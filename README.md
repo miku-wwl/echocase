@@ -1,31 +1,41 @@
-# EchoCase · Enterprise Full-Stack Engineering
+# EchoCase · Enterprise .NET Full-Stack Application Engineering
 
-一个可运行、可复现、可审阅的调查工作台与中文工程教材。技术：C# / ASP.NET Core 10、DDD / CQRS、PostgreSQL / EF Core、React 19 / TypeScript、TanStack Query、React Flow、官方 shadcn 组件。
+一个专注业务应用的 .NET 10 + React 19 工程项目：用虚构调查案例学习需求、DDD、Clean Architecture、CQRS、EF Core/PostgreSQL、API 安全与一致性，以及复杂前端状态。
 
-## 交付物
+五模块为案件、证据、证据关联、调查进度、结论提交。保留关联修订、旧数据兼容、版本条件写入、持久幂等回执、资源所有权、草稿保护和显式冲突恢复。
 
-Phase 2A 在独立 review 分支深化工程，新增现有关联修订、真实数据演进、草稿/并发恢复与应用回退闭环；[工程验收](docs/phase2a/ACCEPTANCE.md)、[复现步骤](docs/phase2a/REPRODUCE.md)、[原 E01–E10 映射](docs/phase2a/TRACEABILITY.md)、[模板比较](docs/phase2a/TEMPLATE-COMPARISON.md)、[Phase 2B 内容清单](docs/phase2a/PUBLICATION-INVENTORY.md)。两份 PDF 保留 Phase 1 版本，本阶段没有扩写出版。当前验证请使用 Phase 2A 复现步骤，将新证据写入独立目录；下方旧命令作为 Phase 1 工作流说明保留，不要用 catalog 重写其冻结证据。
+本仓库拥有应用代码、数据库模型/迁移、独立测试和轻量应用 CI。云资源、环境发布、镜像发行、SRE 运维和灾备不是当前目标。`EchoCase.Infrastructure` 是应用持久化/身份层，继续保留。
 
-- [中文教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)：18 章、26 项实验记录、练习与参考答案、真实截图、源码片段与可点击目录。
-- [独立成册验收报告](docs/ACCEPTANCE-REPORT.md) / [PDF](manual/dist/EchoCase-Acceptance-Report.pdf)：明确 VERIFIED / PARTIAL / BLOCKED / NOT_RUN，披露目标差异与生产限制。
-- [工程路线与参考审计](docs/PLAN.md)、[架构](docs/architecture/ARCHITECTURE.md)、[API](docs/api/API-DESIGN.md)、[测试](docs/testing/TEST-STRATEGY.md)、[部署](docs/deployment/DEPLOYMENT.md)、[实验索引](manual/chapters/19-labs.md)。
+## 源码与独立测试
 
-本项目为教学与作品集 review edition，不宣称生产就绪。Azure 未部署，不创建付费资源。所有案件与人物虚构。
-
-## 快速运行（Windows / PowerShell 7）
-
-前置：.NET SDK 10.0.300、Node 22.22.2+、已启动的 Podman 机器。不要在 API 正运行时重新编译同一输出目录；Windows 会锁定正在执行的程序集。
-
-```powershell
-./scripts/dev-db.ps1
-# 数据库只绑定 127.0.0.1:55432，公开本地实验密码禁止用于生产
-
-dotnet restore --locked-mode
-./scripts/dev.ps1 migrate
-./scripts/dev.ps1 api
+```text
+src/EchoCase.Domain/          聚合、规则、状态机
+src/EchoCase.Application/     用例、查询、DTO、持久化端口
+src/EchoCase.Infrastructure/  EF、PostgreSQL、Identity、迁移
+src/EchoCase.Api/             HTTP 合同与依赖组装
+frontend/src/                React、查询缓存、草稿、图谱
+tests/unit/                 独立 NUnit 单元测试
+tests/integration/          独立 PostgreSQL/API 集成测试；可选 QueryProbe
+tests/e2e/                  独立 Playwright 包与公共接口测试
 ```
 
-另开终端：
+`EchoCase.slnx` 只包含四个应用项目。`tests/EchoCase.Tests.slnx` 是独立测试入口。依赖方向始终是 Tests → Application；单元测试不引用 API、数据库实现或集成夹具。前端应用不安装 Playwright。
+
+## 本地开发
+
+前置：.NET SDK 10.0.300、Node 22.22.2+、可访问的 PostgreSQL 17、Python 3（边界检查）。PostgreSQL 可来自自己的本地安装；仓库不管理其生命周期。以下连接中的账号/口令需自行替换。
+
+```powershell
+$env:ConnectionStrings__EchoCase='Host=127.0.0.1;Port=5432;Database=echocase;Username=YOUR_USER;Password=YOUR_PASSWORD'
+$env:ASPNETCORE_ENVIRONMENT='Development'
+dotnet restore EchoCase.slnx --locked-mode
+dotnet build EchoCase.slnx --no-restore
+dotnet tool restore
+dotnet ef database update --project src/EchoCase.Infrastructure --startup-project src/EchoCase.Api --no-build
+dotnet run --project src/EchoCase.Api --no-build --no-launch-profile --urls http://127.0.0.1:5080
+```
+
+另一个终端：
 
 ```powershell
 cd frontend
@@ -33,60 +43,39 @@ npm ci
 npm run dev
 ```
 
-访问 http://127.0.0.1:5173，创建本地账户。API 为5080。五模块：案件、证据、关联、调查进度、结论提交。六条证据形成一个完整案件。关联无向，发现与提交受状态机约束；终态只读。
+打开 [本地工作台](http://127.0.0.1:5173)，创建本地账户。Windows 下重新编译 API 前先停止使用同一输出目录的进程。详细命令见 [开发指南](docs/engineering/DEVELOPMENT.md)。
 
-## 运行与验证
-
-```powershell
-# 停止开发 API 后运行后端全集；会创建并精确删除随机测试数据库
-./scripts/dev.ps1 test
-# 重启 API 与 Vite 后
-cd frontend
-node node_modules/@playwright/test/cli.js test
-```
-
-后端结果是 evidence/backend/backend.trx，浏览器结果是 evidence/browser/results.json；首次失败与修正前证据也保留。当前数量与远程 CI 状态以验收报告为准。
-
-实验与出版使用独立 Python 环境，见 [测试说明](docs/testing/TEST-STRATEGY.md)。完整实验配置好连接后运行：
+## 验证
 
 ```powershell
-uv venv work/venv --python 3.13
-uv pip install --python work/venv/Scripts/python.exe -r manual/requirements.txt
-$env:ECHOCASE_PG_DSN='postgresql://echocase:echocase-local-only@127.0.0.1:55432/echocase'
-work/venv/Scripts/python.exe experiments/database.py
-work/venv/Scripts/python.exe experiments/backup.py
-# 以下会短暂停止且在 finally 恢复本项目开发数据库；不要与其他测试并行
-work/venv/Scripts/python.exe experiments/reliability.py
-work/venv/Scripts/python.exe experiments/container.py
+dotnet restore tests/EchoCase.Tests.slnx --locked-mode
+dotnet test tests/unit/EchoCase.UnitTests --no-restore
+# 使用可创建临时测试库的本地测试账号；不要使用业务生产数据库
+$env:ECHOCASE_TEST_CONNECTION='Host=127.0.0.1;Port=5432;Database=postgres;Username=YOUR_TEST_ADMIN;Password=YOUR_TEST_PASSWORD'
+dotnet test tests/integration/EchoCase.IntegrationTests --no-restore
+python scripts/check_boundaries.py
 ```
 
-容器实验从独立 PostgreSQL 模式启动，验证应用删除重建后原调查与认证仍可用；成功后保留 http://127.0.0.1:6080 供审阅。开发库与容器验收库独立。Compose 文件可供另一路径使用，但 provider 路径没有在本机运行。
-
-## 证据与出版门禁
+API 与 Vite 已运行时，单独执行 E2E：
 
 ```powershell
-work/venv/Scripts/python.exe tools/catalog.py
-work/venv/Scripts/python.exe tools/verify.py
-work/venv/Scripts/python.exe tools/test_gate.py
-work/venv/Scripts/python.exe tools/catalog.py
+cd tests/e2e
+npm ci
+# 本机默认 Edge；CI 安装 Chromium
+npm test
 ```
 
-检查器验证结构化结果、摘要、来源数字、引用与有限依赖规则；不能证明所有自然语言结论。自测先验证正常副本，再以七类损坏证明非零退出。26份实验记录含假设、机制、设计、执行、观测、解释、限制、清理。
+[测试与依赖隔离](docs/engineering/TESTING.md)说明实际项目图、运行依赖、publish 输出和前端 bundle 的检查方法。应用 CI 只有 [application-ci.yml](.github/workflows/application-ci.yml)，执行构建、独立测试、合同与边界检查；不发布或部署应用。
 
-[出版命令](manual/README.md)使用本地 Pandoc、Mermaid、Playwright，两遍目录映射、PDF负向自测、版面几何检查和逐页视觉复核。字体与浏览器会影响分页，不承诺字节相同。
+## 文档与学习
 
-## 范围与限制
+- [需求](docs/requirements/PRD.md)、[领域](docs/domain/DOMAIN-MODEL.md)、[架构](docs/architecture/ARCHITECTURE.md)、[API](docs/api/API-DESIGN.md)
+- [当前路线与 DoD](docs/PLAN.md)、[应用实验索引](docs/engineering/EXPERIMENTS.md)、[模板机制比较](docs/architecture/TEMPLATE-COMPARISON.md)
+- [重构验收](docs/engineering/ACCEPTANCE.md)、[仓库责任与退役清单](docs/engineering/REPOSITORY-RESPONSIBILITY.md)
+- [教材源](manual/README.md)、[后续 Phase 2B 内容清单](docs/engineering/PUBLICATION-INVENTORY.md)
 
-- 四层模块化单体、单数据库事务，没有微服务/Kubernetes/多租户/AI。
-- Version / If-Match 防过期写；UUID 幂等键和持久回执防相同意图重复提交。
-- Identity 哈希、Cookie、CSRF、资源所有权、限流和合同负测试；MFA、账户恢复、安全戳吊销等生产身份能力未实现。
-- 案件目录在代码固定，列表最近50条，没有分页、协作、动态案件版本或回执自动清理。
-- 可观测性为日志、trace上下文与仪表点，没有完整监控告警平台；性能结果仅为本机测量。
-- pg_dump实验只恢复三条合成记录，不冒充完整应用灾难恢复或PITR。
-- 教材实际规模与原300–400页编辑目标的差异、第三方独立审阅缺项均在验收报告披露。
+## 范围变更与历史
 
-## 停止与保留数据
+2026-11-11 所有者明确收窄为应用工程，本次要求替代原计划中的云与交付目标。原 E10 部署实验不再是当前 DoD；没有将历史重新命名成从来不存在。
 
-关闭开发服务终端；`./scripts/dev-db.ps1 stop` 停开发数据库。容器实例：`podman stop echocase-app echocase-container-db`。这些操作保留数据。删除卷会丢失调查和密钥，不属于默认清理。
-
-[第三方来源与许可证](THIRD-PARTY-NOTICES.md)。原仓库 Apache-2.0；官方 shadcn 组件与复制样式保留其 MIT 许可证。
+历史 Phase 2A 分支 `codex/phase2a-engineering-20261111` 保留在 `63c587277541b4e700258aad82de9b2ad0ba32f8`。历史实验、原证据和两份旧 PDF 可从 [该提交](https://github.com/miku-wwl/echocase/tree/63c587277541b4e700258aad82de9b2ad0ba32f8)恢复；它们不是当前交付物。本次不生成 PDF，不修改 main，也不改变现有业务数据。

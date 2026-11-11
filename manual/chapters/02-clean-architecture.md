@@ -28,7 +28,7 @@ Jason Taylor 模板将日志、授权、校验、性能等行为放进应用请�
 
 ## 端口设计是一项业务选择
 
-{{code:src/EchoCase.Application/Investigations.cs:20-30}}
+源码定位：[Investigations.cs](../../src/EchoCase.Application/Investigations.cs)。
 
 WriteAsync 接收操作上下文和对聚合的变更函数。上下文包含可信所有者、幂等键、请求指纹、目标调查、预期版本和操作名称。这样，事务、回执和并发保护由同一个基础设施实现承载，领域变更仍由应用提供。它比“每张表一个泛型仓储”更接近当前真实的原子操作。
 

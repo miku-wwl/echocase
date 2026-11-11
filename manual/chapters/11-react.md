@@ -21,7 +21,7 @@ EchoCase 的页面包括登录、案件总览和调查工作台。工作台再�
 
 Workspace 仍是较大的组件，这是当前维护性限制。继续增长时，应把证据面板、笔记编辑器和写入 hook 拆为独立模块，并用已有 E2E 保持行为。不能为了立刻达到“组件数量看起来合理”而拆出只有转发属性的空壳；应围绕状态生命周期与交互变化拆分。
 
-![图 11-1　真实浏览器中的案件总览。统计来自当前账户，案件插图为代码绘制的示意图。](evidence/browser/02-dashboard.png)
+[历史截图：图 11-1　真实浏览器中的案件总览。统计来自当前账户，案件插图为代码绘制的示意图。](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/evidence/browser/02-dashboard.png)
 
 ## TypeScript 类型是沟通工具
 
@@ -29,7 +29,7 @@ Workspace 仍是较大的组件，这是当前维护性限制。继续增长时�
 
 请求函数把协议头、Cookie 发送、错误解析和网络失败集中起来。业务组件不拼接密码票据，不直接写 fetch 后忽略 response.ok。把网络错误包装为带状态、机器代码与 trace ID 的 ApiError，使工作台能为不同失败提供不同恢复路径。
 
-{{code:frontend/src/api/client.ts:23-49}}
+源码定位：[client.ts](../../frontend/src/api/client.ts)。
 
 ## 表单与可访问性
 

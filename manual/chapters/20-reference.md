@@ -17,10 +17,7 @@
 | Mutation | [TanStack Mutation](https://tanstack.com/query/latest/docs/framework/react/guides/mutations) | 写入生命周期与重试 |
 | 图谱性能 | [React Flow 性能](https://reactflow.dev/learn/advanced-use/performance) | 节点规模增长时的测量与优化 |
 | 组件来源 | [shadcn/ui](https://github.com/shadcn-ui/ui) | 可拥有的组件与 MIT 许可证 |
-| 容器部署设计 | [Azure 自定义容器](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container) | 端口、镜像与平台设置；当前 NOT_RUN |
-| 云身份设计 | [App Service 数据库身份](https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-azure-database) | 运行身份与数据库权限；当前 NOT_RUN |
 
-本项目没有复制参考 DevOps 教材的正文、测量、截图或平台拓扑。采用的是证据分离、门禁自测、两遍目录与逐页审阅的方法。上游审计提交与出处见仓库 THIRD-PARTY-NOTICES.md 和 docs/PLAN.md。
 
 ## 关键术语
 

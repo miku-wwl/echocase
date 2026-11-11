@@ -1,25 +1,15 @@
-# 出版
+# Enterprise .NET Full-Stack Software Engineering · 教材源
 
-Markdown 在 chapters/，代码片段与测量在构建时从真实文件展开；Mermaid 本地渲染，不使用 CDN。字体优先 Microsoft YaHei，Linux 使用 Noto Sans CJK SC。字体和浏览器版本会改变分页，复现保证可构建与可检查，不保证 PDF 字节完全相同。
+当前材料只讲业务应用：需求、Clean Architecture/DDD/CQRS、ASP.NET/DI、EF/PostgreSQL、API安全与一致性、React/TypeScript/Query/Flow、独立测试和维护性。
 
-```powershell
-uv venv work/venv --python 3.13
-uv pip install --python work/venv/Scripts/python.exe -r manual/requirements.txt
-cd manual
-npm ci
-cd ..
-python tools/catalog.py
-python tools/verify.py
-node manual/tools/build.mjs
-node manual/tools/build.mjs --report
-work/venv/Scripts/python.exe manual/tools/pdfqa.py layout manual/dist/Enterprise-Full-Stack-Engineering.pdf evidence/qa/book-layout.json
-work/venv/Scripts/python.exe manual/tools/pdfqa.py render manual/dist/Enterprise-Full-Stack-Engineering.pdf work/book-pages
-```
+保留应用章节与历史应用缺陷的机制解释。原运维章节、旧PDF、自动出版器与证据门禁已从本分支退役，历史可从63c5872恢复；它们不作为当前交付物。本轮不生成PDF。
 
-Node publisher 从 frontend 的 Playwright 包加载，先安装 frontend 依赖。本机使用 Edge；CI 环境使用 Chromium，需要安装对应浏览器。Pandoc 必须在 PATH。可用 ECHOCASE_PYTHON 指定 Python，否则默认 work/venv。
+- chapters/01–13：需求、架构、领域、请求、用例、合同、持久化、并发、幂等、安全、React、状态与图谱。
+- chapters/14-testing.md：独立测试与依赖边界。
+- chapters/15-performance.md：实际应用SQL与索引。
+- chapters/18-assessment.md：综合应用工程评审；历史编号暂保留，2B重新组织课程顺序。
+- chapters/19-labs.md：当前应用实验导航；历史E编号不改义。
+- chapters/20-reference.md：框架一手来源与词汇。
+- [应用案例材料](../docs/engineering/CASE-STUDIES.md)、[新2B清单](../docs/engineering/PUBLICATION-INVENTORY.md)。
 
-两遍打印：第一次从 outline 顺序匹配所有章/节标题，填入目录；第二次重查页数与标题目的页，任何不匹配非零退出。插图加载和 Mermaid 渲染失败直接中止。layout 几何检查不能替代人工逐页视觉检查；人工记录保存在 evidence/qa/visual-review.json。
-
-## Phase 2A 状态
-
-`dist/` 的两份 PDF 冻结为 Phase 1 review edition，未扩写或重新排版。当前 Markdown 仅修正与实现变更直接相关的内容；新增工程材料和后续编写目录见 `docs/phase2a/`。源码与冻结 PDF 的摘录不再视为同一版本，2B 需重新生成、注释并执行全面出版 QA。
+这些是待深化的Markdown源，不是已经重建出版的教材。源代码链接已重绑到独立测试目录；不再依赖旧claim/code宏。后续2B应绑定新的工程提交，重新提取注释、制作图示并审校，不能把历史PDF的页数或QA结论移到新教材。

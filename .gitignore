@@ -13,3 +13,4 @@ manual/build/
 **/*.tsbuildinfo
 *.log.tmp
 **/__pycache__/
+**/TestResults/

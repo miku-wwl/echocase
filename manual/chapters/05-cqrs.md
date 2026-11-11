@@ -21,7 +21,7 @@
 
 ## 显式编排的可追踪性
 
-{{code:src/EchoCase.Application/Investigations.cs:44-57}}
+源码定位：[Investigations.cs](../../src/EchoCase.Application/Investigations.cs)。
 
 处理 Link 时，应用首先把字符串解析为受控 LinkKind，拒绝未定义枚举值，然后调用领域 Link。这里没有把前端传入的 OwnerId 转交给领域；当前用户来自认证票据。启动调查时案件 ID 仍会被目录验证，不能因为前端只有一个选项就信任传入值。
 

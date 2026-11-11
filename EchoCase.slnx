@@ -5,7 +5,4 @@
     <Project Path="src/EchoCase.Domain/EchoCase.Domain.csproj" />
     <Project Path="src/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/EchoCase.Tests/EchoCase.Tests.csproj" />
-  </Folder>
 </Solution>

@@ -10,7 +10,7 @@ Query Key 包含资源种类、用户 ID 和调查 ID。用户 ID 不是后端�
 
 Phase 1 将预期笔记直接放进缓存，并在成功时清除 dirty。Phase 2A 的延迟响应实验发现，这会删除请求发出后继续输入的文字。因此现在 Query 缓存只存已确认快照，pending 笔记单独呈现；失败时撤销 pending 呈现，草稿保留。成功响应按版本单调更新缓存，onSettled 使调查与列表失效。编辑器只有在当前编辑代次仍等于提交代次时才清除 dirty，否则只推进自己已确认的基线，保留后来输入。
 
-{{code:frontend/src/workspace/useInvestigation.ts:18-62}}
+源码定位：[useInvestigation.ts](../../frontend/src/workspace/useInvestigation.ts)。
 
 取消查询是为了避免较早发出的 GET 在乐观更新之后返回并覆盖缓存。它不取消其他客户端，也不让写请求获得独占权。版本冲突仍由服务器判断。由于当前只对笔记采用乐观更新，解锁证据和封存结论必须等待服务端确认；不同业务动作可以选择不同反馈策略。
 
@@ -45,9 +45,9 @@ sequenceDiagram
 
 查询默认允许一次自动重试，并把 TanStack Query 的 AbortSignal 传给 fetch；主动取消不包装成未知保存错误。写 mutation 不自动重试。网络未知结果期间阻止其他新写入，但允许继续编辑，原操作确认后再决定后续草稿。
 
-Phase 2A 进一步让浏览器先 route.fetch 到真实 API 完成提交，再丢弃返回响应。随后另一个真实请求推进版本，原键重试返回历史回执；MutationObserver 检查界面从未倒退到旧版本。该回执只能证明原提交发生过，不能把旧笔记标成当前已保存内容。见 `evidence/phase2a/browser/lost-response.json`。原图 12-2 仍是 Phase 1 故障截图，现有 PDF 未重新出版。
+Phase 2A 进一步让浏览器先 route.fetch 到真实 API 完成提交，再丢弃返回响应。随后另一个真实请求推进版本，原键重试返回历史回执；MutationObserver 检查界面从未倒退到旧版本。该回执只能证明原提交发生过，不能把旧笔记标成当前已保存内容。见 [历史原键重试记录](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/evidence/phase2a/browser/lost-response.json)。原图 12-2 仍是 Phase 1 故障截图，现有 PDF 未重新出版。
 
-![图 12-2　注入 503 后的笔记编辑器局部：未保存草稿保留。错误提示见完整页面证据；故障来自浏览器拦截，不是实际数据库中断。](evidence/browser/10-rollback-detail.png)
+[历史截图：图 12-2　注入 503 后的笔记编辑器局部：未保存草稿保留。错误提示见完整页面证据；故障来自浏览器拦截，不是实际数据库中断。](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/evidence/browser/10-rollback-detail.png)
 
 ## 实验 E12：把乐观失败做成可复现操作
 
