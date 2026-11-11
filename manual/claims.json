@@ -1,1 +1,15 @@
-{"backend_total":{"source":"evidence/summary.json","pointer":"backend.total"},"backend_passed":{"source":"evidence/summary.json","pointer":"backend.passed"},"browser_passed":{"source":"evidence/summary.json","pointer":"browser.passed"},"sql_before":{"source":"evidence/database/results.json","pointer":"query_optimization.before.median_ms","decimals":2},"sql_after":{"source":"evidence/database/results.json","pointer":"query_optimization.after.median_ms","decimals":2},"api_p95":{"source":"evidence/reliability/results.json","pointer":"latency.p95_ms","decimals":2},"recovery_ms":{"source":"evidence/reliability/results.json","pointer":"recovery_observed_ms","decimals":0}}
+{
+  "backend_total":{"source":"evidence/summary.json","pointer":"backend.total"},
+  "backend_passed":{"source":"evidence/summary.json","pointer":"backend.passed"},
+  "browser_passed":{"source":"evidence/summary.json","pointer":"browser.passed"},
+  "sql_before":{"source":"evidence/database/results.json","pointer":"query_optimization.before.median_ms","decimals":2},
+  "sql_after":{"source":"evidence/database/results.json","pointer":"query_optimization.after.median_ms","decimals":2},
+  "api_p95":{"source":"evidence/reliability/results.json","pointer":"latency.p95_ms","decimals":2},
+  "recovery_ms":{"source":"evidence/reliability/results.json","pointer":"recovery_observed_ms","decimals":0},
+  "before_plan":{"source":"evidence/database/plan-summary.json","pointer":"before_tree"},
+  "after_plan":{"source":"evidence/database/plan-summary.json","pointer":"after_tree"},
+  "before_blocks":{"source":"evidence/database/plan-summary.json","pointer":"before_blocks"},
+  "after_blocks":{"source":"evidence/database/plan-summary.json","pointer":"after_blocks"},
+  "before_execution":{"source":"evidence/database/plan-summary.json","pointer":"before_execution_ms","decimals":3},
+  "after_execution":{"source":"evidence/database/plan-summary.json","pointer":"after_execution_ms","decimals":3}
+}

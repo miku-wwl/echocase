@@ -911,7 +911,7 @@ python tools/test_gate.py
 
 ## E23 远程 CI 失败与恢复
 
-状态：**PARTIAL**。来源：`.github/workflows/engineering.yml`。证据：`evidence/ci/results.json`。
+状态：**VERIFIED**。来源：`experiments/ci-drill.ps1`。证据：`evidence/ci/results.json`。
 
 ### 1. 工程问题与假设
 
@@ -923,23 +923,24 @@ python tools/test_gate.py
 
 ### 3. 基线与实验设计
 
-workflow_dispatch 注入缺失 manifest，再按正常输入运行，保留运行 ID。 先固定输入、身份、数据与执行条件，再引入一个明确变化；不同时改变多个因素后只归因于其中一个。
+在工作分支提交并推送删除 manifest，等待真实失败后恢复清单并推送，保留两次运行 ID。 先固定输入、身份、数据与执行条件，再引入一个明确变化；不同时改变多个因素后只归因于其中一个。
 
 ### 4. 执行与复现
 
 从仓库根目录运行。先按 README 配置真实 PostgreSQL 与所需环境变量，使用文档锁定依赖。浏览器实验需要开发 API 与 Vite 已运行；容器实验自行构建。
 
 ```text
-gh workflow run engineering.yml --ref codex/enterprise-masterclass-20261111
+pwsh -File experiments/ci-drill.ps1 -ReviewBranch codex/your-review-branch
+# 仅在干净且已推送的独立审阅分支执行；脚本拒绝 main。
 ```
 
 ### 5. 实测观测
 
-以实际 GitHub Actions 结果决定状态，文件存在不算通过。 结论以证据文件中的断言、样本和进程退出码为准；若复现结果不同，保留新结果并将状态降为 PARTIAL。
+实际记录中缺清单运行被门禁拒绝，恢复清单后的完整工作流成功。 结论以证据文件中的断言、样本和进程退出码为准；若复现结果不同，保留新结果并将状态降为 PARTIAL。
 
 ### 6. 解释与架构含义
 
-工作流依赖图、真实 runner 退出码与制品。 因此验收必须检查这一边界上的可观察结果，而不能以组件已安装或代码已生成代替。对应实现 `.github/workflows/engineering.yml` 与本章问题具有直接关系。
+工作流依赖图、真实 runner 退出码与制品。 因此验收必须检查这一边界上的可观察结果，而不能以组件已安装或代码已生成代替。对应实现 `experiments/ci-drill.ps1` 与本章问题具有直接关系。
 
 ### 7. 限制与替代解释
 

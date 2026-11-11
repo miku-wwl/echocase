@@ -25,7 +25,7 @@
 | pg_dump/restore | VERIFIED，合成小库 | 三条中文记录精确恢复；非完整应用DR或PITR |
 | QA 自测 | VERIFIED | 七类证据损坏、三类坏PDF均非零退出 |
 | NuGet/npm扫描 | VERIFIED，当时数据库范围 | evidence/backend/dependency-audit.json 与两份npm报告无已知告警 |
-| 远程 GitHub Actions | 以 evidence/ci/results.json 为准 | 必须记录真实失败演练与正常运行，配置文件不算运行证据 |
+| 远程 GitHub Actions | VERIFIED | [基线成功](https://github.com/miku-wwl/echocase/actions/runs/42954657268)、[缺清单被拒绝](https://github.com/miku-wwl/echocase/actions/runs/42955039508)、[恢复后成功](https://github.com/miku-wwl/echocase/actions/runs/42955313193) |
 
 性能：十万条、五千所有者的合成时间线，组合索引前后中位数分别 {{claim:sql_before}} / {{claim:sql_after}} ms，返回行数相同且计划由 Seq Scan 转索引。真实 API 暖机后顺序100次读取 p95 为 {{claim:api_p95}} ms。它们不是生产容量、最大吞吐或长期稳定性结论。
 
@@ -52,9 +52,9 @@
 
 教材含18章、前言、实验手册、参考来源，54道章末练习与参考答案，架构/状态/序列/关系图、真实应用截图和当前源码片段。目录采用两遍打印并核对目的页，测量由来源JSON展开。构建、版面和视觉记录分别在 manual/tools 与 evidence/qa。
 
-**编辑目标仍为 PARTIAL：当前属于约百页的精炼审阅版，明显少于原约300–400页目标，章节深度尚需继续扩展。** 没有通过增加空白、放大字号或重复原始日志凑页数。不能把这一版本称为已完成原任务所要求的完整旗舰教材。
+**编辑目标仍为 PARTIAL：当前教材97页，属于精炼审阅版，明显少于原约300–400页目标，章节深度尚需继续扩展。** 没有通过增加空白、放大字号或重复原始日志凑页数。不能把这一版本称为已完成原任务所要求的完整旗舰教材。
 
-逐页视觉状态与实际页数以 evidence/qa/visual-review.json 和 book-layout.json 为准。任何仍存在的越界、缺图或极小文字都是阻断问题；普通章末留白须在审阅记录中说明。目录、图意与源码一致性和实际PDF再生成需要分别确认。
+教材97页与报告6页均已逐页渲染并通过接触表审阅；关系图、幂等图和执行计划另查看完整页。版面检查零越界/空白/极小文字；教材180个内部链接、报告7个内部链接的目的地有效。原始审阅与成品摘要在 evidence/qa/visual-review.json；普通章末留白列为已接受的外观例外。目录两遍生成稳定，教材源码片段与来源测量已核对。
 
 ## 最终条件逐项评估
 
@@ -70,8 +70,8 @@
 | 性能/可靠性 | VERIFIED，单机范围 | 暖缓存合成数据与有界故障 |
 | CI/CD与部署 | PARTIAL | 本地OCI验证，远程CI实际状态另记，Azure NOT_RUN |
 | 教材实质深度与视觉 | PARTIAL | 精炼审阅版，未达到原旗舰规模与完整编辑目标 |
-| 每页视觉检查 | 以视觉记录为准 | 未观察的页不得勾选 |
-| 产物一致性 | PARTIAL至门禁完成 | 来源数字/源码/证据可机器核对，语义仍需审阅 |
+| 每页视觉检查 | VERIFIED | 97页教材+6页报告，保留视觉记录 |
+| 产物一致性 | VERIFIED，限定检查范围 | 来源数字/源码/证据门禁通过，有限规则不等于全部语义证明 |
 | 限制披露 | VERIFIED | 本报告与各实验均列范围 |
 | 分支提交可审阅 | 以最终Git记录为准 | 不合并main、不修改保护规则 |
 

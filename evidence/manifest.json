@@ -179,7 +179,7 @@
       "artifacts": [
         {
           "path": "evidence/qa/gate-selftest.json",
-          "sha256": "575f982cba5c8bbb970574c78467ed436737a32beff625cd10c05c56e2b31eda"
+          "sha256": "9b1adbe518f601bf61c324abfa7a42e1e380720a6762296441b3515141bb76e7"
         }
       ]
     },
@@ -193,6 +193,10 @@
         {
           "path": "evidence/database/results.json",
           "sha256": "0d0d56b092c639af16141b8c17308fc463681e5e1cd3f0bc67f3776bb97ee601"
+        },
+        {
+          "path": "evidence/database/plan-summary.json",
+          "sha256": "435cf2cbee6d38ff85cc1d8ebe1df7afa2ee3ed9dfd98621aeb4ca1c9483d55c"
         }
       ]
     },
@@ -283,20 +287,20 @@
       "artifacts": [
         {
           "path": "evidence/qa/gate-selftest.json",
-          "sha256": "575f982cba5c8bbb970574c78467ed436737a32beff625cd10c05c56e2b31eda"
+          "sha256": "9b1adbe518f601bf61c324abfa7a42e1e380720a6762296441b3515141bb76e7"
         }
       ]
     },
     {
       "id": "E23",
       "title": "远程 CI 失败与恢复",
-      "status": "PARTIAL",
-      "source": ".github/workflows/engineering.yml",
+      "status": "VERIFIED",
+      "source": "experiments/ci-drill.ps1",
       "selector": "ci",
       "artifacts": [
         {
           "path": "evidence/ci/results.json",
-          "sha256": "099efb2fe71e3e5648ee99223227619751139cc704ed544bfa2ba5e85ad2a738"
+          "sha256": "01f44cee86fec7e52e5b881ddd8699d5c751a6c2141ba7aebeefbcc9876b3994"
         }
       ]
     },

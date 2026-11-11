@@ -19,28 +19,28 @@
     },
     {
       "page": 4,
-      "characters": 501,
-      "bottom": 763.8
-    },
-    {
-      "page": 5,
-      "characters": 520,
+      "characters": 493,
       "bottom": 755.3
     },
     {
+      "page": 5,
+      "characters": 527,
+      "bottom": 764.3
+    },
+    {
       "page": 6,
-      "characters": 505,
+      "characters": 508,
       "bottom": 755.3
     },
     {
       "page": 7,
-      "characters": 457,
+      "characters": 465,
       "bottom": 755.3
     },
     {
       "page": 8,
-      "characters": 362,
-      "bottom": 658.5
+      "characters": 402,
+      "bottom": 738.0
     },
     {
       "page": 9,
@@ -69,8 +69,8 @@
     },
     {
       "page": 14,
-      "characters": 401,
-      "bottom": 241.7
+      "characters": 485,
+      "bottom": 280.7
     },
     {
       "page": 15,
@@ -119,18 +119,18 @@
     },
     {
       "page": 24,
-      "characters": 971,
-      "bottom": 773.8
+      "characters": 775,
+      "bottom": 667.1
     },
     {
       "page": 25,
-      "characters": 1816,
-      "bottom": 719.6
+      "characters": 1902,
+      "bottom": 739.1
     },
     {
       "page": 26,
-      "characters": 901,
-      "bottom": 542.4
+      "characters": 1011,
+      "bottom": 622.7
     },
     {
       "page": 27,
@@ -179,8 +179,8 @@
     },
     {
       "page": 36,
-      "characters": 394,
-      "bottom": 325.9
+      "characters": 894,
+      "bottom": 719.6
     },
     {
       "page": 37,
@@ -209,8 +209,8 @@
     },
     {
       "page": 42,
-      "characters": 379,
-      "bottom": 193.7
+      "characters": 899,
+      "bottom": 605.4
     },
     {
       "page": 43,
@@ -284,18 +284,18 @@
     },
     {
       "page": 57,
-      "characters": 962,
-      "bottom": 782.6
+      "characters": 908,
+      "bottom": 762.3
     },
     {
       "page": 58,
-      "characters": 939,
-      "bottom": 715.1
+      "characters": 1029,
+      "bottom": 778.1
     },
     {
       "page": 59,
-      "characters": 324,
-      "bottom": 193.7
+      "characters": 906,
+      "bottom": 604.7
     },
     {
       "page": 60,
@@ -339,8 +339,8 @@
     },
     {
       "page": 68,
-      "characters": 323,
-      "bottom": 193.7
+      "characters": 363,
+      "bottom": 209.4
     },
     {
       "page": 69,
@@ -454,13 +454,13 @@
     },
     {
       "page": 91,
-      "characters": 857,
+      "characters": 849,
       "bottom": 766.1
     },
     {
       "page": 92,
-      "characters": 934,
-      "bottom": 766.1
+      "characters": 948,
+      "bottom": 781.9
     },
     {
       "page": 93,

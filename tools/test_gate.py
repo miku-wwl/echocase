@@ -24,15 +24,15 @@ for name,kind in cases:
             manifest=target/'evidence/manifest.json';m=json.loads(manifest.read_text(encoding='utf-8'));import hashlib
             for e in m['experiments']:
                 for a in e['artifacts']:
-                    if a['path']=='evidence/reliability/results.json':a['sha256']=hashlib.sha256(p.read_bytes()).hexdigest()
+                    if a['path']=='evidence/reliability/results.json':a['sha256']=hashlib.sha256(p.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
             manifest.write_text(json.dumps(m),encoding='utf-8')
         elif kind=='answer':
-            p=target/'manual/chapters/01-requirements.md';p.write_text(p.read_text(encoding='utf-8').replace('1-C','removed'),encoding='utf-8')
+            p=target/'manual/chapters/01-requirements.md';text=p.read_text(encoding='utf-8');start=text.index('**1-B');end=text.index('**1-C');block=text[start:end];block=block[:block.index('参考答案')];p.write_text(text[:start]+block+'\n\n'+text[end:],encoding='utf-8')
         elif kind=='claim':
             p=target/'manual/chapters/01-requirements.md';p.write_text(p.read_text(encoding='utf-8')+'\n{{claim:invented_result}}',encoding='utf-8')
         run=subprocess.run([sys.executable,str(root/'tools/verify.py'),'--root',str(target)],capture_output=True,text=True,encoding='utf-8')
         assert run.returncode!=0,name+' was incorrectly accepted'
-        expected={'missing':'missing evidence/backup','tamper':'digest mismatch','boundary':'outward project reference','status':'invalid status','performance':'p95 exceeds','answer':'Exercise/answer set incomplete','claim':'Unsupported measurement'}[kind]
+        expected={'missing':'missing evidence/backup','tamper':'digest mismatch','boundary':'outward project reference','status':'invalid status','performance':'p95 exceeds','answer':'Exercise/answer missing','claim':'Unsupported measurement'}[kind]
         assert any(expected in message for message in json.loads(run.stdout)['failures']),name+' failed for an unrelated reason'
         observed.append({'case':name,'exit_code':run.returncode,'diagnostics':json.loads(run.stdout)['failures']})
 baseline=subprocess.run([sys.executable,str(root/'tools/verify.py')],capture_output=True,text=True,encoding='utf-8');assert baseline.returncode==0,baseline.stdout

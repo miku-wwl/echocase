@@ -33,6 +33,9 @@ def verify(root):
         require(rel['saved_session_survived'] and rel['traceparent_preserved'],'Recovery/trace evidence missing')
         require(0<rel['latency']['p95_ms']<200,'Local sequential read p95 exceeds 200ms teaching gate')
         container=load('evidence/container/results.json');require(container['rootless_user'] and container['database_session_survived'] and container['cookie_survived_reconstruction'],'Container reconstruction incomplete')
+        if (root/'evidence/ci/results.json').exists():
+            ci=load('evidence/ci/results.json')
+            if ci['status']=='VERIFIED':require(ci['rejected']['conclusion']=='failure' and ci['repaired']['conclusion']=='success' and ci['failure_matched_missing_manifest'],'CI failure/recovery evidence incomplete')
         require(load('evidence/backup/results.json')['row_count']==3,'Backup restore evidence missing')
         chapters=sorted((root/'manual/chapters').glob('*.md'));require(len(chapters)>=19,'Curriculum chapters missing')
         text='\n'.join(p.read_text(encoding='utf-8') for p in chapters);anchors=set(re.findall(r'\{#([^}]+)\}',text));claims=load('manual/claims.json')
@@ -49,6 +52,13 @@ def verify(root):
         for n in range(1,19):
             chapter=next((p.read_text(encoding='utf-8') for p in chapters if p.name.startswith(f'{n:02}-')),None)
             require(chapter is not None and all(f'{n}-{letter}' in chapter for letter in 'ABC'),'Exercise/answer set incomplete '+str(n))
+            if chapter is not None:
+                questions=list(re.finditer(r'\*\*'+str(n)+r'-([ABC])[^*]*\*\*',chapter))
+                require(len(questions)==3,'Exercise/answer count mismatch '+str(n))
+                for index,q in enumerate(questions):
+                    section=chapter[q.end():questions[index+1].start() if index+1<len(questions) else len(chapter)]
+                    answer=re.search(r'参考答案[：:]\s*(.+)',section,re.S)
+                    require(answer is not None and len(answer.group(1).strip())>=20,'Exercise/answer missing '+str(n)+'-'+q.group(1))
         for audit in ['evidence/frontend-audit.json','evidence/publication-audit.json']:require(load(audit)['metadata']['vulnerabilities']['total']==0,'Known npm vulnerability '+audit)
     except Exception as e:failures.append(type(e).__name__+': '+str(e))
     return failures

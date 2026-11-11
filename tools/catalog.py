@@ -8,6 +8,15 @@ tests={r.attrib['testName']:r.attrib['outcome'] for r in trx.findall('.//t:UnitT
 browser=read('evidence/browser/results.json')['stats']
 summary={'backend':{'total':int(counts['total']),'passed':int(counts['passed']),'failed':int(counts['failed'])},'browser':{'passed':browser['expected'],'failed':browser['unexpected']}}
 (root/'evidence/summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
+database=read('evidence/database/results.json')['query_optimization'];plan_summary={}
+for label in ('before','after'):
+    entry=database[label]['plan'][0];lines=[]
+    def walk(node,depth=0):
+        name=node['Node Type']+(' on '+node['Index Name'] if 'Index Name' in node else '')
+        lines.append('  '*depth+name+' (rows='+str(node['Actual Rows'])+', loops='+str(node['Actual Loops'])+')')
+        for child in node.get('Plans',[]):walk(child,depth+1)
+    walk(entry['Plan']);plan_summary[label+'_tree']='\n'.join(lines);plan_summary[label+'_blocks']=entry['Plan']['Shared Hit Blocks'];plan_summary[label+'_execution_ms']=entry['Execution Time']
+(root/'evidence/database/plan-summary.json').write_text(json.dumps(plan_summary,indent=2),encoding='utf-8')
 
 # Each entry has a distinct question and an executable reproduction route.
 specs=[
@@ -33,7 +42,7 @@ specs=[
 ('E20','幂等键误复用', '相同键改变正文是否被错误重放？','请求指纹绑定用户意图，键不是任意缓存 ID。','ReusedKeyWithChangedPayloadIsConflict','先保存 first，再以相同键保存 different。','第二请求为 409，不能变成新写入或返回无关成功。','当前规范化基于强类型序列化；跨语言通用规范化未实现。','src/EchoCase.Application/Investigations.cs'),
 ('E21','追踪上下文', '服务端是否沿用有效上游 traceparent？','W3C Trace Context 与 ASP.NET 请求活动。','reliability','真实 HTTP 读取带固定有效 traceparent，逐次检查 X-Trace-Id。','一百次测量读取的追踪 ID 与输入一致。','没有验证外部 collector、采样与跨服务导出。','experiments/reliability.py'),
 ('E22','性能回归拒绝', '超出教学阈值的样本是否使门禁失败？','结构化样本阈值与语义检查，避免仅摘要失败掩盖真实检查。','qa','在临时副本把 p95 改为 9999，并刷新摘要，单独触发性能条件。','门禁必须非零，正常证据仍通过。','阈值是本地顺序读取教学预算，不能跨硬件作为严格 SLO。','tools/test_gate.py'),
-('E23','远程 CI 失败与恢复', '远程门禁能否阻断缺失证据，正常提交能否通过？','工作流依赖图、真实 runner 退出码与制品。','ci','workflow_dispatch 注入缺失 manifest，再按正常输入运行，保留运行 ID。','以实际 GitHub Actions 结果决定状态，文件存在不算通过。','GitHub 环境与本机不是同一硬件；云部署不在此实验内。','.github/workflows/engineering.yml'),
+('E23','远程 CI 失败与恢复', '远程门禁能否阻断缺失证据，正常提交能否通过？','工作流依赖图、真实 runner 退出码与制品。','ci','在工作分支提交并推送删除 manifest，等待真实失败后恢复清单并推送，保留两次运行 ID。','实际记录中缺清单运行被门禁拒绝，恢复清单后的完整工作流成功。','GitHub 环境与本机不是同一硬件；云部署不在此实验内。','experiments/ci-drill.ps1'),
 ('E24','备份恢复机制', 'pg_dump 自定义格式能否恢复表与中文记录？','逻辑备份保留模式和数据；恢复目标为独立数据库。','backup','备份三行合成日志，pg_restore 到新库并比较精确行内容。','三行与原表一致，保存备份字节数与 SHA-256，两库随后清理。','不是完整应用 DR、异机备份或 PITR；没有生产 RTO/RPO。','experiments/backup.py'),
 ('E25','移动端工作台', '390px 视口是否可操作且无横向溢出？','响应式布局、标签化表单和替代关联路径。','browser','390×844 登录、开始调查、查证据和查看图谱，检查 scrollWidth。','流程通过，文档宽度不超过视口，保存真实截图。','没有覆盖所有移动设备或 WCAG 全面审计。','frontend/tests/workflow.spec.ts'),
 ('E26','出版校验器反例', '空白、越界和不匹配目录是否会被拒绝？','PDF 几何、书签映射与两遍稳定性检查。','pdfqa','生成受控坏 PDF，分别调用实际 layout 和 TOC 检查命令。','坏 PDF 必须非零；最终成品再跑同一检查。','几何检查不理解图意，仍需人工检查每一页。','manual/tools/pdfqa.py'),
@@ -48,6 +57,7 @@ for id,title,question,mechanism,selector,design,observation,limits,source in spe
     if selector=='browser':observation+=' 当前浏览器结果：%s 通过、%s 失败。'%(browser['expected'],browser['unexpected'])
     elif selector not in category:observation+=' 对应测试 %s：%s。'%(selector,tests.get(selector,'未找到'))
     command=(f'dotnet test --filter "FullyQualifiedName~{selector}"' if selector not in category else {'browser':'cd frontend\nnode node_modules/@playwright/test/cli.js test','qa':'python tools/test_gate.py','database':'python experiments/database.py','reliability':'python experiments/reliability.py','container':'python experiments/container.py','ci':'gh workflow run engineering.yml --ref codex/enterprise-masterclass-20261111','backup':'python experiments/backup.py','pdfqa':'python manual/tools/test_pdfqa.py'}[selector])
+    if selector=='ci':command='pwsh -File experiments/ci-drill.ps1 -ReviewBranch codex/your-review-branch\n# 仅在干净且已推送的独立审阅分支执行；脚本拒绝 main。'
     cleanup='集成测试仅删除自动创建的 echocase_test_ 数据库；单元测试无外部状态。'
     if selector=='database':cleanup='脚本 finally 删除本次随机 echocase_lab_ 数据库；开发数据库不被清空。'
     elif selector=='reliability':cleanup='finally 启动被停止的 echocase-postgres；脚本非零时先检查容器与 ready，保留失败证据。'
@@ -98,6 +108,7 @@ for id,title,question,mechanism,selector,design,observation,limits,source in spe
     appendix.append(doc.replace(f'# {id} {title}',f'## {id} {title}').replace('\n## ','\n### '))
     artifacts=[]
     if p.is_file():artifacts=[{'path':artifact,'sha256':hashlib.sha256(p.read_bytes().replace(b'\r\n',b'\n') if p.suffix in ('.json','.trx','.txt','.md') else p.read_bytes()).hexdigest()}]
+    if id=='E15':artifacts.append({'path':'evidence/database/plan-summary.json','sha256':hashlib.sha256((root/'evidence/database/plan-summary.json').read_bytes().replace(b'\r\n',b'\n')).hexdigest()})
     experiments.append({'id':id,'title':title,'status':status,'source':source,'selector':selector,'artifacts':artifacts})
 (root/'evidence/manifest.json').write_text(json.dumps({'hash_policy':'SHA-256; text CRLF normalized to LF','experiments':experiments},ensure_ascii=False,indent=2),encoding='utf-8')
 (root/'manual/chapters/19-labs.md').write_text('\n\n'.join(appendix),encoding='utf-8');print('Generated',len(experiments),'experiment records')

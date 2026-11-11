@@ -1,0 +1,8 @@
+{
+  "before_tree": "Limit (rows=20, loops=1)\n  Sort (rows=20, loops=1)\n    Seq Scan (rows=20, loops=1)",
+  "before_blocks": 3125,
+  "before_execution_ms": 16.611,
+  "after_tree": "Limit (rows=20, loops=1)\n  Sort (rows=20, loops=1)\n    Bitmap Heap Scan (rows=20, loops=1)\n      Bitmap Index Scan on ix_timeline_owner_time (rows=20, loops=1)",
+  "after_blocks": 23,
+  "after_execution_ms": 0.37
+}

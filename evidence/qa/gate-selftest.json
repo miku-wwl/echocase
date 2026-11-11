@@ -7,7 +7,7 @@
       "exit_code": 1,
       "diagnostics": [
         "E24: missing evidence/backup/results.json",
-        "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\weila\\\\AppData\\\\Local\\\\Temp\\\\echocase_gate_larwrn60\\\\evidence\\\\backup\\\\results.json'"
+        "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\weila\\\\AppData\\\\Local\\\\Temp\\\\echocase_gate_e_fk4m6k\\\\evidence\\\\backup\\\\results.json'"
       ]
     },
     {
@@ -44,7 +44,7 @@
       "case": "missing_answer",
       "exit_code": 1,
       "diagnostics": [
-        "Exercise/answer set incomplete 1"
+        "Exercise/answer missing 1-B"
       ]
     },
     {
