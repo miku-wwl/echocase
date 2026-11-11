@@ -1,6 +1,6 @@
 # Jason Taylor CleanArchitecture 与 EchoCase：固定源码的取舍审查
 
-审查对象为上游提交 [`e1ab4cc4d5d7b4e25e57bd8b0514b766573b8c04`](https://github.com/jasontaylordev/CleanArchitecture/tree/e1ab4cc4d5d7b4e25e57bd8b0514b766573b8c04)。本地逐文件阅读路径为 `work/upstream-cleanarchitecture`；其源文件摘要见[历史审查记录](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/evidence/phase2a/upstream-source.json)。这是源码机制比较，没有运行上游模板测试，也没有将其 Todo 业务复制进 EchoCase。
+审查对象为上游提交 [`e1ab4cc4d5d7b4e25e57bd8b0514b766573b8c04`](https://github.com/jasontaylordev/CleanArchitecture/tree/e1ab4cc4d5d7b4e25e57bd8b0514b766573b8c04)。历史审查逐文件阅读了固定提交；其源文件摘要见[历史审查记录](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/evidence/phase2a/upstream-source.json)。这是源码机制比较，没有运行上游模板测试，也没有将其 Todo 业务复制进 EchoCase。
 
 ## 一次修改请求经过什么
 

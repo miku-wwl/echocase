@@ -16,8 +16,8 @@
 | 边界反例 | VERIFIED | 临时副本中生产引用测试、生产NUnit包、C#测试import、前端fixture import均拒绝；恢复后通过 |
 | 实际应用查询工具 | VERIFIED | 迁入测试区的QueryProbe执行成功；真实Store取50调查，临时库已清理。不作性能SLA |
 | 业务/数据兼容 | VERIFIED | src与frontend/src相对基线无差异，包括三条EF迁移；旧数据/回执、版本/幂等/授权和草稿仍受原有检查保护 |
-| 历史保留 | VERIFIED（本地对象） | 原分支指向63c5872，旧交付脚本与PDF对象存在；最终再核对远程引用 |
-| 最终提交应用CI | NOT_RUN（提交前快照） | 本地验证已完成；必须观察最终推送SHA的application-ci，交接补充实际运行引用，不用早期运行替代 |
+| 历史保留 | VERIFIED | 本地与远程原分支均为63c5872，旧脚本/PDF对象存在；远程main仍为3395678 |
+| 应用CI工程检查点 | VERIFIED | [42986911612](https://github.com/miku-wwl/echocase/actions/runs/42986911612)在ba2f1dd完整通过；26单元/22集成/9浏览器、合同与实际产物隔离均通过。验收材料提交后再核对最终分支头CI |
 
 这些数量描述保留下来的检查，没有增加业务测试总量。E2E只经过公共接口；Unit与Integration没有彼此引用。可选QueryProbe不在默认CI运行。云/运维或PDF工具不参与构建。
 
@@ -33,6 +33,13 @@ PARTIAL：教材源已收窄并重绑路径，深入讲解/插图/最终编辑�
 
 BLOCKED：当前没有需要所有者处理的阻断。
 
-NOT_RUN：未重新生成PDF，未执行历史环境/运维实验，未执行上游模板全套测试；这些均不是当前DoD。最终提交CI在观察成功前不标VERIFIED。
+NOT_RUN：未重新生成PDF，未执行历史环境/运维实验，未执行上游模板全套测试；这些均不是当前DoD。最终分支头CI仍须按匹配SHA单独核验。
 
 [开发](DEVELOPMENT.md)、[独立测试与产物检查](TESTING.md)、[当前实验](EXPERIMENTS.md)、[2B清单](PUBLICATION-INVENTORY.md)给出复现与继续学习入口。最终交接应同时给出源SHA、匹配CI和当前工作区状态。
+
+
+## 交接检查点
+
+工程源检查点为ba2f1dd68ff7afdd94a2a4ec6064a2d50bf0983f；对应application-ci已通过，下载实际TRX和浏览器JSON再次核对。当前只保留这一条工作流，所有旧部署/出版步骤已退役。最终交接另列验收材料提交的完整SHA与匹配绿灯，不用此检查点代替最终提交结果。
+
+旧的忽略构建缓存已可逆移到work/application-restructure/retired-generated，避免源码根目录残留旧experiments/tools和混合测试目录；没有删除用户业务数据。
