@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/.venv/
+**/test-results/
+**/playwright-report/
+frontend/dist/
+src/EchoCase.Api/wwwroot/
+work/
+manual/build/
+.env
+*.user
+*.log.tmp

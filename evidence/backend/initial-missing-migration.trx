@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="fdc5e9fa-0b81-4b84-a319-172f8ea26396" name="weila@JIEJIE 2026-11-11 15:46:30" runUser="JIEJIE\weila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-11T15:46:30.9440808+13:00" queuing="2026-11-11T15:46:30.9440815+13:00" start="2026-11-11T15:46:28.8274546+13:00" finish="2026-11-11T15:46:36.2039449+13:00" />
+  <TestSettings name="default" id="72fb2887-fe87-43b0-abe1-d11e0df298e7">
+    <Deployment runDeploymentRoot="weila_JIEJIE_2026-11-11_15_46_30" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2d132c40-757e-4a68-8c07-d386880cfed8" testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" testName="IfMatchAndIdempotencyHeadersAreRequired" computerName="JIEJIE" duration="00:00:04.9501510" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805163+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d132c40-757e-4a68-8c07-d386880cfed8">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="efeec3b2-2ab6-4255-869b-d4ab4b493936" testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" testName="SameKeyConcurrentRequestsCommitOnce" computerName="JIEJIE" duration="00:00:04.9501580" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805234+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efeec3b2-2ab6-4255-869b-d4ab4b493936">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="78501531-1ab1-4ea9-a7a7-9bf041bdd0bd" testId="2fb1861a-26bd-931e-3161-4c069ee104ef" testName="ReplayingStartReturnsSameInvestigation" computerName="JIEJIE" duration="00:00:04.9501550" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805205+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78501531-1ab1-4ea9-a7a7-9bf041bdd0bd">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="063f43b1-d188-44eb-a797-226e8b62cb23" testId="65207adc-3232-7670-5d7a-162eac12cc22" testName="ReadinessIsRealDatabaseCheck" computerName="JIEJIE" duration="00:00:04.9501530" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805191+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="063f43b1-d188-44eb-a797-226e8b62cb23">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7c67b780-167a-49c3-81fe-e276709e8f24" testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" testName="DuplicateExaminationDoesNotAdvanceVersion" computerName="JIEJIE" duration="00:00:00.0134430" startTime="2026-11-11T15:46:30.7763413+13:00" endTime="2026-11-11T15:46:30.7897835+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c67b780-167a-49c3-81fe-e276709e8f24" />
+    <UnitTestResult executionId="4d07be13-0443-4de7-9ae3-e9fefec064e0" testId="c3532d08-d4e9-e922-e549-654ef074bc31" testName="DomainFailureRollsBackReceiptAndAudit" computerName="JIEJIE" duration="00:00:04.9501450" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805104+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d07be13-0443-4de7-9ae3-e9fefec064e0">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="79fe8866-a96f-4593-97e0-ff7e58cef6c1" testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" testName="ReviewHasMinimumEvidenceGate" computerName="JIEJIE" duration="00:00:00.0008090" startTime="2026-11-11T15:46:30.8095917+13:00" endTime="2026-11-11T15:46:30.8104011+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79fe8866-a96f-4593-97e0-ff7e58cef6c1" />
+    <UnitTestResult executionId="36aa436e-ac51-49e9-b8a9-dea85239be8f" testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" testName="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" computerName="JIEJIE" duration="00:00:04.9501480" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805134+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36aa436e-ac51-49e9-b8a9-dea85239be8f">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="77c497f1-7e4c-492f-8ce5-3723ddcbd04a" testId="10d84449-cf78-62b8-e17c-5ee31e78d710" testName="AlternativeVerdictIsPersistedWithLowerEvaluation" computerName="JIEJIE" duration="00:00:00.0286270" startTime="2026-11-11T15:46:30.7409265+13:00" endTime="2026-11-11T15:46:30.7693886+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77c497f1-7e4c-492f-8ce5-3723ddcbd04a" />
+    <UnitTestResult executionId="e4c788f9-7063-4f62-a879-3200e24a2dd8" testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" testName="ExaminingUnlocksOnlyItsSuccessor" computerName="JIEJIE" duration="00:00:00.0006570" startTime="2026-11-11T15:46:30.7922472+13:00" endTime="2026-11-11T15:46:30.7929037+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4c788f9-7063-4f62-a879-3200e24a2dd8" />
+    <UnitTestResult executionId="442d5758-b017-4b34-ab9d-3995a2a0a236" testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" testName="NotesLengthIsDomainInvariant" computerName="JIEJIE" duration="00:00:00.0013540" startTime="2026-11-11T15:46:30.7961925+13:00" endTime="2026-11-11T15:46:30.7975461+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="442d5758-b017-4b34-ab9d-3995a2a0a236" />
+    <UnitTestResult executionId="155047f7-0170-4be8-a6e2-fe7ecc405b85" testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" testName="InvalidTransitionCannotSkipReview" computerName="JIEJIE" duration="00:00:00.0008190" startTime="2026-11-11T15:46:30.7942550+13:00" endTime="2026-11-11T15:46:30.7950742+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="155047f7-0170-4be8-a6e2-fe7ecc405b85" />
+    <UnitTestResult executionId="754ee480-2545-4e8a-97de-dcd5dd51140e" testId="e6e3ed56-66db-1e5c-a519-35156a296af3" testName="CsrfIsRequiredEvenWithValidCookie" computerName="JIEJIE" duration="00:00:04.9501380" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805033+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="754ee480-2545-4e8a-97de-dcd5dd51140e">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0bc4844b-6b25-452a-8c56-38f9ea180aeb" testId="67625878-8f43-4a4c-5909-04d8366f78f9" testName="CoreHasNoFrameworkOrOutwardDependencies" computerName="JIEJIE" duration="00:00:00.0036720" startTime="2026-11-11T15:46:30.7725988+13:00" endTime="2026-11-11T15:46:30.7762719+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0bc4844b-6b25-452a-8c56-38f9ea180aeb" />
+    <UnitTestResult executionId="64c6ea29-e044-42b5-b94d-b14fce6e41e1" testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" testName="UndefinedEnumIsRejected" computerName="JIEJIE" duration="00:00:00.0006250" startTime="2026-11-11T15:46:30.8118482+13:00" endTime="2026-11-11T15:46:30.8124728+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64c6ea29-e044-42b5-b94d-b14fce6e41e1" />
+    <UnitTestResult executionId="4e730131-2aaa-4d50-9075-971c99d82b57" testId="34462801-bef0-6342-0757-de27491a6769" testName="StaleVersionDoesNotWriteOrCacheFailure" computerName="JIEJIE" duration="00:00:04.9501590" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805248+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e730131-2aaa-4d50-9075-971c99d82b57">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8928c13d-b7c9-451a-a365-869fb1a88aff" testId="382b7729-23fb-4910-9311-27c5c679daf9" testName="ReusedKeyWithChangedPayloadIsConflict" computerName="JIEJIE" duration="00:00:04.9501560" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805220+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8928c13d-b7c9-451a-a365-869fb1a88aff">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0858db61-e3db-40ce-bde2-af0c51e03e03" testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" testName="LinkRequiresBothDiscoveredEndpoints" computerName="JIEJIE" duration="00:00:00.0006489" startTime="2026-11-11T15:46:30.7952966+13:00" endTime="2026-11-11T15:46:30.7959456+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0858db61-e3db-40ce-bde2-af0c51e03e03" />
+    <UnitTestResult executionId="b08b8434-3e48-4b8f-899f-db93fb9911bc" testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" testName="UnexaminedBodiesAreAbsentFromProjection" computerName="JIEJIE" duration="00:00:00.0075510" startTime="2026-11-11T15:46:30.8125006+13:00" endTime="2026-11-11T15:46:30.8200507+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b08b8434-3e48-4b8f-899f-db93fb9911bc" />
+    <UnitTestResult executionId="683347a1-788f-468a-b970-f3d02ff21135" testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" testName="ReversedPairIsDuplicateEvenWithOtherKind" computerName="JIEJIE" duration="00:00:00.0012460" startTime="2026-11-11T15:46:30.8008890+13:00" endTime="2026-11-11T15:46:30.8021348+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="683347a1-788f-468a-b970-f3d02ff21135" />
+    <UnitTestResult executionId="064fcf4e-bc17-4a2e-b1ce-13e8e01f2720" testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" testName="TraceAndSecurityHeadersArePresent" computerName="JIEJIE" duration="00:00:04.9501609" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805262+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="064fcf4e-bc17-4a2e-b1ce-13e8e01f2720">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="634dce09-6aeb-48a0-98b0-7ea398eecc4b" testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" testName="HiddenEvidenceBodyNeverLeaks" computerName="JIEJIE" duration="00:00:04.9501490" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805148+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="634dce09-6aeb-48a0-98b0-7ea398eecc4b">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c4c151d9-b0da-4741-a243-179b5fa344c6" testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" testName="UnknownCaseIsRejected" computerName="JIEJIE" duration="00:00:00.0007670" startTime="2026-11-11T15:46:30.8217301+13:00" endTime="2026-11-11T15:46:30.8224965+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4c151d9-b0da-4741-a243-179b5fa344c6" />
+    <UnitTestResult executionId="6febc4bb-80c1-4fb0-a690-1a664f0904b9" testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" testName="AuthenticationRateLimitActuallyRejectsBurst" computerName="JIEJIE" duration="00:00:04.9501090" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7804742+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6febc4bb-80c1-4fb0-a690-1a664f0904b9">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cf4f18db-021d-41ce-9bf2-514fc3f4452e" testId="c0dc21e5-e796-1b2d-17f9-dde218332706" testName="DatabaseRejectsLinkToUndiscoveredEvidence" computerName="JIEJIE" duration="00:00:04.9501390" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805050+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf4f18db-021d-41ce-9bf2-514fc3f4452e">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3028937d-11db-4321-8427-5ec73fa2e05c" testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" testName="ForeignOwnerCannotReadOrWrite" computerName="JIEJIE" duration="00:00:04.9501460" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805119+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3028937d-11db-4321-8427-5ec73fa2e05c">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3372d934-60ca-4ad0-a6c4-7710663211d0" testId="790029ff-be30-cb3d-40f4-18941957ab32" testName="RemoveLinkChangesVersionAndReadiness" computerName="JIEJIE" duration="00:00:00.0025880" startTime="2026-11-11T15:46:30.7980636+13:00" endTime="2026-11-11T15:46:30.8006513+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3372d934-60ca-4ad0-a6c4-7710663211d0" />
+    <UnitTestResult executionId="30dde1c7-4d06-421b-a33e-79df0cf4d2b8" testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" testName="HiddenEvidenceCannotBeExamined" computerName="JIEJIE" duration="00:00:00.0010330" startTime="2026-11-11T15:46:30.7929344+13:00" endTime="2026-11-11T15:46:30.7939663+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30dde1c7-4d06-421b-a33e-79df0cf4d2b8" />
+    <UnitTestResult executionId="2b6c2c56-f4c5-43cf-bdb0-be83c2b0676e" testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" testName="DifferentKeysCompetingOnOneVersionHaveOneWinner" computerName="JIEJIE" duration="00:00:04.9501430" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805086+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b6c2c56-f4c5-43cf-bdb0-be83c2b0676e">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7396731b-6521-42e7-bb69-3c27ad187ed5" testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" testName="MalformedAndNullContractsAreRejected" computerName="JIEJIE" duration="00:00:04.9501520" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805176+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7396731b-6521-42e7-bb69-3c27ad187ed5">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="809c21d5-9b93-468a-98bc-dbfd3862a990" testId="9a139626-8b95-6e27-d28a-106dcc03b348" testName="AnonymousCannotReadCases" computerName="JIEJIE" duration="00:00:04.9501350" startTime="2026-11-11T15:46:30.8303646+13:00" endTime="2026-11-11T15:46:35.7805006+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="809c21d5-9b93-468a-98bc-dbfd3862a990">
+      <Output>
+        <ErrorInfo>
+          <Message>OneTimeSetUp:   {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+</Message>
+          <StackTrace>   at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="44f83b9d-07a2-4087-af6e-cb23deeb1be0" testId="edeac40e-5d64-460f-491d-3eaacf4c8089" testName="VerdictIsDeterministicAndSubmittedIsTerminal" computerName="JIEJIE" duration="00:00:00.0018730" startTime="2026-11-11T15:46:30.8227548+13:00" endTime="2026-11-11T15:46:30.8246273+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44f83b9d-07a2-4087-af6e-cb23deeb1be0" />
+    <UnitTestResult executionId="d0b98c2c-be2e-42ed-83ae-7243bd0348a7" testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" testName="StartRequiresOwner" computerName="JIEJIE" duration="00:00:00.0005419" startTime="2026-11-11T15:46:30.8112815+13:00" endTime="2026-11-11T15:46:30.8118233+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0b98c2c-be2e-42ed-83ae-7243bd0348a7" />
+    <UnitTestResult executionId="7ce8b53d-920f-4725-82ef-072ddb27b369" testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" testName="SelfLinkIsRejected" computerName="JIEJIE" duration="00:00:00.0006630" startTime="2026-11-11T15:46:30.8104316+13:00" endTime="2026-11-11T15:46:30.8110940+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ce8b53d-920f-4725-82ef-072ddb27b369" />
+    <UnitTestResult executionId="127d59fa-d4d0-4264-9117-50297bd37adc" testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" testName="DuplicateSupportCannotSatisfyMinimum" computerName="JIEJIE" duration="00:00:00.0016230" startTime="2026-11-11T15:46:30.7904915+13:00" endTime="2026-11-11T15:46:30.7921143+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="127d59fa-d4d0-4264-9117-50297bd37adc" />
+    <UnitTestResult executionId="0c59aaa8-6712-4cf0-acf4-956a863fcd91" testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" testName="UnexaminedSupportIsRejected" computerName="JIEJIE" duration="00:00:00.0012170" startTime="2026-11-11T15:46:30.8202883+13:00" endTime="2026-11-11T15:46:30.8215054+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c59aaa8-6712-4cf0-acf4-956a863fcd91" />
+    <UnitTestResult executionId="8aa802ac-705f-4e24-8885-682e216a9a6d" testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" testName="ReviewFreezesWritesUntilResume" computerName="JIEJIE" duration="00:00:00.0047890" startTime="2026-11-11T15:46:30.8023188+13:00" endTime="2026-11-11T15:46:30.8071072+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8aa802ac-705f-4e24-8885-682e216a9a6d" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ForeignOwnerCannotReadOrWrite" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e22b9cd5-1c4e-2e97-ac85-697b429ddc63">
+      <Execution id="3028937d-11db-4321-8427-5ec73fa2e05c" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ForeignOwnerCannotReadOrWrite" />
+    </UnitTest>
+    <UnitTest name="RemoveLinkChangesVersionAndReadiness" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="790029ff-be30-cb3d-40f4-18941957ab32">
+      <Execution id="3372d934-60ca-4ad0-a6c4-7710663211d0" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="RemoveLinkChangesVersionAndReadiness" />
+    </UnitTest>
+    <UnitTest name="DatabaseRejectsLinkToUndiscoveredEvidence" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="c0dc21e5-e796-1b2d-17f9-dde218332706">
+      <Execution id="cf4f18db-021d-41ce-9bf2-514fc3f4452e" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DatabaseRejectsLinkToUndiscoveredEvidence" />
+    </UnitTest>
+    <UnitTest name="AuthenticationRateLimitActuallyRejectsBurst" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3">
+      <Execution id="6febc4bb-80c1-4fb0-a690-1a664f0904b9" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="AuthenticationRateLimitActuallyRejectsBurst" />
+    </UnitTest>
+    <UnitTest name="SameKeyConcurrentRequestsCommitOnce" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="fae69e35-bcaf-3328-d45b-8aee20bdac7a">
+      <Execution id="efeec3b2-2ab6-4255-869b-d4ab4b493936" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="SameKeyConcurrentRequestsCommitOnce" />
+    </UnitTest>
+    <UnitTest name="HiddenEvidenceCannotBeExamined" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="ad48b6fe-6f9c-560e-c9e6-86894dd8b679">
+      <Execution id="30dde1c7-4d06-421b-a33e-79df0cf4d2b8" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="HiddenEvidenceCannotBeExamined" />
+    </UnitTest>
+    <UnitTest name="DuplicateExaminationDoesNotAdvanceVersion" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="f8f8296f-94ff-3adb-0562-5b6d1cac2252">
+      <Execution id="7c67b780-167a-49c3-81fe-e276709e8f24" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="DuplicateExaminationDoesNotAdvanceVersion" />
+    </UnitTest>
+    <UnitTest name="UnexaminedBodiesAreAbsentFromProjection" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="bf874d4a-6ada-e4a0-fe1f-243856dfcc67">
+      <Execution id="b08b8434-3e48-4b8f-899f-db93fb9911bc" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnexaminedBodiesAreAbsentFromProjection" />
+    </UnitTest>
+    <UnitTest name="UnexaminedSupportIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="8e6e7c4d-dd68-422a-9495-6ed11647bbe2">
+      <Execution id="0c59aaa8-6712-4cf0-acf4-956a863fcd91" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnexaminedSupportIsRejected" />
+    </UnitTest>
+    <UnitTest name="ReusedKeyWithChangedPayloadIsConflict" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="382b7729-23fb-4910-9311-27c5c679daf9">
+      <Execution id="8928c13d-b7c9-451a-a365-869fb1a88aff" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReusedKeyWithChangedPayloadIsConflict" />
+    </UnitTest>
+    <UnitTest name="IfMatchAndIdempotencyHeadersAreRequired" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="5eaa222e-0ca6-757a-c5a1-31dbc19d6725">
+      <Execution id="2d132c40-757e-4a68-8c07-d386880cfed8" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="IfMatchAndIdempotencyHeadersAreRequired" />
+    </UnitTest>
+    <UnitTest name="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="8aecf5d7-6106-f284-2148-32d47cbe4d09">
+      <Execution id="36aa436e-ac51-49e9-b8a9-dea85239be8f" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" />
+    </UnitTest>
+    <UnitTest name="ExaminingUnlocksOnlyItsSuccessor" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f">
+      <Execution id="e4c788f9-7063-4f62-a879-3200e24a2dd8" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ExaminingUnlocksOnlyItsSuccessor" />
+    </UnitTest>
+    <UnitTest name="CsrfIsRequiredEvenWithValidCookie" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e6e3ed56-66db-1e5c-a519-35156a296af3">
+      <Execution id="754ee480-2545-4e8a-97de-dcd5dd51140e" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="CsrfIsRequiredEvenWithValidCookie" />
+    </UnitTest>
+    <UnitTest name="TraceAndSecurityHeadersArePresent" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="0ea6673f-bc13-09be-95ed-dfb72a92d762">
+      <Execution id="064fcf4e-bc17-4a2e-b1ce-13e8e01f2720" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="TraceAndSecurityHeadersArePresent" />
+    </UnitTest>
+    <UnitTest name="StaleVersionDoesNotWriteOrCacheFailure" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="34462801-bef0-6342-0757-de27491a6769">
+      <Execution id="4e730131-2aaa-4d50-9075-971c99d82b57" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="StaleVersionDoesNotWriteOrCacheFailure" />
+    </UnitTest>
+    <UnitTest name="UndefinedEnumIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1ab9c201-2ba9-83e4-fc6b-aed959259b9d">
+      <Execution id="64c6ea29-e044-42b5-b94d-b14fce6e41e1" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UndefinedEnumIsRejected" />
+    </UnitTest>
+    <UnitTest name="VerdictIsDeterministicAndSubmittedIsTerminal" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="edeac40e-5d64-460f-491d-3eaacf4c8089">
+      <Execution id="44f83b9d-07a2-4087-af6e-cb23deeb1be0" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="VerdictIsDeterministicAndSubmittedIsTerminal" />
+    </UnitTest>
+    <UnitTest name="StartRequiresOwner" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="22563811-cf8b-3890-9b3b-51b6c6b2246f">
+      <Execution id="d0b98c2c-be2e-42ed-83ae-7243bd0348a7" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="StartRequiresOwner" />
+    </UnitTest>
+    <UnitTest name="InvalidTransitionCannotSkipReview" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="312e4d37-42ea-f8de-a4c0-6d009ccaa390">
+      <Execution id="155047f7-0170-4be8-a6e2-fe7ecc405b85" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="InvalidTransitionCannotSkipReview" />
+    </UnitTest>
+    <UnitTest name="DifferentKeysCompetingOnOneVersionHaveOneWinner" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e8dc213d-49c9-3fe8-befd-5e161d6dfef7">
+      <Execution id="2b6c2c56-f4c5-43cf-bdb0-be83c2b0676e" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DifferentKeysCompetingOnOneVersionHaveOneWinner" />
+    </UnitTest>
+    <UnitTest name="ReplayingStartReturnsSameInvestigation" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="2fb1861a-26bd-931e-3161-4c069ee104ef">
+      <Execution id="78501531-1ab1-4ea9-a7a7-9bf041bdd0bd" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReplayingStartReturnsSameInvestigation" />
+    </UnitTest>
+    <UnitTest name="ReadinessIsRealDatabaseCheck" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="65207adc-3232-7670-5d7a-162eac12cc22">
+      <Execution id="063f43b1-d188-44eb-a797-226e8b62cb23" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReadinessIsRealDatabaseCheck" />
+    </UnitTest>
+    <UnitTest name="SelfLinkIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8">
+      <Execution id="7ce8b53d-920f-4725-82ef-072ddb27b369" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="SelfLinkIsRejected" />
+    </UnitTest>
+    <UnitTest name="HiddenEvidenceBodyNeverLeaks" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="fbefd099-e5f1-1535-41ce-53fa535d79ad">
+      <Execution id="634dce09-6aeb-48a0-98b0-7ea398eecc4b" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="HiddenEvidenceBodyNeverLeaks" />
+    </UnitTest>
+    <UnitTest name="AlternativeVerdictIsPersistedWithLowerEvaluation" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="10d84449-cf78-62b8-e17c-5ee31e78d710">
+      <Execution id="77c497f1-7e4c-492f-8ce5-3723ddcbd04a" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="AlternativeVerdictIsPersistedWithLowerEvaluation" />
+    </UnitTest>
+    <UnitTest name="AnonymousCannotReadCases" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="9a139626-8b95-6e27-d28a-106dcc03b348">
+      <Execution id="809c21d5-9b93-468a-98bc-dbfd3862a990" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="AnonymousCannotReadCases" />
+    </UnitTest>
+    <UnitTest name="CoreHasNoFrameworkOrOutwardDependencies" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="67625878-8f43-4a4c-5909-04d8366f78f9">
+      <Execution id="0bc4844b-6b25-452a-8c56-38f9ea180aeb" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="CoreHasNoFrameworkOrOutwardDependencies" />
+    </UnitTest>
+    <UnitTest name="ReviewFreezesWritesUntilResume" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6">
+      <Execution id="8aa802ac-705f-4e24-8885-682e216a9a6d" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReviewFreezesWritesUntilResume" />
+    </UnitTest>
+    <UnitTest name="DomainFailureRollsBackReceiptAndAudit" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="c3532d08-d4e9-e922-e549-654ef074bc31">
+      <Execution id="4d07be13-0443-4de7-9ae3-e9fefec064e0" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DomainFailureRollsBackReceiptAndAudit" />
+    </UnitTest>
+    <UnitTest name="ReviewHasMinimumEvidenceGate" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d">
+      <Execution id="79fe8866-a96f-4593-97e0-ff7e58cef6c1" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReviewHasMinimumEvidenceGate" />
+    </UnitTest>
+    <UnitTest name="ReversedPairIsDuplicateEvenWithOtherKind" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec">
+      <Execution id="683347a1-788f-468a-b970-f3d02ff21135" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReversedPairIsDuplicateEvenWithOtherKind" />
+    </UnitTest>
+    <UnitTest name="DuplicateSupportCannotSatisfyMinimum" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="4f37a56b-5585-4246-7d00-8eeb76b818ec">
+      <Execution id="127d59fa-d4d0-4264-9117-50297bd37adc" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="DuplicateSupportCannotSatisfyMinimum" />
+    </UnitTest>
+    <UnitTest name="MalformedAndNullContractsAreRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67">
+      <Execution id="7396731b-6521-42e7-bb69-3c27ad187ed5" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="MalformedAndNullContractsAreRejected" />
+    </UnitTest>
+    <UnitTest name="NotesLengthIsDomainInvariant" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="f3eeab25-7a17-435c-26b9-9b4b59b0de54">
+      <Execution id="442d5758-b017-4b34-ab9d-3995a2a0a236" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="NotesLengthIsDomainInvariant" />
+    </UnitTest>
+    <UnitTest name="UnknownCaseIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="d42308dd-c307-5f8b-2a62-2decedb1ffba">
+      <Execution id="c4c151d9-b0da-4741-a243-179b5fa344c6" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnknownCaseIsRejected" />
+    </UnitTest>
+    <UnitTest name="LinkRequiresBothDiscoveredEndpoints" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="4ef4d73e-c210-cb93-d885-72ce689cc7df">
+      <Execution id="0858db61-e3db-40ce-bde2-af0c51e03e03" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="LinkRequiresBothDiscoveredEndpoints" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" executionId="2d132c40-757e-4a68-8c07-d386880cfed8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" executionId="efeec3b2-2ab6-4255-869b-d4ab4b493936" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2fb1861a-26bd-931e-3161-4c069ee104ef" executionId="78501531-1ab1-4ea9-a7a7-9bf041bdd0bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65207adc-3232-7670-5d7a-162eac12cc22" executionId="063f43b1-d188-44eb-a797-226e8b62cb23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" executionId="7c67b780-167a-49c3-81fe-e276709e8f24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3532d08-d4e9-e922-e549-654ef074bc31" executionId="4d07be13-0443-4de7-9ae3-e9fefec064e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" executionId="79fe8866-a96f-4593-97e0-ff7e58cef6c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" executionId="36aa436e-ac51-49e9-b8a9-dea85239be8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10d84449-cf78-62b8-e17c-5ee31e78d710" executionId="77c497f1-7e4c-492f-8ce5-3723ddcbd04a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" executionId="e4c788f9-7063-4f62-a879-3200e24a2dd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" executionId="442d5758-b017-4b34-ab9d-3995a2a0a236" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" executionId="155047f7-0170-4be8-a6e2-fe7ecc405b85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6e3ed56-66db-1e5c-a519-35156a296af3" executionId="754ee480-2545-4e8a-97de-dcd5dd51140e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67625878-8f43-4a4c-5909-04d8366f78f9" executionId="0bc4844b-6b25-452a-8c56-38f9ea180aeb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" executionId="64c6ea29-e044-42b5-b94d-b14fce6e41e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34462801-bef0-6342-0757-de27491a6769" executionId="4e730131-2aaa-4d50-9075-971c99d82b57" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="382b7729-23fb-4910-9311-27c5c679daf9" executionId="8928c13d-b7c9-451a-a365-869fb1a88aff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" executionId="0858db61-e3db-40ce-bde2-af0c51e03e03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" executionId="b08b8434-3e48-4b8f-899f-db93fb9911bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" executionId="683347a1-788f-468a-b970-f3d02ff21135" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" executionId="064fcf4e-bc17-4a2e-b1ce-13e8e01f2720" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" executionId="634dce09-6aeb-48a0-98b0-7ea398eecc4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" executionId="c4c151d9-b0da-4741-a243-179b5fa344c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" executionId="6febc4bb-80c1-4fb0-a690-1a664f0904b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0dc21e5-e796-1b2d-17f9-dde218332706" executionId="cf4f18db-021d-41ce-9bf2-514fc3f4452e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" executionId="3028937d-11db-4321-8427-5ec73fa2e05c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="790029ff-be30-cb3d-40f4-18941957ab32" executionId="3372d934-60ca-4ad0-a6c4-7710663211d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" executionId="30dde1c7-4d06-421b-a33e-79df0cf4d2b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" executionId="2b6c2c56-f4c5-43cf-bdb0-be83c2b0676e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" executionId="7396731b-6521-42e7-bb69-3c27ad187ed5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a139626-8b95-6e27-d28a-106dcc03b348" executionId="809c21d5-9b93-468a-98bc-dbfd3862a990" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edeac40e-5d64-460f-491d-3eaacf4c8089" executionId="44f83b9d-07a2-4087-af6e-cb23deeb1be0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" executionId="d0b98c2c-be2e-42ed-83ae-7243bd0348a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" executionId="7ce8b53d-920f-4725-82ef-072ddb27b369" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" executionId="127d59fa-d4d0-4264-9117-50297bd37adc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" executionId="0c59aaa8-6712-4cf0-acf4-956a863fcd91" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" executionId="8aa802ac-705f-4e24-8885-682e216a9a6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="37" executed="37" passed="20" failed="17" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 6.3.1.0: Test execution started&#xD;
+Running all tests in D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll&#xD;
+   NUnit3TestExecutor discovered 37 of 37 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="JIEJIE" outcome="Error" timestamp="2026-11-11T15:46:35.9719826+13:00">
+        <Text>Setup failed for test fixture EchoCase.Tests.PostgresApiTests</Text>
+      </RunInfo>
+      <RunInfo computerName="JIEJIE" outcome="Error" timestamp="2026-11-11T15:46:35.9724279+13:00">
+        <Text>  {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.4","title":"database_unavailable","status":503,"detail":"数据服务暂不可用。请稍后重试。","traceId":"00-f730af50381c367636b24f83ddd6eb05-c4ceda14402a01bc-00"}&#xD;
+Assert.That(register.StatusCode, Is.EqualTo(HttpStatusCode.OK))&#xD;
+  Expected: OK&#xD;
+  But was:  ServiceUnavailable&#xD;
+
+StackTrace:    at EchoCase.Tests.PostgresApiTests.User(String name) in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 49&#xD;
+   at EchoCase.Tests.PostgresApiTests.Setup() in D:\workshop\nov\echocase\tests\EchoCase.Tests\PostgresApiTests.cs:line 33&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
