@@ -51,6 +51,26 @@ def render(pdf,out):
         sheet.save(out/f'sheet-{offset//6+1:02}.jpg',quality=90)
     print(f'Rendered {len(doc)} pages; {(len(doc)+5)//6} contact sheets')
 
+def links(pdf,out):
+    reader=PdfReader(pdf);page_ids={p.indirect_reference.idnum:n+1 for n,p in enumerate(reader.pages)};internal=external=0;issues=[]
+    for n,page in enumerate(reader.pages):
+        for ref in page.get('/Annots',[]):
+            a=ref.get_object()
+            if a.get('/Subtype')!='/Link':continue
+            action=a.get('/A',{});dest=a.get('/Dest') or action.get('/D')
+            if dest is not None:
+                if isinstance(dest,list):valid=getattr(dest[0],'idnum',None) in page_ids
+                else:valid=str(dest) in reader.named_destinations
+                if not valid:issues.append({'page':n+1,'kind':'unresolved_internal_destination'})
+                internal+=1
+            elif action.get('/URI'):
+                uri=str(action['/URI']);external+=1
+                if not uri.startswith(('https://','http://','mailto:')):issues.append({'page':n+1,'kind':'nonportable_uri','uri':uri})
+            else:issues.append({'page':n+1,'kind':'empty_link'})
+    if internal==0:issues.append({'kind':'no_internal_navigation'})
+    result={'pages':len(reader.pages),'internal_links':internal,'external_links':external,'issues':issues};Path(out).write_text(json.dumps(result,indent=2),encoding='utf-8');print(json.dumps(result));
+    if issues:raise SystemExit(1)
+
 if __name__=='__main__':
     mode,*args=sys.argv[1:]
     if mode=='toc':
@@ -59,4 +79,5 @@ if __name__=='__main__':
         first,final,headings,numbers=args;assert len(PdfReader(first).pages)==len(PdfReader(final).pages),'Pagination changed between passes';assert mapping(final,json.loads(Path(headings).read_text(encoding='utf-8')))==json.loads(Path(numbers).read_text(encoding='utf-8')),'TOC targets changed';print('TOC page numbers stable')
     elif mode=='layout':layout(*args)
     elif mode=='render':render(*args)
+    elif mode=='links':links(*args)
     else:raise SystemExit('Unknown mode')

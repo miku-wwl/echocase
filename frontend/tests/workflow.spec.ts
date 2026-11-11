@@ -74,6 +74,7 @@ test("five business modules: real browser → ASP.NET → PostgreSQL", async ({
   await graphLink(page, "access-log", "badge-ledger");
   await graphLink(page, "badge-ledger", "dispatch");
   await page.screenshot({ path: `${evidence}/04-graph.png`, fullPage: true });
+  await page.locator('.graph-panel').screenshot({path:`${evidence}/09-graph-detail.png`});
   await page.getByRole("tab", { name: "调查笔记" }).click();
   await page
     .getByLabel("调查笔记", { exact: true })
@@ -141,6 +142,7 @@ test("injected 503: optimistic note cache rolls back and draft survives", async 
     path: `${evidence}/06-rollback.png`,
     fullPage: true,
   });
+  await page.locator('.writing-panel').screenshot({path:`${evidence}/10-rollback-detail.png`});
   await page.unroute("**/api/investigations/*/notes");
   await page.getByRole("button", { name: "保存笔记" }).click();
   await expect(page.getByRole("status")).toHaveText("笔记已保存到档案。");

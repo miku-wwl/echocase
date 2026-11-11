@@ -1,5 +1,5 @@
 {
-  "pages": 98,
+  "pages": 97,
   "issues": [],
   "page_metrics": [
     {
@@ -184,18 +184,18 @@
     },
     {
       "page": 37,
-      "characters": 407,
-      "bottom": 700.9
+      "characters": 712,
+      "bottom": 784.3
     },
     {
       "page": 38,
-      "characters": 1887,
-      "bottom": 726.4
+      "characters": 1841,
+      "bottom": 781.8
     },
     {
       "page": 39,
-      "characters": 1021,
-      "bottom": 689.4
+      "characters": 762,
+      "bottom": 505.7
     },
     {
       "page": 40,
@@ -244,251 +244,246 @@
     },
     {
       "page": 49,
-      "characters": 530,
-      "bottom": 367.9
+      "characters": 595,
+      "bottom": 725.8
     },
     {
       "page": 50,
-      "characters": 374,
-      "bottom": 640.1
-    },
-    {
-      "page": 51,
-      "characters": 353,
-      "bottom": 193.7
-    },
-    {
-      "page": 52,
-      "characters": 413,
-      "bottom": 774.6
-    },
-    {
-      "page": 53,
-      "characters": 967,
-      "bottom": 679.9
-    },
-    {
-      "page": 54,
-      "characters": 548,
+      "characters": 622,
       "bottom": 358.7
     },
     {
-      "page": 55,
-      "characters": 877,
-      "bottom": 727.9
+      "page": 51,
+      "characters": 525,
+      "bottom": 739.1
     },
     {
-      "page": 56,
+      "page": 52,
+      "characters": 1078,
+      "bottom": 760.1
+    },
+    {
+      "page": 53,
+      "characters": 327,
+      "bottom": 193.7
+    },
+    {
+      "page": 54,
+      "characters": 877,
+      "bottom": 727.8
+    },
+    {
+      "page": 55,
       "characters": 1003,
       "bottom": 716.6
     },
     {
-      "page": 57,
+      "page": 56,
       "characters": 358,
       "bottom": 193.7
     },
     {
-      "page": 58,
+      "page": 57,
       "characters": 962,
       "bottom": 782.6
     },
     {
-      "page": 59,
+      "page": 58,
       "characters": 939,
       "bottom": 715.1
     },
     {
-      "page": 60,
+      "page": 59,
       "characters": 324,
       "bottom": 193.7
     },
     {
-      "page": 61,
+      "page": 60,
       "characters": 778,
       "bottom": 667.9
     },
     {
-      "page": 62,
+      "page": 61,
       "characters": 870,
       "bottom": 742.9
     },
     {
-      "page": 63,
+      "page": 62,
       "characters": 563,
       "bottom": 358.7
     },
     {
-      "page": 64,
+      "page": 63,
       "characters": 930,
       "bottom": 751.1
     },
     {
-      "page": 65,
+      "page": 64,
       "characters": 1060,
       "bottom": 757.1
     },
     {
-      "page": 66,
+      "page": 65,
       "characters": 366,
       "bottom": 255.9
     },
     {
-      "page": 67,
+      "page": 66,
       "characters": 774,
       "bottom": 683.2
     },
     {
-      "page": 68,
+      "page": 67,
       "characters": 973,
       "bottom": 716.6
     },
     {
-      "page": 69,
+      "page": 68,
       "characters": 323,
       "bottom": 193.7
     },
     {
-      "page": 70,
+      "page": 69,
       "characters": 857,
       "bottom": 742.1
     },
     {
-      "page": 71,
+      "page": 70,
       "characters": 950,
       "bottom": 784.1
     },
     {
-      "page": 72,
+      "page": 71,
       "characters": 835,
       "bottom": 695.8
     },
     {
-      "page": 73,
+      "page": 72,
       "characters": 965,
       "bottom": 773.8
     },
     {
-      "page": 74,
+      "page": 73,
       "characters": 974,
       "bottom": 773.8
     },
     {
-      "page": 75,
+      "page": 74,
       "characters": 985,
       "bottom": 773.8
     },
     {
-      "page": 76,
+      "page": 75,
       "characters": 895,
       "bottom": 736.1
     },
     {
-      "page": 77,
+      "page": 76,
       "characters": 975,
       "bottom": 745.9
     },
     {
-      "page": 78,
+      "page": 77,
       "characters": 948,
       "bottom": 724.9
     },
     {
-      "page": 79,
+      "page": 78,
       "characters": 954,
       "bottom": 742.9
     },
     {
-      "page": 80,
+      "page": 79,
       "characters": 966,
       "bottom": 784.1
     },
     {
-      "page": 81,
+      "page": 80,
       "characters": 931,
+      "bottom": 781.9
+    },
+    {
+      "page": 81,
+      "characters": 928,
       "bottom": 781.8
     },
     {
       "page": 82,
-      "characters": 928,
+      "characters": 907,
       "bottom": 781.9
     },
     {
       "page": 83,
-      "characters": 907,
-      "bottom": 781.8
-    },
-    {
-      "page": 84,
       "characters": 836,
       "bottom": 766.1
     },
     {
-      "page": 85,
+      "page": 84,
       "characters": 887,
       "bottom": 766.1
     },
     {
-      "page": 86,
+      "page": 85,
       "characters": 905,
       "bottom": 766.1
     },
     {
-      "page": 87,
+      "page": 86,
       "characters": 921,
       "bottom": 784.1
     },
     {
-      "page": 88,
+      "page": 87,
       "characters": 902,
       "bottom": 766.1
     },
     {
-      "page": 89,
+      "page": 88,
       "characters": 921,
       "bottom": 784.1
     },
     {
-      "page": 90,
+      "page": 89,
       "characters": 969,
       "bottom": 784.1
     },
     {
-      "page": 91,
+      "page": 90,
       "characters": 888,
       "bottom": 766.1
     },
     {
-      "page": 92,
+      "page": 91,
       "characters": 857,
       "bottom": 766.1
     },
     {
-      "page": 93,
+      "page": 92,
       "characters": 934,
       "bottom": 766.1
     },
     {
-      "page": 94,
+      "page": 93,
       "characters": 867,
       "bottom": 766.1
     },
     {
-      "page": 95,
+      "page": 94,
       "characters": 891,
       "bottom": 781.8
     },
     {
-      "page": 96,
+      "page": 95,
       "characters": 681,
       "bottom": 604.1
     },
     {
-      "page": 97,
+      "page": 96,
       "characters": 831,
       "bottom": 743.6
     },
     {
-      "page": 98,
+      "page": 97,
       "characters": 728,
       "bottom": 658.9
     }

@@ -10,4 +10,5 @@ work/
 manual/build/
 .env
 *.user
+**/*.tsbuildinfo
 *.log.tmp

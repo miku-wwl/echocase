@@ -1,0 +1,18 @@
+integrity	Run python tools/verify.py	﻿2026-11-11T03:47:33.2101593Z ##[group]Run python tools/verify.py
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2103117Z ^[[36;1mpython tools/verify.py^[[0m
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2205855Z shell: /usr/bin/bash -e {0}
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2207949Z env:
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2210094Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.18/x64
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2213286Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.18/x64/lib/pkgconfig
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2216428Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.18/x64
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2219586Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.18/x64
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2222269Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.18/x64
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2224647Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.18/x64/lib
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.2226465Z ##[endgroup]
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3881092Z {
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3882520Z   "status": "FAIL",
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3963189Z   "failures": [
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3965798Z     "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/echocase/echocase/evidence/manifest.json'"
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3968710Z   ]
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3969872Z }
+integrity	Run python tools/verify.py	2026-11-11T03:47:33.3986223Z ##[error]Process completed with exit code 1.
