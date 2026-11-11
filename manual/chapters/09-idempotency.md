@@ -46,7 +46,7 @@ flowchart TD
 
 ## 原子回执比“先查再写”多了什么
 
-源码定位：[PostgresInvestigationStore.cs](../../src/EchoCase.Infrastructure/PostgresInvestigationStore.cs)。
+源码定位：[PostgresInvestigationStore.cs](../../backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs)。
 
 若先保存业务，再在另一个事务写回执，两个事务之间崩溃会留下“业务已完成、回执不存在”的窗口，重试仍会重复执行。若先写回执，再保存业务，则可能缓存一个从未完成的成功结果。当前方案把业务、审计与回执放在同一个 PostgreSQL 事务里，缩小到数据库本身的提交边界。
 

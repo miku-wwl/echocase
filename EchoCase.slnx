@@ -1,8 +1,8 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/EchoCase.Api/EchoCase.Api.csproj" />
-    <Project Path="src/EchoCase.Application/EchoCase.Application.csproj" />
-    <Project Path="src/EchoCase.Domain/EchoCase.Domain.csproj" />
-    <Project Path="src/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj" />
+  <Folder Name="/backend/">
+    <Project Path="backend/EchoCase.Api/EchoCase.Api.csproj" />
+    <Project Path="backend/EchoCase.Application/EchoCase.Application.csproj" />
+    <Project Path="backend/EchoCase.Domain/EchoCase.Domain.csproj" />
+    <Project Path="backend/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj" />
   </Folder>
 </Solution>

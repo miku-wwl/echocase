@@ -5,7 +5,7 @@
 **/test-results/
 **/playwright-report/
 frontend/dist/
-src/EchoCase.Api/wwwroot/
+backend/EchoCase.Api/wwwroot/
 work/
 manual/build/
 .env

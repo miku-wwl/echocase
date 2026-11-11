@@ -1,3 +1,5 @@
+> 历史记录：本文件对应已验证应用化基线3d192a3，文中旧路径记录当时布局；当前布局见根README。
+
 # 应用仓库重构验收
 
 基线：63c587277541b4e700258aad82de9b2ad0ba32f8，保留原Phase2A分支和main；新review分支codex/application-only-restructure-20261111。2026-11-11所有者范围变更见ADR0009，当前不以环境交付验收。
@@ -35,7 +37,7 @@ BLOCKED：当前没有需要所有者处理的阻断。
 
 NOT_RUN：未重新生成PDF，未执行历史环境/运维实验，未执行上游模板全套测试；这些均不是当前DoD。最终分支头CI仍须按匹配SHA单独核验。
 
-[开发](DEVELOPMENT.md)、[独立测试与产物检查](TESTING.md)、[当前实验](EXPERIMENTS.md)、[2B清单](PUBLICATION-INVENTORY.md)给出复现与继续学习入口。最终交接应同时给出源SHA、匹配CI和当前工作区状态。
+[开发](DEVELOPMENT.md)、[独立测试与产物检查](TESTING.md)、[当前实验](../../../manual/reference/EXPERIMENTS.md)、[2B清单](../../../manual/reference/PUBLICATION-INVENTORY.md)给出复现与继续学习入口。最终交接应同时给出源SHA、匹配CI和当前工作区状态。
 
 
 ## 交接检查点

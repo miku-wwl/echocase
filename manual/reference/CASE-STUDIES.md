@@ -1,6 +1,6 @@
 # 应用案例：从关联修订理解架构、数据库与React状态
 
-以下机制来自Phase2A的真实应用变更。原始历史记录在[基线](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/docs/phase2a/FINDINGS.md)。这里保留应用机制，不保留原环境演练责任；文中基线测量不是当前提交的性能承诺。当前测试入口见[TESTING](TESTING.md)。
+以下机制来自Phase2A的真实应用变更。原始历史记录在[基线](https://github.com/miku-wwl/echocase/blob/63c587277541b4e700258aad82de9b2ad0ba32f8/docs/phase2a/FINDINGS.md)。这里保留应用机制，不保留原环境演练责任；文中基线测量不是当前提交的性能承诺。当前测试入口见[TESTING](../../backend/docs/engineering/TESTING.md)。
 
 ## A：真正修改既有规则，而不增加模块
 

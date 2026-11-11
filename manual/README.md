@@ -10,6 +10,6 @@
 - chapters/18-assessment.md：综合应用工程评审；历史编号暂保留，2B重新组织课程顺序。
 - chapters/19-labs.md：当前应用实验导航；历史E编号不改义。
 - chapters/20-reference.md：框架一手来源与词汇。
-- [应用案例材料](../docs/engineering/CASE-STUDIES.md)、[新2B清单](../docs/engineering/PUBLICATION-INVENTORY.md)。
+- [应用案例材料](reference/CASE-STUDIES.md)、[新2B清单](reference/PUBLICATION-INVENTORY.md)。
 
 这些是待深化的Markdown源，不是已经重建出版的教材。源代码链接已重绑到独立测试目录；不再依赖旧claim/code宏。后续2B应绑定新的工程提交，重新提取注释、制作图示并审校，不能把历史PDF的页数或QA结论移到新教材。

@@ -14,7 +14,7 @@
 | React/TypeScript | App/Workspace/hooks/editors、ch11/12 | 解释确认缓存、pending呈现、基线/代次、取消、未知响应、显式冲突 |
 | React Flow | EvidenceGraph/LinkEditor、ch13、五模块E2E | 业务关联与本地坐标分离，标注同一关联修订的身份保持 |
 | 查询性能 | 实际Store、索引、QueryProbe、ch15 | 注释真实SQL、三种计划与测量条件；不扩为负载/可用性框架 |
-| 独立测试 | tests/unit、integration、e2e；TESTING；ch14 | 源码图/运行包/publish/bundle的隔离证据；失败同步条件，避免测试数量叙事 |
+| 独立测试 | test/unit、integration、e2e；TESTING；ch14 | 源码图/运行包/publish/bundle的隔离证据；失败同步条件，避免测试数量叙事 |
 | 维护性与需求演进 | CASE-STUDIES、ADR0007/0008/0009、APP09 | 需求→影响→领域/用例/合同/迁移/React→回归的连贯案例；解释为何小而明确的拆分有效 |
 
 ## 继续保留的真实教训

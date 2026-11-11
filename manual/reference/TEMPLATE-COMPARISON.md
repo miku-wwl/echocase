@@ -4,7 +4,7 @@
 
 ## 一次修改请求经过什么
 
-上游 `src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItem.cs` 的请求记录由 MediatR 分派到处理器。处理器通过 `IApplicationDbContext.TodoItems.FindAsync` 取得实体，设置 Title/Done，再调用 SaveChangesAsync。Application 的 DI 注册日志预处理器，随后注册异常、授权、校验、性能行为。Infrastructure 把 IApplicationDbContext 解析为当前作用域的 ApplicationDbContext；两个 SavingChanges 拦截器分别补审计字段、分派领域事件，最后由关系提供者保存。
+上游 [上游固定UpdateTodoItem源码](https://github.com/jasontaylordev/CleanArchitecture/blob/e1ab4cc4d5d7b4e25e57bd8b0514b766573b8c04/src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItem.cs) 的请求记录由 MediatR 分派到处理器。处理器通过 `IApplicationDbContext.TodoItems.FindAsync` 取得实体，设置 Title/Done，再调用 SaveChangesAsync。Application 的 DI 注册日志预处理器，随后注册异常、授权、校验、性能行为。Infrastructure 把 IApplicationDbContext 解析为当前作用域的 ApplicationDbContext；两个 SavingChanges 拦截器分别补审计字段、分派领域事件，最后由关系提供者保存。
 
 EchoCase 的对应操作是 PUT 修订关联。API 解析 Cookie 身份、防伪令牌、If-Match 与幂等键，调用 InvestigationService.ReviseLink；Store 开启事务并锁定 owner/key，先按 owner/id 加载聚合，检查回执，再比较版本。应用回调调用根聚合方法，EF 将子实体修改、根版本、审计与回执写入同一事务。没有通用调度器，也没有外部副作用。
 
@@ -38,4 +38,4 @@ EchoCase 的查询与命令方法、请求合同分离，但读写共用 Postgre
 新增跨聚合事务、大量可组合用例行为、复杂查询分页、可靠外部通知或独立模块团队，都会改变当前端口/分派选择。反之，同一案件的六条证据、十五条关联上限没有提供服务化或消息系统的理由。比较结论是本范围内的适配判断；上游完整模板执行与所有模板选项仍为 **NOT_RUN**。
 
 
-当前责任边界由ADR0009定义，模板比较保留应用机制；历史环境交付选型不作为当前任务。测试路径已迁到tests/unit、tests/integration和tests/e2e。
+当前责任边界由ADR0009定义，模板比较保留应用机制；历史环境交付选型不作为当前任务。测试路径已迁到test/unit、test/integration和test/e2e。

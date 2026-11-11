@@ -6,7 +6,7 @@ import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 LAYERS = {"EchoCase.Domain": set(), "EchoCase.Application": {"EchoCase.Domain"},
           "EchoCase.Infrastructure": {"EchoCase.Application", "EchoCase.Domain"},
           "EchoCase.Api": {"EchoCase.Application", "EchoCase.Infrastructure", "EchoCase.Domain"}}
@@ -14,6 +14,16 @@ TEST_PACKAGE = re.compile(r"^(nunit|nunit3testadapter|microsoft\.net\.test\.sdk|
 TEST_IMPORT = re.compile(r"^\s*(?:global\s+)?using\b.*(?:NUnit|Xunit|Moq|NSubstitute|EchoCase\.(?:Tests|UnitTests|IntegrationTests))\b", re.M)
 JS_IMPORT = re.compile(r"(?:\bfrom\s*|\bimport\s*\(\s*|\brequire\s*\(\s*|\bimport\s*)['\"]([^'\"]+)['\"]")
 TEST_MODULE = re.compile(r"(?:^|[/\\])(?:tests?|fixtures|__tests__|test-results|playwright(?:-core)?|vitest)(?:[/\\]|$)|@playwright/|@testing-library/|^node:test(?:/|$)")
+
+
+def check_layout(root):
+    # The policy concerns tracked source, never ignored local user data.
+    result = subprocess.run(["git", "-C", str(root), "ls-files", "--full-name"], capture_output=True, text=True, encoding="utf-8")
+    if result.returncode:
+        return ["Cannot inspect tracked repository layout"]
+    directories = {p.split("/", 1)[0] for p in result.stdout.splitlines() if "/" in p}
+    expected = {"backend", "frontend", "test", "manual", ".github"}
+    return [] if directories == expected else ["Tracked top-level directories must be backend/frontend/test/manual plus .github: " + ", ".join(sorted(directories))]
 
 
 def check(root, evaluated=True, publish=None, dist=None):
@@ -24,42 +34,42 @@ def check(root, evaluated=True, publish=None, dist=None):
     def refs(project):
         tree = ET.parse(project)
         return tree, [(project.parent / e.attrib["Include"]).resolve() for e in tree.iter("ProjectReference")]
-    sources = sorted((root / "src").glob("*/*.csproj"))
+    sources = sorted((root / "backend").glob("*/*.csproj"))
     require({p.stem for p in sources} == set(LAYERS), "Expected four application projects")
     for project in sources:
         tree, references = refs(project)
         for target in references:
-            require(target.is_relative_to(root / "src") and target.stem in LAYERS[project.stem], f"Production reference crosses boundary: {project.name} -> {target}")
+            require(target.is_relative_to(root / "backend") and target.stem in LAYERS[project.stem], f"Production reference crosses boundary: {project.name} -> {target}")
         require(not any(e.text == "true" for e in tree.iter("IsTestProject")), "Production project is a test project: " + project.name)
         for e in tree.iter("PackageReference"):
             require(not TEST_PACKAGE.search(e.attrib.get("Include", "")), "Test package in production project: " + project.name)
         for e in tree.iter():
             if e.tag in ("Compile", "Content", "None", "Import", "Reference"):
-                require(not any(re.search(r"(?:^|[/\\])tests[/\\]", value, re.I) for value in e.attrib.values()), "Production MSBuild item imports test source: " + project.name)
-    for p in (root / "src").rglob("*.cs"):
+                require(not any(re.search(r"(?:^|[/\\])tests?[/\\]", value, re.I) for value in e.attrib.values()), "Production MSBuild item imports test source: " + project.name)
+    for p in (root / "backend").rglob("*.cs"):
         if not {"bin", "obj"} & set(p.parts):
             require(not TEST_IMPORT.search(p.read_text(encoding="utf-8-sig")), "Production C# imports test utilities: " + str(p.relative_to(root)))
-    tests = sorted((root / "tests").glob("**/*.csproj"))
+    tests = sorted((root / "test").glob("**/*.csproj"))
     require({p.stem for p in tests} == {"EchoCase.UnitTests", "EchoCase.IntegrationTests", "EchoCase.QueryProbe"}, "Independent test project set is incomplete")
     for p in tests:
         _, references = refs(p)
         for target in references:
-            require(target.is_relative_to(root / "src"), "Tests must reference application only: " + str(p.relative_to(root)))
+            require(target.is_relative_to(root / "backend"), "Tests must reference application only: " + str(p.relative_to(root)))
             if p.stem == "EchoCase.UnitTests":
                 require(target.stem in {"EchoCase.Domain", "EchoCase.Application"}, "Unit tests depend on database/API implementation")
-    for p in (root / "tests/unit").rglob("*.cs"):
+    for p in (root / "test/unit").rglob("*.cs"):
         if not {"bin", "obj"} & set(p.parts):
             require(not re.search(r"^\s*using\s+(?:Npgsql|Microsoft\.EntityFrameworkCore|Microsoft\.AspNetCore|EchoCase\.(?:Infrastructure|IntegrationTests))\b", p.read_text(encoding="utf-8-sig"), re.M), "Unit tests import integration implementation: " + str(p))
     solution = ET.parse(root / "EchoCase.slnx")
-    require(all((root / p.attrib["Path"]).resolve().is_relative_to(root / "src") for p in solution.iter("Project")), "Application solution includes testing projects")
+    require(all((root / p.attrib["Path"]).resolve().is_relative_to(root / "backend") for p in solution.iter("Project")), "Application solution includes testing projects")
     for p in (root / "frontend/src").rglob("*"):
         if p.suffix in {".ts", ".tsx", ".js", ".jsx"}:
             require(not any(TEST_MODULE.search(m) for m in JS_IMPORT.findall(p.read_text(encoding="utf-8-sig"))), "Production frontend imports tests: " + str(p.relative_to(root)))
     package = json.loads((root / "frontend/package.json").read_text(encoding="utf-8"))
     for section in ("dependencies", "devDependencies"):
-        require(not any(TEST_MODULE.search(p) for p in package.get(section, {})), "Test runner must live in tests/e2e, not frontend: " + section)
-    for p in (root / "tests/e2e/specs").glob("*.ts"):
-        require(not any(re.search(r"(?:frontend/src|(?:^|/)src/)", m) for m in JS_IMPORT.findall(p.read_text(encoding="utf-8-sig"))), "E2E imports internal application source: " + str(p))
+        require(not any(TEST_MODULE.search(p) for p in package.get(section, {})), "Test runner must live in test/e2e, not frontend: " + section)
+    for p in (root / "test/e2e/specs").glob("*.ts"):
+        require(not any(re.search(r"(?:frontend/src|(?:^|/)(?:backend|src)/)", m) for m in JS_IMPORT.findall(p.read_text(encoding="utf-8-sig"))), "E2E imports internal application source: " + str(p))
     if errors:  # Do not evaluate an invalid project or a controlled negative fixture.
         return errors
     if evaluated:
@@ -72,10 +82,10 @@ def check(root, evaluated=True, publish=None, dist=None):
             require(graph["Properties"].get("IsTestProject", "").lower() != "true", "Evaluated production project is a test project")
             for item in graph["Items"]["ProjectReference"]:
                 target = Path(item["FullPath"]).resolve()
-                require(target.is_relative_to(root / "src") and target.stem in LAYERS[p.stem], "Evaluated production reference crosses layer boundary: " + p.name)
+                require(target.is_relative_to(root / "backend") and target.stem in LAYERS[p.stem], "Evaluated production reference crosses layer boundary: " + p.name)
             require(not any(TEST_PACKAGE.search(item["Identity"]) for item in graph["Items"]["PackageReference"]), "Evaluated production package includes test tooling: " + p.name)
             for item in graph["Items"]["Compile"]:
-                require(Path(item["FullPath"]).resolve().is_relative_to(root / "src"), "Evaluated production compilation contains test/outside source: " + p.name)
+                require(Path(item["FullPath"]).resolve().is_relative_to(root / "backend"), "Evaluated production compilation contains test/outside source: " + p.name)
             assets = p.parent / "obj/project.assets.json"
             require(assets.is_file(), "Restore application dependencies first: " + p.name)
             if assets.exists():
@@ -103,7 +113,7 @@ if __name__ == "__main__":
     parser.add_argument("--frontend-dist", type=Path)
     args = parser.parse_args()
     try:
-        errors = check(args.root.resolve(), not args.structure_only, args.publish_dir, args.frontend_dist)
+        errors = check_layout(args.root.resolve()) + check(args.root.resolve(), not args.structure_only, args.publish_dir, args.frontend_dist)
     except Exception as e:
         errors = [type(e).__name__ + ": " + str(e)]
     print(json.dumps({"status": "FAIL" if errors else "PASS", "failures": errors}, indent=2))

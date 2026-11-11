@@ -18,7 +18,7 @@ App负责身份/导航；Workspace组合业务视图；useInvestigation持有已
 
 ## 测试依赖
 
-应用solution只含src四项目。UnitTests仅引用Domain/Application；IntegrationTests引用应用API/持久化；QueryProbe是测试区域的可选查询分析工具。E2E是独立npm包，只经过UI/API，不导入应用内部模块。生产构建不需要任何测试项目。
+应用solution只含backend四项目。UnitTests仅引用Domain/Application；IntegrationTests引用应用API/持久化；QueryProbe是测试区域的可选查询分析工具。E2E是独立npm包，只经过UI/API，不导入应用内部模块。生产构建不需要任何测试项目。
 
 check_boundaries.py既查源码和引用，也读取MSBuild求值Compile/ProjectReference、NuGet运行依赖、publish DLL/deps.json与前端source map来源。具体命令和边界见测试指南。它不是通用恶意构建脚本沙箱。
 

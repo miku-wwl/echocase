@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Npgsql;
 
 var admin = Environment.GetEnvironmentVariable("ECHOCASE_TEST_CONNECTION") ?? throw new InvalidOperationException("Set a disposable PostgreSQL admin connection.");
-var directory = args.Length == 1 ? args[0] : "tests/integration/TestResults/query-probe";
+var directory = args.Length == 1 ? args[0] : "test/integration/TestResults/query-probe";
 Directory.CreateDirectory(directory);
 var name = "echocase_probe_" + Guid.NewGuid().ToString("N");
 await using var control = new NpgsqlConnection(admin); await control.OpenAsync();

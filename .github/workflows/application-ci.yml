@@ -35,50 +35,51 @@ jobs:
           cache: npm
           cache-dependency-path: |
             frontend/package-lock.json
-            tests/e2e/package-lock.json
+            test/e2e/package-lock.json
       - uses: actions/setup-python@v6
         with: {python-version: '3.13'}
       - name: Restore independent application and test solutions
         run: |
           dotnet restore EchoCase.slnx --locked-mode
-          dotnet restore tests/EchoCase.Tests.slnx --locked-mode
+          dotnet restore test/EchoCase.Tests.slnx --locked-mode
       - name: Verify dependency direction and compile application
         run: |
-          python scripts/check_boundaries.py
+          python test/tools/check_boundaries.py
           dotnet build EchoCase.slnx --no-restore
       - name: Unit tests (no database dependency)
-        run: dotnet test tests/unit/EchoCase.UnitTests --no-restore --logger 'trx;LogFileName=unit.trx' --results-directory tests/unit/TestResults
+        run: dotnet test test/unit/EchoCase.UnitTests --no-restore --logger 'trx;LogFileName=unit.trx' --results-directory test/unit/TestResults
       - name: PostgreSQL integration tests
-        run: dotnet test tests/integration/EchoCase.IntegrationTests --no-restore --logger 'trx;LogFileName=integration.trx' --results-directory tests/integration/TestResults
+        run: dotnet test test/integration/EchoCase.IntegrationTests --no-restore --logger 'trx;LogFileName=integration.trx' --results-directory test/integration/TestResults
       - name: Compile optional application query tool (do not benchmark in CI)
-        run: dotnet build tests/integration/EchoCase.QueryProbe --no-restore
+        run: dotnet build test/integration/EchoCase.QueryProbe --no-restore
       - name: Compile application publish output
-        run: dotnet publish src/EchoCase.Api --no-restore -c Release -o work/publish
+        run: dotnet publish backend/EchoCase.Api --no-restore -c Release -o test/TestResults/publish
       - name: Install frontend dependencies
         run: npm ci
         working-directory: frontend
       - name: Install isolated E2E dependencies
         run: npm ci
-        working-directory: tests/e2e
+        working-directory: test/e2e
       - name: Type check and build frontend
         run: npm run build:verify
         working-directory: frontend
       - name: Verify production output isolation
-        run: python scripts/check_boundaries.py --publish-dir work/publish --frontend-dist frontend/dist
+        run: python test/tools/check_boundaries.py --publish-dir test/TestResults/publish --frontend-dist frontend/dist
       - name: Start application for public contract and browser checks
         run: |
           dotnet tool restore
-          dotnet ef database update --project src/EchoCase.Infrastructure --startup-project src/EchoCase.Api --no-build
-          dotnet run --project src/EchoCase.Api --no-build --no-launch-profile --urls http://127.0.0.1:5080 > work/api.log 2>&1 &
-          npm run dev --prefix frontend > work/web.log 2>&1 &
-          python scripts/wait_http.py http://127.0.0.1:5080/health/ready http://127.0.0.1:5173/
+          dotnet ef database update --project backend/EchoCase.Infrastructure --startup-project backend/EchoCase.Api --no-build
+          mkdir -p test/TestResults
+          dotnet run --project backend/EchoCase.Api --no-build --no-launch-profile --urls http://127.0.0.1:5080 > test/TestResults/api.log 2>&1 &
+          npm run dev --prefix frontend > test/TestResults/web.log 2>&1 &
+          python test/tools/wait_http.py http://127.0.0.1:5080/health/ready http://127.0.0.1:5173/
       - name: Check generated public API contract
         run: |
           npm run contract --prefix frontend
           git diff --exit-code -- frontend/src/api/schema.d.ts
       - name: Focused browser regressions
         run: |
-          cd tests/e2e
+          cd test/e2e
           npx playwright install --with-deps chromium
           npm test
       - uses: actions/upload-artifact@v4
@@ -86,7 +87,7 @@ jobs:
         with:
           name: application-test-results
           path: |
-            tests/unit/TestResults/
-            tests/integration/TestResults/
-            tests/e2e/test-results/
+            test/unit/TestResults/
+            test/integration/TestResults/
+            test/e2e/test-results/
           retention-days: 7

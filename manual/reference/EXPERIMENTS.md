@@ -16,7 +16,7 @@
 
 ## 运行与解释
 
-APP-01/02的纯行为首先运行UnitTests；数据/协议问题独立运行IntegrationTests；UI时序通过tests/e2e的公开接口检查。QueryProbe是手工应用SQL分析，不进入默认CI或容量门禁。步骤见TESTING，实际执行结果见当前验收。
+APP-01/02的纯行为首先运行UnitTests；数据/协议问题独立运行IntegrationTests；UI时序通过test/e2e的公开接口检查。QueryProbe是手工应用SQL分析，不进入默认CI或容量门禁。步骤见TESTING，实际执行结果见当前验收。
 
 不要把浏览器拦截503描述成真实数据库宕机；不要把API回执描述成最新状态；不要把合成数据热缓存样本当生产性能。历史环境中发现的应用错误仍可教学，但不恢复环境演练责任。
 

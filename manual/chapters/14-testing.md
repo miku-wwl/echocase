@@ -6,13 +6,13 @@ UnitTests只引用Domain/Application，具有自己的NUnit依赖。IntegrationT
 
 每次集成夹具创建受控echocase_test_随机库，finally只删除这个库。缺测试连接就失败，不把缺环境伪装为跳过。调用WebApplicationFactory时替代的是HTTP宿主，不是数据库：原值Version谓词、真实外键/唯一键和事务回滚仍由PostgreSQL执行。
 
-E2E是tests/e2e中的独立npm包，frontend不依赖Playwright。测试经过UI或公共API，不引入应用内部fixture。关键用例保留五模块闭环、关联修订、草稿/后台刷新/双窗口、提交后丢响应与不可读成功正文。没有因重构提高测试总量，也不通过增加重试隐藏失败。
+E2E是test/e2e中的独立npm包，frontend不依赖Playwright。测试经过UI或公共API，不引入应用内部fixture。关键用例保留五模块闭环、关联修订、草稿/后台刷新/双窗口、提交后丢响应与不可读成功正文。没有因重构提高测试总量，也不通过增加重试隐藏失败。
 
 等待条件应表达业务完成。保存说明可能已渲染，而异步表单还没关闭；宽泛文字定位器会同时匹配输入框与已保存段落。应等待表单关闭，再定位确认区并读取真实服务器状态。测试同步问题也要保留失败原因。
 
 架构检查同时看项目引用、MSBuild求值Compile项、实际NuGet库和publish DLL/deps.json；前端检查imports及生产bundle的source map来源。文件夹名称正确只是一项条件，不能代替真实构建图。data-testid属性不是测试源码，也不意味着测试框架已打进bundle。
 
-复现入口见[独立测试指南](../../docs/engineering/TESTING.md)。产物在忽略的TestResults/test-results目录及CI测试附件，普通CI不维护历史证据或出版流水线。
+复现入口见[独立测试指南](../../backend/docs/engineering/TESTING.md)。产物在忽略的TestResults/test-results目录及CI测试附件，普通CI不维护历史证据或出版流水线。
 
 ## 练习
 

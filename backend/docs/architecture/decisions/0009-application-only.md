@@ -4,7 +4,7 @@
 
 仓库拥有需求、领域、四层实现、React、API合同、应用数据库迁移、安全/事务、开发者测试和全栈教材源。Infrastructure项目承担应用持久化和Identity，继续保留。环境编排、镜像发行、云资源、SRE和灾备不在当前责任中；原E10是历史，非当前完成条件。
 
-生产solution只含四个应用项目。单元项目只引用Domain/Application；真实PostgreSQL/API集成夹具、SQL记录器与可选查询探针只在tests/integration。Playwright有自己的包/锁文件，前端应用不再安装测试运行器。独立测试引用应用，应用永远不引用测试。
+生产solution只含四个应用项目。单元项目只引用Domain/Application；真实PostgreSQL/API集成夹具、SQL记录器与可选查询探针只在test/integration。Playwright有自己的包/锁文件，前端应用不再安装测试运行器。独立测试引用应用，应用永远不引用测试。
 
 除静态引用，门禁检查MSBuild求值图、解析包、publish DLL/deps.json和实际bundle source map。独立测试不依赖应用部署打包，也不把测试helpers搬到src中共享。
 

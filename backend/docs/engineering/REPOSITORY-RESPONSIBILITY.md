@@ -1,10 +1,10 @@
 # 当前仓库责任审计
 
-按实际用途分类，而非按infrastructure、logging、Docker等单词计数。src/EchoCase.Infrastructure保留应用EF/Identity；CI的PostgreSQL服务仅供应用集成测试，不是环境发布。范围变更见ADR0009。
+按实际用途分类，而非按infrastructure、logging、Docker等单词计数。backend/EchoCase.Infrastructure保留应用EF/Identity；CI的PostgreSQL服务仅供应用集成测试，不是环境发布。范围变更见ADR0009。
 
 | 分类 | 当前内容 |
 |---|---|
-| 业务应用 | src四层、frontend应用/构建配置、模型/迁移/身份/一致性；生产源码保持基线行为 |
+| 业务应用 | backend四层、frontend应用/构建配置、模型/迁移/身份/一致性；生产源码保持基线行为 |
 | 应用测试 | unit、integration、独立e2e；可选真实Store QueryProbe也只在测试区 |
 | 应用文档 | 需求/领域/架构/API、开发/测试/应用实验与验收 |
 | 全栈教材 | 应用Markdown源与新2B索引，没有活动PDF或旧出版器 |

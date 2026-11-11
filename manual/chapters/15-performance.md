@@ -4,13 +4,13 @@
 
 映射保留OwnerId/UpdatedAt DESC组合索引。只按OwnerId建索引可以减少筛选行，但不直接提供所需排序；组合索引有机会在取前50时早停。索引增加存储与写维护成本，不能只看读取数字。默认计划可能仍有最终联接排序，应看实际EXPLAIN而不是画想要的Index Scan。
 
-可选探针位于tests/integration/EchoCase.QueryProbe。它调用真实Store并拦截DbCommand，然后用同一SQL/参数获取三组EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)：无所有者索引、初始单列索引、现有组合索引。数据是实际应用表中的合成调查/发现/关联，只改本次临时测试库。
+可选探针位于test/integration/EchoCase.QueryProbe。它调用真实Store并拦截DbCommand，然后用同一SQL/参数获取三组EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)：无所有者索引、初始单列索引、现有组合索引。数据是实际应用表中的合成调查/发现/关联，只改本次临时测试库。
 
 探针每组先预热再取有限样本，保留完整计划与样本，不以本机毫秒值构造CI性能门槛。固定执行顺序、暖缓存、合成分布、每案孩子数和无并发写都会限制结论。这里没有基础设施负载、可用性或容量基准。
 
 查看根限制是否先于联接、Actual Rows/Loops、Shared Hit/Read Blocks、排序及索引名称，再解释样本差异。测得更快不自动说明哪个工作减少，计划变化也不保证所有分布都更快。没有新查询需求时不制造额外索引。
 
-[测试指南](../../docs/engineering/TESTING.md)给出可选运行命令。默认应用CI保留正确性与隔离检查，不执行该测量。历史Phase2A曾在真实Store上执行过，原数据在基线63c5872的evidence/phase2a/database；不能将旧结果冒充当前环境运行。
+[测试指南](../../backend/docs/engineering/TESTING.md)给出可选运行命令。默认应用CI保留正确性与隔离检查，不执行该测量。历史Phase2A曾在真实Store上执行过，原数据在基线63c5872的evidence/phase2a/database；不能将旧结果冒充当前环境运行。
 
 ## 练习
 
