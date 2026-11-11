@@ -11,7 +11,7 @@
 | EF跟踪如何变成多个UPDATE，为什么子表没有Version也不能局部提交 | SqlObservation、迁移测试、Store竞争测试 | `database/migration-tracking.json`、`store-race.json` 的真实SQL/状态/结果 | 从 Unchanged→DetectChanges→Modified→条件UPDATE→回滚讲解，标注身份映射与事务边界；日志放附录/仓库 |
 | 模式可以回退，数据未必可回退 | ADR0007、第三迁移、delivery.py | 旧镜像真实数据→扩展模式→旧应用写入→新解释仍在 | 画 expand/应用切换/回退/前滚时间线；解释为什么不执行有损Down，并明确没有灾备/PITR结论 |
 | 时间精度导致的合同不一致 | Application.Now；新API一致性断言 | `before/timestamp.trx`，前后 timestamp-precision JSON | 用7 tick真实差异拆解.NET/数据库精度与回执稳定性；设计跨存储类型的练习 |
-| 幂等不是拿到成功响应，更不是网络exactly-once | Application.Write、PostgresStore、useInvestigation | `browser/lost-response.json/.png`，同键并发/误用/旧版本测试 | 画提交点/丢响应/后续写/旧回执时间线；解释有限保留、精确原请求重试及所有权检查顺序 |
+| 幂等不是拿到成功响应，更不是网络exactly-once | Application.Write、PostgresStore、useInvestigation、client.request | `browser/lost-response.json/.png`、`unreadable-body.json/.png`，同键并发/误用/旧版本测试 | 画提交点/丢响应/正文不可读/后续写/旧回执时间线；解释有限保留、精确原请求重试及所有权检查顺序 |
 | React正确性取决于时间与状态所有权 | ADR0008、useNotesDraft、NotesEditor、useInvestigation | `before/`两项失败；`browser/inflight-draft`、dirty-refetch、lost-response | 用失败时序与修复后时序对照，逐步解释编辑代次、基线、确认缓存/pending呈现、显式冲突；避免只列hook API |
 | 真实查询、索引和测量限制 | DbProbe、Store.ListAsync、索引迁移 | `application-query-plan.json`三组完整计划、样本、SQL与参数 | 重绘可读的计划路径和样本分布；解释取前50与联接排序、写成本/基数、预热与固定顺序偏差；不转述为生产SLA |
 | 故障发现必须能回到对应日志 | API ProblemDetails定制；框架固定源码说明 | `before/problem-trace.json`、第一次OCI失败、第二次200/503/503与统一TraceId | 以“看起来都有编号但对不上”开篇，解释框架写入顺序；匿名化/裁切日志，不把异常堆栈堆成正文 |

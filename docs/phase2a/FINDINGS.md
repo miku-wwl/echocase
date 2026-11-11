@@ -18,13 +18,13 @@
 
 **跟踪观测。** `database/migration-tracking.json` 在 AutoDetectChangesEnabled=false 时记录根和关联均为 Unchanged；调用根修订再 DetectChanges 后，根的 UpdatedAt/Version 与关联的 Kind/Rationale/RevisedAt 标记为 Modified。没有删除/插入关联。拦截器保存实际执行的 SQL，不记录参数值。根 UPDATE 的 WHERE 包含 Id 和原 Version，子 UPDATE 只按自身 ID；跨实体一致性依靠同一次事务与根令牌，不能只看子 UPDATE 就认定存在独立保护。[EF Core change tracking](https://learn.microsoft.com/en-us/ef/core/change-tracking/)、[乐观并发](https://learn.microsoft.com/en-us/ef/core/saving/concurrency)描述了相关机制。
 
-**两种失败。** 一个测试用两个跟踪上下文提交不同解释，后者抛 DbUpdateConcurrencyException，重新读取只剩胜者解释。另一个测试实际调用生产 Store，barrier 让不同幂等键的两次读取都完成后再放行领域回调；记录隔离级别为 READ COMMITTED。结果为 200/412，只剩一条新回执和一条修订审计。EF 批处理可能先写审计，特定版本唯一约束冲突也被映射为 412；外层事务同时回滚子关联和回执。执行 SQL 与 surviving counts 见 `database/store-race.json`，不靠一次“碰巧并发”的请求证明路径。
+**两种失败。** 一个测试用两个跟踪上下文提交不同解释，后者抛 DbUpdateConcurrencyException，重新读取只剩胜者解释。另一个测试实际调用实际应用 Store，barrier 让不同幂等键的两次读取都完成后再放行领域回调；记录隔离级别为 READ COMMITTED。结果为 200/412，只剩一条新回执和一条修订审计。EF 批处理可能先写审计，特定版本唯一约束冲突也被映射为 412；外层事务同时回滚子关联和回执。执行 SQL 与 surviving counts 见 `database/store-race.json`，不靠一次“碰巧并发”的请求证明路径。
 
 **隔离替代。** 不把所有请求改为 SERIALIZABLE：当前单聚合的根令牌足以拒绝旧版本，序列化隔离会增加重试与全事务失败面。同键 advisory lock 只串行化相同 owner/key，不阻止不同键竞争；64 位锁名哈希碰撞最多导致额外串行等待，不是不同请求共用回执。单语句 Include 取得语句级快照；拆多条读取需要重新评估一致性。旧 E18/E19 演示隔离现象的独立表实验仍有教学价值，但不是当前业务实际执行路径。
 
 **时间精度的实际失败。** 首轮 API 响应 RevisedAt 为 `639299746962572167` tick，数据库重读为 `639299746962572160`。7 个 tick 的差异使记录比较失败。应用在把时间传入领域前截到微秒后，两者相等；旧回执不修改。证据 `before/timestamp.trx`、前后 `timestamp-precision.json` 保留了发现与修正，避免把精度差误诊为并发覆盖。
 
-**真实列表查询。** DbProbe 调用生产 `PostgresInvestigationStore.ListAsync` 并拦截 DbCommand，随后对同一 SQL/参数执行 EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)。实际表含 30,000 个调查、100 个所有者、60,000 个发现、30,000 条关联；目标所有者 300 个调查中取最近 50 个，联接后 100 行。没有使用与应用相似的另建 timeline 表。
+**真实列表查询。** DbProbe 调用实际应用 `PostgresInvestigationStore.ListAsync` 并拦截 DbCommand，随后对同一 SQL/参数执行 EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)。实际表含 30,000 个调查、100 个所有者、60,000 个发现、30,000 条关联；目标所有者 300 个调查中取最近 50 个，联接后 100 行。没有使用与应用相似的另建 timeline 表。
 
 本机七次热缓存观测的中位数为：无所有者索引 4.037ms、初始 OwnerId 单列索引 1.808ms、现有 OwnerId/UpdatedAt DESC 组合索引 0.929ms。组合索引让取前 50 的顺序读取更便宜，不能消除最终联接/排序成本；保留索引也增加存储与写维护成本。`application-query-plan.json` 包含全部样本、预热、完整代表计划与实际 SQL。固定顺序、单机、合成分布、只有每调查两条发现/一条关联、无并发负载；没有推断生产容量或宣称本阶段新增了这个早已存在的索引。
 
@@ -32,11 +32,13 @@
 
 ## C：重复、旧版本与未知网络结果
 
-**协议。** 每次写入需要原意图的键；已有调查另带强格式单值 If-Match。指纹包括调查、版本、操作与正文。先按 owner/id 加载资源，再检查回执；同键同指纹返回原快照，同键改正文 409，新键旧版本 412，领域不允许 422。失败不缓存回执。链接属于另一个本人调查时不能修改，跨账户目标统一 404。
+**协议。** 每次写入需要原意图的键；已有调查另带强格式单值 If-Match。指纹包括调查、版本、操作与正文。先按 owner/id 加载资源，再检查回执；同键同指纹返回原快照，同键改正文 409，新键旧版本 412，领域不允许 422。版本/领域拒绝不存失败回执。网络未知或数据库提交确认丢失可能已经有成功回执，不能把所有5xx解释为绝对未提交；后者本阶段未单独注入。链接属于另一个本人调查时不能修改，跨账户目标统一 404。
 
 **保证。** 对遵守协议、走同一 PostgreSQL 端口的业务写入，同一 owner/key 的本地数据库效果至多提交一次，并可以重放同一响应。不是网络 exactly-once、永久可用保证或外部通知可靠交付。回执目前不自动过期/清理，也没有容量治理；不得在任意时间删除回执后仍承诺无限期去重。键按原字符串重试，客户端不重新生成键或变更大小写。
 
 **未知结果。** 浏览器 route.fetch 将笔记实际送达 ASP.NET/PostgreSQL，等待提交响应后 route.abort 丢掉返回。直接 GET 证明原内容已提交；另一个真实请求再保存新内容。点击“重试同一次操作”重用原键/版本/正文，拿到原回执，服务器版本不再增加。MutationObserver 检查页面没有观察到版本倒退，原草稿保留等待显式决策。`browser/lost-response.json` 保存两次实际请求、已提交/较晚/最终快照。这与 `workflow.spec.ts` 单纯返回假 503 的注入点不同。
+
+**成功头不等于可用回执。** 最终审查补上另一个客户端分支：fetch已返回200后，读取/解析响应体也可能失败。request现在把该错误按未知结果处理，主动查询取消仍原样抛出。浏览器真实提交后只破坏200正文，直接GET确认已提交，再用原键重试，版本保持不变；证据 `browser/unreadable-body.json`。注入的是不可解析正文，没有声称做了底层网络报文截断。
 
 ## D：草稿、缓存与呈现的所有权
 

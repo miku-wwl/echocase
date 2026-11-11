@@ -132,12 +132,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3933,
+                  "duration": 3209,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:50:46.980Z",
+                  "startTime": "2026-11-11T07:01:49.656Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -166,12 +166,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2199,
+                  "duration": 2227,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:50:55.661Z",
+                  "startTime": "2026-11-11T07:01:53.797Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -200,12 +200,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2399,
+                  "duration": 2455,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:50:57.881Z",
+                  "startTime": "2026-11-11T07:01:56.047Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -216,6 +216,40 @@
           "id": "7f7e13e0439da18ef6ff-ed0028df8d07543005e4",
           "file": "phase2a.spec.ts",
           "line": 124,
+          "column": 1
+        },
+        {
+          "title": "unreadable success body after a real commit retains the original retry intent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2293,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T07:01:58.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f7e13e0439da18ef6ff-3e17b11e9d5459bb8208",
+          "file": "phase2a.spec.ts",
+          "line": 188,
           "column": 1
         },
         {
@@ -234,12 +268,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3836,
+                  "duration": 3995,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:51:00.298Z",
+                  "startTime": "2026-11-11T07:02:00.840Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -249,7 +283,7 @@
           ],
           "id": "7f7e13e0439da18ef6ff-fcf0e657e1422aff444d",
           "file": "phase2a.spec.ts",
-          "line": 188,
+          "line": 233,
           "column": 1
         }
       ]
@@ -276,12 +310,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7984,
+                  "duration": 8730,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:51:04.182Z",
+                  "startTime": "2026-11-11T07:02:04.879Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -310,12 +344,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2732,
+                  "duration": 3226,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:51:12.180Z",
+                  "startTime": "2026-11-11T07:02:13.635Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -344,12 +378,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3890,
+                  "duration": 4857,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:51:14.928Z",
+                  "startTime": "2026-11-11T07:02:16.894Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -378,12 +412,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2563,
+                  "duration": 3030,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-11T06:51:18.834Z",
+                  "startTime": "2026-11-11T07:02:21.771Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -401,9 +435,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-11T06:50:45.917Z",
-    "duration": 36568.754,
-    "expected": 8,
+    "startTime": "2026-11-11T07:01:48.532Z",
+    "duration": 37449.058999999994,
+    "expected": 9,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

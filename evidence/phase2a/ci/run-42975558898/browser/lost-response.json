@@ -1,0 +1,219 @@
+{
+  "attempts": [
+    {
+      "key": "c04149aa-bf60-44f6-aecf-a08f9d4ef032",
+      "version": "\"1\"",
+      "body": "{\"notes\":\"提交成功但返回途中断开的观察\"}"
+    },
+    {
+      "key": "c04149aa-bf60-44f6-aecf-a08f9d4ef032",
+      "version": "\"1\"",
+      "body": "{\"notes\":\"提交成功但返回途中断开的观察\"}"
+    }
+  ],
+  "committed": {
+    "id": "69659f9a-5892-48ae-af27-d4c5c2e840ec",
+    "caseId": "harbor-01",
+    "title": "雾港档案",
+    "status": "Active",
+    "version": 2,
+    "notes": "提交成功但返回途中断开的观察",
+    "createdAt": "2026-11-11T06:55:34.376889+00:00",
+    "updatedAt": "2026-11-11T06:55:34.592108+00:00",
+    "evidence": [
+      {
+        "id": "access-log",
+        "title": "异常门禁记录",
+        "kind": "系统日志",
+        "summary": "02:12，有人使用档案室的备用凭证。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "camera",
+        "title": "走廊摄像片段",
+        "kind": "影像记录",
+        "summary": "02:09 至 02:21 的画面中断。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "badge-ledger",
+        "title": "备用凭证领用册",
+        "kind": "书面档案",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "maintenance",
+        "title": "维护工单",
+        "kind": "运维记录",
+        "summary": "摄像维护与门禁异常是否有关？",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "dispatch",
+        "title": "调度消息副本",
+        "kind": "通信记录",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "witness",
+        "title": "值班人员笔录",
+        "kind": "访谈记录",
+        "summary": "证人把时间记成了 02:40。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      }
+    ],
+    "links": [],
+    "verdict": null
+  },
+  "later": {
+    "id": "69659f9a-5892-48ae-af27-d4c5c2e840ec",
+    "caseId": "harbor-01",
+    "title": "雾港档案",
+    "status": "Active",
+    "version": 3,
+    "notes": "后来窗口补充的已保存事实",
+    "createdAt": "2026-11-11T06:55:34.376889+00:00",
+    "updatedAt": "2026-11-11T06:55:34.700373+00:00",
+    "evidence": [
+      {
+        "id": "access-log",
+        "title": "异常门禁记录",
+        "kind": "系统日志",
+        "summary": "02:12，有人使用档案室的备用凭证。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "camera",
+        "title": "走廊摄像片段",
+        "kind": "影像记录",
+        "summary": "02:09 至 02:21 的画面中断。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "badge-ledger",
+        "title": "备用凭证领用册",
+        "kind": "书面档案",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "maintenance",
+        "title": "维护工单",
+        "kind": "运维记录",
+        "summary": "摄像维护与门禁异常是否有关？",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "dispatch",
+        "title": "调度消息副本",
+        "kind": "通信记录",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "witness",
+        "title": "值班人员笔录",
+        "kind": "访谈记录",
+        "summary": "证人把时间记成了 02:40。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      }
+    ],
+    "links": [],
+    "verdict": null
+  },
+  "observedVersions": [],
+  "final": {
+    "id": "69659f9a-5892-48ae-af27-d4c5c2e840ec",
+    "caseId": "harbor-01",
+    "title": "雾港档案",
+    "status": "Active",
+    "version": 3,
+    "notes": "后来窗口补充的已保存事实",
+    "createdAt": "2026-11-11T06:55:34.376889+00:00",
+    "updatedAt": "2026-11-11T06:55:34.700373+00:00",
+    "evidence": [
+      {
+        "id": "access-log",
+        "title": "异常门禁记录",
+        "kind": "系统日志",
+        "summary": "02:12，有人使用档案室的备用凭证。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "camera",
+        "title": "走廊摄像片段",
+        "kind": "影像记录",
+        "summary": "02:09 至 02:21 的画面中断。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "badge-ledger",
+        "title": "备用凭证领用册",
+        "kind": "书面档案",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "maintenance",
+        "title": "维护工单",
+        "kind": "运维记录",
+        "summary": "摄像维护与门禁异常是否有关？",
+        "body": null,
+        "locked": false,
+        "examined": false
+      },
+      {
+        "id": "dispatch",
+        "title": "调度消息副本",
+        "kind": "通信记录",
+        "summary": "完成前置调查后解锁。",
+        "body": null,
+        "locked": true,
+        "examined": false
+      },
+      {
+        "id": "witness",
+        "title": "值班人员笔录",
+        "kind": "访谈记录",
+        "summary": "证人把时间记成了 02:40。",
+        "body": null,
+        "locked": false,
+        "examined": false
+      }
+    ],
+    "links": [],
+    "verdict": null
+  }
+}

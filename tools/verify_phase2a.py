@@ -28,7 +28,7 @@ def verify(directory, expected_commit=None, frozen=True):
         stats = browser["stats"]
         require(stats["unexpected"] == stats["flaky"] == stats["skipped"] == 0, "Browser run has failures, flaky results or skipped scenarios")
         specs = [spec for suite in browser["suites"] for spec in suite.get("specs", [])]
-        for phrase in ("draft typed", "dirty draft", "committed write", "revise an existing link", "five business modules", "injected 503", "two windows", "mobile viewport"):
+        for phrase in ("draft typed", "dirty draft", "committed write", "unreadable success body", "revise an existing link", "five business modules", "injected 503", "two windows", "mobile viewport"):
             require(any(phrase in s["title"] and s["ok"] for s in specs), "Browser scenario absent: " + phrase)
         inflight = read("browser/inflight-draft.json")
         require(inflight["draft"] != inflight["server"]["notes"], "In-flight editing observation must preserve newer input")
@@ -36,6 +36,8 @@ def verify(directory, expected_commit=None, frozen=True):
         require(len(lost["attempts"]) == 2 and lost["attempts"][0] == lost["attempts"][1], "Unknown outcome retry changed key, version or body")
         require(lost["final"]["version"] == lost["later"]["version"] > lost["committed"]["version"], "Replay must not write a new version")
         require(all(v >= lost["later"]["version"] for v in lost["observedVersions"]), "Old receipt regressed the visible version")
+        unreadable = read("browser/unreadable-body.json")
+        require(len(unreadable["attempts"]) == 2 and unreadable["attempts"][0] == unreadable["attempts"][1] and unreadable["committed"]["version"] == unreadable["final"]["version"], "Unreadable successful response lost the original operation intent")
         revision = read("browser/link-revision.json")
         require(revision["after"]["links"][0]["id"] == revision["before"]["links"][0]["id"] and revision["after"]["version"] == revision["before"]["version"] + 1, "Revision replaced identity or advanced an incorrect version")
         race = read("database/store-race.json")

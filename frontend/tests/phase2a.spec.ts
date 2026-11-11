@@ -185,6 +185,51 @@ test("committed write with lost response reuses its key and cannot regress a new
   });
 });
 
+test("unreadable success body after a real commit retains the original retry intent", async ({
+  page,
+}) => {
+  await page.getByRole("tab", { name: "调查笔记" }).click();
+  const attempts: { key?: string; version?: string; body: string | null }[] =
+    [];
+  let corrupt = true;
+  await page.route("**/api/investigations/*/notes", async (route) => {
+    const req = route.request();
+    attempts.push({
+      key: req.headers()["idempotency-key"],
+      version: req.headers()["if-match"],
+      body: req.postData(),
+    });
+    const response = await route.fetch(); // Commit is real; only its successful JSON body is corrupted.
+    if (corrupt) {
+      corrupt = false;
+      await route.fulfill({ response, body: '{"id":' });
+    } else await route.fulfill({ response });
+  });
+  await page
+    .getByLabel("调查笔记", { exact: true })
+    .fill("已经提交但成功响应体无法解析的观察");
+  await page.getByRole("button", { name: "保存笔记", exact: true }).click();
+  await expect(page.getByRole("alert")).toContainText("保存结果尚未确认");
+  await expect(
+    page.getByRole("button", { name: "保存笔记", exact: true }),
+  ).toBeDisabled();
+  const committed = await read(page);
+  expect(committed.notes).toBe("已经提交但成功响应体无法解析的观察");
+  await page.getByRole("button", { name: "重试同一次操作" }).click();
+  await expect(page.getByRole("status")).toHaveText("笔记已保存到档案。");
+  expect(attempts).toHaveLength(2);
+  expect(attempts[1]).toEqual(attempts[0]);
+  const final = await read(page);
+  expect(final.version).toBe(committed.version);
+  await record(page, "unreadable-body", {
+    injection:
+      "HTTP 200 body deliberately corrupted after real API commit; not a wire-level packet truncation",
+    attempts,
+    committed,
+    final,
+  });
+});
+
 test("revise an existing link through the real graph editor without replacing its identity", async ({
   page,
 }) => {

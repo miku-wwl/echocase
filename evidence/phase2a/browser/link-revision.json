@@ -1,13 +1,13 @@
 {
   "before": {
-    "id": "058cfcc7-3b9a-4e17-9d3a-bccb6189720b",
+    "id": "dd5efb71-bbf4-4451-bafc-699299d8abef",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 4,
     "notes": "",
-    "createdAt": "2026-11-11T06:51:01.53963+00:00",
-    "updatedAt": "2026-11-11T06:51:02.57531+00:00",
+    "createdAt": "2026-11-11T07:02:02.205022+00:00",
+    "updatedAt": "2026-11-11T07:02:03.284371+00:00",
     "evidence": [
       {
         "id": "access-log",
@@ -66,7 +66,7 @@
     ],
     "links": [
       {
-        "id": "774b3c59-610b-42d1-b1bb-8124999b5263",
+        "id": "dcb1c59e-8f3e-44df-a2c8-96efa2e50e5a",
         "sourceId": "access-log",
         "targetId": "badge-ledger",
         "kind": "Corroborates",
@@ -77,14 +77,14 @@
     "verdict": null
   },
   "after": {
-    "id": "058cfcc7-3b9a-4e17-9d3a-bccb6189720b",
+    "id": "dd5efb71-bbf4-4451-bafc-699299d8abef",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 5,
     "notes": "",
-    "createdAt": "2026-11-11T06:51:01.53963+00:00",
-    "updatedAt": "2026-11-11T06:51:02.97477+00:00",
+    "createdAt": "2026-11-11T07:02:02.205022+00:00",
+    "updatedAt": "2026-11-11T07:02:03.652976+00:00",
     "evidence": [
       {
         "id": "access-log",
@@ -143,12 +143,12 @@
     ],
     "links": [
       {
-        "id": "774b3c59-610b-42d1-b1bb-8124999b5263",
+        "id": "dcb1c59e-8f3e-44df-a2c8-96efa2e50e5a",
         "sourceId": "access-log",
         "targetId": "badge-ledger",
         "kind": "Contradicts",
         "rationale": "核对门禁时钟后发现领用时间与通行时间无法互相印证，暂改为存在矛盾。",
-        "revisedAt": "2026-11-11T06:51:02.97477+00:00"
+        "revisedAt": "2026-11-11T07:02:03.652976+00:00"
       }
     ],
     "verdict": null

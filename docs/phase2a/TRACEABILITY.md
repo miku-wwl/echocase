@@ -17,7 +17,7 @@
 | 原 E07 React 同步/恢复 | TanStack/React Flow，现 E11/E12/E13/E25 | `evidence/browser/` | ch11–13 | 保留基线失败；编辑代次、固定草稿版本、显式比较确认、历史回执单调缓存、AbortSignal；浏览器关闭后草稿恢复未实现 | VERIFIED（页面生命周期） |
 | 原 E08 PostgreSQL 性能 | 所有者组合索引；现 E15/E22 | `evidence/database/results.json`；旧门禁反例 | ch15 | 实际 Store 拦截 SQL、真实表中 30,000 调查/100 所有者，比较无索引/单列/组合。只展示当前索引作用，非生产容量或新增优化成绩 | VERIFIED（限定测量） |
 | 原 E09 维护性/架构变更 | Phase 1 只有假设分析，没有贯穿变更 | ch02 假设，不构成执行证据 | ch02/18 | A：需求、影响、ADR、领域、迁移、API、生成类型、React、回归、交付与发布说明；拆分由已重现错误驱动 | VERIFIED |
-| 原 E10 CI/CD/部署 | 工作流、镜像、现 E14/E16/E17/E21/E23/E24 | `evidence/ci`、`container`、`reliability`、`backup` | ch16/17 | 从固定旧源与当前源构建，旧库→扩展→新应用→真实停库→旧应用写→新应用结案；本地已执行，远程新工作流结果须单独核验。Azure 未执行 | PARTIAL（远程验收进行中） |
+| 原 E10 CI/CD/部署 | 工作流、镜像、现 E14/E16/E17/E21/E23/E24 | `evidence/ci`、`container`、`reliability`、`backup` | ch16/17 | 固定旧源与当前源构建，旧库→扩展→新应用→真停库→旧应用写→新应用结案；本地Podman与远程42975558898的Docker/全栈/新产物核验通过。Azure 未执行 | VERIFIED（本地/CI限定范围） |
 
 新增证据入口：`evidence/phase2a/backend/backend.trx`、`browser/results.json`、`before/`、`database/`、`delivery/latest.json`。具体因果与限制见 [场景发现](FINDINGS.md)，复现见 [REPRODUCE](REPRODUCE.md)。
 

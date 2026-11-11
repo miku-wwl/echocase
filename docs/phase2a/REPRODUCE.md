@@ -45,7 +45,7 @@ $env:ECHOCASE_BROWSER_EVIDENCE='../evidence/phase2a/reproduced/browser'
 node node_modules/@playwright/test/cli.js test
 ```
 
-浏览器注册随机账户；四项新场景共用一个独立测试账户，原四项流程各用随机账户，避免把认证限流误当用例失败。不关闭限流以跑测试。需要 Chromium 时先 `npx playwright install chromium` 并按 CI 配置设置 CI=true；Windows 默认使用已安装 Edge。
+浏览器注册随机账户；Phase 2A新增场景共用一个独立测试账户，原四项流程各用随机账户，避免把认证限流误当用例失败。不关闭限流以跑测试。需要 Chromium 时先 `npx playwright install chromium` 并按 CI 配置设置 CI=true；Windows 默认使用已安装 Edge。
 
 ## 真实 OCI 升级、故障与应用回退
 
@@ -74,10 +74,13 @@ python tools/test_phase2a_gate.py --output work/phase2a-gate-selftest.json
 | `evidence/phase2a/before/` | 两个基线浏览器失败、原现场文字、截图、trace；时间精度失败与错误追踪不一致 |
 | `evidence/phase2a/backend/backend.trx` | 本轮领域、真实 PostgreSQL/API/迁移/架构检查的具体断言结果 |
 | `evidence/phase2a/database/` | SQL 与跟踪、保证同时加载的竞争、微秒一致性、真实 Store 三种索引执行计划 |
-| `evidence/phase2a/browser/` | 原五模块/503/双窗口/移动端回归，以及四个新真实时序场景；JSON 与截图 |
+| `evidence/phase2a/browser/` | 原五模块/503/双窗口/移动端回归，以及新增真实时序、关联修订和不可读成功响应恢复；JSON 与截图 |
 | `evidence/phase2a/delivery/latest.json` | 当前本地成功运行目录；同级保留第一次追踪编号检查失败的记录 |
 | `evidence/phase2a/upstream-source.json` | 固定模板提交、实际阅读文件与摘要；不代表上游执行结果 |
 | `evidence/phase2a/qa/` | 新门禁反例检查 |
+| `evidence/phase2a/ci/` | 真实远程42975558898的运行元数据、后端/浏览器/数据库/交付紧凑原始结果；完整PNG与日志在CI artifacts |
 | `.github/workflows/phase2a.yml` | 每次推送真实重新执行后端、合同、浏览器、Docker交付；新产物写 fresh 目录，合并下载后语义验证 |
 
 CI integrity 先核对已提交的本地证据；full-stack 与 delivery 再分别产生本次真实运行结果；fresh-evidence 验证本次 OCI 源为当前 clean 提交。artifact 名 `phase2a-full-stack`、`phase2a-delivery`；失败时还有调试日志/trace。Azure 不执行。
+
+已核验例：[42975558898](https://github.com/miku-wwl/echocase/actions/runs/42975558898)，工程源提交 a0040802f28594badbc5dbb4b1c308930c38ab0e。最终交接另核对审阅分支头的相关检查，验收文档不假造自身提交的哈希。

@@ -68,5 +68,17 @@ export async function request<T>(
       p.traceId,
     );
   }
-  return response.status === 204 ? (undefined as T) : response.json();
+  if (response.status === 204) return undefined as T;
+  try {
+    return await response.json();
+  } catch (error) {
+    if (options.signal?.aborted) throw error;
+    throw new ApiError(
+      0,
+      "response_unreadable",
+      method === "GET"
+        ? "响应内容无法读取，请重新加载。"
+        : "响应内容无法读取，保存结果尚未确认。可重试同一次操作。",
+    );
+  }
 }
