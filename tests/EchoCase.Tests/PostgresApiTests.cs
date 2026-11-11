@@ -12,7 +12,7 @@ using NUnit.Framework;
 namespace EchoCase.Tests;
 
 [TestFixture, Category("Integration"), NonParallelizable]
-public sealed class PostgresApiTests
+public sealed partial class PostgresApiTests
 {
     private WebApplicationFactory<Program> _factory = null!;
     private HttpClient _alice = null!, _bob = null!;

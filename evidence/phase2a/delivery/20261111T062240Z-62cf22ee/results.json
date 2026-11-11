@@ -1,0 +1,93 @@
+{
+  "kind": "REAL_APPLICATION_OCI_UPGRADE_AND_ROLLBACK",
+  "runId": "20261111T062240Z-62cf22ee",
+  "startedAtUtc": "2026-11-11T06:22:40.703735+00:00",
+  "engine": "podman",
+  "oldSourceCommit": "f7e0cadb1a1c78d73aff011298a4b2eae84af9d4",
+  "sourceCommit": "f7e0cadb1a1c78d73aff011298a4b2eae84af9d4",
+  "workingTreeDirty": true,
+  "sourceTreeSha256": "71efa86fb23c8d9c12cad8ee3d09eb0cad153e3d9d01d4ae034d8b1593a9afec",
+  "steps": [
+    {
+      "name": "clean-source-images-built",
+      "atUtc": "2026-11-11T06:25:02.101086+00:00",
+      "nonRoot": true
+    },
+    {
+      "name": "old-application-seeded-real-case",
+      "atUtc": "2026-11-11T06:25:31.886398+00:00",
+      "version": 7,
+      "investigationId": "b270a0e0-3395-482e-ad28-d7e32d698264",
+      "linkIds": [
+        "735bf3dd-3b14-432d-abac-e3ccb976cf5d",
+        "b0e2a6cb-e099-491f-8e74-a4e51f090f7a"
+      ],
+      "container": "0122794b1175bd7f0d49bdc0a8b8b092997a5897a3ed736517d0609c18823fa9"
+    },
+    {
+      "name": "schema-expanded-old-application-still-writes",
+      "atUtc": "2026-11-11T06:25:44.365592+00:00",
+      "version": 8,
+      "repeatMigration": "no-op"
+    },
+    {
+      "name": "new-application-revises-existing-link",
+      "atUtc": "2026-11-11T06:25:53.461553+00:00",
+      "container": "c391fa42a1821245171ac514e39c5a5da903f43293b1a14eb7b15e65354a7e1c",
+      "oldReceiptReplayed": true,
+      "cookieSurvived": true,
+      "version": 9,
+      "link": {
+        "id": "735bf3dd-3b14-432d-abac-e3ccb976cf5d",
+        "sourceId": "access-log",
+        "targetId": "badge-ledger",
+        "kind": "Contradicts",
+        "rationale": "升级后核对门禁时钟与领用记录，发现两者目前不能互相印证，需要保留矛盾解释。",
+        "revisedAt": "2026-11-11T06:25:53.246402+00:00"
+      }
+    }
+  ],
+  "status": "FAILED",
+  "engineVersion": "podman version 5.8.3",
+  "oldImage": {
+    "id": "2f5a727050a8c28c207cf664dde9d14680cad082d21b431edfce5cd2c43a6d45",
+    "tag": "localhost/echocase:phase1-f7e0cad",
+    "user": "1654",
+    "revisionLabel": "f7e0cadb1a1c78d73aff011298a4b2eae84af9d4"
+  },
+  "newImage": {
+    "id": "cdef3284ab310c69a6fe83d3ef8039aaa328264a3206e99ddb4b454e7902e767",
+    "tag": "localhost/echocase:phase2a-71efa86fb23c",
+    "user": "1654",
+    "revisionLabel": "f7e0cadb1a1c78d73aff011298a4b2eae84af9d4:71efa86fb23c"
+  },
+  "error": "AssertionError: ",
+  "cleanup": [
+    {
+      "type": "container",
+      "name": "echocase-p2a-10614f64-app",
+      "exitCode": 0
+    },
+    {
+      "type": "container",
+      "name": "echocase-p2a-10614f64-db",
+      "exitCode": 0
+    },
+    {
+      "type": "volume",
+      "name": "echocase-p2a-10614f64-data",
+      "exitCode": 0
+    },
+    {
+      "type": "volume",
+      "name": "echocase-p2a-10614f64-keys",
+      "exitCode": 0
+    },
+    {
+      "type": "network",
+      "name": "echocase-p2a-10614f64-net",
+      "exitCode": 0
+    }
+  ],
+  "finishedAtUtc": "2026-11-11T06:26:05.277350+00:00"
+}

@@ -1,0 +1,11 @@
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='5']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20261111024947_InitialInvestigation'.
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20261111030224_InvestigationOwnerTimeline'.
+Cannot load library libgssapi_krb5.so.2 
+Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory

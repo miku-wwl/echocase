@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 import { mkdir } from "node:fs/promises";
-const evidence = "../evidence/browser";
+const evidence = process.env.ECHOCASE_BROWSER_EVIDENCE ?? "../evidence/browser";
 async function account(page: Page) {
   await page.goto("/");
   await page.getByRole("button", { name: "创建账户", exact: true }).click();
@@ -111,7 +111,7 @@ test("five business modules: real browser → ASP.NET → PostgreSQL", async ({
   expect(errors).toEqual([]);
 });
 
-test("injected 503: optimistic note cache rolls back and draft survives", async ({
+test("injected 503: pending note presentation resets and draft survives", async ({
   page,
 }) => {
   await account(page);

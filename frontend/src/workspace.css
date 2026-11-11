@@ -1068,6 +1068,7 @@ legend {
   font-size: 9px;
 }
 .link-list > div {
+  flex-wrap: wrap;
   padding: 10px 20px;
   display: flex;
   gap: 15px;
@@ -1083,6 +1084,29 @@ legend {
 }
 .link-list button {
   margin-left: auto;
+}
+.link-editor,
+.link-rationale {
+  flex-basis: 100%;
+  overflow-wrap: anywhere;
+}
+.link-editor label {
+  display: block;
+  margin: 12px 0;
+}
+.link-editor select {
+  margin-left: 14px;
+}
+.writing-panel [data-testid="notes-conflict"] {
+  background: #f5f1e6;
+  border: 1px solid #dfd2ab;
+}
+.writing-panel dd {
+  white-space: pre-wrap;
+  margin: 5px 0 15px;
+}
+.writing-panel dt {
+  font-weight: 600;
 }
 .review-checks {
   display: flex;

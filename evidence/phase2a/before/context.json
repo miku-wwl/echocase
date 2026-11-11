@@ -1,0 +1,10 @@
+{
+  "baselineCommit": "f7e0cadb1a1c78d73aff011298a4b2eae84af9d4",
+  "baselineAppSha256": "91e19b3cc67d9895a1d9e87c63d3194a7dfb44e3da0528490067ddd755c97006",
+  "baselineAppLines": 1018,
+  "environment": "Windows 11, Edge, API at 5080 using separate phase2a PostgreSQL 55433; Phase 1 app 6080 untouched",
+  "browserBefore": "Two expected failures: later typing overwritten; dirty draft loses conditional baseline safety after refetch",
+  "timestampBefore": "A real API response/read mismatch of 7 ticks; test failure retained",
+  "traceBefore": "Default ASP.NET ProblemDetails writer replaced traceId with full Activity.Id; header used Activity.TraceId",
+  "preservation": "Phase 1 evidence and both PDFs remain byte-identical to baseline; check gate uses git diff"
+}

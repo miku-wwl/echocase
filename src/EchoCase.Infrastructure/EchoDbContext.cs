@@ -56,10 +56,17 @@ public sealed class EchoDbContext(DbContextOptions<EchoDbContext> options) : Ide
         d.HasKey(x => new { x.InvestigationId, x.EvidenceId });
         d.Property(x => x.EvidenceId).HasMaxLength(64);
         var l = b.Entity<EvidenceLink>();
-        l.ToTable("Links", t => { t.HasCheckConstraint("ck_no_self_link", "\"SourceId\" <> \"TargetId\""); t.HasCheckConstraint("ck_link_kind", "\"Kind\" IN ('Corroborates','Contradicts')"); t.HasCheckConstraint("ck_canonical_pair", "\"SourceId\" < \"TargetId\""); });
+        l.ToTable("Links", t =>
+        {
+            t.HasCheckConstraint("ck_no_self_link", "\"SourceId\" <> \"TargetId\"");
+            t.HasCheckConstraint("ck_link_kind", "\"Kind\" IN ('Corroborates','Contradicts')");
+            t.HasCheckConstraint("ck_canonical_pair", "\"SourceId\" < \"TargetId\"");
+            t.HasCheckConstraint("ck_link_revision", "(\"Rationale\" IS NULL AND \"RevisedAt\" IS NULL) OR (\"Rationale\" IS NOT NULL AND \"RevisedAt\" IS NOT NULL AND char_length(\"Rationale\") BETWEEN 20 AND 500)");
+        });
         l.HasKey(x => x.Id); l.Property(x => x.Id).ValueGeneratedNever();
         l.Property(x => x.SourceId).HasMaxLength(64); l.Property(x => x.TargetId).HasMaxLength(64);
         l.Property(x => x.Kind).HasConversion<string>().HasMaxLength(24);
+        l.Property(x => x.Rationale).HasMaxLength(500);
         l.HasIndex(x => new { x.InvestigationId, x.SourceId, x.TargetId }).IsUnique();
         l.HasOne<Discovery>().WithMany().HasForeignKey(x => new { x.InvestigationId, x.SourceId }).OnDelete(DeleteBehavior.Restrict);
         l.HasOne<Discovery>().WithMany().HasForeignKey(x => new { x.InvestigationId, x.TargetId }).OnDelete(DeleteBehavior.Restrict);

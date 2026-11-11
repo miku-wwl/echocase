@@ -43,7 +43,12 @@ builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddScoped<IInvestigationStore, PostgresInvestigationStore>();
 builder.Services.AddScoped<InvestigationService>();
 builder.Services.AddOpenApi();
-builder.Services.AddProblemDetails();
+builder.Services.AddProblemDetails(o => o.CustomizeProblemDetails = context =>
+{
+    // The default writer sets Activity.Id (the full W3C parent string) first.
+    // Keep the public error identifier equal to our response/log TraceId.
+    context.ProblemDetails.Extensions["traceId"] = Activity.Current?.TraceId.ToString() ?? context.HttpContext.TraceIdentifier;
+});
 var app = builder.Build();
 if (args.Contains("--migrate"))
 {
@@ -129,6 +134,7 @@ api.MapGet("/investigations/{id:guid}", async (Guid id, InvestigationService s, 
 api.MapPost("/investigations", async (StartRequest body, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.Start(Owner(p), Key(ctx), body, ct))).Produces<SessionView>().RequireRateLimiting("writes");
 api.MapPost("/investigations/{id:guid}/evidence/{evidenceId}/examine", async (Guid id, string evidenceId, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.Examine(id, Owner(p), Key(ctx), Version(ctx), evidenceId, ct))).Produces<SessionView>().RequireRateLimiting("writes");
 api.MapPost("/investigations/{id:guid}/links", async (Guid id, LinkRequest body, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.Link(id, Owner(p), Key(ctx), Version(ctx), body, ct))).Produces<SessionView>().RequireRateLimiting("writes");
+api.MapPut("/investigations/{id:guid}/links/{linkId:guid}", async (Guid id, Guid linkId, ReviseLinkRequest body, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.ReviseLink(id, Owner(p), Key(ctx), Version(ctx), linkId, body, ct))).Produces<SessionView>().RequireRateLimiting("writes");
 api.MapDelete("/investigations/{id:guid}/links/{linkId:guid}", async (Guid id, Guid linkId, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.RemoveLink(id, Owner(p), Key(ctx), Version(ctx), linkId, ct))).Produces<SessionView>().RequireRateLimiting("writes");
 api.MapPut("/investigations/{id:guid}/notes", async (Guid id, NotesRequest body, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.Notes(id, Owner(p), Key(ctx), Version(ctx), body, ct))).Produces<SessionView>().RequireRateLimiting("writes");
 api.MapPost("/investigations/{id:guid}/state/{action}", async (Guid id, string action, InvestigationService s, ClaimsPrincipal p, HttpContext ctx, CancellationToken ct) => Respond(ctx, await s.Transition(id, Owner(p), Key(ctx), Version(ctx), action, ct))).Produces<SessionView>().RequireRateLimiting("writes");

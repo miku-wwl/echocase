@@ -1,0 +1,60 @@
+[1/3] STEP 1/6: FROM docker.io/library/node:22.22.2-bookworm-slim AS frontend
+[1/3] STEP 2/6: WORKDIR /web
+--> Using cache a731d13584254edf6367644d599974b26b7c765737e198c5d5d9b5ebf06688b4
+--> a731d1358425
+[1/3] STEP 3/6: COPY frontend/package*.json frontend/.npmrc ./
+--> Using cache 127b89dc58b3d19b438ac4eb87fa8093c3d33df0eba95067fd5b3608e22693e1
+--> 127b89dc58b3
+[1/3] STEP 4/6: RUN npm ci
+--> Using cache f9b869466c166a7b811c2b4dc5e5aff5c18e64ebd32582fe68a73d5c2be10a14
+--> f9b869466c16
+[1/3] STEP 5/6: COPY frontend/ ./
+--> Using cache 3d929123a1b017d23ce5427d3ff4ef52d2e1dedca54e2c22ba736500911bc387
+--> 3d929123a1b0
+[1/3] STEP 6/6: RUN npm run build
+--> Using cache 3a5a0a4ced42d01fb3dc76d8c538c656bc37d22f287af9a53c2828ad2e3989f1
+--> 3a5a0a4ced42
+[2/3] STEP 1/6: FROM mcr.microsoft.com/dotnet/sdk:10.0.300 AS build
+[2/3] STEP 2/6: WORKDIR /source
+--> Using cache 27cec089f7e5e445d7d6fe5e32995356c6fe1fb32fc5a5596cfa9fcd01531701
+--> 27cec089f7e5
+[2/3] STEP 3/6: COPY global.json Directory.Build.props EchoCase.slnx ./
+--> Using cache 70b0ff436fb58b23aaa61c546656e042800e722f91dfc2a0f2474f786003ba9f
+--> 70b0ff436fb5
+[2/3] STEP 4/6: COPY src/ src/
+--> Using cache 0795ebf4131e2c53e64c71e193fa3dde901941c15ec46982a00f28cd6960fa27
+--> 0795ebf4131e
+[2/3] STEP 5/6: RUN dotnet restore src/EchoCase.Api --locked-mode
+--> Using cache 65a9602780ba944beb0d3fd3a2995290821a7c8b2520533e7e9e7dae16200f7c
+--> 65a9602780ba
+[2/3] STEP 6/6: RUN dotnet publish src/EchoCase.Api -c Release --no-restore -o /app
+--> Using cache 1dd4dc2ddfe1cf4e874baf8d5a705e904bd747576e0a0fecf06b1da14d636808
+--> 1dd4dc2ddfe1
+[3/3] STEP 1/9: FROM mcr.microsoft.com/dotnet/aspnet:10.0.9 AS final
+[3/3] STEP 2/9: WORKDIR /app
+--> Using cache 821220c7e695476e32d75bf71f352325796a9e08ea4d2b49062a906cd564f3e4
+--> 821220c7e695
+[3/3] STEP 3/9: COPY --from=build /app ./
+--> Using cache e973208bfdc314155d1f1e55ec1c471194473b64c9b7545b4082a956e8b3a2fe
+--> e973208bfdc3
+[3/3] STEP 4/9: COPY --from=frontend /web/dist ./wwwroot
+--> Using cache 4437f9300da2d12fbb25bd206d787a5271ba0498738cc17ec595e86ebc6d95e1
+--> 4437f9300da2
+[3/3] STEP 5/9: ENV ASPNETCORE_HTTP_PORTS=8080
+--> Using cache b2aba569a869a97e78b3edb7926d15758b7bdbfedc11f2301b0aa816d7dfb77f
+--> b2aba569a869
+[3/3] STEP 6/9: USER $APP_UID
+--> Using cache 0273932ea7384be7913a5087b6312719d99141abc08b5f75f6e84ad5171ddd44
+--> 0273932ea738
+[3/3] STEP 7/9: EXPOSE 8080
+--> Using cache a6386c47f2ada45d9923ef5b276d66ad911757a10f0c8b628e2edc99681cea35
+--> a6386c47f2ad
+[3/3] STEP 8/9: ENTRYPOINT ["dotnet","EchoCase.Api.dll"]
+--> Using cache 3e198f81664795bf26036097dfdba6469b321f812d85ba4aee4129929013946b
+--> 3e198f816647
+[3/3] STEP 9/9: LABEL "org.opencontainers.image.revision"="f7e0cadb1a1c78d73aff011298a4b2eae84af9d4"
+--> Using cache 2f5a727050a8c28c207cf664dde9d14680cad082d21b431edfce5cd2c43a6d45
+[3/3] COMMIT localhost/echocase:phase1-f7e0cad
+--> 2f5a727050a8
+Successfully tagged localhost/echocase:phase1-f7e0cad
+2f5a727050a8c28c207cf664dde9d14680cad082d21b431edfce5cd2c43a6d45

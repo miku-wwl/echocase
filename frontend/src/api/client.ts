@@ -3,6 +3,7 @@ export type Session = components["schemas"]["SessionView"];
 export type Evidence = components["schemas"]["EvidenceView"];
 export type Case = components["schemas"]["CaseSummary"];
 export type User = components["schemas"]["UserView"];
+export type ReviseLinkRequest = components["schemas"]["ReviseLinkRequest"];
 export class ApiError extends Error {
   constructor(
     public status: number,
@@ -27,6 +28,7 @@ export async function request<T>(
     body?: unknown;
     key?: string;
     version?: number;
+    signal?: AbortSignal;
   } = {},
 ): Promise<T> {
   const method = options.method ?? "GET";
@@ -43,10 +45,13 @@ export async function request<T>(
       method,
       headers,
       credentials: "same-origin",
+      signal: options.signal,
       body:
         options.body === undefined ? undefined : JSON.stringify(options.body),
     });
-  } catch {
+  } catch (error) {
+    // Query cancellation is intentional; it is not an ambiguous write failure.
+    if (options.signal?.aborted) throw error;
     throw new ApiError(
       0,
       "network_error",

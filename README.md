@@ -4,6 +4,8 @@
 
 ## 交付物
 
+Phase 2A 在独立 review 分支深化工程，新增现有关联修订、真实数据演进、草稿/并发恢复与应用回退闭环；[工程验收](docs/phase2a/ACCEPTANCE.md)、[复现步骤](docs/phase2a/REPRODUCE.md)、[原 E01–E10 映射](docs/phase2a/TRACEABILITY.md)、[模板比较](docs/phase2a/TEMPLATE-COMPARISON.md)、[Phase 2B 内容清单](docs/phase2a/PUBLICATION-INVENTORY.md)。两份 PDF 保留 Phase 1 版本，本阶段没有扩写出版。当前验证请使用 Phase 2A 复现步骤，将新证据写入独立目录；下方旧命令作为 Phase 1 工作流说明保留，不要用 catalog 重写其冻结证据。
+
 - [中文教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)：18 章、26 项实验记录、练习与参考答案、真实截图、源码片段与可点击目录。
 - [独立成册验收报告](docs/ACCEPTANCE-REPORT.md) / [PDF](manual/dist/EchoCase-Acceptance-Report.pdf)：明确 VERIFIED / PARTIAL / BLOCKED / NOT_RUN，披露目标差异与生产限制。
 - [工程路线与参考审计](docs/PLAN.md)、[架构](docs/architecture/ARCHITECTURE.md)、[API](docs/api/API-DESIGN.md)、[测试](docs/testing/TEST-STRATEGY.md)、[部署](docs/deployment/DEPLOYMENT.md)、[实验索引](manual/chapters/19-labs.md)。

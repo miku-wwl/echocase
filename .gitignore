@@ -12,3 +12,4 @@ manual/build/
 *.user
 **/*.tsbuildinfo
 *.log.tmp
+**/__pycache__/

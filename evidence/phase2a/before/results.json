@@ -1,0 +1,282 @@
+{
+  "config": {
+    "argv": [
+      "D:\\node\\node.exe",
+      "D:\\workshop\\nov\\echocase\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/phase2a.spec.ts",
+      "-g",
+      "draft typed|dirty draft"
+    ],
+    "configFile": "D:\\workshop\\nov\\echocase\\frontend\\playwright.config.ts",
+    "rootDir": "D:/workshop/nov/echocase/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/workshop/nov/echocase/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "edge",
+        "name": "edge",
+        "testDir": "D:/workshop/nov/echocase/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\workshop\\nov\\echocase\\frontend\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "edge",
+        "testDir": "D:\\workshop\\nov\\echocase\\frontend\\tests",
+        "snapshotDir": "D:\\workshop\\nov\\echocase\\frontend\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "channel": "msedge",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36 Edg/158.0.8127.18",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "edge"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../evidence/phase2a/before/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase2a.spec.ts",
+      "file": "phase2a.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "draft typed while a real save response is delayed survives acknowledgement",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14443,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel('调查笔记', { exact: true })\nExpected: \u001b[32m\"先提交的观察\u001b[7m；等待时继续记录的新线索\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"先提交的观察\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByLabel('调查笔记', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('调查笔记', { exact: true })\u001b[22m\n\u001b[2m    23 × locator resolved to <textarea id=\"notes\" maxlength=\"4000\" data-slot=\"textarea\" placeholder=\"我观察到…\\n这可能意味着…\\n还需要核实…\" class=\"flex field-sizing-content min-h-16 w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md…>先提交的观察</textarea>\u001b[22m\n\u001b[2m       - unexpected value \"先提交的观察\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel('调查笔记', { exact: true })\nExpected: \u001b[32m\"先提交的观察\u001b[7m；等待时继续记录的新线索\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"先提交的观察\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByLabel('调查笔记', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('调查笔记', { exact: true })\u001b[22m\n\u001b[2m    23 × locator resolved to <textarea id=\"notes\" maxlength=\"4000\" data-slot=\"textarea\" placeholder=\"我观察到…\\n这可能意味着…\\n还需要核实…\" class=\"flex field-sizing-content min-h-16 w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md…>先提交的观察</textarea>\u001b[22m\n\u001b[2m       - unexpected value \"先提交的观察\"\u001b[22m\n\n    at D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts:62:23",
+                    "location": {
+                      "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                      "column": 23,
+                      "line": 62
+                    },
+                    "snippet": " \u001b[90m 60 |\u001b[39m   \u001b[36mconst\u001b[39m server \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m read(page)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m   \u001b[36mawait\u001b[39m record(page\u001b[33m,\u001b[39m \u001b[32m\"inflight-draft\"\u001b[39m\u001b[33m,\u001b[39m { server\u001b[33m,\u001b[39m draft\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39minputValue() })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m   \u001b[36mawait\u001b[39m expect(input)\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m\"先提交的观察；等待时继续记录的新线索\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"保存笔记\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m   expect(server\u001b[33m.\u001b[39mnotes)\u001b[33m.\u001b[39mtoBe(\u001b[32m\"先提交的观察\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39munroute(\u001b[32m\"**/api/investigations/*/notes\"\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                        "column": 23,
+                        "line": 62
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel('调查笔记', { exact: true })\nExpected: \u001b[32m\"先提交的观察\u001b[7m；等待时继续记录的新线索\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"先提交的观察\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByLabel('调查笔记', { exact: true }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('调查笔记', { exact: true })\u001b[22m\n\u001b[2m    23 × locator resolved to <textarea id=\"notes\" maxlength=\"4000\" data-slot=\"textarea\" placeholder=\"我观察到…\\n这可能意味着…\\n还需要核实…\" class=\"flex field-sizing-content min-h-16 w-full rounded-lg border border-input bg-transparent px-2.5 py-2 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md…>先提交的观察</textarea>\u001b[22m\n\u001b[2m       - unexpected value \"先提交的观察\"\u001b[22m\n\n\n  60 |   const server = await read(page);\n  61 |   await record(page, \"inflight-draft\", { server, draft: await input.inputValue() });\n> 62 |   await expect(input).toHaveValue(\"先提交的观察；等待时继续记录的新线索\");\n     |                       ^\n  63 |   await expect(page.getByRole(\"button\", { name: \"保存笔记\" })).toBeEnabled();\n  64 |   expect(server.notes).toBe(\"先提交的观察\");\n  65 |   await page.unroute(\"**/api/investigations/*/notes\");\n    at D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts:62:23"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T06:07:22.977Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-draft-typed-while--20a2b-ed-survives-acknowledgement-edge\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-draft-typed-while--20a2b-ed-survives-acknowledgement-edge\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-draft-typed-while--20a2b-ed-survives-acknowledgement-edge\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                    "column": 23,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f7e13e0439da18ef6ff-e946910b3225b7662c75",
+          "file": "phase2a.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "dirty draft keeps its baseline across refetch and requires explicit conflict confirmation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12844,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeDisabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: '保存笔记' })\nExpected: disabled\nReceived: enabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeDisabled\" getByRole('button', { name: '保存笔记' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: '保存笔记' })\u001b[22m\n\u001b[2m    23 × locator resolved to <button tabindex=\"0\" type=\"button\" data-slot=\"button\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 da…>…</button>\u001b[22m\n\u001b[2m       - unexpected value \"enabled\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeDisabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: '保存笔记' })\nExpected: disabled\nReceived: enabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeDisabled\" getByRole('button', { name: '保存笔记' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: '保存笔记' })\u001b[22m\n\u001b[2m    23 × locator resolved to <button tabindex=\"0\" type=\"button\" data-slot=\"button\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 da…>…</button>\u001b[22m\n\u001b[2m       - unexpected value \"enabled\"\u001b[22m\n\n    at D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts:80:60",
+                    "location": {
+                      "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                      "column": 60,
+                      "line": 80
+                    },
+                    "snippet": " \u001b[90m 78 |\u001b[39m   \u001b[36mawait\u001b[39m record(page\u001b[33m,\u001b[39m \u001b[32m\"dirty-refetch\"\u001b[39m\u001b[33m,\u001b[39m { server\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m read(page)\u001b[33m,\u001b[39m draft\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39minputValue() })\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m   \u001b[36mawait\u001b[39m expect(input)\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m\"本窗口的待核实推断\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"保存笔记\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"notes-conflict\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"另一窗口已经核实的事实\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"确认保留草稿并基于当前版本保存\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 83 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"status\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"笔记已保存到档案。\"\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                        "column": 60,
+                        "line": 80
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeDisabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: '保存笔记' })\nExpected: disabled\nReceived: enabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeDisabled\" getByRole('button', { name: '保存笔记' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: '保存笔记' })\u001b[22m\n\u001b[2m    23 × locator resolved to <button tabindex=\"0\" type=\"button\" data-slot=\"button\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 da…>…</button>\u001b[22m\n\u001b[2m       - unexpected value \"enabled\"\u001b[22m\n\n\n  78 |   await record(page, \"dirty-refetch\", { server: await read(page), draft: await input.inputValue() });\n  79 |   await expect(input).toHaveValue(\"本窗口的待核实推断\");\n> 80 |   await expect(page.getByRole(\"button\", { name: \"保存笔记\" })).toBeDisabled();\n     |                                                            ^\n  81 |   await expect(page.getByTestId(\"notes-conflict\")).toContainText(\"另一窗口已经核实的事实\");\n  82 |   await page.getByRole(\"button\", { name: \"确认保留草稿并基于当前版本保存\" }).click();\n  83 |   await expect(page.getByRole(\"status\")).toHaveText(\"笔记已保存到档案。\");\n    at D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts:80:60"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T06:07:43.809Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-dirty-draft-keeps--6bce5-licit-conflict-confirmation-edge\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-dirty-draft-keeps--6bce5-licit-conflict-confirmation-edge\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\workshop\\nov\\echocase\\frontend\\test-results\\phase2a-dirty-draft-keeps--6bce5-licit-conflict-confirmation-edge\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\workshop\\nov\\echocase\\frontend\\tests\\phase2a.spec.ts",
+                    "column": 60,
+                    "line": 80
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f7e13e0439da18ef6ff-31b9884b3287d9dd1750",
+          "file": "phase2a.spec.ts",
+          "line": 71,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-11T06:07:21.981Z",
+    "duration": 36846.99,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

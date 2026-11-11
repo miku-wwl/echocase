@@ -7,11 +7,13 @@ namespace EchoCase.Application;
 
 public sealed record CaseSummary(string Id, string Title, string Subtitle, string Synopsis, string[] Suspects, int EvidenceCount);
 public sealed record EvidenceView(string Id, string Title, string Kind, string Summary, string? Body, bool Locked, bool Examined);
-public sealed record LinkView(Guid Id, string SourceId, string TargetId, string Kind);
+// Optional defaults also allow replaying receipts created by Phase 1.
+public sealed record LinkView(Guid Id, string SourceId, string TargetId, string Kind, string? Rationale = null, DateTimeOffset? RevisedAt = null);
 public sealed record VerdictView(string Suspect, string Reasoning, string[] SupportingEvidence, int Score);
 public sealed record SessionView(Guid Id, string CaseId, string Title, string Status, int Version, string Notes, DateTimeOffset CreatedAt, DateTimeOffset UpdatedAt, IReadOnlyList<EvidenceView> Evidence, IReadOnlyList<LinkView> Links, VerdictView? Verdict);
 public sealed record StartRequest(string CaseId);
 public sealed record LinkRequest(string SourceId, string TargetId, string Kind);
+public sealed record ReviseLinkRequest(string Kind, string Rationale);
 public sealed record NotesRequest(string Notes);
 public sealed record VerdictRequest(string Suspect, string Reasoning, string[] SupportingEvidence);
 public sealed record Change(string OwnerId, string Key, string Fingerprint, Guid? SessionId, int? ExpectedVersion, string Operation);
@@ -35,7 +37,7 @@ public static class SessionPresenter
         CaseCatalog.Get(i.CaseId).Evidence.Select(e => new EvidenceView(e.Id, e.Title, e.Kind,
             i.IsVisible(e) ? e.Summary : "完成前置调查后解锁。", i.Discoveries.Any(d => d.EvidenceId == e.Id) ? e.Body : null,
             !i.IsVisible(e), i.Discoveries.Any(d => d.EvidenceId == e.Id))).ToArray(),
-        i.Links.OrderBy(l => l.SourceId).ThenBy(l => l.TargetId).Select(l => new LinkView(l.Id, l.SourceId, l.TargetId, l.Kind.ToString())).ToArray(),
+        i.Links.OrderBy(l => l.SourceId).ThenBy(l => l.TargetId).Select(l => new LinkView(l.Id, l.SourceId, l.TargetId, l.Kind.ToString(), l.Rationale, l.RevisedAt)).ToArray(),
         i.Score is null ? null : new(i.Suspect!, i.Reasoning!, i.SupportingEvidence!.Split(','), i.Score.Value));
 }
 
@@ -46,29 +48,45 @@ public sealed class InvestigationService(IInvestigationStore store, TimeProvider
     public Task<SessionView> Get(Guid id, string owner, CancellationToken ct) => store.GetAsync(id, owner, ct);
 
     public Task<SessionView> Start(string owner, string key, StartRequest body, CancellationToken ct) =>
-        Write(owner, key, null, null, "start", body, _ => Investigation.Start(owner, body.CaseId, clock.GetUtcNow()), ct);
+        Write(owner, key, null, null, "start", body, _ => Investigation.Start(owner, body.CaseId, Now()), ct);
     public Task<SessionView> Examine(Guid id, string owner, string key, int version, string evidenceId, CancellationToken ct) =>
-        Write(owner, key, id, version, "examine", new { evidenceId }, i => { i!.Examine(evidenceId, clock.GetUtcNow()); return i; }, ct);
+        Write(owner, key, id, version, "examine", new { evidenceId }, i => { i!.Examine(evidenceId, Now()); return i; }, ct);
     public Task<SessionView> Link(Guid id, string owner, string key, int version, LinkRequest body, CancellationToken ct) =>
         Write(owner, key, id, version, "link", body, i =>
         {
             if (!Enum.TryParse<LinkKind>(body.Kind, false, out var kind) || !Enum.IsDefined(kind)) throw new DomainRule("invalid_relation", "关联类型无效。");
-            i!.Link(body.SourceId, body.TargetId, kind, clock.GetUtcNow()); return i;
+            i!.Link(body.SourceId, body.TargetId, kind, Now()); return i;
         }, ct);
     public Task<SessionView> RemoveLink(Guid id, string owner, string key, int version, Guid linkId, CancellationToken ct) =>
-        Write(owner, key, id, version, "unlink", new { linkId }, i => { i!.RemoveLink(linkId, clock.GetUtcNow()); return i; }, ct);
+        Write(owner, key, id, version, "unlink", new { linkId }, i => { i!.RemoveLink(linkId, Now()); return i; }, ct);
+    public Task<SessionView> ReviseLink(Guid id, string owner, string key, int version, Guid linkId, ReviseLinkRequest body, CancellationToken ct) =>
+        Write(owner, key, id, version, "revise-link", new { linkId, body }, i =>
+        {
+            if (!Enum.TryParse<LinkKind>(body.Kind, false, out var kind) || !Enum.IsDefined(kind) || kind.ToString() != body.Kind)
+                throw new DomainRule("invalid_relation", "关联类型无效。");
+            i!.ReviseLink(linkId, kind, body.Rationale, Now());
+            return i;
+        }, ct);
     public Task<SessionView> Notes(Guid id, string owner, string key, int version, NotesRequest body, CancellationToken ct) =>
-        Write(owner, key, id, version, "notes", body, i => { i!.SaveNotes(body.Notes, clock.GetUtcNow()); return i; }, ct);
+        Write(owner, key, id, version, "notes", body, i => { i!.SaveNotes(body.Notes, Now()); return i; }, ct);
     public Task<SessionView> Transition(Guid id, string owner, string key, int version, string action, CancellationToken ct) =>
         Write(owner, key, id, version, action, new { action }, i =>
         {
-            if (action == "review") i!.Review(clock.GetUtcNow());
-            else if (action == "resume") i!.Resume(clock.GetUtcNow());
+            if (action == "review") i!.Review(Now());
+            else if (action == "resume") i!.Resume(Now());
             else throw new ApplicationFault(404, "action_not_found", "操作不存在。");
             return i;
         }, ct);
     public Task<SessionView> Verdict(Guid id, string owner, string key, int version, VerdictRequest body, CancellationToken ct) =>
-        Write(owner, key, id, version, "verdict", body, i => { i!.Submit(body.Suspect, body.Reasoning, body.SupportingEvidence, clock.GetUtcNow()); return i; }, ct);
+        Write(owner, key, id, version, "verdict", body, i => { i!.Submit(body.Suspect, body.Reasoning, body.SupportingEvidence, Now()); return i; }, ct);
+
+    // API timestamps use microseconds so an immediate receipt and a PostgreSQL
+    // reread describe exactly the same instant (DateTimeOffset ticks are finer).
+    private DateTimeOffset Now()
+    {
+        var utc = clock.GetUtcNow();
+        return utc.AddTicks(-(utc.Ticks % TimeSpan.TicksPerMicrosecond));
+    }
 
     private Task<SessionView> Write<T>(string owner, string key, Guid? id, int? version, string operation, T body, Func<Investigation?, Investigation> apply, CancellationToken ct)
     {

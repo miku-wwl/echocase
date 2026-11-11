@@ -8,7 +8,12 @@ export default defineConfig({
   expect: { timeout: 10_000 },
   reporter: [
     ["list"],
-    ["json", { outputFile: "../evidence/browser/results.json" }],
+    [
+      "json",
+      {
+        outputFile: `${process.env.ECHOCASE_BROWSER_EVIDENCE ?? "../evidence/browser"}/results.json`,
+      },
+    ],
     ["html", { open: "never" }],
   ],
   use: {

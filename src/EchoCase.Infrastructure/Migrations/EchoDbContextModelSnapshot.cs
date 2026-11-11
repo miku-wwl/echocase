@@ -52,6 +52,13 @@ namespace EchoCase.Infrastructure.Migrations
                         .HasMaxLength(24)
                         .HasColumnType("character varying(24)");
 
+                    b.Property<string>("Rationale")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTimeOffset?>("RevisedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("SourceId")
                         .IsRequired()
                         .HasMaxLength(64)
@@ -74,6 +81,8 @@ namespace EchoCase.Infrastructure.Migrations
                             t.HasCheckConstraint("ck_canonical_pair", "\"SourceId\" < \"TargetId\"");
 
                             t.HasCheckConstraint("ck_link_kind", "\"Kind\" IN ('Corroborates','Contradicts')");
+
+                            t.HasCheckConstraint("ck_link_revision", "(\"Rationale\" IS NULL AND \"RevisedAt\" IS NULL) OR (\"Rationale\" IS NOT NULL AND \"RevisedAt\" IS NOT NULL AND char_length(\"Rationale\") BETWEEN 20 AND 500)");
 
                             t.HasCheckConstraint("ck_no_self_link", "\"SourceId\" <> \"TargetId\"");
                         });

@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace EchoCase.Domain;
 
 public sealed class DomainRule(string code, string message) : Exception(message)
@@ -68,6 +70,21 @@ public sealed class Investigation
         Advance(now);
     }
 
+    public void ReviseLink(Guid id, LinkKind kind, string rationale, DateTimeOffset now)
+    {
+        Editable();
+        Require(Enum.IsDefined(kind), "invalid_relation", "关联类型无效。");
+        var link = _links.SingleOrDefault(x => x.Id == id);
+        Require(link is not null, "link_not_found", "关联不存在。");
+        var explanation = rationale.Trim();
+        Require(explanation.EnumerateRunes().Count() is >= 20 and <= 500,
+            "rationale_length", "关联解释需要 20 至 500 个字符。");
+        Require(link!.Kind != kind || link.Rationale != explanation,
+            "link_unchanged", "关联类型和解释均未改变。");
+        link.Revise(kind, explanation, now);
+        Advance(now);
+    }
+
     public void SaveNotes(string notes, DateTimeOffset now)
     {
         Editable();
@@ -126,4 +143,12 @@ public sealed class EvidenceLink
     public string SourceId { get; private set; } = "";
     public string TargetId { get; private set; } = "";
     public LinkKind Kind { get; private set; }
+    public string? Rationale { get; private set; }
+    public DateTimeOffset? RevisedAt { get; private set; }
+    internal void Revise(LinkKind kind, string rationale, DateTimeOffset now)
+    {
+        Kind = kind;
+        Rationale = rationale;
+        RevisedAt = now;
+    }
 }

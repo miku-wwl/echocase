@@ -10,16 +10,24 @@ import { Network, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Session } from "./api/client";
 import "@xyflow/react/dist/style.css";
+import LinkEditor from "./workspace/LinkEditor";
+import type { ReviseLinkRequest } from "./api/client";
 export default function EvidenceGraph({
   session,
   disabled,
   onLink,
   onRemove,
+  onRevise,
 }: {
   session: Session;
   disabled: boolean;
   onLink: (s: string, t: string, k: string) => void;
   onRemove: (id: string) => void;
+  onRevise: (
+    id: string,
+    body: ReviseLinkRequest,
+    version: number,
+  ) => Promise<unknown>;
 }) {
   const evidence = session.evidence.filter((e) => e.examined);
   const [nodes, setNodes] = useState<Node[]>([]),
@@ -172,10 +180,17 @@ export default function EvidenceGraph({
       </div>
       <div className="link-list">
         {session.links.map((l) => (
-          <div key={l.id}>
+          <div key={l.id} className="link-row">
             <span>{evidence.find((e) => e.id === l.sourceId)?.title}</span>
             <b>{l.kind === "Corroborates" ? "相互印证" : "存在矛盾"}</b>
             <span>{evidence.find((e) => e.id === l.targetId)?.title}</span>
+            <LinkEditor
+              link={l}
+              version={session.version}
+              disabled={disabled}
+              onSave={onRevise}
+            />
+            {l.rationale && <p className="link-rationale">{l.rationale}</p>}
             {!disabled && (
               <button
                 aria-label={`删除 ${l.sourceId} ${l.targetId} 关联`}

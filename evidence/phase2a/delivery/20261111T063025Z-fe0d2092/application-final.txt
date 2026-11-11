@@ -1,0 +1,24 @@
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://[::]:8080
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /app
+info: EchoCase.Api[0]
+      HTTP GET /health/ready 200 2139.1139ms trace=21056d6c447a830cbad4f1d50ad41848
+info: EchoCase.Api[0]
+      HTTP GET /api/investigations/a0c4f8c8-b7a1-45b3-acae-76e88ab21e9b 200 970.2826ms trace=847b004d024b9e3ee4af910a10620edd
+info: EchoCase.Api[0]
+      HTTP GET /api/cases 200 8.3127ms trace=2c0538c59ecdd75fd65d7b2f57620413
+info: EchoCase.Api[0]
+      HTTP GET /api/investigations 200 214.0873ms trace=ff05374d5af3569a75a524a85e5eacde
+info: EchoCase.Api[0]
+      HTTP POST /api/investigations/a0c4f8c8-b7a1-45b3-acae-76e88ab21e9b/state/review 200 822.4297ms trace=289dec272bab0bc479a9b7e52a31affe
+info: EchoCase.Api[0]
+      HTTP POST /api/investigations/a0c4f8c8-b7a1-45b3-acae-76e88ab21e9b/verdict 200 84.4236ms trace=bd7804a479fb435a21e270e6bd595fc2
+info: EchoCase.Api[0]
+      HTTP GET /api/investigations/a0c4f8c8-b7a1-45b3-acae-76e88ab21e9b 200 5.7879ms trace=f7f984c6a886ea2c2a71a8514e83a827
+Cannot load library libgssapi_krb5.so.2 
+Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory

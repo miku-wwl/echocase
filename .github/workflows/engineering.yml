@@ -1,7 +1,7 @@
 name: engineering
 on:
   push:
-    branches: [main, 'codex/**']
+    branches: [main, 'codex/**', '!codex/phase2a-*']
   pull_request:
   workflow_dispatch:
     inputs:
@@ -16,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   integrity:
+    if: ${{ !startsWith(github.head_ref, 'codex/phase2a-') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

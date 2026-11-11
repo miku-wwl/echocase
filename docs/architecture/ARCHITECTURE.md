@@ -16,6 +16,10 @@ Store 开始事务，按 OwnerId+Key 获取事务级 advisory lock，按 OwnerId
 
 单案件聚合最多六条发现与十五条无向关联，采用单 SQL Include 保持语句级快照；列表限制 50。大规模数据需要投影和分页，不应直接扩大当前全部加载策略。组合索引匹配 OwnerId/UpdatedAt。合成性能实验独立于应用表，禁止将其结果描述为应用生产容量。
 
+Phase 2A 增加了针对真实 `PostgresInvestigationStore.ListAsync` SQL 的三组执行计划对照：无所有者索引、初始的 OwnerId 单列索引、现有组合索引。数据是实际应用表中的合成数据，仍不能代表生产容量；SQL、参数、完整计划和测量限制保存在 `evidence/phase2a/database/application-query-plan.json`。
+
 ## 演化与限制
 
 案件目录在代码中固定，目前没有不可变案件版本实体。回执没有自动清理，审计不是防篡改存储。身份采用成熟哈希与 Cookie，但账户全生命周期未完成。应用为可审阅教学实现，不能据此宣称生产就绪。
+
+关联解释使用向后兼容的可空列扩展；旧应用回退保留向前模式。前端的请求/确认快照、草稿基线和编辑代次分别由 `useInvestigation`、`useNotesDraft` 和 `NotesEditor` 管理；历史回执不允许倒退缓存。具体权衡见 ADR 0007/0008 与 Phase 2A 场景记录。

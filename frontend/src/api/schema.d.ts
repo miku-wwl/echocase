@@ -464,7 +464,33 @@ export interface paths {
             cookie?: never;
         };
         get?: never;
-        put?: never;
+        put: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                    linkId: string;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["ReviseLinkRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["SessionView"];
+                    };
+                };
+            };
+        };
         post?: never;
         delete: {
             parameters: {
@@ -654,9 +680,16 @@ export interface components {
             sourceId: string;
             targetId: string;
             kind: string;
+            rationale?: null | string;
+            /** Format: date-time */
+            revisedAt?: null | string;
         };
         NotesRequest: {
             notes: string;
+        };
+        ReviseLinkRequest: {
+            kind: string;
+            rationale: string;
         };
         SessionView: {
             /** Format: uuid */
