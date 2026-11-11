@@ -262,7 +262,10 @@ test("revise an existing link through the real graph editor without replacing it
     "核对门禁时钟后发现领用时间与通行时间无法互相印证，暂改为存在矛盾。";
   await page.getByLabel("修订解释").fill(rationale);
   await page.getByRole("button", { name: "保存关联修订", exact: true }).click();
-  await expect(page.getByText(rationale, { exact: true })).toBeVisible();
+  // The confirmed response renders before onSettled finishes and the editor
+  // closes. Assert completion and the persisted presentation, not any equal text.
+  await expect(page.getByLabel("修订解释")).toHaveCount(0);
+  await expect(page.locator(".link-rationale")).toHaveText(rationale);
   const after = await read(page);
   expect(after.version).toBe(before.version + 1);
   expect(after.links[0]).toMatchObject({
@@ -273,6 +276,6 @@ test("revise an existing link through the real graph editor without replacing it
   });
   await page.reload();
   await page.getByRole("tab", { name: "关联图谱" }).click();
-  await expect(page.getByText(rationale, { exact: true })).toBeVisible();
+  await expect(page.locator(".link-rationale")).toHaveText(rationale);
   await record(page, "link-revision", { before, after });
 });

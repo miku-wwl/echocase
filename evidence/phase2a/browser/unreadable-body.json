@@ -2,25 +2,25 @@
   "injection": "HTTP 200 body deliberately corrupted after real API commit; not a wire-level packet truncation",
   "attempts": [
     {
-      "key": "61e9118e-c474-4aab-8e85-5597181884d7",
+      "key": "335f3d02-45da-4ccf-86f3-07f13844d174",
       "version": "\"1\"",
       "body": "{\"notes\":\"已经提交但成功响应体无法解析的观察\"}"
     },
     {
-      "key": "61e9118e-c474-4aab-8e85-5597181884d7",
+      "key": "335f3d02-45da-4ccf-86f3-07f13844d174",
       "version": "\"1\"",
       "body": "{\"notes\":\"已经提交但成功响应体无法解析的观察\"}"
     }
   ],
   "committed": {
-    "id": "5f71fe8a-f38d-41c1-abef-15520ac19837",
+    "id": "def87723-76ad-4920-844a-85eb3ce420ef",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 2,
     "notes": "已经提交但成功响应体无法解析的观察",
-    "createdAt": "2026-11-11T07:01:59.891871+00:00",
-    "updatedAt": "2026-11-11T07:02:00.274035+00:00",
+    "createdAt": "2026-11-11T07:08:43.387778+00:00",
+    "updatedAt": "2026-11-11T07:08:43.709234+00:00",
     "evidence": [
       {
         "id": "access-log",
@@ -81,14 +81,14 @@
     "verdict": null
   },
   "final": {
-    "id": "5f71fe8a-f38d-41c1-abef-15520ac19837",
+    "id": "def87723-76ad-4920-844a-85eb3ce420ef",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 2,
     "notes": "已经提交但成功响应体无法解析的观察",
-    "createdAt": "2026-11-11T07:01:59.891871+00:00",
-    "updatedAt": "2026-11-11T07:02:00.274035+00:00",
+    "createdAt": "2026-11-11T07:08:43.387778+00:00",
+    "updatedAt": "2026-11-11T07:08:43.709234+00:00",
     "evidence": [
       {
         "id": "access-log",

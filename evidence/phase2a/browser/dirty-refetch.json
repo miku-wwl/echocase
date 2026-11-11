@@ -1,13 +1,13 @@
 {
   "server": {
-    "id": "8f03af15-a205-46ac-9360-53114b1f064c",
+    "id": "0ea08172-70a9-4844-8d37-fd2cf9b2ddad",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 2,
     "notes": "另一窗口已经核实的事实",
-    "createdAt": "2026-11-11T07:01:55.037037+00:00",
-    "updatedAt": "2026-11-11T07:01:55.365814+00:00",
+    "createdAt": "2026-11-11T07:08:38.27522+00:00",
+    "updatedAt": "2026-11-11T07:08:38.611046+00:00",
     "evidence": [
       {
         "id": "access-log",

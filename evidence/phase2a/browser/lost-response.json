@@ -1,25 +1,25 @@
 {
   "attempts": [
     {
-      "key": "b55e11b5-e98a-4fb2-95af-cc622bb4c135",
+      "key": "05de8e26-73a3-4d30-a911-e14daee42f76",
       "version": "\"1\"",
       "body": "{\"notes\":\"提交成功但返回途中断开的观察\"}"
     },
     {
-      "key": "b55e11b5-e98a-4fb2-95af-cc622bb4c135",
+      "key": "05de8e26-73a3-4d30-a911-e14daee42f76",
       "version": "\"1\"",
       "body": "{\"notes\":\"提交成功但返回途中断开的观察\"}"
     }
   ],
   "committed": {
-    "id": "d2b50937-ed60-4031-8fa0-cd665c698c4b",
+    "id": "cc57255c-bcdc-4ee5-93a8-d0064fcf239c",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 2,
     "notes": "提交成功但返回途中断开的观察",
-    "createdAt": "2026-11-11T07:01:57.330767+00:00",
-    "updatedAt": "2026-11-11T07:01:57.710591+00:00",
+    "createdAt": "2026-11-11T07:08:40.658003+00:00",
+    "updatedAt": "2026-11-11T07:08:41.091121+00:00",
     "evidence": [
       {
         "id": "access-log",
@@ -80,14 +80,14 @@
     "verdict": null
   },
   "later": {
-    "id": "d2b50937-ed60-4031-8fa0-cd665c698c4b",
+    "id": "cc57255c-bcdc-4ee5-93a8-d0064fcf239c",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 3,
     "notes": "后来窗口补充的已保存事实",
-    "createdAt": "2026-11-11T07:01:57.330767+00:00",
-    "updatedAt": "2026-11-11T07:01:57.86691+00:00",
+    "createdAt": "2026-11-11T07:08:40.658003+00:00",
+    "updatedAt": "2026-11-11T07:08:41.261499+00:00",
     "evidence": [
       {
         "id": "access-log",
@@ -149,14 +149,14 @@
   },
   "observedVersions": [],
   "final": {
-    "id": "d2b50937-ed60-4031-8fa0-cd665c698c4b",
+    "id": "cc57255c-bcdc-4ee5-93a8-d0064fcf239c",
     "caseId": "harbor-01",
     "title": "雾港档案",
     "status": "Active",
     "version": 3,
     "notes": "后来窗口补充的已保存事实",
-    "createdAt": "2026-11-11T07:01:57.330767+00:00",
-    "updatedAt": "2026-11-11T07:01:57.86691+00:00",
+    "createdAt": "2026-11-11T07:08:40.658003+00:00",
+    "updatedAt": "2026-11-11T07:08:41.261499+00:00",
     "evidence": [
       {
         "id": "access-log",

@@ -1,0 +1,28 @@
+{
+  "conclusion": "failure",
+  "headSha": "d6a99fce62453b0e0a21397e24cdc3804c76280f",
+  "jobs": [
+    {
+      "name": "integrity",
+      "conclusion": "success",
+      "url": "https://github.com/miku-wwl/echocase/actions/runs/42976782644/job/130377602895"
+    },
+    {
+      "name": "delivery",
+      "conclusion": "success",
+      "url": "https://github.com/miku-wwl/echocase/actions/runs/42976782644/job/130377657409"
+    },
+    {
+      "name": "full-stack",
+      "conclusion": "failure",
+      "url": "https://github.com/miku-wwl/echocase/actions/runs/42976782644/job/130377657412"
+    },
+    {
+      "name": "fresh-evidence",
+      "conclusion": "skipped",
+      "url": "https://github.com/miku-wwl/echocase/actions/runs/42976782644/job/130378527180"
+    }
+  ],
+  "url": "https://github.com/miku-wwl/echocase/actions/runs/42976782644",
+  "diagnosis": "Broad text locator matched both draft textarea and confirmed rationale during onSettled; wait for editor close and select persisted rationale explicitly. No assertion weakened, no retry added."
+}
