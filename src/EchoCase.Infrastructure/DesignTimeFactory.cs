@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 namespace EchoCase.Infrastructure;
+
 public sealed class DesignTimeFactory : IDesignTimeDbContextFactory<EchoDbContext>
 {
     public EchoDbContext CreateDbContext(string[] args) => new(new DbContextOptionsBuilder<EchoDbContext>().UseNpgsql(

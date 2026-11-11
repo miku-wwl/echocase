@@ -50,7 +50,8 @@ public sealed class InvestigationService(IInvestigationStore store, TimeProvider
     public Task<SessionView> Examine(Guid id, string owner, string key, int version, string evidenceId, CancellationToken ct) =>
         Write(owner, key, id, version, "examine", new { evidenceId }, i => { i!.Examine(evidenceId, clock.GetUtcNow()); return i; }, ct);
     public Task<SessionView> Link(Guid id, string owner, string key, int version, LinkRequest body, CancellationToken ct) =>
-        Write(owner, key, id, version, "link", body, i => {
+        Write(owner, key, id, version, "link", body, i =>
+        {
             if (!Enum.TryParse<LinkKind>(body.Kind, false, out var kind) || !Enum.IsDefined(kind)) throw new DomainRule("invalid_relation", "关联类型无效。");
             i!.Link(body.SourceId, body.TargetId, kind, clock.GetUtcNow()); return i;
         }, ct);
@@ -59,7 +60,8 @@ public sealed class InvestigationService(IInvestigationStore store, TimeProvider
     public Task<SessionView> Notes(Guid id, string owner, string key, int version, NotesRequest body, CancellationToken ct) =>
         Write(owner, key, id, version, "notes", body, i => { i!.SaveNotes(body.Notes, clock.GetUtcNow()); return i; }, ct);
     public Task<SessionView> Transition(Guid id, string owner, string key, int version, string action, CancellationToken ct) =>
-        Write(owner, key, id, version, action, new { action }, i => {
+        Write(owner, key, id, version, action, new { action }, i =>
+        {
             if (action == "review") i!.Review(clock.GetUtcNow());
             else if (action == "resume") i!.Resume(clock.GetUtcNow());
             else throw new ApplicationFault(404, "action_not_found", "操作不存在。");

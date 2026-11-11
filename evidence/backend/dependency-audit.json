@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "D:/workshop/nov/echocase/src/EchoCase.Api/EchoCase.Api.csproj"
+    },
+    {
+      "path": "D:/workshop/nov/echocase/src/EchoCase.Application/EchoCase.Application.csproj"
+    },
+    {
+      "path": "D:/workshop/nov/echocase/src/EchoCase.Domain/EchoCase.Domain.csproj"
+    },
+    {
+      "path": "D:/workshop/nov/echocase/src/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj"
+    },
+    {
+      "path": "D:/workshop/nov/echocase/tests/EchoCase.Tests/EchoCase.Tests.csproj"
+    }
+  ]
+}

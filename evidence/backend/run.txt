@@ -10,4 +10,4 @@ D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.d
 警告: 正在覆盖结果文件: D:\workshop\nov\echocase\evidence\backend\backend.trx
 结果文件: D:\workshop\nov\echocase\evidence\backend\backend.trx
 
-已通过! - 失败:     0，通过:    37，已跳过:     0，总计:    37，持续时间: 7 s - EchoCase.Tests.dll (net10.0)
+已通过! - 失败:     0，通过:    38，已跳过:     0，总计:    38，持续时间: 8 s - EchoCase.Tests.dll (net10.0)

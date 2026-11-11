@@ -47,6 +47,7 @@ public sealed class EchoDbContext(DbContextOptions<EchoDbContext> options) : Ide
         i.Property(x => x.Reasoning).HasMaxLength(4000);
         i.Property(x => x.Suspect).HasMaxLength(100);
         i.Property(x => x.SupportingEvidence).HasMaxLength(1000);
+        i.HasIndex(x => new { x.OwnerId, x.UpdatedAt }).IsDescending(false, true);
         i.HasMany(x => x.Discoveries).WithOne().HasForeignKey(x => x.InvestigationId).OnDelete(DeleteBehavior.Cascade);
         i.Navigation(x => x.Discoveries).UsePropertyAccessMode(PropertyAccessMode.Field);
         i.HasMany(x => x.Links).WithOne().HasForeignKey(x => x.InvestigationId).OnDelete(DeleteBehavior.Cascade);

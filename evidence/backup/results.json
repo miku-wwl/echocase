@@ -1,0 +1,22 @@
+{
+  "kind": "REAL_PG_DUMP_PG_RESTORE_SYNTHETIC_DATABASE",
+  "dump_bytes": 1793,
+  "sha256": "25c16d7fb3c3ebef78930138e7359de16830bbb78a11b59322408fd92f3fdbba",
+  "restored_rows": [
+    [
+      1,
+      "门禁"
+    ],
+    [
+      2,
+      "凭证"
+    ],
+    [
+      3,
+      "调度"
+    ]
+  ],
+  "row_count": 3,
+  "scope": "one disposable local PostgreSQL database; NOT complete application DR, off-host backup, or PITR",
+  "cleanup": "both disposable databases removed; dump not persisted"
+}

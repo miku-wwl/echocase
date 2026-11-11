@@ -1,0 +1,58 @@
+{
+  "baseline_exit_code": 0,
+  "corruptions_rejected": 7,
+  "cases": [
+    {
+      "case": "missing_artifact",
+      "exit_code": 1,
+      "diagnostics": [
+        "E24: missing evidence/backup/results.json",
+        "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\weila\\\\AppData\\\\Local\\\\Temp\\\\echocase_gate_kx86_k5v\\\\evidence\\\\backup\\\\results.json'"
+      ]
+    },
+    {
+      "case": "tampered_artifact",
+      "exit_code": 1,
+      "diagnostics": [
+        "E15: digest mismatch evidence/database/results.json",
+        "E18: digest mismatch evidence/database/results.json",
+        "E19: digest mismatch evidence/database/results.json"
+      ]
+    },
+    {
+      "case": "outward_dependency",
+      "exit_code": 1,
+      "diagnostics": [
+        "Domain: outward project reference {'EchoCase.Infrastructure'}"
+      ]
+    },
+    {
+      "case": "unsupported_status",
+      "exit_code": 1,
+      "diagnostics": [
+        "E01: invalid status"
+      ]
+    },
+    {
+      "case": "performance_regression",
+      "exit_code": 1,
+      "diagnostics": [
+        "Local sequential read p95 exceeds 200ms teaching gate"
+      ]
+    },
+    {
+      "case": "missing_answer",
+      "exit_code": 1,
+      "diagnostics": [
+        "Exercise/answer set incomplete 1"
+      ]
+    },
+    {
+      "case": "unsupported_measurement",
+      "exit_code": 1,
+      "diagnostics": [
+        "Unsupported measurement invented_result"
+      ]
+    }
+  ]
+}

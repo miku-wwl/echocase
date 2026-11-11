@@ -16,12 +16,14 @@ var builder = WebApplication.CreateBuilder(args);
 var connection = builder.Configuration.GetConnectionString("EchoCase") ?? throw new InvalidOperationException("Set ConnectionStrings__EchoCase. No default database credentials are shipped.");
 builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = 16384);
 builder.Services.AddDbContext<EchoDbContext>(o => o.UseNpgsql(connection, p => p.CommandTimeout(5)));
-builder.Services.AddIdentityCore<Investigator>(o => {
+builder.Services.AddIdentityCore<Investigator>(o =>
+{
     o.User.RequireUniqueEmail = true;
     o.Password.RequiredLength = 12; o.Password.RequireNonAlphanumeric = false;
     o.Lockout.MaxFailedAccessAttempts = 5; o.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
 }).AddEntityFrameworkStores<EchoDbContext>();
-builder.Services.AddAuthentication("EchoCase").AddCookie("EchoCase", o => {
+builder.Services.AddAuthentication("EchoCase").AddCookie("EchoCase", o =>
+{
     o.Cookie.Name = "echocase.session"; o.Cookie.HttpOnly = true; o.Cookie.SameSite = SameSiteMode.Strict;
     o.Cookie.SecurePolicy = builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("Testing") ? CookieSecurePolicy.SameAsRequest : CookieSecurePolicy.Always;
     o.ExpireTimeSpan = TimeSpan.FromHours(2); o.SlidingExpiration = false;
@@ -30,7 +32,8 @@ builder.Services.AddAuthentication("EchoCase").AddCookie("EchoCase", o => {
 });
 builder.Services.AddAuthorization();
 builder.Services.AddAntiforgery(o => { o.HeaderName = "X-CSRF-TOKEN"; o.Cookie.Name = "echocase.csrf"; o.Cookie.SameSite = SameSiteMode.Strict; });
-builder.Services.AddRateLimiter(o => {
+builder.Services.AddRateLimiter(o =>
+{
     o.RejectionStatusCode = 429;
     o.AddPolicy("auth", ctx => RateLimitPartition.GetFixedWindowLimiter(ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown", _ => new() { PermitLimit = 15, Window = TimeSpan.FromMinutes(1), QueueLimit = 0 }));
     o.AddPolicy("writes", ctx => RateLimitPartition.GetFixedWindowLimiter(ctx.User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "anonymous", _ => new() { PermitLimit = 120, Window = TimeSpan.FromMinutes(1), QueueLimit = 0 }));
@@ -48,7 +51,8 @@ if (args.Contains("--migrate"))
     await scope.ServiceProvider.GetRequiredService<EchoDbContext>().Database.MigrateAsync();
     return;
 }
-app.Use(async (ctx, next) => {
+app.Use(async (ctx, next) =>
+{
     ctx.Response.Headers["X-Content-Type-Options"] = "nosniff";
     ctx.Response.Headers["Referrer-Policy"] = "no-referrer";
     ctx.Response.Headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'";
@@ -58,12 +62,14 @@ app.Use(async (ctx, next) => {
     try { await next(); }
     catch (Exception e) when (!ctx.Response.HasStarted)
     {
-        var (status, code, detail) = e switch {
+        var (status, code, detail) = e switch
+        {
             ApplicationFault f => (f.Status, f.Code, f.Message),
             DomainRule d => (422, d.Code, d.Message),
             AntiforgeryValidationException => (400, "csrf_invalid", "防伪令牌缺失或失效。请刷新页面。"),
             BadHttpRequestException b => (b.StatusCode, "invalid_request", "请求格式不正确。"),
             NpgsqlException => (503, "database_unavailable", "数据服务暂不可用。请稍后重试。"),
+            InvalidOperationException { InnerException: NpgsqlException } => (503, "database_unavailable", "数据服务暂不可用。请稍后重试。"),
             DbUpdateException => (503, "write_failed", "保存未完成。请刷新后重试。"),
             _ => (500, "internal_error", "服务发生错误，请使用追踪编号排查。")
         };
@@ -78,7 +84,8 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseRateLimiter();
 app.UseAuthorization();
-app.Use(async (ctx, next) => {
+app.Use(async (ctx, next) =>
+{
     if (ctx.Request.Path.StartsWithSegments("/api") && !HttpMethods.IsGet(ctx.Request.Method) && !HttpMethods.IsHead(ctx.Request.Method) && !HttpMethods.IsOptions(ctx.Request.Method))
         await ctx.RequestServices.GetRequiredService<IAntiforgery>().ValidateRequestAsync(ctx);
     await next();
@@ -86,19 +93,22 @@ app.Use(async (ctx, next) => {
 app.UseDefaultFiles(); app.UseStaticFiles();
 if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Testing")) app.MapOpenApi();
 app.MapGet("/health/live", () => Results.Ok(new { status = "live" })).AllowAnonymous();
-app.MapGet("/health/ready", async (EchoDbContext db, CancellationToken ct) => {
+app.MapGet("/health/ready", async (EchoDbContext db, CancellationToken ct) =>
+{
     try { return await db.Database.CanConnectAsync(ct) ? Results.Ok(new { status = "ready" }) : Results.StatusCode(503); }
     catch (Exception e) when (e is NpgsqlException or TimeoutException) { return Results.StatusCode(503); }
 }).AllowAnonymous();
 app.MapGet("/api/auth/csrf", (HttpContext ctx, IAntiforgery anti) => new CsrfResponse(anti.GetAndStoreTokens(ctx).RequestToken!));
-app.MapPost("/api/auth/register", async (Credentials body, UserManager<Investigator> users) => {
+app.MapPost("/api/auth/register", async (Credentials body, UserManager<Investigator> users) =>
+{
     if (body.Email.Length > 254 || !System.Net.Mail.MailAddress.TryCreate(body.Email, out var email) || email.Address != body.Email)
         return Results.Problem(statusCode: 400, title: "invalid_email", detail: "请输入有效邮箱。");
     var user = new Investigator { UserName = body.Email, Email = body.Email, LockoutEnabled = true };
     var result = await users.CreateAsync(user, body.Password);
     return result.Succeeded ? Results.Ok(new { message = "账户已创建，请登录。" }) : Results.Problem(statusCode: 400, title: "registration_failed", detail: "无法创建账户。密码至少 12 位且含大小写字母和数字，邮箱必须唯一。");
 }).RequireRateLimiting("auth");
-app.MapPost("/api/auth/login", async (Credentials body, UserManager<Investigator> users, HttpContext ctx) => {
+app.MapPost("/api/auth/login", async (Credentials body, UserManager<Investigator> users, HttpContext ctx) =>
+{
     var user = await users.FindByEmailAsync(body.Email);
     if (user is null || await users.IsLockedOutAsync(user) || !await users.CheckPasswordAsync(user, body.Password))
     {

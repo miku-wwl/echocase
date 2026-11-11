@@ -1,0 +1,17 @@
+{
+  "corruptions_rejected": 3,
+  "cases": [
+    {
+      "case": "blank",
+      "exit_code": 1
+    },
+    {
+      "case": "overflow",
+      "exit_code": 1
+    },
+    {
+      "case": "missing_outline_heading",
+      "exit_code": 1
+    }
+  ]
+}

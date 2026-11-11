@@ -1,0 +1,1 @@
+{"name":"echocase-publication","private":true,"type":"module","scripts":{"build":"node tools/build.mjs","report":"node tools/build.mjs --report"},"dependencies":{"mermaid":"12.3.0"}}

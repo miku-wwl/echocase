@@ -1,0 +1,14 @@
+{
+  "kind": "REAL_OCI_BUILD_AND_CONTAINER_RECONSTRUCTION",
+  "image_id": "f4c46e408242a2c639227c3cfccae1dd3d3876b78594ce532f7bda21c1bdda8a",
+  "first_container": "eb7f58cb8ec466058f9bf401832f73c14bc059c0979601156e58a5b0539f2660",
+  "second_container": "551514c216978e2d083387275b89e7b057c1da663398c9f2115fa4a2e22e6303",
+  "user": "1654",
+  "rootless_user": true,
+  "http_ready": 200,
+  "static_frontend_served": true,
+  "database_session_survived": true,
+  "cookie_survived_reconstruction": true,
+  "url": "http://127.0.0.1:6080",
+  "scope": "single local container; HTTP loopback lab; paid Azure NOT_RUN"
+}

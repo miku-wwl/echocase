@@ -1,0 +1,36 @@
+{
+  "pages": 6,
+  "issues": [],
+  "page_metrics": [
+    {
+      "page": 1,
+      "characters": 338,
+      "bottom": 739.9
+    },
+    {
+      "page": 2,
+      "characters": 155,
+      "bottom": 343.6
+    },
+    {
+      "page": 3,
+      "characters": 1046,
+      "bottom": 765.0
+    },
+    {
+      "page": 4,
+      "characters": 1011,
+      "bottom": 759.7
+    },
+    {
+      "page": 5,
+      "characters": 843,
+      "bottom": 747.7
+    },
+    {
+      "page": 6,
+      "characters": 603,
+      "bottom": 517.9
+    }
+  ]
+}

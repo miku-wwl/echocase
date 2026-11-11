@@ -1,263 +1,90 @@
-# EchoCase
-
-**An Evidence-Driven Full-Stack Investigation Web Application**
+# EchoCase · Enterprise Full-Stack Engineering
 
-**Project 2 — Master of Software Engineering Capstone**
+一个可运行、可复现、可审阅的调查工作台与中文工程教材。技术：C# / ASP.NET Core 10、DDD / CQRS、PostgreSQL / EF Core、React 19 / TypeScript、TanStack Query、React Flow、官方 shadcn 组件。
 
-## 1. Project Overview
+## 交付物
 
-EchoCase is a full-stack web application for investigating fictional cases, managing evidence, constructing evidence relationships, tracking investigation progress, and submitting evidence-based conclusions.
+- [中文教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)：18 章、26 项实验记录、练习与参考答案、真实截图、源码片段与可点击目录。
+- [独立成册验收报告](docs/ACCEPTANCE-REPORT.md) / [PDF](manual/dist/EchoCase-Acceptance-Report.pdf)：明确 VERIFIED / PARTIAL / BLOCKED / NOT_RUN，披露目标差异与生产限制。
+- [工程路线与参考审计](docs/PLAN.md)、[架构](docs/architecture/ARCHITECTURE.md)、[API](docs/api/API-DESIGN.md)、[测试](docs/testing/TEST-STRATEGY.md)、[部署](docs/deployment/DEPLOYMENT.md)、[实验索引](manual/chapters/19-labs.md)。
 
-The investigation scenario serves as a practical domain for studying and applying enterprise software engineering principles.
+本项目为教学与作品集 review edition，不宣称生产就绪。Azure 未部署，不创建付费资源。所有案件与人物虚构。
 
-**Primary goal:** Develop a deep understanding of full-stack application architecture, domain-driven design, database consistency, frontend state management, automated testing, and reliable software delivery.
+## 快速运行（Windows / PowerShell 7）
 
-This is a software engineering capstone project, not a game-development or AI demonstration project.
+前置：.NET SDK 10.0.300、Node 22.22.2+、已启动的 Podman 机器。不要在 API 正运行时重新编译同一输出目录；Windows 会锁定正在执行的程序集。
 
-## 2. Technology Stack
+```powershell
+./scripts/dev-db.ps1
+# 数据库只绑定 127.0.0.1:55432，公开本地实验密码禁止用于生产
 
-| Layer | Technology |
-|---|---|
-| Backend | C#, ASP.NET Core 10 |
-| Architecture | Clean Architecture, DDD, CQRS |
-| Project Foundation | Jason Taylor CleanArchitecture |
-| Frontend | React 19, TypeScript, Vite |
-| UI Components | Official shadcn/ui, Tailwind CSS |
-| Interactive Graph | React Flow |
-| Server State | TanStack Query |
-| Database | PostgreSQL, Entity Framework Core |
-| Backend Testing | NUnit, Integration Tests |
-| Frontend Testing | Playwright |
-| Containerization | Docker |
-| Deployment | Azure |
-| CI/CD | GitHub Actions |
-
-Technology choices will be validated during the foundation phase.
+dotnet restore --locked-mode
+./scripts/dev.ps1 migrate
+./scripts/dev.ps1 api
+```
 
-## 3. Core Functional Scope
+另开终端：
 
-The initial version contains five business modules.
+```powershell
+cd frontend
+npm ci
+npm run dev
+```
 
-### 3.1 Case Management
-- Browse available cases
-- Start a new investigation
-- View case information
-- Resume an existing investigation
-
-### 3.2 Evidence Management
-- View and examine evidence
-- Track discovered evidence
-- Enforce evidence visibility and access rules
+访问 http://127.0.0.1:5173，创建本地账户。API 为5080。五模块：案件、证据、关联、调查进度、结论提交。六条证据形成一个完整案件。关联无向，发现与提交受状态机约束；终态只读。
 
-### 3.3 Evidence Linking
-- Create relationships between evidence items
-- Validate relationships against domain rules
-- Visualize evidence using an interactive React graph
-
-### 3.4 Investigation Progress
-- Save and restore investigation state
-- Track state transitions
-- Handle concurrent modifications
-- Prevent duplicate operations
-
-### 3.5 Verdict Submission
-- Submit conclusions supported by evidence
-- Validate business invariants
-- Persist final decisions
-- Present deterministic evaluation results
+## 运行与验证
 
-**MVP:** One complete fictional case with enough evidence and rules to exercise the full application architecture.
-
-## 4. Architecture Design
-
-EchoCase follows Clean Architecture principles.
-
-### Domain Layer
-- Entities and Value Objects
-- Aggregate Roots
-- Business Invariants
-- Investigation State Machine
-- Domain Rules
-
-### Application Layer
-- Commands and Queries
-- Use Case Handlers
-- Validation
-- Authorization
-- Transaction Coordination
-
-### Infrastructure Layer
-- EF Core Persistence
-- PostgreSQL
-- Database Migrations
-- External Service Adapters
-
-### Presentation Layer
-- ASP.NET Core Web API
-- React and TypeScript
-- shadcn/ui
-- React Flow
-- Typed API Client
+```powershell
+# 停止开发 API 后运行后端全集；会创建并精确删除随机测试数据库
+./scripts/dev.ps1 test
+# 重启 API 与 Vite 后
+cd frontend
+node node_modules/@playwright/test/cli.js test
+```
 
-Dependencies should point inward toward the core business logic.
+后端结果是 evidence/backend/backend.trx，浏览器结果是 evidence/browser/results.json；首次失败与修正前证据也保留。当前数量与远程 CI 状态以验收报告为准。
 
-## 5. Primary Technical Learning Objectives
+实验与出版使用独立 Python 环境，见 [测试说明](docs/testing/TEST-STRATEGY.md)。完整实验配置好连接后运行：
 
-### T1 — Clean Architecture & DDD
-Study dependency inversion, aggregate design, domain invariants, application boundaries, and architectural trade-offs.
-
-### T2 — EF Core & PostgreSQL
-Study migrations, LINQ, transactions, indexes, optimistic concurrency, database constraints, and query performance.
-
-### T3 — Advanced React Engineering
-Study component design, TypeScript typing, local versus server state, optimistic updates, query invalidation, error handling, and complex interactive components.
+```powershell
+uv venv work/venv --python 3.13
+uv pip install --python work/venv/Scripts/python.exe -r manual/requirements.txt
+$env:ECHOCASE_PG_DSN='postgresql://echocase:echocase-local-only@127.0.0.1:55432/echocase'
+work/venv/Scripts/python.exe experiments/database.py
+work/venv/Scripts/python.exe experiments/backup.py
+# 以下会短暂停止且在 finally 恢复本项目开发数据库；不要与其他测试并行
+work/venv/Scripts/python.exe experiments/reliability.py
+work/venv/Scripts/python.exe experiments/container.py
+```
 
-### T4 — API Security & Data Consistency
-Study authentication, resource-level authorization, idempotency, concurrency conflict handling, and secure API design.
+容器实验从独立 PostgreSQL 模式启动，验证应用删除重建后原调查与认证仍可用；成功后保留 http://127.0.0.1:6080 供审阅。开发库与容器验收库独立。Compose 文件可供另一路径使用，但 provider 路径没有在本机运行。
 
-### T5 — Testing & Software Quality
-Study unit, functional, integration, architecture, and end-to-end tests, along with observability and performance measurement.
+## 证据与出版门禁
 
-## 6. Engineering Experiments
-
-| ID | Experiment |
-|---|---|
-| E01 | Clean Architecture dependency validation |
-| E02 | Domain invariant and state transition testing |
-| E03 | Database migration and data preservation |
-| E04 | Optimistic concurrency conflict handling |
-| E05 | Idempotent API operations |
-| E06 | Resource authorization and security testing |
-| E07 | React state synchronization and error recovery |
-| E08 | PostgreSQL query performance benchmarking |
-| E09 | Maintainability and architecture change analysis |
-| E10 | Reproducible CI/CD and deployment |
-
-Each experiment should include a hypothesis, implementation, reproducible procedure, observations, and conclusions.
-
-## 7. Development Roadmap
-
-### Stage 0 — Foundation & Template Dissection
-- Initialize Jason Taylor CleanArchitecture
-- Establish backend, frontend, and PostgreSQL
-- Run existing tests
-- Trace a complete API request
-- Review dependency boundaries and third-party licenses
-- Integrate official shadcn/ui
-
-**Gate:** Reproducible baseline with passing tests.
-
-### Stage 1 — Domain Engineering
-- Design the investigation domain
-- Implement InvestigationSession aggregate
-- Define business invariants
-- Implement investigation state transitions
-- Write domain unit tests
-
-**Gate:** Core domain behavior verified independently of infrastructure.
-
-### Stage 2 — Persistence & API Engineering
-- Design the PostgreSQL schema
-- Implement EF Core mappings and migrations
-- Develop commands, queries, and REST endpoints
-- Implement concurrency and idempotency handling
-- Test using a real database
+```powershell
+work/venv/Scripts/python.exe tools/catalog.py
+work/venv/Scripts/python.exe tools/verify.py
+work/venv/Scripts/python.exe tools/test_gate.py
+work/venv/Scripts/python.exe tools/catalog.py
+```
 
-**Gate:** Correct and repeatable backend behavior.
+检查器验证结构化结果、摘要、来源数字、引用与有限依赖规则；不能证明所有自然语言结论。自测先验证正常副本，再以七类损坏证明非零退出。26份实验记录含假设、机制、设计、执行、观测、解释、限制、清理。
 
-### Stage 3 — React Full-Stack Integration
-- Build React pages with official shadcn/ui
-- Integrate generated API clients
-- Implement evidence visualization
-- Implement TanStack Query server-state management
-- Handle errors, retries, and conflicts
+[出版命令](manual/README.md)使用本地 Pandoc、Mermaid、Playwright，两遍目录映射、PDF负向自测、版面几何检查和逐页视觉复核。字体与浏览器会影响分页，不承诺字节相同。
 
-**Gate:** Complete functional frontend-to-database workflow.
+## 范围与限制
 
-### Stage 4 — Quality & Reliability Engineering
-- Add security and authorization tests
-- Add integration and Playwright E2E tests
-- Benchmark critical database queries
-- Introduce observability
-- Configure Docker and CI/CD
+- 四层模块化单体、单数据库事务，没有微服务/Kubernetes/多租户/AI。
+- Version / If-Match 防过期写；UUID 幂等键和持久回执防相同意图重复提交。
+- Identity 哈希、Cookie、CSRF、资源所有权、限流和合同负测试；MFA、账户恢复、安全戳吊销等生产身份能力未实现。
+- 案件目录在代码固定，列表最近50条，没有分页、协作、动态案件版本或回执自动清理。
+- 可观测性为日志、trace上下文与仪表点，没有完整监控告警平台；性能结果仅为本机测量。
+- pg_dump实验只恢复三条合成记录，不冒充完整应用灾难恢复或PITR。
+- 教材实际规模与原300–400页编辑目标的差异、第三方独立审阅缺项均在验收报告披露。
 
-**Gate:** Verified quality and reproducible deployment.
+## 停止与保留数据
 
-### Stage 5 — Capstone Technical Evaluation
-- Evaluate architectural decisions
-- Conduct engineering experiments
-- Refactor based on measured evidence
-- Document technical trade-offs
-- Complete the final capstone report
+关闭开发服务终端；`./scripts/dev-db.ps1 stop` 停开发数据库。容器实例：`podman stop echocase-app echocase-container-db`。这些操作保留数据。删除卷会丢失调查和密钥，不属于默认清理。
 
-**Gate:** Working application with reproducible technical evidence.
-
-## 8. Explicit Non-Goals
-
-The initial project will not include:
-
-- Complex AI agents or autonomous NPCs
-- AI-generated storylines
-- 3D graphics or Unity integration
-- Multiplayer functionality
-- Microservices architecture
-- Kubernetes-based production orchestration
-- Multi-tenant SaaS capabilities
-- Full Event Sourcing
-- Complex branching narratives
-- Extensive multimedia production
-
-These features are excluded to preserve the project's software engineering learning objectives.
-
-## 9. Definition of Done
-
-The project will be considered complete when:
-
-- The full-stack application runs from a clean environment
-- All five core business modules work
-- Domain invariants are verified by automated tests
-- Database persistence and concurrency are validated
-- Authorization boundaries are tested
-- A complete investigation passes browser E2E testing
-- CI/CD and deployment are reproducible
-- Technical experiments and architectural decisions are documented
-
-## 10. Documentation
-
-Planned documents:
-
-- `docs/requirements/PRD.md`
-- `docs/architecture/ARCHITECTURE.md`
-- `docs/architecture/decisions/`
-- `docs/domain/DOMAIN-MODEL.md`
-- `docs/api/API-DESIGN.md`
-- `docs/testing/TEST-STRATEGY.md`
-- `docs/experiments/`
-- `docs/deployment/DEPLOYMENT.md`
-- `docs/learning/LEARNING-JOURNAL.md`
-
-## 11. Development Principles
-
-1. Understand the technology before implementing major features.
-2. Prefer explicit, testable domain behavior over framework complexity.
-3. Keep business logic independent of infrastructure.
-4. Measure engineering quality instead of claiming it.
-5. Avoid unnecessary abstractions and premature optimization.
-6. Use AI coding assistants to support implementation, not replace architectural understanding.
-7. Document architectural decisions and lessons learned.
-8. Clearly distinguish original contributions from third-party starter code.
-
-## 12. Attribution
-
-EchoCase plans to use Jason Taylor's CleanArchitecture as its initial project foundation.
-
-Upstream repository:
-https://github.com/jasontaylordev/CleanArchitecture
-
-Third-party licenses, notices, and the distinction between inherited and original code will be documented as the project develops.
-
-## 13. Project Status
-
-**Status: Planning — Initial Repository Setup**
-
-Implementation, testing, and deployment have not yet been completed.
+[第三方来源与许可证](THIRD-PARTY-NOTICES.md)。原仓库 Apache-2.0；官方 shadcn 组件与复制样式保留其 MIT 许可证。

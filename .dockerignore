@@ -1,0 +1,11 @@
+.git
+work
+evidence
+manual
+outputs
+frontend/node_modules
+frontend/dist
+frontend/test-results
+frontend/playwright-report
+**/bin
+**/obj

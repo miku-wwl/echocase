@@ -42,7 +42,6 @@ namespace EchoCase.Infrastructure.Migrations
             modelBuilder.Entity("EchoCase.Domain.EvidenceLink", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("InvestigationId")
@@ -133,7 +132,8 @@ namespace EchoCase.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerId", "UpdatedAt")
+                        .IsDescending(false, true);
 
                     b.ToTable("Investigations", null, t =>
                         {

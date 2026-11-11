@@ -1,247 +1,253 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="55d3bdfb-dd52-4e40-99a0-4a2e41e56a3f" name="weila@JIEJIE 2026-11-11 15:55:04" runUser="JIEJIE\weila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2026-11-11T15:55:04.9172140+13:00" queuing="2026-11-11T15:55:04.9172148+13:00" start="2026-11-11T15:55:03.2620588+13:00" finish="2026-11-11T15:55:12.4228214+13:00" />
-  <TestSettings name="default" id="7141b632-27d3-4da7-980f-858d683117bd">
-    <Deployment runDeploymentRoot="weila_JIEJIE_2026-11-11_15_55_04" />
+<TestRun id="dabd71e4-be6b-4c68-a0d0-9182f9e02ec8" name="weila@JIEJIE 2026-11-11 16:05:34" runUser="JIEJIE\weila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-11T16:05:34.3710195+13:00" queuing="2026-11-11T16:05:34.3710204+13:00" start="2026-11-11T16:05:32.6814102+13:00" finish="2026-11-11T16:05:43.3562278+13:00" />
+  <TestSettings name="default" id="60d7dae9-be12-4a03-9ef6-3ff5169d933a">
+    <Deployment runDeploymentRoot="weila_JIEJIE_2026-11-11_16_05_34" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="194b1a29-f90f-418c-ab2d-7aa04da18506" testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" testName="IfMatchAndIdempotencyHeadersAreRequired" computerName="JIEJIE" duration="00:00:00.0204710" startTime="2026-11-11T15:55:11.7407591+13:00" endTime="2026-11-11T15:55:11.7612291+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="194b1a29-f90f-418c-ab2d-7aa04da18506" />
-    <UnitTestResult executionId="86e26b5d-60d6-4f29-8568-7a6f0a72a84b" testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" testName="ReversedPairIsDuplicateEvenWithOtherKind" computerName="JIEJIE" duration="00:00:00.0011980" startTime="2026-11-11T15:55:04.7737972+13:00" endTime="2026-11-11T15:55:04.7749941+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86e26b5d-60d6-4f29-8568-7a6f0a72a84b" />
-    <UnitTestResult executionId="3ada0dbb-750d-4bb0-9fbd-fbb550b86e64" testId="9a139626-8b95-6e27-d28a-106dcc03b348" testName="AnonymousCannotReadCases" computerName="JIEJIE" duration="00:00:00.0106860" startTime="2026-11-11T15:55:10.1714867+13:00" endTime="2026-11-11T15:55:10.1821710+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ada0dbb-750d-4bb0-9fbd-fbb550b86e64" />
-    <UnitTestResult executionId="82a37176-d6ad-43ad-8532-1eb877dc852c" testId="790029ff-be30-cb3d-40f4-18941957ab32" testName="RemoveLinkChangesVersionAndReadiness" computerName="JIEJIE" duration="00:00:00.0030670" startTime="2026-11-11T15:55:04.7706959+13:00" endTime="2026-11-11T15:55:04.7737617+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82a37176-d6ad-43ad-8532-1eb877dc852c" />
-    <UnitTestResult executionId="c7ca13da-2831-4906-a610-0d50afc3ab67" testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" testName="HiddenEvidenceCannotBeExamined" computerName="JIEJIE" duration="00:00:00.0010800" startTime="2026-11-11T15:55:04.7662494+13:00" endTime="2026-11-11T15:55:04.7673296+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7ca13da-2831-4906-a610-0d50afc3ab67" />
-    <UnitTestResult executionId="dc7977cb-6027-4882-b4b1-91bf00d8c4a3" testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" testName="SelfLinkIsRejected" computerName="JIEJIE" duration="00:00:00.0006890" startTime="2026-11-11T15:55:04.7823683+13:00" endTime="2026-11-11T15:55:04.7830571+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc7977cb-6027-4882-b4b1-91bf00d8c4a3" />
-    <UnitTestResult executionId="c698f56b-f39c-4760-96ec-7603f5f37371" testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" testName="UndefinedEnumIsRejected" computerName="JIEJIE" duration="00:00:00.0008100" startTime="2026-11-11T15:55:04.7836654+13:00" endTime="2026-11-11T15:55:04.7844755+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c698f56b-f39c-4760-96ec-7603f5f37371" />
-    <UnitTestResult executionId="39eb2b14-d05c-480d-8276-b749c7b730f9" testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" testName="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" computerName="JIEJIE" duration="00:00:00.3618520" startTime="2026-11-11T15:55:11.3439398+13:00" endTime="2026-11-11T15:55:11.7057912+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39eb2b14-d05c-480d-8276-b749c7b730f9" />
-    <UnitTestResult executionId="0974d848-2105-48b8-a999-d75daf917f9d" testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" testName="UnknownCaseIsRejected" computerName="JIEJIE" duration="00:00:00.0006269" startTime="2026-11-11T15:55:04.7917491+13:00" endTime="2026-11-11T15:55:04.7923764+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0974d848-2105-48b8-a999-d75daf917f9d" />
-    <UnitTestResult executionId="6c7cd081-4294-4b40-8204-7ab748829988" testId="67625878-8f43-4a4c-5909-04d8366f78f9" testName="CoreHasNoFrameworkOrOutwardDependencies" computerName="JIEJIE" duration="00:00:00.0039100" startTime="2026-11-11T15:55:04.7473173+13:00" endTime="2026-11-11T15:55:04.7512277+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c7cd081-4294-4b40-8204-7ab748829988" />
-    <UnitTestResult executionId="5bab0396-7f8e-4d8a-b20f-219e00802cbd" testId="10d84449-cf78-62b8-e17c-5ee31e78d710" testName="AlternativeVerdictIsPersistedWithLowerEvaluation" computerName="JIEJIE" duration="00:00:00.0255830" startTime="2026-11-11T15:55:04.7187315+13:00" endTime="2026-11-11T15:55:04.7441844+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bab0396-7f8e-4d8a-b20f-219e00802cbd" />
-    <UnitTestResult executionId="b30eef79-5369-48d4-82f2-0f74eae4035c" testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" testName="SameKeyConcurrentRequestsCommitOnce" computerName="JIEJIE" duration="00:00:00.0624570" startTime="2026-11-11T15:55:11.9277764+13:00" endTime="2026-11-11T15:55:11.9902313+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b30eef79-5369-48d4-82f2-0f74eae4035c" />
-    <UnitTestResult executionId="9991e60b-ddb6-4242-b010-589c51e5efc7" testId="c0dc21e5-e796-1b2d-17f9-dde218332706" testName="DatabaseRejectsLinkToUndiscoveredEvidence" computerName="JIEJIE" duration="00:00:00.0349420" startTime="2026-11-11T15:55:10.5732704+13:00" endTime="2026-11-11T15:55:10.6082116+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9991e60b-ddb6-4242-b010-589c51e5efc7" />
-    <UnitTestResult executionId="e7a15753-5038-42b5-9e33-d55e543de0e3" testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" testName="DuplicateSupportCannotSatisfyMinimum" computerName="JIEJIE" duration="00:00:00.0011820" startTime="2026-11-11T15:55:04.7641145+13:00" endTime="2026-11-11T15:55:04.7652961+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7a15753-5038-42b5-9e33-d55e543de0e3" />
-    <UnitTestResult executionId="302b71f1-e7b1-4a59-b8eb-30e92196331c" testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" testName="AuthenticationRateLimitActuallyRejectsBurst" computerName="JIEJIE" duration="00:00:00.0982119" startTime="2026-11-11T15:55:10.0732222+13:00" endTime="2026-11-11T15:55:10.1714337+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="302b71f1-e7b1-4a59-b8eb-30e92196331c" />
-    <UnitTestResult executionId="4e52d88a-efec-434e-9710-4f06b67b3c2f" testId="edeac40e-5d64-460f-491d-3eaacf4c8089" testName="VerdictIsDeterministicAndSubmittedIsTerminal" computerName="JIEJIE" duration="00:00:00.0018570" startTime="2026-11-11T15:55:04.7923949+13:00" endTime="2026-11-11T15:55:04.7942507+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e52d88a-efec-434e-9710-4f06b67b3c2f" />
-    <UnitTestResult executionId="d4f5910a-7d8f-4bf1-92ac-e46aea163ddf" testId="382b7729-23fb-4910-9311-27c5c679daf9" testName="ReusedKeyWithChangedPayloadIsConflict" computerName="JIEJIE" duration="00:00:00.0461410" startTime="2026-11-11T15:55:11.8815653+13:00" endTime="2026-11-11T15:55:11.9277062+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4f5910a-7d8f-4bf1-92ac-e46aea163ddf" />
-    <UnitTestResult executionId="e6739c8d-6c7e-4b4c-98ee-858cac27b6ce" testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" testName="StartRequiresOwner" computerName="JIEJIE" duration="00:00:00.0005480" startTime="2026-11-11T15:55:04.7831002+13:00" endTime="2026-11-11T15:55:04.7836481+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6739c8d-6c7e-4b4c-98ee-858cac27b6ce" />
-    <UnitTestResult executionId="42a73585-3474-4c57-9bb3-b639d9cbc668" testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" testName="ExaminingUnlocksOnlyItsSuccessor" computerName="JIEJIE" duration="00:00:00.0008640" startTime="2026-11-11T15:55:04.7653233+13:00" endTime="2026-11-11T15:55:04.7661860+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42a73585-3474-4c57-9bb3-b639d9cbc668" />
-    <UnitTestResult executionId="fea510f6-aeef-4ad6-89cf-53ab549e7b0e" testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" testName="MalformedAndNullContractsAreRejected" computerName="JIEJIE" duration="00:00:00.0861220" startTime="2026-11-11T15:55:11.7612778+13:00" endTime="2026-11-11T15:55:11.8473989+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fea510f6-aeef-4ad6-89cf-53ab549e7b0e" />
-    <UnitTestResult executionId="7db6c3ba-a821-4514-83ca-f5f5e16ff194" testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" testName="ReviewFreezesWritesUntilResume" computerName="JIEJIE" duration="00:00:00.0064920" startTime="2026-11-11T15:55:04.7750707+13:00" endTime="2026-11-11T15:55:04.7815619+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7db6c3ba-a821-4514-83ca-f5f5e16ff194" />
-    <UnitTestResult executionId="f9a2d34f-8e14-4276-ad2f-a2d2298904ff" testId="e6e3ed56-66db-1e5c-a519-35156a296af3" testName="CsrfIsRequiredEvenWithValidCookie" computerName="JIEJIE" duration="00:00:00.3909520" startTime="2026-11-11T15:55:10.1822665+13:00" endTime="2026-11-11T15:55:10.5732177+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9a2d34f-8e14-4276-ad2f-a2d2298904ff" />
-    <UnitTestResult executionId="070e2cf8-9277-4e77-a9e2-97b414ab57f3" testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" testName="HiddenEvidenceBodyNeverLeaks" computerName="JIEJIE" duration="00:00:00.0348690" startTime="2026-11-11T15:55:11.7058374+13:00" endTime="2026-11-11T15:55:11.7407062+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="070e2cf8-9277-4e77-a9e2-97b414ab57f3" />
-    <UnitTestResult executionId="8b0b276d-5912-4275-83f7-c7e8a854cc60" testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" testName="UnexaminedBodiesAreAbsentFromProjection" computerName="JIEJIE" duration="00:00:00.0061910" startTime="2026-11-11T15:55:04.7844966+13:00" endTime="2026-11-11T15:55:04.7906867+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b0b276d-5912-4275-83f7-c7e8a854cc60" />
-    <UnitTestResult executionId="ef903450-2433-48f4-a99a-33722b527e3a" testId="c3532d08-d4e9-e922-e549-654ef074bc31" testName="DomainFailureRollsBackReceiptAndAudit" computerName="JIEJIE" duration="00:00:00.1761110" startTime="2026-11-11T15:55:11.0910097+13:00" endTime="2026-11-11T15:55:11.2671198+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef903450-2433-48f4-a99a-33722b527e3a" />
-    <UnitTestResult executionId="97cdc28e-4a63-4c57-bf80-d2d3e3763db3" testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" testName="LinkRequiresBothDiscoveredEndpoints" computerName="JIEJIE" duration="00:00:00.0008990" startTime="2026-11-11T15:55:04.7686387+13:00" endTime="2026-11-11T15:55:04.7695377+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97cdc28e-4a63-4c57-bf80-d2d3e3763db3" />
-    <UnitTestResult executionId="9038fca3-6093-4ad3-b3be-78144894fa6d" testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" testName="NotesLengthIsDomainInvariant" computerName="JIEJIE" duration="00:00:00.0010640" startTime="2026-11-11T15:55:04.7695571+13:00" endTime="2026-11-11T15:55:04.7706207+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9038fca3-6093-4ad3-b3be-78144894fa6d" />
-    <UnitTestResult executionId="30bad5e2-6960-4450-b696-892a06392a53" testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" testName="DifferentKeysCompetingOnOneVersionHaveOneWinner" computerName="JIEJIE" duration="00:00:00.4826860" startTime="2026-11-11T15:55:10.6082717+13:00" endTime="2026-11-11T15:55:11.0909564+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30bad5e2-6960-4450-b696-892a06392a53" />
-    <UnitTestResult executionId="0673fa05-e7e0-44be-b94b-dd6625f03786" testId="65207adc-3232-7670-5d7a-162eac12cc22" testName="ReadinessIsRealDatabaseCheck" computerName="JIEJIE" duration="00:00:00.0109040" startTime="2026-11-11T15:55:11.8474496+13:00" endTime="2026-11-11T15:55:11.8583527+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0673fa05-e7e0-44be-b94b-dd6625f03786" />
-    <UnitTestResult executionId="d2eb6ec4-6437-4d5b-a0b4-a9a8c7edb8f7" testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" testName="ReviewHasMinimumEvidenceGate" computerName="JIEJIE" duration="00:00:00.0007050" startTime="2026-11-11T15:55:04.7816326+13:00" endTime="2026-11-11T15:55:04.7823373+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2eb6ec4-6437-4d5b-a0b4-a9a8c7edb8f7" />
-    <UnitTestResult executionId="7351683d-9b6b-4f73-857f-f491e5ce0e04" testId="2fb1861a-26bd-931e-3161-4c069ee104ef" testName="ReplayingStartReturnsSameInvestigation" computerName="JIEJIE" duration="00:00:00.0230950" startTime="2026-11-11T15:55:11.8584148+13:00" endTime="2026-11-11T15:55:11.8815089+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7351683d-9b6b-4f73-857f-f491e5ce0e04" />
-    <UnitTestResult executionId="961c08c6-fa45-4b2e-986f-0ebbb7da9830" testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" testName="InvalidTransitionCannotSkipReview" computerName="JIEJIE" duration="00:00:00.0011930" startTime="2026-11-11T15:55:04.7673918+13:00" endTime="2026-11-11T15:55:04.7685848+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="961c08c6-fa45-4b2e-986f-0ebbb7da9830" />
-    <UnitTestResult executionId="183e475f-0c1b-47ff-ad38-bc81d7e1d602" testId="34462801-bef0-6342-0757-de27491a6769" testName="StaleVersionDoesNotWriteOrCacheFailure" computerName="JIEJIE" duration="00:00:00.0687580" startTime="2026-11-11T15:55:11.9903189+13:00" endTime="2026-11-11T15:55:12.0590769+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="183e475f-0c1b-47ff-ad38-bc81d7e1d602" />
-    <UnitTestResult executionId="85b3d4f3-2d53-4f45-a8a8-48c55f8bcef9" testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" testName="ForeignOwnerCannotReadOrWrite" computerName="JIEJIE" duration="00:00:00.0767160" startTime="2026-11-11T15:55:11.2671742+13:00" endTime="2026-11-11T15:55:11.3438894+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85b3d4f3-2d53-4f45-a8a8-48c55f8bcef9" />
-    <UnitTestResult executionId="ee28fc55-1056-46ed-8e98-7375814259c2" testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" testName="DuplicateExaminationDoesNotAdvanceVersion" computerName="JIEJIE" duration="00:00:00.0127880" startTime="2026-11-11T15:55:04.7512897+13:00" endTime="2026-11-11T15:55:04.7640777+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee28fc55-1056-46ed-8e98-7375814259c2" />
-    <UnitTestResult executionId="da5bc54a-adb4-4b9c-b106-f6d40be0638c" testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" testName="TraceAndSecurityHeadersArePresent" computerName="JIEJIE" duration="00:00:00.0153880" startTime="2026-11-11T15:55:12.0591332+13:00" endTime="2026-11-11T15:55:12.0745203+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da5bc54a-adb4-4b9c-b106-f6d40be0638c" />
-    <UnitTestResult executionId="d21d0f1e-4f58-4061-b178-a1774aa03d05" testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" testName="UnexaminedSupportIsRejected" computerName="JIEJIE" duration="00:00:00.0009160" startTime="2026-11-11T15:55:04.7907722+13:00" endTime="2026-11-11T15:55:04.7916875+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d21d0f1e-4f58-4061-b178-a1774aa03d05" />
+    <UnitTestResult executionId="15885fd0-882a-4f48-99db-0016c13d6a9b" testId="c3532d08-d4e9-e922-e549-654ef074bc31" testName="DomainFailureRollsBackReceiptAndAudit" computerName="JIEJIE" duration="00:00:00.0851590" startTime="2026-11-11T16:05:42.0729641+13:00" endTime="2026-11-11T16:05:42.1581222+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15885fd0-882a-4f48-99db-0016c13d6a9b" />
+    <UnitTestResult executionId="70ec30bc-2b7a-482e-8807-7a44306b54b6" testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" testName="LinkRequiresBothDiscoveredEndpoints" computerName="JIEJIE" duration="00:00:00.0005180" startTime="2026-11-11T16:05:34.2208659+13:00" endTime="2026-11-11T16:05:34.2213836+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70ec30bc-2b7a-482e-8807-7a44306b54b6" />
+    <UnitTestResult executionId="d65c0e84-b201-4e13-bb7f-860e2f57ad4f" testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" testName="SelfLinkIsRejected" computerName="JIEJIE" duration="00:00:00.0005810" startTime="2026-11-11T16:05:34.2284073+13:00" endTime="2026-11-11T16:05:34.2289875+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d65c0e84-b201-4e13-bb7f-860e2f57ad4f" />
+    <UnitTestResult executionId="3524b570-87f1-4e32-a8bb-e377dbadd28b" testId="edeac40e-5d64-460f-491d-3eaacf4c8089" testName="VerdictIsDeterministicAndSubmittedIsTerminal" computerName="JIEJIE" duration="00:00:00.0015160" startTime="2026-11-11T16:05:34.2381475+13:00" endTime="2026-11-11T16:05:34.2396623+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3524b570-87f1-4e32-a8bb-e377dbadd28b" />
+    <UnitTestResult executionId="96250b9a-49d2-4b88-a6b5-3b30bb83bff0" testId="89062700-b251-c194-e873-fee30c59fa96" testName="UpgradePreservesExistingInvestigationAndEfRejectsStaleTrackedWriter" computerName="JIEJIE" duration="00:00:04.4472300" startTime="2026-11-11T16:05:34.2443997+13:00" endTime="2026-11-11T16:05:38.6916285+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96250b9a-49d2-4b88-a6b5-3b30bb83bff0" />
+    <UnitTestResult executionId="390016d1-768f-4654-a8d9-59df068e9f79" testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" testName="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" computerName="JIEJIE" duration="00:00:00.3806690" startTime="2026-11-11T16:05:42.2519976+13:00" endTime="2026-11-11T16:05:42.6326662+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="390016d1-768f-4654-a8d9-59df068e9f79" />
+    <UnitTestResult executionId="32ed80a1-6f68-4415-8141-b508ef697073" testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" testName="TraceAndSecurityHeadersArePresent" computerName="JIEJIE" duration="00:00:00.0204939" startTime="2026-11-11T16:05:43.0034047+13:00" endTime="2026-11-11T16:05:43.0238972+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32ed80a1-6f68-4415-8141-b508ef697073" />
+    <UnitTestResult executionId="3fbcc5f4-227c-4279-8be1-80972b17290c" testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" testName="UnexaminedSupportIsRejected" computerName="JIEJIE" duration="00:00:00.0008610" startTime="2026-11-11T16:05:34.2367039+13:00" endTime="2026-11-11T16:05:34.2375646+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fbcc5f4-227c-4279-8be1-80972b17290c" />
+    <UnitTestResult executionId="249509e6-b8b5-4144-b676-cd8f0af22e64" testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" testName="InvalidTransitionCannotSkipReview" computerName="JIEJIE" duration="00:00:00.0007410" startTime="2026-11-11T16:05:34.2201039+13:00" endTime="2026-11-11T16:05:34.2208445+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="249509e6-b8b5-4144-b676-cd8f0af22e64" />
+    <UnitTestResult executionId="465f2739-bd37-4c2b-8c2d-096aa3d2cf86" testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" testName="UnexaminedBodiesAreAbsentFromProjection" computerName="JIEJIE" duration="00:00:00.0065370" startTime="2026-11-11T16:05:34.2301254+13:00" endTime="2026-11-11T16:05:34.2366613+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="465f2739-bd37-4c2b-8c2d-096aa3d2cf86" />
+    <UnitTestResult executionId="cf9eb7d4-70b1-42cb-af21-8767b39e1bfb" testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" testName="HiddenEvidenceCannotBeExamined" computerName="JIEJIE" duration="00:00:00.0006810" startTime="2026-11-11T16:05:34.2194042+13:00" endTime="2026-11-11T16:05:34.2200842+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf9eb7d4-70b1-42cb-af21-8767b39e1bfb" />
+    <UnitTestResult executionId="22aff667-e33b-4e0a-b584-e4fd81133576" testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" testName="HiddenEvidenceBodyNeverLeaks" computerName="JIEJIE" duration="00:00:00.0315650" startTime="2026-11-11T16:05:42.6327271+13:00" endTime="2026-11-11T16:05:42.6642918+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="22aff667-e33b-4e0a-b584-e4fd81133576" />
+    <UnitTestResult executionId="ed6c279a-611c-4c64-8973-a7c36a732387" testId="10d84449-cf78-62b8-e17c-5ee31e78d710" testName="AlternativeVerdictIsPersistedWithLowerEvaluation" computerName="JIEJIE" duration="00:00:00.0275310" startTime="2026-11-11T16:05:34.1657248+13:00" endTime="2026-11-11T16:05:34.1931003+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed6c279a-611c-4c64-8973-a7c36a732387" />
+    <UnitTestResult executionId="ee29ab22-0022-4f5b-83f5-6d77a8c5e617" testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" testName="ExaminingUnlocksOnlyItsSuccessor" computerName="JIEJIE" duration="00:00:00.0003780" startTime="2026-11-11T16:05:34.2190074+13:00" endTime="2026-11-11T16:05:34.2193850+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee29ab22-0022-4f5b-83f5-6d77a8c5e617" />
+    <UnitTestResult executionId="462f992b-6f4f-4e2b-b249-03585708eb22" testId="67625878-8f43-4a4c-5909-04d8366f78f9" testName="CoreHasNoFrameworkOrOutwardDependencies" computerName="JIEJIE" duration="00:00:00.0049300" startTime="2026-11-11T16:05:34.1967231+13:00" endTime="2026-11-11T16:05:34.2016533+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="462f992b-6f4f-4e2b-b249-03585708eb22" />
+    <UnitTestResult executionId="d61a28b8-4d58-4085-8384-5cfed37ac14d" testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" testName="UndefinedEnumIsRejected" computerName="JIEJIE" duration="00:00:00.0006300" startTime="2026-11-11T16:05:34.2294790+13:00" endTime="2026-11-11T16:05:34.2301088+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d61a28b8-4d58-4085-8384-5cfed37ac14d" />
+    <UnitTestResult executionId="7fceeeee-4898-4fb9-963f-023dd46469c7" testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" testName="UnknownCaseIsRejected" computerName="JIEJIE" duration="00:00:00.0005310" startTime="2026-11-11T16:05:34.2375957+13:00" endTime="2026-11-11T16:05:34.2381268+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fceeeee-4898-4fb9-963f-023dd46469c7" />
+    <UnitTestResult executionId="28f91f49-8eb9-47a6-a9cc-24cdd9ca73c0" testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" testName="DuplicateSupportCannotSatisfyMinimum" computerName="JIEJIE" duration="00:00:00.0010349" startTime="2026-11-11T16:05:34.2179483+13:00" endTime="2026-11-11T16:05:34.2189821+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28f91f49-8eb9-47a6-a9cc-24cdd9ca73c0" />
+    <UnitTestResult executionId="ffda471d-e201-4969-aa9c-1343325c26ef" testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" testName="IfMatchAndIdempotencyHeadersAreRequired" computerName="JIEJIE" duration="00:00:00.0235570" startTime="2026-11-11T16:05:42.6643448+13:00" endTime="2026-11-11T16:05:42.6879012+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffda471d-e201-4969-aa9c-1343325c26ef" />
+    <UnitTestResult executionId="1618605a-5635-44b0-ade6-2dbdd3137a9e" testId="e6e3ed56-66db-1e5c-a519-35156a296af3" testName="CsrfIsRequiredEvenWithValidCookie" computerName="JIEJIE" duration="00:00:00.3432690" startTime="2026-11-11T16:05:41.2881369+13:00" endTime="2026-11-11T16:05:41.6314050+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1618605a-5635-44b0-ade6-2dbdd3137a9e" />
+    <UnitTestResult executionId="e5bd06a8-3614-4d43-95d2-3f52106bd2ea" testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" testName="ReviewFreezesWritesUntilResume" computerName="JIEJIE" duration="00:00:00.0027990" startTime="2026-11-11T16:05:34.2250867+13:00" endTime="2026-11-11T16:05:34.2278851+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5bd06a8-3614-4d43-95d2-3f52106bd2ea" />
+    <UnitTestResult executionId="4570a534-c138-43d7-aa96-f607d6ef5ec3" testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" testName="NotesLengthIsDomainInvariant" computerName="JIEJIE" duration="00:00:00.0008230" startTime="2026-11-11T16:05:34.2214033+13:00" endTime="2026-11-11T16:05:34.2222256+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4570a534-c138-43d7-aa96-f607d6ef5ec3" />
+    <UnitTestResult executionId="3445f01b-8673-4b91-8a53-eda9488f952f" testId="790029ff-be30-cb3d-40f4-18941957ab32" testName="RemoveLinkChangesVersionAndReadiness" computerName="JIEJIE" duration="00:00:00.0020240" startTime="2026-11-11T16:05:34.2222440+13:00" endTime="2026-11-11T16:05:34.2242675+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3445f01b-8673-4b91-8a53-eda9488f952f" />
+    <UnitTestResult executionId="7fd3af87-4cb9-4116-8b4c-900286fc1ac5" testId="65207adc-3232-7670-5d7a-162eac12cc22" testName="ReadinessIsRealDatabaseCheck" computerName="JIEJIE" duration="00:00:00.0096490" startTime="2026-11-11T16:05:42.7525796+13:00" endTime="2026-11-11T16:05:42.7622283+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fd3af87-4cb9-4116-8b4c-900286fc1ac5" />
+    <UnitTestResult executionId="b4ebae5f-dfd0-4ab0-91a1-ef7cae9764b7" testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" testName="DuplicateExaminationDoesNotAdvanceVersion" computerName="JIEJIE" duration="00:00:00.0160160" startTime="2026-11-11T16:05:34.2018899+13:00" endTime="2026-11-11T16:05:34.2179059+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4ebae5f-dfd0-4ab0-91a1-ef7cae9764b7" />
+    <UnitTestResult executionId="829714f9-add9-46a1-9914-c45d62ba3dc7" testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" testName="ForeignOwnerCannotReadOrWrite" computerName="JIEJIE" duration="00:00:00.0937019" startTime="2026-11-11T16:05:42.1582309+13:00" endTime="2026-11-11T16:05:42.2519330+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="829714f9-add9-46a1-9914-c45d62ba3dc7" />
+    <UnitTestResult executionId="390d4895-2e18-4de0-ac20-07dbc8176625" testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" testName="ReversedPairIsDuplicateEvenWithOtherKind" computerName="JIEJIE" duration="00:00:00.0007770" startTime="2026-11-11T16:05:34.2242920+13:00" endTime="2026-11-11T16:05:34.2250688+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="390d4895-2e18-4de0-ac20-07dbc8176625" />
+    <UnitTestResult executionId="8b6c37a6-072f-41f7-a408-6f2a21fc0165" testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" testName="SameKeyConcurrentRequestsCommitOnce" computerName="JIEJIE" duration="00:00:00.0646760" startTime="2026-11-11T16:05:42.8369224+13:00" endTime="2026-11-11T16:05:42.9015985+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b6c37a6-072f-41f7-a408-6f2a21fc0165" />
+    <UnitTestResult executionId="5f3bc609-2f62-4097-94e9-c02015bc3f0b" testId="34462801-bef0-6342-0757-de27491a6769" testName="StaleVersionDoesNotWriteOrCacheFailure" computerName="JIEJIE" duration="00:00:00.1016870" startTime="2026-11-11T16:05:42.9016698+13:00" endTime="2026-11-11T16:05:43.0033561+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f3bc609-2f62-4097-94e9-c02015bc3f0b" />
+    <UnitTestResult executionId="1645fc11-9434-4b6a-8804-a6aa5cfca826" testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" testName="MalformedAndNullContractsAreRejected" computerName="JIEJIE" duration="00:00:00.0645410" startTime="2026-11-11T16:05:42.6879591+13:00" endTime="2026-11-11T16:05:42.7524994+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1645fc11-9434-4b6a-8804-a6aa5cfca826" />
+    <UnitTestResult executionId="7637ecff-5c24-44c8-a4d5-bd1e21e4f205" testId="c0dc21e5-e796-1b2d-17f9-dde218332706" testName="DatabaseRejectsLinkToUndiscoveredEvidence" computerName="JIEJIE" duration="00:00:00.0336190" startTime="2026-11-11T16:05:41.6315085+13:00" endTime="2026-11-11T16:05:41.6651260+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7637ecff-5c24-44c8-a4d5-bd1e21e4f205" />
+    <UnitTestResult executionId="66780770-a461-49e8-ac88-2af13de622e0" testId="2fb1861a-26bd-931e-3161-4c069ee104ef" testName="ReplayingStartReturnsSameInvestigation" computerName="JIEJIE" duration="00:00:00.0265010" startTime="2026-11-11T16:05:42.7622924+13:00" endTime="2026-11-11T16:05:42.7887927+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66780770-a461-49e8-ac88-2af13de622e0" />
+    <UnitTestResult executionId="ed6d4602-f2f2-42dd-8627-d5921ce8df89" testId="9a139626-8b95-6e27-d28a-106dcc03b348" testName="AnonymousCannotReadCases" computerName="JIEJIE" duration="00:00:00.0108650" startTime="2026-11-11T16:05:41.2772216+13:00" endTime="2026-11-11T16:05:41.2880862+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed6d4602-f2f2-42dd-8627-d5921ce8df89" />
+    <UnitTestResult executionId="bdc93e20-d111-48a3-80d7-facbb66d888d" testId="382b7729-23fb-4910-9311-27c5c679daf9" testName="ReusedKeyWithChangedPayloadIsConflict" computerName="JIEJIE" duration="00:00:00.0477870" startTime="2026-11-11T16:05:42.7888909+13:00" endTime="2026-11-11T16:05:42.8366777+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bdc93e20-d111-48a3-80d7-facbb66d888d" />
+    <UnitTestResult executionId="f06534df-a55a-47b1-aa12-31163679df83" testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" testName="StartRequiresOwner" computerName="JIEJIE" duration="00:00:00.0004560" startTime="2026-11-11T16:05:34.2290067+13:00" endTime="2026-11-11T16:05:34.2294621+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f06534df-a55a-47b1-aa12-31163679df83" />
+    <UnitTestResult executionId="0c774544-65be-46a2-a340-1fdde229d10d" testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" testName="DifferentKeysCompetingOnOneVersionHaveOneWinner" computerName="JIEJIE" duration="00:00:00.4077260" startTime="2026-11-11T16:05:41.6651859+13:00" endTime="2026-11-11T16:05:42.0729111+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c774544-65be-46a2-a340-1fdde229d10d" />
+    <UnitTestResult executionId="0d43cfbd-525e-4989-ba95-363867ebb98d" testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" testName="AuthenticationRateLimitActuallyRejectsBurst" computerName="JIEJIE" duration="00:00:00.1078790" startTime="2026-11-11T16:05:41.1692762+13:00" endTime="2026-11-11T16:05:41.2771545+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d43cfbd-525e-4989-ba95-363867ebb98d" />
+    <UnitTestResult executionId="47a27d14-a2a8-4e5d-9590-762064145635" testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" testName="ReviewHasMinimumEvidenceGate" computerName="JIEJIE" duration="00:00:00.0004750" startTime="2026-11-11T16:05:34.2279150+13:00" endTime="2026-11-11T16:05:34.2283898+13:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47a27d14-a2a8-4e5d-9590-762064145635" />
   </Results>
   <TestDefinitions>
     <UnitTest name="ForeignOwnerCannotReadOrWrite" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e22b9cd5-1c4e-2e97-ac85-697b429ddc63">
-      <Execution id="85b3d4f3-2d53-4f45-a8a8-48c55f8bcef9" />
+      <Execution id="829714f9-add9-46a1-9914-c45d62ba3dc7" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ForeignOwnerCannotReadOrWrite" />
     </UnitTest>
     <UnitTest name="RemoveLinkChangesVersionAndReadiness" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="790029ff-be30-cb3d-40f4-18941957ab32">
-      <Execution id="82a37176-d6ad-43ad-8532-1eb877dc852c" />
+      <Execution id="3445f01b-8673-4b91-8a53-eda9488f952f" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="RemoveLinkChangesVersionAndReadiness" />
     </UnitTest>
+    <UnitTest name="UpgradePreservesExistingInvestigationAndEfRejectsStaleTrackedWriter" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="89062700-b251-c194-e873-fee30c59fa96">
+      <Execution id="96250b9a-49d2-4b88-a6b5-3b30bb83bff0" />
+      <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.MigrationTests" name="UpgradePreservesExistingInvestigationAndEfRejectsStaleTrackedWriter" />
+    </UnitTest>
     <UnitTest name="DatabaseRejectsLinkToUndiscoveredEvidence" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="c0dc21e5-e796-1b2d-17f9-dde218332706">
-      <Execution id="9991e60b-ddb6-4242-b010-589c51e5efc7" />
+      <Execution id="7637ecff-5c24-44c8-a4d5-bd1e21e4f205" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DatabaseRejectsLinkToUndiscoveredEvidence" />
     </UnitTest>
     <UnitTest name="AuthenticationRateLimitActuallyRejectsBurst" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3">
-      <Execution id="302b71f1-e7b1-4a59-b8eb-30e92196331c" />
+      <Execution id="0d43cfbd-525e-4989-ba95-363867ebb98d" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="AuthenticationRateLimitActuallyRejectsBurst" />
     </UnitTest>
     <UnitTest name="SameKeyConcurrentRequestsCommitOnce" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="fae69e35-bcaf-3328-d45b-8aee20bdac7a">
-      <Execution id="b30eef79-5369-48d4-82f2-0f74eae4035c" />
+      <Execution id="8b6c37a6-072f-41f7-a408-6f2a21fc0165" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="SameKeyConcurrentRequestsCommitOnce" />
     </UnitTest>
     <UnitTest name="HiddenEvidenceCannotBeExamined" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="ad48b6fe-6f9c-560e-c9e6-86894dd8b679">
-      <Execution id="c7ca13da-2831-4906-a610-0d50afc3ab67" />
+      <Execution id="cf9eb7d4-70b1-42cb-af21-8767b39e1bfb" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="HiddenEvidenceCannotBeExamined" />
     </UnitTest>
     <UnitTest name="DuplicateExaminationDoesNotAdvanceVersion" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="f8f8296f-94ff-3adb-0562-5b6d1cac2252">
-      <Execution id="ee28fc55-1056-46ed-8e98-7375814259c2" />
+      <Execution id="b4ebae5f-dfd0-4ab0-91a1-ef7cae9764b7" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="DuplicateExaminationDoesNotAdvanceVersion" />
     </UnitTest>
     <UnitTest name="UnexaminedBodiesAreAbsentFromProjection" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="bf874d4a-6ada-e4a0-fe1f-243856dfcc67">
-      <Execution id="8b0b276d-5912-4275-83f7-c7e8a854cc60" />
+      <Execution id="465f2739-bd37-4c2b-8c2d-096aa3d2cf86" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnexaminedBodiesAreAbsentFromProjection" />
     </UnitTest>
     <UnitTest name="UnexaminedSupportIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="8e6e7c4d-dd68-422a-9495-6ed11647bbe2">
-      <Execution id="d21d0f1e-4f58-4061-b178-a1774aa03d05" />
+      <Execution id="3fbcc5f4-227c-4279-8be1-80972b17290c" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnexaminedSupportIsRejected" />
     </UnitTest>
     <UnitTest name="ReusedKeyWithChangedPayloadIsConflict" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="382b7729-23fb-4910-9311-27c5c679daf9">
-      <Execution id="d4f5910a-7d8f-4bf1-92ac-e46aea163ddf" />
+      <Execution id="bdc93e20-d111-48a3-80d7-facbb66d888d" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReusedKeyWithChangedPayloadIsConflict" />
     </UnitTest>
     <UnitTest name="IfMatchAndIdempotencyHeadersAreRequired" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="5eaa222e-0ca6-757a-c5a1-31dbc19d6725">
-      <Execution id="194b1a29-f90f-418c-ab2d-7aa04da18506" />
+      <Execution id="ffda471d-e201-4969-aa9c-1343325c26ef" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="IfMatchAndIdempotencyHeadersAreRequired" />
     </UnitTest>
     <UnitTest name="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="8aecf5d7-6106-f284-2148-32d47cbe4d09">
-      <Execution id="39eb2b14-d05c-480d-8276-b749c7b730f9" />
+      <Execution id="390016d1-768f-4654-a8d9-59df068e9f79" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="FullWorkflowSurvivesFreshReadAndSubmissionIsImmutable" />
     </UnitTest>
     <UnitTest name="ExaminingUnlocksOnlyItsSuccessor" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f">
-      <Execution id="42a73585-3474-4c57-9bb3-b639d9cbc668" />
+      <Execution id="ee29ab22-0022-4f5b-83f5-6d77a8c5e617" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ExaminingUnlocksOnlyItsSuccessor" />
     </UnitTest>
     <UnitTest name="CsrfIsRequiredEvenWithValidCookie" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e6e3ed56-66db-1e5c-a519-35156a296af3">
-      <Execution id="f9a2d34f-8e14-4276-ad2f-a2d2298904ff" />
+      <Execution id="1618605a-5635-44b0-ade6-2dbdd3137a9e" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="CsrfIsRequiredEvenWithValidCookie" />
     </UnitTest>
     <UnitTest name="TraceAndSecurityHeadersArePresent" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="0ea6673f-bc13-09be-95ed-dfb72a92d762">
-      <Execution id="da5bc54a-adb4-4b9c-b106-f6d40be0638c" />
+      <Execution id="32ed80a1-6f68-4415-8141-b508ef697073" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="TraceAndSecurityHeadersArePresent" />
     </UnitTest>
     <UnitTest name="StaleVersionDoesNotWriteOrCacheFailure" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="34462801-bef0-6342-0757-de27491a6769">
-      <Execution id="183e475f-0c1b-47ff-ad38-bc81d7e1d602" />
+      <Execution id="5f3bc609-2f62-4097-94e9-c02015bc3f0b" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="StaleVersionDoesNotWriteOrCacheFailure" />
     </UnitTest>
     <UnitTest name="UndefinedEnumIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1ab9c201-2ba9-83e4-fc6b-aed959259b9d">
-      <Execution id="c698f56b-f39c-4760-96ec-7603f5f37371" />
+      <Execution id="d61a28b8-4d58-4085-8384-5cfed37ac14d" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UndefinedEnumIsRejected" />
     </UnitTest>
     <UnitTest name="VerdictIsDeterministicAndSubmittedIsTerminal" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="edeac40e-5d64-460f-491d-3eaacf4c8089">
-      <Execution id="4e52d88a-efec-434e-9710-4f06b67b3c2f" />
+      <Execution id="3524b570-87f1-4e32-a8bb-e377dbadd28b" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="VerdictIsDeterministicAndSubmittedIsTerminal" />
     </UnitTest>
     <UnitTest name="StartRequiresOwner" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="22563811-cf8b-3890-9b3b-51b6c6b2246f">
-      <Execution id="e6739c8d-6c7e-4b4c-98ee-858cac27b6ce" />
+      <Execution id="f06534df-a55a-47b1-aa12-31163679df83" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="StartRequiresOwner" />
     </UnitTest>
     <UnitTest name="InvalidTransitionCannotSkipReview" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="312e4d37-42ea-f8de-a4c0-6d009ccaa390">
-      <Execution id="961c08c6-fa45-4b2e-986f-0ebbb7da9830" />
+      <Execution id="249509e6-b8b5-4144-b676-cd8f0af22e64" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="InvalidTransitionCannotSkipReview" />
     </UnitTest>
     <UnitTest name="DifferentKeysCompetingOnOneVersionHaveOneWinner" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="e8dc213d-49c9-3fe8-befd-5e161d6dfef7">
-      <Execution id="30bad5e2-6960-4450-b696-892a06392a53" />
+      <Execution id="0c774544-65be-46a2-a340-1fdde229d10d" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DifferentKeysCompetingOnOneVersionHaveOneWinner" />
     </UnitTest>
     <UnitTest name="ReplayingStartReturnsSameInvestigation" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="2fb1861a-26bd-931e-3161-4c069ee104ef">
-      <Execution id="7351683d-9b6b-4f73-857f-f491e5ce0e04" />
+      <Execution id="66780770-a461-49e8-ac88-2af13de622e0" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReplayingStartReturnsSameInvestigation" />
     </UnitTest>
     <UnitTest name="ReadinessIsRealDatabaseCheck" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="65207adc-3232-7670-5d7a-162eac12cc22">
-      <Execution id="0673fa05-e7e0-44be-b94b-dd6625f03786" />
+      <Execution id="7fd3af87-4cb9-4116-8b4c-900286fc1ac5" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="ReadinessIsRealDatabaseCheck" />
     </UnitTest>
     <UnitTest name="SelfLinkIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8">
-      <Execution id="dc7977cb-6027-4882-b4b1-91bf00d8c4a3" />
+      <Execution id="d65c0e84-b201-4e13-bb7f-860e2f57ad4f" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="SelfLinkIsRejected" />
     </UnitTest>
     <UnitTest name="HiddenEvidenceBodyNeverLeaks" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="fbefd099-e5f1-1535-41ce-53fa535d79ad">
-      <Execution id="070e2cf8-9277-4e77-a9e2-97b414ab57f3" />
+      <Execution id="22aff667-e33b-4e0a-b584-e4fd81133576" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="HiddenEvidenceBodyNeverLeaks" />
     </UnitTest>
     <UnitTest name="AlternativeVerdictIsPersistedWithLowerEvaluation" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="10d84449-cf78-62b8-e17c-5ee31e78d710">
-      <Execution id="5bab0396-7f8e-4d8a-b20f-219e00802cbd" />
+      <Execution id="ed6c279a-611c-4c64-8973-a7c36a732387" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="AlternativeVerdictIsPersistedWithLowerEvaluation" />
     </UnitTest>
     <UnitTest name="AnonymousCannotReadCases" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="9a139626-8b95-6e27-d28a-106dcc03b348">
-      <Execution id="3ada0dbb-750d-4bb0-9fbd-fbb550b86e64" />
+      <Execution id="ed6d4602-f2f2-42dd-8627-d5921ce8df89" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="AnonymousCannotReadCases" />
     </UnitTest>
     <UnitTest name="CoreHasNoFrameworkOrOutwardDependencies" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="67625878-8f43-4a4c-5909-04d8366f78f9">
-      <Execution id="6c7cd081-4294-4b40-8204-7ab748829988" />
+      <Execution id="462f992b-6f4f-4e2b-b249-03585708eb22" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="CoreHasNoFrameworkOrOutwardDependencies" />
     </UnitTest>
     <UnitTest name="ReviewFreezesWritesUntilResume" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6">
-      <Execution id="7db6c3ba-a821-4514-83ca-f5f5e16ff194" />
+      <Execution id="e5bd06a8-3614-4d43-95d2-3f52106bd2ea" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReviewFreezesWritesUntilResume" />
     </UnitTest>
     <UnitTest name="DomainFailureRollsBackReceiptAndAudit" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="c3532d08-d4e9-e922-e549-654ef074bc31">
-      <Execution id="ef903450-2433-48f4-a99a-33722b527e3a" />
+      <Execution id="15885fd0-882a-4f48-99db-0016c13d6a9b" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="DomainFailureRollsBackReceiptAndAudit" />
     </UnitTest>
     <UnitTest name="ReviewHasMinimumEvidenceGate" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d">
-      <Execution id="d2eb6ec4-6437-4d5b-a0b4-a9a8c7edb8f7" />
+      <Execution id="47a27d14-a2a8-4e5d-9590-762064145635" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReviewHasMinimumEvidenceGate" />
     </UnitTest>
     <UnitTest name="ReversedPairIsDuplicateEvenWithOtherKind" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec">
-      <Execution id="86e26b5d-60d6-4f29-8568-7a6f0a72a84b" />
+      <Execution id="390d4895-2e18-4de0-ac20-07dbc8176625" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="ReversedPairIsDuplicateEvenWithOtherKind" />
     </UnitTest>
     <UnitTest name="DuplicateSupportCannotSatisfyMinimum" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="4f37a56b-5585-4246-7d00-8eeb76b818ec">
-      <Execution id="e7a15753-5038-42b5-9e33-d55e543de0e3" />
+      <Execution id="28f91f49-8eb9-47a6-a9cc-24cdd9ca73c0" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="DuplicateSupportCannotSatisfyMinimum" />
     </UnitTest>
     <UnitTest name="MalformedAndNullContractsAreRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67">
-      <Execution id="fea510f6-aeef-4ad6-89cf-53ab549e7b0e" />
+      <Execution id="1645fc11-9434-4b6a-8804-a6aa5cfca826" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.PostgresApiTests" name="MalformedAndNullContractsAreRejected" />
     </UnitTest>
     <UnitTest name="NotesLengthIsDomainInvariant" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="f3eeab25-7a17-435c-26b9-9b4b59b0de54">
-      <Execution id="9038fca3-6093-4ad3-b3be-78144894fa6d" />
+      <Execution id="4570a534-c138-43d7-aa96-f607d6ef5ec3" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="NotesLengthIsDomainInvariant" />
     </UnitTest>
     <UnitTest name="UnknownCaseIsRejected" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="d42308dd-c307-5f8b-2a62-2decedb1ffba">
-      <Execution id="0974d848-2105-48b8-a999-d75daf917f9d" />
+      <Execution id="7fceeeee-4898-4fb9-963f-023dd46469c7" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="UnknownCaseIsRejected" />
     </UnitTest>
     <UnitTest name="LinkRequiresBothDiscoveredEndpoints" storage="d:\workshop\nov\echocase\tests\echocase.tests\bin\debug\net10.0\echocase.tests.dll" id="4ef4d73e-c210-cb93-d885-72ce689cc7df">
-      <Execution id="97cdc28e-4a63-4c57-bf80-d2d3e3763db3" />
+      <Execution id="70ec30bc-2b7a-482e-8807-7a44306b54b6" />
       <TestMethod codeBase="D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EchoCase.Tests.DomainTests" name="LinkRequiresBothDiscoveredEndpoints" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" executionId="194b1a29-f90f-418c-ab2d-7aa04da18506" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" executionId="86e26b5d-60d6-4f29-8568-7a6f0a72a84b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9a139626-8b95-6e27-d28a-106dcc03b348" executionId="3ada0dbb-750d-4bb0-9fbd-fbb550b86e64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="790029ff-be30-cb3d-40f4-18941957ab32" executionId="82a37176-d6ad-43ad-8532-1eb877dc852c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" executionId="c7ca13da-2831-4906-a610-0d50afc3ab67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" executionId="dc7977cb-6027-4882-b4b1-91bf00d8c4a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" executionId="c698f56b-f39c-4760-96ec-7603f5f37371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" executionId="39eb2b14-d05c-480d-8276-b749c7b730f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" executionId="0974d848-2105-48b8-a999-d75daf917f9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="67625878-8f43-4a4c-5909-04d8366f78f9" executionId="6c7cd081-4294-4b40-8204-7ab748829988" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="10d84449-cf78-62b8-e17c-5ee31e78d710" executionId="5bab0396-7f8e-4d8a-b20f-219e00802cbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" executionId="b30eef79-5369-48d4-82f2-0f74eae4035c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="c0dc21e5-e796-1b2d-17f9-dde218332706" executionId="9991e60b-ddb6-4242-b010-589c51e5efc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" executionId="e7a15753-5038-42b5-9e33-d55e543de0e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" executionId="302b71f1-e7b1-4a59-b8eb-30e92196331c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="edeac40e-5d64-460f-491d-3eaacf4c8089" executionId="4e52d88a-efec-434e-9710-4f06b67b3c2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="382b7729-23fb-4910-9311-27c5c679daf9" executionId="d4f5910a-7d8f-4bf1-92ac-e46aea163ddf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" executionId="e6739c8d-6c7e-4b4c-98ee-858cac27b6ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" executionId="42a73585-3474-4c57-9bb3-b639d9cbc668" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" executionId="fea510f6-aeef-4ad6-89cf-53ab549e7b0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" executionId="7db6c3ba-a821-4514-83ca-f5f5e16ff194" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e6e3ed56-66db-1e5c-a519-35156a296af3" executionId="f9a2d34f-8e14-4276-ad2f-a2d2298904ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" executionId="070e2cf8-9277-4e77-a9e2-97b414ab57f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" executionId="8b0b276d-5912-4275-83f7-c7e8a854cc60" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="c3532d08-d4e9-e922-e549-654ef074bc31" executionId="ef903450-2433-48f4-a99a-33722b527e3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" executionId="97cdc28e-4a63-4c57-bf80-d2d3e3763db3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" executionId="9038fca3-6093-4ad3-b3be-78144894fa6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" executionId="30bad5e2-6960-4450-b696-892a06392a53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="65207adc-3232-7670-5d7a-162eac12cc22" executionId="0673fa05-e7e0-44be-b94b-dd6625f03786" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" executionId="d2eb6ec4-6437-4d5b-a0b4-a9a8c7edb8f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2fb1861a-26bd-931e-3161-4c069ee104ef" executionId="7351683d-9b6b-4f73-857f-f491e5ce0e04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" executionId="961c08c6-fa45-4b2e-986f-0ebbb7da9830" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="34462801-bef0-6342-0757-de27491a6769" executionId="183e475f-0c1b-47ff-ad38-bc81d7e1d602" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" executionId="85b3d4f3-2d53-4f45-a8a8-48c55f8bcef9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" executionId="ee28fc55-1056-46ed-8e98-7375814259c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" executionId="da5bc54a-adb4-4b9c-b106-f6d40be0638c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" executionId="d21d0f1e-4f58-4061-b178-a1774aa03d05" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3532d08-d4e9-e922-e549-654ef074bc31" executionId="15885fd0-882a-4f48-99db-0016c13d6a9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ef4d73e-c210-cb93-d885-72ce689cc7df" executionId="70ec30bc-2b7a-482e-8807-7a44306b54b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1be0b5c2-f6d9-493e-8617-9fbc0aa336c8" executionId="d65c0e84-b201-4e13-bb7f-860e2f57ad4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edeac40e-5d64-460f-491d-3eaacf4c8089" executionId="3524b570-87f1-4e32-a8bb-e377dbadd28b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89062700-b251-c194-e873-fee30c59fa96" executionId="96250b9a-49d2-4b88-a6b5-3b30bb83bff0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aecf5d7-6106-f284-2148-32d47cbe4d09" executionId="390016d1-768f-4654-a8d9-59df068e9f79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ea6673f-bc13-09be-95ed-dfb72a92d762" executionId="32ed80a1-6f68-4415-8141-b508ef697073" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e6e7c4d-dd68-422a-9495-6ed11647bbe2" executionId="3fbcc5f4-227c-4279-8be1-80972b17290c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="312e4d37-42ea-f8de-a4c0-6d009ccaa390" executionId="249509e6-b8b5-4144-b676-cd8f0af22e64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf874d4a-6ada-e4a0-fe1f-243856dfcc67" executionId="465f2739-bd37-4c2b-8c2d-096aa3d2cf86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad48b6fe-6f9c-560e-c9e6-86894dd8b679" executionId="cf9eb7d4-70b1-42cb-af21-8767b39e1bfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbefd099-e5f1-1535-41ce-53fa535d79ad" executionId="22aff667-e33b-4e0a-b584-e4fd81133576" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10d84449-cf78-62b8-e17c-5ee31e78d710" executionId="ed6c279a-611c-4c64-8973-a7c36a732387" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd38b20a-82a0-de15-9d0a-2ddd7a9dc60f" executionId="ee29ab22-0022-4f5b-83f5-6d77a8c5e617" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67625878-8f43-4a4c-5909-04d8366f78f9" executionId="462f992b-6f4f-4e2b-b249-03585708eb22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ab9c201-2ba9-83e4-fc6b-aed959259b9d" executionId="d61a28b8-4d58-4085-8384-5cfed37ac14d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d42308dd-c307-5f8b-2a62-2decedb1ffba" executionId="7fceeeee-4898-4fb9-963f-023dd46469c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f37a56b-5585-4246-7d00-8eeb76b818ec" executionId="28f91f49-8eb9-47a6-a9cc-24cdd9ca73c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5eaa222e-0ca6-757a-c5a1-31dbc19d6725" executionId="ffda471d-e201-4969-aa9c-1343325c26ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6e3ed56-66db-1e5c-a519-35156a296af3" executionId="1618605a-5635-44b0-ade6-2dbdd3137a9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95a0b0a6-cc11-5771-80ef-9d0fa59d8ec6" executionId="e5bd06a8-3614-4d43-95d2-3f52106bd2ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f3eeab25-7a17-435c-26b9-9b4b59b0de54" executionId="4570a534-c138-43d7-aa96-f607d6ef5ec3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="790029ff-be30-cb3d-40f4-18941957ab32" executionId="3445f01b-8673-4b91-8a53-eda9488f952f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65207adc-3232-7670-5d7a-162eac12cc22" executionId="7fd3af87-4cb9-4116-8b4c-900286fc1ac5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8f8296f-94ff-3adb-0562-5b6d1cac2252" executionId="b4ebae5f-dfd0-4ab0-91a1-ef7cae9764b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e22b9cd5-1c4e-2e97-ac85-697b429ddc63" executionId="829714f9-add9-46a1-9914-c45d62ba3dc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5cd3b52-4745-14e0-dea0-1ff16cffa7ec" executionId="390d4895-2e18-4de0-ac20-07dbc8176625" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fae69e35-bcaf-3328-d45b-8aee20bdac7a" executionId="8b6c37a6-072f-41f7-a408-6f2a21fc0165" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34462801-bef0-6342-0757-de27491a6769" executionId="5f3bc609-2f62-4097-94e9-c02015bc3f0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b13c00a1-7ad7-50f8-94ad-f64d7cd85e67" executionId="1645fc11-9434-4b6a-8804-a6aa5cfca826" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0dc21e5-e796-1b2d-17f9-dde218332706" executionId="7637ecff-5c24-44c8-a4d5-bd1e21e4f205" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2fb1861a-26bd-931e-3161-4c069ee104ef" executionId="66780770-a461-49e8-ac88-2af13de622e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a139626-8b95-6e27-d28a-106dcc03b348" executionId="ed6d4602-f2f2-42dd-8627-d5921ce8df89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="382b7729-23fb-4910-9311-27c5c679daf9" executionId="bdc93e20-d111-48a3-80d7-facbb66d888d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22563811-cf8b-3890-9b3b-51b6c6b2246f" executionId="f06534df-a55a-47b1-aa12-31163679df83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8dc213d-49c9-3fe8-befd-5e161d6dfef7" executionId="0c774544-65be-46a2-a340-1fdde229d10d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3135a5e1-89c4-e3fa-bb69-a8bf6d35f3b3" executionId="0d43cfbd-525e-4989-ba95-363867ebb98d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1854c2ab-804f-ba44-8bb4-63dbf9ed9b9d" executionId="47a27d14-a2a8-4e5d-9590-762064145635" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <ResultSummary outcome="Completed">
-    <Counters total="37" executed="37" passed="37" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="38" executed="38" passed="38" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>NUnit Adapter 6.3.1.0: Test execution started&#xD;
 Running all tests in D:\workshop\nov\echocase\tests\EchoCase.Tests\bin\Debug\net10.0\EchoCase.Tests.dll&#xD;
-   NUnit3TestExecutor discovered 37 of 37 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+   NUnit3TestExecutor discovered 38 of 38 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
 </StdOut>
     </Output>
   </ResultSummary>
