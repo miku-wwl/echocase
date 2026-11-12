@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="274" viewBox="0 0 960 274">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="274" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">端点登记与端点执行处在两个时刻</text>
+<rect x="28.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">应用构建</text>
+<text x="46.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">MapPut 登记路由与委托</text>
+<text x="46.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">授权 / 限流元数据</text>
+<text x="46.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">处理器的参数契约</text>
+<rect x="336.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="354.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">请求执行</text>
+<text x="354.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">路由匹配 → 绑定参数</text>
+<text x="354.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">解析 DI 与可信身份</text>
+<text x="354.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">调用 Service → 执行</text>
+<text x="354.0" y="224" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">IResult</text>
+<rect x="644.0" y="70" width="288.0" height="174" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="662.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">可能的停止点</text>
+<text x="662.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">路由不匹配</text>
+<text x="662.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">认证、防伪或绑定失败</text>
+<text x="662.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">端点内规则或数据库拒绝</text>
+</svg>

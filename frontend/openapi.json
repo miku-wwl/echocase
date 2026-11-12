@@ -1,0 +1,898 @@
+{
+  "components": {
+    "schemas": {
+      "CaseSummary": {
+        "additionalProperties": false,
+        "properties": {
+          "evidenceCount": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "suspects": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "synopsis": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "subtitle",
+          "synopsis",
+          "suspects",
+          "evidenceCount"
+        ],
+        "type": "object"
+      },
+      "Credentials": {
+        "additionalProperties": false,
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object"
+      },
+      "CsrfResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ],
+        "type": "object"
+      },
+      "EvidenceView": {
+        "additionalProperties": false,
+        "properties": {
+          "body": {
+            "nullable": true,
+            "type": "string"
+          },
+          "examined": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "kind",
+          "summary",
+          "body",
+          "locked",
+          "examined"
+        ],
+        "type": "object"
+      },
+      "LinkRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "targetId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sourceId",
+          "targetId",
+          "kind"
+        ],
+        "type": "object"
+      },
+      "LinkView": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "rationale": {
+            "nullable": true,
+            "type": "string"
+          },
+          "revisedAt": {
+            "format": "date-time",
+            "nullable": true,
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "targetId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "sourceId",
+          "targetId",
+          "kind"
+        ],
+        "type": "object"
+      },
+      "MessageResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "type": "object"
+      },
+      "NotesRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "notes"
+        ],
+        "type": "object"
+      },
+      "ReviseLinkRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "rationale"
+        ],
+        "type": "object"
+      },
+      "SessionView": {
+        "additionalProperties": false,
+        "properties": {
+          "caseId": {
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceView"
+            },
+            "type": "array"
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/LinkView"
+            },
+            "type": "array"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "verdict": {
+            "oneOf": [
+              {
+                "enum": [
+                  null
+                ],
+                "nullable": true
+              },
+              {
+                "$ref": "#/components/schemas/VerdictView"
+              }
+            ]
+          },
+          "version": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "caseId",
+          "title",
+          "status",
+          "version",
+          "notes",
+          "createdAt",
+          "updatedAt",
+          "evidence",
+          "links",
+          "verdict"
+        ],
+        "type": "object"
+      },
+      "StartRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "caseId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "caseId"
+        ],
+        "type": "object"
+      },
+      "UserView": {
+        "additionalProperties": false,
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "email"
+        ],
+        "type": "object"
+      },
+      "VerdictRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reasoning": {
+            "type": "string"
+          },
+          "supportingEvidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "suspect": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "suspect",
+          "reasoning",
+          "supportingEvidence"
+        ],
+        "type": "object"
+      },
+      "VerdictView": {
+        "additionalProperties": false,
+        "properties": {
+          "reasoning": {
+            "type": "string"
+          },
+          "score": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "supportingEvidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "suspect": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "suspect",
+          "reasoning",
+          "supportingEvidence",
+          "score"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "EchoCase.Api | v1",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.4",
+  "paths": {
+    "/api/auth/csrf": {
+      "get": {
+        "operationId": "GetCsrfToken",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CsrfResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "operationId": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Credentials"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "operationId": "Logout",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "operationId": "GetCurrentUser",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "operationId": "Register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Credentials"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/api/cases": {
+      "get": {
+        "operationId": "GetCases",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/CaseSummary"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations": {
+      "get": {
+        "operationId": "ListInvestigations",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/SessionView"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      },
+      "post": {
+        "operationId": "StartInvestigation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}": {
+      "get": {
+        "operationId": "GetInvestigation",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/evidence/{evidenceId}/examine": {
+      "post": {
+        "operationId": "ExamineEvidence",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "evidenceId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/links": {
+      "post": {
+        "operationId": "CreateLink",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/links/{linkId}": {
+      "delete": {
+        "operationId": "RemoveLink",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      },
+      "put": {
+        "operationId": "ReviseLink",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviseLinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/notes": {
+      "put": {
+        "operationId": "SaveNotes",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/state/{action}": {
+      "post": {
+        "operationId": "TransitionInvestigation",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "action",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/api/investigations/{id}/verdict": {
+      "post": {
+        "operationId": "SubmitVerdict",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerdictRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionView"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Investigations"
+        ]
+      }
+    },
+    "/health/live": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    },
+    "/health/ready": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "EchoCase.Api"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "EchoCase.Api"
+    },
+    {
+      "name": "Investigations"
+    }
+  ]
+}

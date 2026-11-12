@@ -1,0 +1,11 @@
+# Third-party origin and attribution
+
+EchoCase's original business implementation is under the repository's Apache-2.0 license. Through `bf9de37b9bd4d5cc2c227af2c857360e048b15d1`, the architecture was studied from Jason Taylor CleanArchitecture and implemented separately; it was not generated from the template. That historical fact has not been rewritten.
+
+The current remediation genuinely starts from the official `Clean.Architecture.Solution.Template@10.8.0` React/PostgreSQL generator, upstream tag `v10.8.0`, commit `e5c08ecead8a52f6cf519477bf6c57668248c035`. Inherited/adapted MIT code includes `backend/EchoCase.Application/Common/` behaviors, security, identity ports and result types; template-style registration in each backend layer; `backend/EchoCase.Infrastructure/Identity/`; and `backend/EchoCase.Api/Infrastructure/` endpoint discovery/naming plus `Services/CurrentUser.cs`. The full upstream MIT notice is retained at `backend/docs/architecture/template-origin/UPSTREAM-LICENSE`. The file-level transformation inventory identifies removed samples and adapted components. These components are attributed to Jason Taylor and contributors, not presented as original EchoCase authorship.
+
+The React template's NSwag Fetch client capability is retained and configured for EchoCase. `frontend/src/api/generated.ts` is generated from the actual application contract by pinned NSwag 14.8.0; it is not manually authored endpoint code. Package licenses, including MediatR's current licensing terms, remain governed by their upstream packages.
+
+The retired Phase 1 publisher studied the methods of DevOps Delivery. That implementation and its attribution remain in the preserved Phase 2A history; the active repository no longer includes that publisher or its outputs.
+
+Official shadcn/ui registry components are generated into frontend/src/components/ui and retain their upstream MIT provenance: https://github.com/shadcn-ui/ui/blob/main/LICENSE.md . React, TanStack Query, React Flow, Lucide, Vite, Tailwind, Playwright, EF Core, Npgsql and NUnit retain their respective upstream licenses. Package lock files identify installed versions. No images from third-party media are used. All investigation names and incidents are fictional.

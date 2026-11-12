@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="250" viewBox="0 0 960 250">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="250" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">同一屏幕上的四种状态，不应混成一个对象</text>
+<rect x="28.0" y="70" width="288.0" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">确认事实</text>
+<text x="46.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Query cache</text>
+<text x="46.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">服务器返回的 Session</text>
+<text x="46.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">只接受不倒退的版本</text>
+<rect x="336.0" y="70" width="288.0" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="354.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">用户意图</text>
+<text x="354.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">draft + baseline</text>
+<text x="354.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">输入代次 revision</text>
+<text x="354.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">保留未保存内容</text>
+<rect x="644.0" y="70" width="288.0" height="150" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="662.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">交互与呈现</text>
+<text x="662.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">tab / selected / nodes</text>
+<text x="662.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">pending 操作快照</text>
+<text x="662.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">节点位置不写入数据库</text>
+</svg>

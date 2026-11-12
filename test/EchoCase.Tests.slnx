@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/unit/">
+    <Project Path="unit/EchoCase.UnitTests/EchoCase.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/integration/">
+    <Project Path="integration/EchoCase.IntegrationTests/EchoCase.IntegrationTests.csproj" />
+    <Project Path="integration/EchoCase.QueryProbe/EchoCase.QueryProbe.csproj" />
+  </Folder>
+</Solution>

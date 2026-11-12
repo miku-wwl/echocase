@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="510" viewBox="0 0 960 510">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="510" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">聚合边界：一次业务修改只有一个版本</text>
+<rect x="30" y="66" width="900" height="385" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<rect x="270" y="85" width="420" height="125" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="288" y="120" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Investigation · 聚合根</text>
+<text x="288" y="149" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Owner / Status / Version / Notes</text>
+<rect x="60" y="275" width="385" height="133" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="78" y="310" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Discovery · 已调查证据</text>
+<text x="78" y="339" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">复合身份：调查 + 证据</text>
+<text x="78" y="369" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">只由根的 Examine 增加</text>
+<rect x="515" y="275" width="385" height="133" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="533" y="310" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">EvidenceLink · 证据关系</text>
+<text x="533" y="339" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">稳定 Guid；规范化端点</text>
+<text x="533" y="369" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">只能由根建立、删除、修订</text>
+<line x1="385" y1="212" x2="252" y2="270" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="575" y1="212" x2="706" y2="270" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="480" y="483" font-family="Book" font-size="22" fill="#24766e" text-anchor="middle">修改子对象 → 根推进 Version → 同一数据库事务</text>
+</svg>

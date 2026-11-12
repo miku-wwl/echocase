@@ -1,0 +1,103 @@
+{
+  "baseline": "bf9de37b9bd4d5cc2c227af2c857360e048b15d1",
+  "unchangedSourceAndOriginalTests": [
+    {
+      "path": "backend/EchoCase.Domain/CaseCatalog.cs",
+      "normalizedSha256": "b3ffd226fd03b9fb1c4757fa27cc065a0679f8667dd58d0aebf6da0bed70993c",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Domain/Investigation.cs",
+      "normalizedSha256": "fa54b37458af48eb9a11cbef7d12a6b78b52cfd4e79d9a7bbe8824d113aca3f0",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Application/Investigations.cs",
+      "normalizedSha256": "3e94b63e39c99618e5b1103c87b6eb322994ff2158b08505a4ce5101066d0ca5",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+      "normalizedSha256": "3fae07d12565107506fd2c26822fded6dd3447e1c6127148fac1a1de60fe6cd1",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+      "normalizedSha256": "ceb9b89ff8a81debecd4dd4e554f38821044d95712ed24fa7c43f09f4333d784",
+      "unchanged": true
+    },
+    {
+      "path": "test/unit/EchoCase.UnitTests/DomainTests.cs",
+      "normalizedSha256": "52bf66e9b5df75c4c1fadffef6a96bc8bbea91767bd6346c3b3a34623cf383be",
+      "unchanged": true
+    },
+    {
+      "path": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+      "normalizedSha256": "ed34bde2307d57772497ea912b8b515c3b2f1fd8a7e5286d7925c7eb99e311c1",
+      "unchanged": true
+    },
+    {
+      "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.cs",
+      "normalizedSha256": "dca462d67e45422cdb5d65c0bb0027446600bac3f08f04c0e0b88f28bb3fc0fc",
+      "unchanged": true
+    },
+    {
+      "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs",
+      "normalizedSha256": "5f563a7bf19ecb18377f2a813f537a0a9f05ef83fc18a782632c398258940589",
+      "unchanged": true
+    },
+    {
+      "path": "test/integration/EchoCase.IntegrationTests/MigrationTests.cs",
+      "normalizedSha256": "1b707ffd2b94ae8b1d9a3ffc7981d0eb52bdc6cbf2087e1ad2f3016bab72da70",
+      "unchanged": true
+    },
+    {
+      "path": "test/e2e/specs/consistency.spec.ts",
+      "normalizedSha256": "fec96077a38358e8f2d5de39441e96e57d37866a25d0e2c9a2fbb09b7bcecd92",
+      "unchanged": true
+    },
+    {
+      "path": "test/e2e/specs/workflow.spec.ts",
+      "normalizedSha256": "124995eac59fef6439ca37788d27c9eb4f10b5223db35f4fab9825a47fa9fe0b",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111024947_InitialInvestigation.cs",
+      "normalizedSha256": "e1e1834f585582b0cc1cb7ab6e39b5e299c1bd7597d4508e8909872c9e69eb32",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111024947_InitialInvestigation.Designer.cs",
+      "normalizedSha256": "0d7fe08dfe979d3bebee1986aea865bcb22fc4b01300ca2a539ad4f53744b858",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111030224_InvestigationOwnerTimeline.cs",
+      "normalizedSha256": "4b148ce875929c239c7cf77e9e042ed3123b258cb43bbf6f1fc049ee31d1959f",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111030224_InvestigationOwnerTimeline.Designer.cs",
+      "normalizedSha256": "ae3153b8fcfae7ba9d215a5e1b6652c4595f85f88587cb294cf63d8e54fb3896",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+      "normalizedSha256": "5b3b86e514c7fa1afd89ade47384bf0a9524c0b2b8c9166a3cbcd16d9a1b7bf8",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.Designer.cs",
+      "normalizedSha256": "668a46c29e050f43890d32b996726c435480e43ecaaae50a97a4bb44eb5f97a0",
+      "unchanged": true
+    },
+    {
+      "path": "backend/EchoCase.Infrastructure/Migrations/EchoDbContextModelSnapshot.cs",
+      "normalizedSha256": "96e59af2192d5cdf402e4bc57f5f32d2e9ae5154b595b91e9005e667ed71c22c",
+      "unchanged": true
+    }
+  ],
+  "pdfSha256": "dd00cbfb1cfeb58cea6f28e13c6ea0dd6d72df68bc4668ba6016f1c8edf66166",
+  "bootstrap": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+  "generatedFileCount": 171
+}

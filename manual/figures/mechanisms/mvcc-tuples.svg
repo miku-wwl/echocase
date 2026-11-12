@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="495" viewBox="0 0 960 495">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="495" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">MVCC 可见性与应用版本属于不同层次</text>
+<rect x="28" y="80" width="410" height="154" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="115" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">旧物理行版本</text>
+<text x="46" y="144" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">业务 Version = 4</text>
+<text x="46" y="174" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">xmin = T0；xmax = T1（示意）</text>
+<rect x="518" y="80" width="410" height="154" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="536" y="115" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">新物理行版本</text>
+<text x="536" y="144" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">业务 Version = 5</text>
+<text x="536" y="174" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">xmin = T1；T1 提交后可见</text>
+<line x1="442" y1="158" x2="510" y2="158" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="480" y="129" font-family="Book" font-size="19" fill="#173c44" text-anchor="middle">更新</text>
+<rect x="28" y="277" width="410" height="162" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="312" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">快照 S0：T1 尚未提交</text>
+<text x="46" y="341" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">读取旧版本 4</text>
+<text x="46" y="371" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">看不到 T1 的未提交版本</text>
+<rect x="518" y="277" width="410" height="162" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="536" y="312" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">快照 S1：T1 已提交</text>
+<text x="536" y="341" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">新的 Read Committed 语句读到 5</text>
+<text x="536" y="371" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">旧快照的规则不会被改写</text>
+<line x1="232" y1="238" x2="232" y2="267" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="720" y1="238" x2="720" y2="267" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="30" y="478" font-family="Book" font-size="19" fill="#627477" text-anchor="start">T0 / T1 是概念事务标识；本图没有声称采集到这些 xmin / xmax 值。</text>
+</svg>

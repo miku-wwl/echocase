@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="274" viewBox="0 0 960 274">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="274" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">错误是协议中的决定</text>
+<rect x="28.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">尚未接受意图</text>
+<text x="46.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">400：格式或防伪失败</text>
+<text x="46.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">401：需要认证</text>
+<text x="46.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">404：不可见的资源</text>
+<rect x="336.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="354.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">需要重新决定</text>
+<text x="354.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">409：同键不同请求</text>
+<text x="354.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">412：资源版本已变化</text>
+<text x="354.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">422：业务规则拒绝</text>
+<rect x="644.0" y="70" width="288.0" height="174" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="662.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">不能直接下结论</text>
+<text x="662.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">响应丢失 / 200 正文不可</text>
+<text x="662.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">读</text>
+<text x="662.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">浏览器没有可靠结果</text>
+<text x="662.0" y="224" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">保留原意图，原样重试</text>
+</svg>

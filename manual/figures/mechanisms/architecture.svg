@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="430" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">编译依赖与运行调用，分别阅读</text>
+<rect x="28" y="82" width="260" height="120" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="117" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">API</text>
+<text x="46" y="146" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">解析协议、身份</text>
+<text x="46" y="176" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">组装具体实现</text>
+<rect x="350" y="82" width="260" height="120" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="368" y="117" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Application</text>
+<text x="368" y="146" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">用例、DTO</text>
+<text x="368" y="176" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">IInvestigationStore</text>
+<rect x="672" y="82" width="260" height="120" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="690" y="117" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Domain</text>
+<text x="690" y="146" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Investigation</text>
+<text x="690" y="176" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">不依赖框架</text>
+<line x1="294" y1="145" x2="342" y2="145" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="616" y1="145" x2="664" y2="145" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="350" y="270" width="360" height="117" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="368" y="305" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Infrastructure</text>
+<text x="368" y="334" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Postgres Store + EF</text>
+<text x="368" y="364" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Identity / migrations</text>
+<line x1="482" y1="265" x2="482" y2="211" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="712" y1="320" x2="800" y2="210" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="156" y1="206" x2="156" y2="329" stroke="#627477" stroke-width="2"/>
+<line x1="156" y1="329" x2="340" y2="329" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="35" y="370" font-family="Book" font-size="17" fill="#627477" text-anchor="start">组合根引用并注册实现</text>
+<text x="30" y="411" font-family="Book" font-size="19" fill="#627477" text-anchor="start">图中选择关键项目引用；运行时 Application 通过端口调用具体 Store。</text>
+</svg>

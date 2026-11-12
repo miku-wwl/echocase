@@ -1,0 +1,1199 @@
+[
+  {
+    "generatedPath": ".editorconfig",
+    "originalSha256": "990226c9f588c72b136d5b19d409afb31f15d38a07368f525039d636aa2f9b85",
+    "status": "retained",
+    "activePath": ".editorconfig",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": ".gitignore",
+    "originalSha256": "dd70e6b27c75bd2ef0f077fbc920665709cda63fd3a0759e0d419e277a3b86d4",
+    "status": "adapted",
+    "activePath": ".gitignore",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "Directory.Build.props",
+    "originalSha256": "38dc4530d8fe8c79377d5c900b259d2e73cdb0e2cb92e581d2471c31d8d5dfa3",
+    "status": "adapted",
+    "activePath": "Directory.Build.props",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "Directory.Packages.props",
+    "originalSha256": "6cf944d07b1308feebcc982c3e2f6e1ecfdc731f2caf75319d1d45472b71b97f",
+    "status": "adapted",
+    "activePath": "Directory.Packages.props",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "EchoCase.slnx",
+    "originalSha256": "01ea54a380b3583b6f8a556bf8e8021e599874c952c16faedd0a86f67fe21b01",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "global.json",
+    "originalSha256": "6c72a734a927c01dd08e0ab80936191f0e3deb086245675b8008129b5f4b5aab",
+    "status": "adapted",
+    "activePath": "global.json",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "README.md",
+    "originalSha256": "b088a401487baa3f9f31f4d4b5549a709f7d3c6d90d6bca3657999dbadece142",
+    "status": "adapted",
+    "activePath": "README.md",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": ".aspire/settings.json",
+    "originalSha256": "f4f0f13884dd1be276c37ca605191664f2a9f1b267a849c45760005841b8d1aa",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": ".devcontainer/devcontainer.json",
+    "originalSha256": "a352b5a2d6b9311b7f35bf9c4703a8c39096ddd0a45feeba17ed7b360bc638f0",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": ".devcontainer/README.md",
+    "originalSha256": "d7e40ec38b4d0a64e8840c7f8f53d6d810418cdcd0e7998f0b96a3d17998f170",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/AppHost.csproj",
+    "originalSha256": "03e13a56d55717d8cc11692ce2970a77308556112e79f6b02188ce34a65b0a5d",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/appsettings.Development.json",
+    "originalSha256": "817db0bf2ecca78364c41dbaf7949bf2504cf47a1c3d0d54f3be8178fefc030b",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/appsettings.json",
+    "originalSha256": "42f506bc3a9d676eecf304ff7482b89cd46f448d4964ee87d55d116b5dae3954",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/Extensions.cs",
+    "originalSha256": "a39524a0377d8d7624c3ee9a8b8196e1e2c34bc96e72d7e6db6c4a05e8e902bd",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/Program.cs",
+    "originalSha256": "dd8d70f2756e17569cb6cff0e5ec7493402f63abb585c5f37388e84578b9bbf2",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/AppHost/Properties/launchSettings.json",
+    "originalSha256": "02ffaac7b51347f54133b3174d856a55f8e86946d9bf22f3cfdd292e1a87d16e",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/Application.csproj",
+    "originalSha256": "8413f666d8e43927774aed8b837221833b9a7cdbe2b8b4280048949b40b3e801",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Application/EchoCase.Application.csproj",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Application/DependencyInjection.cs",
+    "originalSha256": "30ee9d3e0b4abe3c480766a16a5feba8621cdff4060944f75c55ccf47ea32050",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Application/DependencyInjection.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Application/GlobalUsings.cs",
+    "originalSha256": "5fd150c3ae50f4b8f652d7f10542958dac6f45417200e596d69f807dc33a4eb2",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/Common/Behaviours/AuthorizationBehaviour.cs",
+    "originalSha256": "d02fdae7c4ead0f3179a2909aa55502873e43eafb32243780a77f915b0fbd14a",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Behaviours/AuthorizationBehaviour.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Behaviours/LoggingBehaviour.cs",
+    "originalSha256": "94bb7c9f5e921460823956a2eb899badfab4195a4f66d8aaebb580cffff5b373",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Application/Common/Behaviours/LoggingBehaviour.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "originalSha256": "af0e9945a35e60e5f141461fd538411f24b9726862c4a8b420b43cc9f33741ad",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Application/Common/Behaviours/UnhandledExceptionBehaviour.cs",
+    "originalSha256": "04112cd72d7867e511afde23af1a79cde4f04fffc3de7a0aab9dd0687306cd96",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Application/Common/Behaviours/UnhandledExceptionBehaviour.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Application/Common/Behaviours/ValidationBehaviour.cs",
+    "originalSha256": "4b5d702b57d830f647acb25db74bd3a6a431f60f6b4eb9174caa9dde0025b07c",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Behaviours/ValidationBehaviour.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Exceptions/ForbiddenAccessException.cs",
+    "originalSha256": "2184a3c48ecc4e16ffa7bc513853cfcc54904dd32133b6e9c47625ef70598018",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Exceptions/ForbiddenAccessException.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Exceptions/ValidationException.cs",
+    "originalSha256": "091e2dc1eff7f7d7e1abda9d598f824b508465757cf1ea5f1e334ded06d40ead",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Exceptions/ValidationException.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Interfaces/IApplicationDbContext.cs",
+    "originalSha256": "6ce47a91775d019701155b3e18517878f997accc95afb6d90215481621a29956",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/Common/Interfaces/IIdentityService.cs",
+    "originalSha256": "648cffa6aee6aac3e273f203697d28b28e4be2f8ee8c3831afc9e9ec28064ac0",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Interfaces/IIdentityService.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Interfaces/IUser.cs",
+    "originalSha256": "096fd813e478fbcbb862898311d9220407e01c7d9bc17b625702f7e0ce6fa86c",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Interfaces/IUser.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Models/LookupDto.cs",
+    "originalSha256": "26c44a4341556ecc50884de50d95b20da92f70f754cbf957570fe3bab522cc8b",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/Common/Models/Result.cs",
+    "originalSha256": "89592f9b3f0a2b7d381965db1ae880dc332a2def1e667f3883385c4459ecadd0",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Models/Result.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/Common/Security/AuthorizeAttribute.cs",
+    "originalSha256": "df81305d25ffeb3460d5c83eea2f91ae202dba8fa1793066342fcfec95e625a4",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Application/Common/Security/AuthorizeAttribute.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/CreateTodoItem/CreateTodoItem.cs",
+    "originalSha256": "bccba5a7031c3c474bf5cbe27328eba64978e82ccf70d9b41a10200ed6727057",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/CreateTodoItem/CreateTodoItemCommandValidator.cs",
+    "originalSha256": "f01dbc0fa578cadc37096b8d48fae414c33e05ed5ab935d6b88a30605d5cfa8c",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/DeleteTodoItem/DeleteTodoItem.cs",
+    "originalSha256": "e2981580e43e36b65cf3cb999d13589f81b71acc6cd8bd3f166c98e3998712ee",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItem.cs",
+    "originalSha256": "943cafadcdebee55d57ac9fcdbd9314ee540ca3c7a219e478b7b4310decd6da3",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItemCommandValidator.cs",
+    "originalSha256": "ee749e09b432dc8261d824d15ffb169f06f85a01b97403f2c79f361d30eb7546",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/Commands/UpdateTodoItemDetail/UpdateTodoItemDetail.cs",
+    "originalSha256": "424ce9a4846c54fcece1d2a63b07242c9eafbdf614f624958d09f375821cab90",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoItems/EventHandlers/LogTodoItemCompleted.cs",
+    "originalSha256": "2582b3e98b65472cb0bb3e73eb719a5f30fd85018c6d3552c1b57e27feb7d9bb",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Commands/CreateTodoList/CreateTodoList.cs",
+    "originalSha256": "789a2b259f18eb451f845c3d8f8f8d64c2a91778b3dae4283a09dbb4f5dc7f3a",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Commands/CreateTodoList/CreateTodoListCommandValidator.cs",
+    "originalSha256": "cd9b625e92bd566cd7f31ea8a13485b98c75e3aacd487f2218cab7408f1ec326",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Commands/DeleteTodoList/DeleteTodoList.cs",
+    "originalSha256": "03d944f44b2cbcc22946879d20e131efa52303273cbe5322086d024448446bf4",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Commands/UpdateTodoList/UpdateTodoList.cs",
+    "originalSha256": "f831b0a2a85c547fe4919abf50e3a8ac45e1971ada1a95a78a700e285af23668",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Commands/UpdateTodoList/UpdateTodoListCommandValidator.cs",
+    "originalSha256": "2a2a92c6e591f121fd5609aecd2dae495681506a6d7da81671b5756f69020ff0",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Queries/GetTodos/GetTodos.cs",
+    "originalSha256": "a69965d69a959c2d4ecf58e4f8228d0688fc750ab15f37d7bd9b27dc5968dd4d",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Queries/GetTodos/TodoItemDto.cs",
+    "originalSha256": "cd96feb57e035e3e8f200f33c3a236c006af5c1d99bea08348352e08e28f4ed5",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Queries/GetTodos/TodoListDto.cs",
+    "originalSha256": "e63d197a76cfc88d9fb9dae1eae23f24c1f0b45e637a6de9a5e69c3feef11583",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/TodoLists/Queries/GetTodos/TodosVm.cs",
+    "originalSha256": "8b0d2b66e010e9a28f1b252427f800501d88cfb62b35088a29f5aaf39de4c830",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/WeatherForecasts/Queries/GetWeatherForecasts/GetWeatherForecastsQuery.cs",
+    "originalSha256": "60cdd738c519755c416aefb90af7f5a5e3004b0289a98d456cbc72710206a290",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Application/WeatherForecasts/Queries/GetWeatherForecasts/WeatherForecast.cs",
+    "originalSha256": "1dbd564d64fb24f2496d09cfc3eb1df4327dc73df13140c376e7cb4c24e73d78",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Domain.csproj",
+    "originalSha256": "0b0906ef99f816ba08358389771008b0c17f306a59eaf5243a8f383efe2c0539",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Domain/EchoCase.Domain.csproj",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Domain/GlobalUsings.cs",
+    "originalSha256": "43baeb13f8e9bf85a6997d19d730be464a26d34d01fbeb89234ee4eec00b2dd9",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Common/BaseAuditableEntity.cs",
+    "originalSha256": "bccb5d22df05c5c63e55b614103164b32f0c2be39107ebb2e14531a5b9568e2b",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Common/BaseEntity.cs",
+    "originalSha256": "663ee4c79b656fa68248585909fe9d84ebf18376c99cac9f3e67b9cef0b8b622",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Common/BaseEvent.cs",
+    "originalSha256": "85154b643d0983c573fb75e7b043cd5c7382e88972f213ee83a1c483923db76d",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Common/ValueObject.cs",
+    "originalSha256": "8ecd240d4f58bcd9eef56466379ef1cf0dd53d0273ce757e37d989a759e7ee5e",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Constants/Roles.cs",
+    "originalSha256": "d4c294373e3adde34585075c350c38193686a6b8027f8eebe6d1e0cda0cfdf70",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Entities/TodoItem.cs",
+    "originalSha256": "b9f5cc24a39b163be3c6463ed21160495066ab2d77715671deb427cb45b678ba",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Entities/TodoList.cs",
+    "originalSha256": "0ff077ab91eadaee014a5220a67bcfa077bba4961e2ae4c4418e0720013daeff",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Enums/PriorityLevel.cs",
+    "originalSha256": "a0afa080b5bc5edf043bcdee8070b4d1671bfafc45391045df60ab94b96cbe7d",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Events/TodoItemCompletedEvent.cs",
+    "originalSha256": "91a0fd65a4aee86965adcd734c607ca65e191a3e8e7b8fb06c24c12584f4a0ba",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/Exceptions/UnsupportedColourException.cs",
+    "originalSha256": "25a93b34ba495165361ba32004e544df8f0e5d825e3e9a48f7543096c5a8febb",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Domain/ValueObjects/Colour.cs",
+    "originalSha256": "6c1280caaf2ee5a0170fc25820b9683ed19a1595a206f16d934c12fb778f7cd0",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/DependencyInjection.cs",
+    "originalSha256": "fd747b012562a55400b476592e1d324f2f6372b338986b476bbdd30a6b2b0616",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Infrastructure/GlobalUsings.cs",
+    "originalSha256": "5c4f7098b8ed02e154c94a58199a10f21173d663aab58b5f7b47d65ad7e54823",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Infrastructure.csproj",
+    "originalSha256": "3a5be0278097b77ddc79f4bd45a45c8a0805a2cc0a0421e1e2c55d9693af1955",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/ApplicationDbContext.cs",
+    "originalSha256": "925a29c85cb380b0b6edf799430314281da7e3f3a560685dcd05c3916ad3c89b",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/ApplicationDbContextInitialiser.cs",
+    "originalSha256": "97aa626c8502fe998280bf73f3b3d8bfd89c6ad00586f578dce5634817685f53",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/Configurations/TodoItemConfiguration.cs",
+    "originalSha256": "d679f9e467fcda8ba25fb7e343f26caeac230bf2bb1af983dd0d662a7f7e9c28",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/Configurations/TodoListConfiguration.cs",
+    "originalSha256": "a526f970597924acec4b6692561ae7faee1e978f84a1fa04fc7ec8f6fed96db9",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/Interceptors/AuditableEntityInterceptor.cs",
+    "originalSha256": "ad2bdefb8f86443f1c8278f42ffad73ca659d1f37ed7327628cce3a0ae872970",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Data/Interceptors/DispatchDomainEventsInterceptor.cs",
+    "originalSha256": "5545e233cfe8adc74976d4a711703c01ae3d8bbfa534ca5bba6767a6b0781ef1",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Identity/ApplicationUser.cs",
+    "originalSha256": "2ae2d4351659954cab61ce5ad466bfc71bba4c4a5e9e7249a85208190f853e3c",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Identity/IdentityResultExtensions.cs",
+    "originalSha256": "fbc801c5b5c8d59e2d183e2b3334763f942635c87a63a5470f35bb1c87925a4d",
+    "status": "retained",
+    "activePath": "backend/EchoCase.Infrastructure/Identity/IdentityResultExtensions.cs",
+    "reason": "Inherited source retained"
+  },
+  {
+    "generatedPath": "src/Infrastructure/Identity/IdentityService.cs",
+    "originalSha256": "a9205d09e0b4f102729b83a2ad5db8792521e7f12587ee002e2476745aa48a09",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Infrastructure/Identity/IdentityService.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/ServiceDefaults/Extensions.cs",
+    "originalSha256": "574fac292c8fc51b7242eff223dd928a4dcfc61426ae025141acb429ba6320f7",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/ServiceDefaults/ServiceDefaults.csproj",
+    "originalSha256": "d835ea324108d598a060715149e3b97fbac0eec46799d2bc5fbbbc75ab1178a6",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Shared/Services.cs",
+    "originalSha256": "8901c3bf3d130dba9fcdf99c6ef7f7ac866e49574180ffe7b37a6509f8100655",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Shared/Shared.csproj",
+    "originalSha256": "b02d1db505474ec73b28ff113a2426c323035aa7a495d3a30ff8298d763b82be",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/appsettings.json",
+    "originalSha256": "7fb66a3f992103f5b847c960813d3e72707880aa159548c428f443038156ce7a",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/appsettings.json",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/DependencyInjection.cs",
+    "originalSha256": "2e96f43910855a88fe71f71b08d7262841201359168d03eb021ae95e577cca60",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/DependencyInjection.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/GlobalUsings.cs",
+    "originalSha256": "6243c19b2b233e18d688e417502625990fc79c2d335fe65cbfe04b7e72960ff1",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Program.cs",
+    "originalSha256": "6a81634529b53b383f8ffbdadd89062f29e8cc4a72f8d17649b61d6d4ca1e80e",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Program.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Web.csproj",
+    "originalSha256": "94389f483e829ef2f3f235f09cda7c997588a339f349c40062ce007883bab785",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/EchoCase.Api.csproj",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Web.http",
+    "originalSha256": "0af162f54e904c21530926d203d57f86b5340aaf814a9a657aa9000f682a4176",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/.env",
+    "originalSha256": "1785715c0589613147995bd39e04da02599e0ca1dd2516e4cce176b2f6d25927",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/.env.development",
+    "originalSha256": "2f727fa76ce4f491712879bfde091cc4350d5a8a7c7870402b7ec147afa57308",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/.gitignore",
+    "originalSha256": "f5fd985d5e5beb0079293a92d88701b6a78aac7d6290084ffc689dc06b06bb1a",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/aspnetcore-https.cjs",
+    "originalSha256": "8855003084d3bf7b6da8a3fb682c82e0b3e1993577064a28ab58c272252b63ac",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/index.html",
+    "originalSha256": "2fbae0ee7d12dc3cb194ef15151490bea8f77d65592fd637ff228036a8f36543",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/nswag.json",
+    "originalSha256": "19b27795dad823cdcb8902e6d41a973d3ba6a674e01805ffaac7b0f97c0a6631",
+    "status": "adapted",
+    "activePath": "frontend/nswag.json",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/package-lock.json",
+    "originalSha256": "7083677a6982c4732724a13fd7ac800ccdaadfc6b641694e839939cf2750a036",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/package.json",
+    "originalSha256": "732e8171624b782dda847d12124d97d2b9368a13152ba5951e7137364fa14823",
+    "status": "adapted",
+    "activePath": "frontend/package.json",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/README.md",
+    "originalSha256": "f5240b2754275eca01c301541e2c28db132ee83b6ca25447b205cfe88e4a57b6",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/tsconfig.json",
+    "originalSha256": "95be8ef6b22945b23d7cd927b1decd4f117d3a62a47719a4df46a51f7f891a89",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/vite.config.ts",
+    "originalSha256": "9b55163081823b6870b704a67afc02a8e4c2ac7a98ef26ac24dd4516fcd5962d",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/public/favicon.png",
+    "originalSha256": "8cc56b3996b5ac4b0b864400e74ba21a4b484a43f1faab4776d5af57f215968f",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/public/manifest.webmanifest",
+    "originalSha256": "3da82db0aa2e52d5a0d79b1544d33cc42bf4388a0e733888d3cabe68bd994aa0",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/App.jsx",
+    "originalSha256": "acad04e5211d21efdf042c1eb3c8c21f0ca24924ea48abad6c844cc957b38aad",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/AppRoutes.jsx",
+    "originalSha256": "5c4c5a2eb724f8ca53c38656a41736ef3cf611dc2b18dca630b84ed66cf0907e",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/main.jsx",
+    "originalSha256": "5303f544b022f5f0f4502c5f9cea9083557696ac1229569d9415d5ef8ab84659",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/styles.scss",
+    "originalSha256": "9383e967ad885dfa92880eb0a5b56442d3cf2cf8c3b6b32b02d4a3c8c994dcaa",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/vite-env.d.ts",
+    "originalSha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/Counter.jsx",
+    "originalSha256": "1a95ed412cd9a12042a042abc947aec70989c7815f67caa68f934ce2c2b1a2ea",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/Home.jsx",
+    "originalSha256": "792a7a5081b8e79c0fccfff4be6f3e673bb5f410de4abe26d22532f99a10e10b",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/Layout.jsx",
+    "originalSha256": "26fadf0f64f4b8154f421aeb7e4b0749f37bc08a6e9538bc1ca47f4cd8b7ad96",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/NavMenu.jsx",
+    "originalSha256": "ff2dcd07f4d5eaffc94db22b418089fb8359d24bd9b2fed7462d0bd8bf1ea636",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/ThemeContext.jsx",
+    "originalSha256": "8ee2c1fc345d15f7600e5877ca9fd30a7196c9d66fa7139f3126d27186c5c027",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/ThemeToggle.jsx",
+    "originalSha256": "2a29ac3510f9d9766624c7142c860491ae249524afddcf6b108fe53722462c8b",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/Todo.jsx",
+    "originalSha256": "542a447863574e2a6b15c03fdd963a32d072458f0f0fad571e0be8c44700cbe3",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/Weather.jsx",
+    "originalSha256": "6d5bdb9622ecb6e01ccf048664a904ff0951739769ea1ff67cc90e3985d21eee",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/api-authorization/AuthContext.jsx",
+    "originalSha256": "6273d1b2e0ceefd897d30e7235dc3e7d92f2ea2e3e082520caf118d56dbd26b0",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/api-authorization/LoginPage.jsx",
+    "originalSha256": "edd851059e8f92586edde429fa5d108e02bc59b27856735b0352eaa25db1e107",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/api-authorization/ProtectedRoute.jsx",
+    "originalSha256": "45403714c94dc71751ca7039a6c5d3e9d9d5b21fc344aa8c70352aaca95148a4",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/ClientApp/src/components/api-authorization/RegisterPage.jsx",
+    "originalSha256": "5e91349faab44ce40dc5deca14cb7987c15904a7ee9140c40d0a41fef2ef1048",
+    "status": "replaced",
+    "activePath": "frontend/",
+    "reason": "Replace sample UI with existing five-module React application; retain actual Vite/React and NSwag generation capability"
+  },
+  {
+    "generatedPath": "src/Web/Endpoints/TodoItems.cs",
+    "originalSha256": "f168c2c5b27e318e8bac0b685008dd3aa5267d8345f24f4f70f7fa91fc5e17b6",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Endpoints/TodoLists.cs",
+    "originalSha256": "924d6b5486525d7e44a5fdc8be53a9507374667fff9bde11cc4eeea6a49d368c",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Endpoints/Users.cs",
+    "originalSha256": "e284bdedb1bd3e2cd545a4dd4aacd83ac48a3ab169d8d86dc7b8bdea18deb31a",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Endpoints/WeatherForecasts.cs",
+    "originalSha256": "88636b1a821b46b159b0cd7b05b9c5dfd5abc2051540162cbe366e362f55f231",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/ApiExceptionOperationTransformer.cs",
+    "originalSha256": "13a04b11d3ebefa2548e3fa9245a615f230c5745afb8492e486a1a8fedce19ba",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/EndpointRouteBuilderExtensions.cs",
+    "originalSha256": "6dc2865ede9a38a1608ad80f17d176441f949115bb9c33155e33b6c18f976003",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Infrastructure/EndpointRouteBuilderExtensions.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/IdentityApiOperationTransformer.cs",
+    "originalSha256": "b23276c8dc6457bfec3529106f9443305410da03f24475f03ff9a1df3ef00775",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/IEndpointGroup.cs",
+    "originalSha256": "a89fd5b528258540723a0028666c2a234c18f0df6d74c008819059469a30413a",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Infrastructure/IEndpointGroup.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/MethodInfoExtensions.cs",
+    "originalSha256": "7fcb51ea6d9396fc509d743a5f5e3a294e11ffb261ef049d09d12bba4f5ac064",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Infrastructure/MethodInfoExtensions.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/ProblemDetailsExceptionHandler.cs",
+    "originalSha256": "67b7c9b66e7e3e324caa7adbada8da76d763a33ae416b7a47b7d2f57aab51258",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Infrastructure/WebApplicationExtensions.cs",
+    "originalSha256": "8edc7e4fa527f4f37e23fd502d04ad463b39d01cd92a5a018c3cae5fd229639e",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Infrastructure/WebApplicationExtensions.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/Properties/launchSettings.json",
+    "originalSha256": "17409ff393491237754f7c149bb934a3efb2dfc119c9261a86ae8d4758782fed",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "src/Web/Services/CurrentUser.cs",
+    "originalSha256": "1f5840b8dedd3a26290734790b143e6d800d60cf815d01186e2b0b62a4e2cd51",
+    "status": "adapted",
+    "activePath": "backend/EchoCase.Api/Services/CurrentUser.cs",
+    "reason": "EchoCase namespace, domain, DI, version/security, protocol or application-only adaptation; see ADR 0010"
+  },
+  {
+    "generatedPath": "src/Web/wwwroot/favicon.ico",
+    "originalSha256": "26dc5ff4bfb9213291735808465e156d4a4691135f3815e3613761243e1f69c3",
+    "status": "removed",
+    "activePath": null,
+    "reason": "Optional Aspire/Azure/deployment or sample Todo/Weather/base-entity/audit-initialization component; not needed by EchoCase and retained in bootstrap"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/Application.FunctionalTests.csproj",
+    "originalSha256": "3b2016a01c79fcbef7663718f0ac404c03f16fb566457be1222035a312aca7dc",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/FunctionalTestSetup.cs",
+    "originalSha256": "ba3e0fcfefac4cc95b314e0f7f9c2f1d5d6976587d7a1fc75c91c9edd00a364e",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/GlobalUsings.cs",
+    "originalSha256": "6d3d62e0a864eecd076834c7b82c530e6de7600c5631cc137f017d3ab55595ca",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/Infrastructure/DatabaseResetter.cs",
+    "originalSha256": "c3c9282c432152afee31a37bfb8a770c5fe9f6689760ceb9e68f6a04d838fda6",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/Infrastructure/TestApp.cs",
+    "originalSha256": "2f627e914a96536d0f87a22212a669fa67047b7a6f81012f3eb1a1b2c6e8bd32",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/Infrastructure/TestBase.cs",
+    "originalSha256": "baed3f4566cce2e84ae01e063e19f8d285fdbfbefeab957caa5d6d9245cef98f",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/Infrastructure/WebApiFactory.cs",
+    "originalSha256": "bf93bb9556c4b4fca2680281763f9fe51e1f13411c08826b9d2f2757956e83bf",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoItems/Commands/CreateTodoItemTests.cs",
+    "originalSha256": "0d37af7fb082d2a6620b92ae814e4ffb47a80cef0a1c8e2be2e7a2f312d4bd2a",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoItems/Commands/DeleteTodoItemTests.cs",
+    "originalSha256": "d83eeca415c94a8b379693539c0e4181d2f68aec8f3001e25c866b25ab3ed93d",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoItems/Commands/UpdateTodoItemDetailTests.cs",
+    "originalSha256": "d9dbd0f92c20dcd0cae13f9fcdc5fecf66e6c5e015f73381e0fc4b7f791f0b09",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoItems/Commands/UpdateTodoItemTests.cs",
+    "originalSha256": "1cda393c4adeea931acbb8782483bdea5a0695d22e255a402ed9357e7a377772",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoLists/Commands/CreateTodoListTests.cs",
+    "originalSha256": "552c73f96a30848b1dfb9177c84b5a28810ae5d6506b9871c8f9851c6843ba50",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoLists/Commands/DeleteTodoListTests.cs",
+    "originalSha256": "7c40d869226df896d04ad4cb4e269dd4f878c0139304da8868b9a823239a774b",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoLists/Commands/UpdateTodoListTests.cs",
+    "originalSha256": "2daab26d493f8b5d03d28a0ffb4b90448b5ebf4373503b7bb27538a8d413598c",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.FunctionalTests/TodoLists/Queries/GetTodosTests.cs",
+    "originalSha256": "300198931edabcc4c2887d52346d958ad22178963d5ec84f196ad1078a2c99b6",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.UnitTests/Application.UnitTests.csproj",
+    "originalSha256": "957f5e937f54e1372eebb0fdfbc13554440d0fea1359c0499cd54807263bc054",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.UnitTests/Common/Behaviours/RequestLoggerTests.cs",
+    "originalSha256": "592f42f6f4dfd78e0a5ff845abafc5327ec397eabb246e1058eb25569157360b",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.UnitTests/Common/Exceptions/ValidationExceptionTests.cs",
+    "originalSha256": "d8e370edff3a7de50e3a81a8ec2bbec71e558962ac8c85a4f3375fbfc881d973",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Application.UnitTests/Common/Mappings/MappingTests.cs",
+    "originalSha256": "bf5b93f7953fa35b7eacf3e8f282275a3dff4836d315bef3472d7730a6b51c6f",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Domain.UnitTests/Domain.UnitTests.csproj",
+    "originalSha256": "76b7916bad3078aa9802bf266f8dbcc1ee042da57184b9e4830b8cd76d0a190f",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Domain.UnitTests/ValueObjects/ColourTests.cs",
+    "originalSha256": "daa364a64bb3f9fb71bad56058e08e04d72457ee72b7d8aa0c7ac6f7a3970498",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Infrastructure.IntegrationTests/GlobalUsings.cs",
+    "originalSha256": "d080bbb50dbbb80aa5b7c64606b24f2bb04f8f79238a874f707581deffc94fea",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Infrastructure.IntegrationTests/Infrastructure.IntegrationTests.csproj",
+    "originalSha256": "58a75c2bb0df03bdead228f6620b49d016d98b8bd41b6c89de3957e09b679e2d",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/TestAppHost/Program.cs",
+    "originalSha256": "a138db589102ebe2363a40aa907ada582c52e31af5b647f4c3e9cacde218b10c",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/TestAppHost/TestAppHost.csproj",
+    "originalSha256": "1d9e94a8daa1cc68b1a745197b84cdffba941cdb4583cf2ae5cb4be4ad2b82b7",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/AspireSetup.cs",
+    "originalSha256": "49de77443474d6e7546632f48b3bb7e6c588437e102198f150ad6e000b1d2ece",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/GlobalUsings.cs",
+    "originalSha256": "b73d15a3e43c32e9af4f97996286c3d4f2d5f26072b7e78251e7625c67e02e62",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/PlaywrightSetup.cs",
+    "originalSha256": "80ee6620a775ceb18e3dcc25788dec9955f6629379fea88a8ee339c089703818",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Web.AcceptanceTests.csproj",
+    "originalSha256": "a47251e78a9686a5b8332fe58b37cb3524232ae9e82c4e541b44e422a8fba676",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Features/Counter.feature",
+    "originalSha256": "9a69716c76234f03a5f397ba570721e022c1f22007e1ecf9078ec71a4fc3a797",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Features/Home.feature",
+    "originalSha256": "3bf69e0e17657ee4654fb51fb1c8daa4e5ed9dfd460f106a65103fd43f7c0171",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Features/Login.feature",
+    "originalSha256": "2b9681c47351810b878b1c153d3d40e5a31d776512954ddb258a865afeaee629",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Features/Weather.feature",
+    "originalSha256": "71bb2854ff58374a1d70332dcfead239b15a86ff33891bf123914b151b1dd834",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Pages/BasePage.cs",
+    "originalSha256": "93a15e496967d306fc516ec382665c8b72ca58a48edf760b62eaa1085effa543",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Pages/CounterPage.cs",
+    "originalSha256": "08583b46f49ff4e80fb226070bb8bc00f8c8d865ef485c6c3b6b2c081051c41a",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Pages/HomePage.cs",
+    "originalSha256": "7663bc825570f9bffed5f3c92a86fa3a42d025ac61fa6478e4c364d55fddafa3",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Pages/LoginPage.cs",
+    "originalSha256": "134b274c660207a4e7936dbddbe949bd626a0a6ab355ead8537d92580fc09e1d",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/Pages/WeatherPage.cs",
+    "originalSha256": "dcf70961bbd5a086fb0f6a0c1c5e7e2125df61c2b38b9b17caefefcffc1d92ed",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/StepDefinitions/CounterStepDefinitions.cs",
+    "originalSha256": "1bd11f80add42771c5970fd04a6497bc32c93a90487ede6985be85f5607bc475",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/StepDefinitions/HomeStepDefinitions.cs",
+    "originalSha256": "9b53ebd268b1cee2a1cb3179f5b63d2e0c9dc4a68b26fc916c3bcba67e8cc18f",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/StepDefinitions/LoginStepDefinitions.cs",
+    "originalSha256": "8ebaa57433b2dcfffea550c05bd54dfa1c335355a59acaa5e9d16548e29424a3",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  },
+  {
+    "generatedPath": "tests/Web.AcceptanceTests/StepDefinitions/WeatherStepDefinitions.cs",
+    "originalSha256": "49d5418ba952d9b3fd0c18b2d5c6f14e1d8607e736802492bb49fc6b563c1915",
+    "status": "replaced",
+    "activePath": "test/",
+    "reason": "Retain official originals on bootstrap; migrate existing independent 26/22/9 business assertions and add five focused pipeline/ownership/model/post-commit telemetry checks"
+  }
+]
