@@ -19,7 +19,7 @@ test/unit/                 独立 NUnit 单元测试
 test/integration/          独立 PostgreSQL/API 集成测试；可选 QueryProbe
 test/e2e/                  独立 Playwright 包与公共接口测试
 test/tools/                边界检查与测试启动工具
-manual/                    教材章节与reference材料
+manual/                    教材章节、原创插图、出版工具与正式 PDF
 ```
 
 `EchoCase.slnx` 只包含四个应用项目。`test/EchoCase.Tests.slnx` 是独立测试入口。依赖方向始终是 Tests → Application；单元测试不引用 API、数据库实现或集成夹具。前端应用不安装 Playwright。
@@ -77,10 +77,10 @@ npm test
 - [需求](backend/docs/requirements/PRD.md)、[领域](backend/docs/domain/DOMAIN-MODEL.md)、[架构](backend/docs/architecture/ARCHITECTURE.md)、[API](backend/docs/api/API-DESIGN.md)
 - [当前路线与 DoD](backend/docs/PLAN.md)、[应用实验索引](manual/reference/EXPERIMENTS.md)、[模板机制比较](manual/reference/TEMPLATE-COMPARISON.md)
 - [重构验收](backend/docs/engineering/APPLICATION-ONLY-ACCEPTANCE.md)、[仓库责任与退役清单](backend/docs/engineering/REPOSITORY-RESPONSIBILITY.md)
-- [教材源](manual/README.md)、[后续 Phase 2B 内容清单](manual/reference/PUBLICATION-INVENTORY.md)
+- [正式教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)、[教材源与阅读顺序](manual/README.md)、[出版内容地图](manual/reference/PUBLICATION-INVENTORY.md)
 
 ## 范围变更与历史
 
 2026-11-11 所有者明确收窄为应用工程，本次要求替代原计划中的云与交付目标。原 E10 部署实验不再是当前 DoD；没有将历史重新命名成从来不存在。
 
-历史 Phase 2A 分支 `codex/phase2a-engineering-20261111` 保留在 `63c587277541b4e700258aad82de9b2ad0ba32f8`。历史实验、原证据和两份旧 PDF 可从 [该提交](https://github.com/miku-wwl/echocase/tree/63c587277541b4e700258aad82de9b2ad0ba32f8)恢复；它们不是当前交付物。本次不生成 PDF，不修改 main，也不改变现有业务数据。
+历史 Phase 2A 分支 `codex/phase2a-engineering-20261111` 保留在 `63c587277541b4e700258aad82de9b2ad0ba32f8`。历史实验、原证据和两份旧 PDF 可从 [该提交](https://github.com/miku-wwl/echocase/tree/63c587277541b4e700258aad82de9b2ad0ba32f8)恢复。2026-11-12 的新教材以四目录整理后的应用为源码基础，重写正文与插图，不把旧 PDF 或运行日志重新装订成交付物；业务代码、main 与历史分支保持原状。

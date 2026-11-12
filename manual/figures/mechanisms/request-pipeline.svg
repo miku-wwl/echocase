@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="620" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">PUT 修订关联如何穿过请求管道</text>
+<rect x="28" y="70" width="822" height="67" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="97" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">① 外围中间件</text>
+<text x="44" y="123" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">安全头、TraceId、计时；包住后续异常</text>
+<line x1="874" y1="95" x2="874" y2="162" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="149" width="822" height="67" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<text x="44" y="176" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">② Routing</text>
+<text x="44" y="202" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">选中端点，获得授权与限流元数据</text>
+<line x1="874" y1="174" x2="874" y2="241" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="228" width="822" height="67" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="255" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">③ Authentication</text>
+<text x="44" y="281" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Cookie → ClaimsPrincipal</text>
+<line x1="874" y1="253" x2="874" y2="320" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="307" width="822" height="67" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<text x="44" y="334" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">④ RateLimiter / Authorization</text>
+<text x="44" y="360" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">先有可信身份，再按身份分区；检查授权</text>
+<line x1="874" y1="332" x2="874" y2="399" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="386" width="822" height="67" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="413" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">⑤ 防伪校验</text>
+<text x="44" y="439" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">写 API 必须有 Cookie / Header 令牌对</text>
+<line x1="874" y1="411" x2="874" y2="478" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="465" width="822" height="67" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<text x="44" y="492" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">⑥ 端点绑定与调用</text>
+<text x="44" y="518" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">严格 JSON → If-Match / Key → Application</text>
+<text x="30" y="590" font-family="Book" font-size="20" fill="#af543c" text-anchor="start">响应、异常沿调用栈返回外围；响应已经开始后，不能重新写完整错误正文。</text>
+</svg>

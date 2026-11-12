@@ -1,0 +1,16 @@
+{
+  "title": "企业级 .NET 全栈软件工程",
+  "subtitle": "从 EchoCase 的真实实现理解架构、数据一致性与 React 状态",
+  "edition": "2026 年 11 月 · 应用工程版",
+  "sourceCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+  "repository": "https://github.com/miku-wwl/echocase",
+  "chapters": [
+    "00-preface.md", "01-requirements.md", "02-clean-architecture.md",
+    "03-domain.md", "04-request-pipeline.md", "05-cqrs.md", "06-api.md",
+    "07-persistence.md", "08-schema-evolution.md", "09-mvcc.md",
+    "10-concurrency.md", "11-idempotency.md", "12-security.md",
+    "13-react.md", "14-server-state.md", "15-drafts.md", "16-graph.md",
+    "17-performance.md", "18-testing.md", "19-evolution.md",
+    "20-reasoning.md", "21-reference.md"
+  ]
+}

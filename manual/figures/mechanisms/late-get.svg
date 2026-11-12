@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="532" viewBox="0 0 960 532">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="532" rx="14" fill="#f8faf9"/>
+<text x="28" y="40" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">请求完成顺序不等于资源版本顺序</text>
+<text x="25" y="126" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">旧 GET</text>
+<line x1="165" y1="140" x2="928" y2="140" stroke="#c8d7d3" stroke-width="2"/>
+<text x="25" y="244" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">写入响应</text>
+<line x1="165" y1="258" x2="928" y2="258" stroke="#c8d7d3" stroke-width="2"/>
+<text x="25" y="362" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">确认缓存</text>
+<line x1="165" y1="376" x2="928" y2="376" stroke="#c8d7d3" stroke-width="2"/>
+<rect x="180" y="78" width="172" height="90" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="192" y="104" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">① 查询基于 v4</text>
+<rect x="365" y="196" width="172" height="90" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="377" y="222" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">② 写入确认 v5</text>
+<rect x="550" y="314" width="172" height="90" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="562" y="340" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">③ 缓存已经是</text>
+<text x="562" y="365" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">v5</text>
+<rect x="735" y="78" width="172" height="90" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="747" y="104" font-family="Book" font-size="19" fill="#af543c" text-anchor="start">④ v4 晚到被拒</text>
+<text x="747" y="129" font-family="Book" font-size="19" fill="#af543c" text-anchor="start">绝</text>
+<line x1="174" y1="482" x2="924" y2="482" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="28" y="517" font-family="Book" font-size="18" fill="#627477" text-anchor="start">时间向右；编号表示发生顺序，不表示耗时比例。</text>
+</svg>

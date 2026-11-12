@@ -1,15 +1,27 @@
-# Enterprise .NET Full-Stack Software Engineering · 教材源
+# 企业级 .NET 全栈软件工程
 
-当前材料只讲业务应用：需求、Clean Architecture/DDD/CQRS、ASP.NET/DI、EF/PostgreSQL、API安全与一致性、React/TypeScript/Query/Flow、独立测试和维护性。
+[阅读正式 PDF](dist/Enterprise-Full-Stack-Engineering.pdf)
 
-保留应用章节与历史应用缺陷的机制解释。原运维章节、旧PDF、自动出版器与证据门禁已从本分支退役，历史可从63c5872恢复；它们不作为当前交付物。本轮不生成PDF。
+教材以 EchoCase 的实际应用实现解释需求、架构、事务和浏览器状态。正文由连贯中文论述、固定版本源码摘录、原创矢量机制图、经过解释的真实运行观察和真实界面构成。没有把实验索引、日志、命令、CI 历史或出版器装订成正文。
 
-- chapters/01–13：需求、架构、领域、请求、用例、合同、持久化、并发、幂等、安全、React、状态与图谱。
-- chapters/14-testing.md：独立测试与依赖边界。
-- chapters/15-performance.md：实际应用SQL与索引。
-- chapters/18-assessment.md：综合应用工程评审；历史编号暂保留，2B重新组织课程顺序。
-- chapters/19-labs.md：当前应用实验导航；历史E编号不改义。
-- chapters/20-reference.md：框架一手来源与词汇。
-- [应用案例材料](reference/CASE-STUDIES.md)、[新2B清单](reference/PUBLICATION-INVENTORY.md)。
+## 阅读顺序
 
-这些是待深化的Markdown源，不是已经重建出版的教材。源代码链接已重绑到独立测试目录；不再依赖旧claim/code宏。后续2B应绑定新的工程提交，重新提取注释、制作图示并审校，不能把历史PDF的页数或QA结论移到新教材。
+- 序言与第 1-6 章：需求、聚合、依赖、请求、用例和 HTTP 合同。
+- 第 7-11 章：EF 跟踪、schema 演进、MVCC、并发和幂等。
+- 第 12 章：身份、所有权、防伪与内容边界。
+- 第 13-16 章：React 渲染、Query 缓存、草稿代次和图谱。
+- 第 17-19 章：真实查询计划、反例验证和完整需求演进。
+- 第 20 章：设计推理题与解析；原 `19-labs.md` 已撤出并删除。
+- 附录：概念对照、源码地图和一手资料。
+
+`book.json` 是唯一正文清单；`reference/` 与 `tools/` 不进入 PDF。`chapters/` 可直接阅读，`{{code ...}}` 和 `{{figure ...}}` 是出版时解析的源码/插图选择，不是读者需要执行的命令。
+
+## 来源与边界
+
+应用源码固定于 `908811b95fb40cf14fa79b8eddf41796aa02cc04`，使用当前 `backend/`、`frontend/`、`test/` 路径。出版器逐段核对工作区与固定提交内容，不接受漂移。历史 UI 与数据库观察取自 `63c587277541b4e700258aad82de9b2ad0ba32f8`；相关应用源文件在目录迁移后按换行规范化保持一致。
+
+截图为真实浏览器捕获，源 PNG 保留原像素；书页只裁切并加独立编号。机制图为原创 SVG。详细出处与像素摘要见 [素材来源](reference/asset-provenance.json)。这些历史观察没有冒称本轮新运行或生产容量测量。
+
+## 出版维护
+
+出版依赖、最少构建说明见 [维护说明](reference/PUBLISHING.md)；编辑审查与视觉验收见 [出版验收](reference/EDITORIAL-ACCEPTANCE.md)。它们面向维护者，不属于教材章节。运行应用与测试仍以 `backend/docs/engineering/` 的指南为准。

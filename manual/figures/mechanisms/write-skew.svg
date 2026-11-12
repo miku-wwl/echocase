@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="274" viewBox="0 0 960 274">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="274" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">两行不冲突，业务决定仍可能冲突</text>
+<rect x="28.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">共同前提</text>
+<text x="46.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">至少一人保持值班</text>
+<text x="46.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">A 与 B 都读取两人值班</text>
+<text x="46.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">两条读相互依赖</text>
+<rect x="336.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="354.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">各改一行</text>
+<text x="354.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">A 把自己设为离岗</text>
+<text x="354.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">B 也把自己设为离岗</text>
+<text x="354.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">每行版本比较都可能通过</text>
+<rect x="644.0" y="70" width="288.0" height="174" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="662.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">设计含义</text>
+<text x="662.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">单行 CAS 不覆盖跨根约束</text>
+<text x="662.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">需锁定共同仲裁点或更强隔</text>
+<text x="662.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">离</text>
+<text x="662.0" y="224" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">序列化失败要重试整个决定</text>
+</svg>

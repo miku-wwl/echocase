@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="435" viewBox="0 0 960 435">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="435" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">两个坐标决定一次写入的身份</text>
+<rect x="28" y="82" width="425" height="228" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="117" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Version：事实的坐标</text>
+<text x="46" y="146" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">“我看过哪个资源版本？”</text>
+<text x="46" y="176" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">不同意图可能基于同一个版本。</text>
+<text x="46" y="206" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">过期 → 412，交给用户重新决定。</text>
+<rect x="507" y="82" width="425" height="228" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="525" y="117" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Idempotency-Key：意图的坐标</text>
+<text x="525" y="146" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">“这是不是同一次尝试？”</text>
+<text x="525" y="176" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">网络重试必须保留原键和请求。</text>
+<text x="525" y="206" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">同键异指纹 → 409，拒绝改写意图。</text>
+<text x="30" y="361" font-family="BookBold" font-size="24" fill="#24766e" text-anchor="start">旧回执确认过去的提交；当前 GET 描述现在的资源。</text>
+<text x="30" y="405" font-family="Book" font-size="20" fill="#627477" text-anchor="start">重试：原 Key + 原 Version + 原 Body；新决定：新 Key + 重新确认的 Version。</text>
+</svg>

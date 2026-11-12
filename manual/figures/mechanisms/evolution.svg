@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="270" viewBox="0 0 960 270">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="270" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">关联修订沿一条语义链演进</text>
+<rect x="28.0" y="78" width="203.5" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="113" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">规则</text>
+<text x="46.0" y="142" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">保持身份</text>
+<text x="46.0" y="172" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">解释长度</text>
+<line x1="233.5" y1="153" x2="256.5" y2="153" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="261.5" y="78" width="203.5" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="279.5" y="113" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">持久化</text>
+<text x="279.5" y="142" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">可空演进</text>
+<text x="279.5" y="172" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">根子同事务</text>
+<line x1="467.0" y1="153" x2="490.0" y2="153" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="495.0" y="78" width="203.5" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="513.0" y="113" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">协议</text>
+<text x="513.0" y="142" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">新增 PUT</text>
+<text x="513.0" y="172" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">旧回执兼容</text>
+<line x1="700.5" y1="153" x2="723.5" y2="153" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="728.5" y="78" width="203.5" height="150" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="746.5" y="113" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">界面</text>
+<text x="746.5" y="142" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">冻结基线</text>
+<text x="746.5" y="172" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">失败留草稿</text>
+</svg>

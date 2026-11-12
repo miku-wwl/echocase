@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="274" viewBox="0 0 960 274">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="274" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">按状态的变化原因拆分组件</text>
+<rect x="28.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">App / Workspace</text>
+<text x="46.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">身份、导航与调查装配</text>
+<text x="46.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Workspace 的 key = id</text>
+<text x="46.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">不同调查重置本地状态</text>
+<rect x="336.0" y="70" width="288.0" height="174" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="354.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">业务钩子</text>
+<text x="354.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">useInvestigation：请求</text>
+<text x="354.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">协议</text>
+<text x="354.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">useNotesDraft：草稿语义</text>
+<text x="354.0" y="224" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">函数式更新读取队列前值</text>
+<rect x="644.0" y="70" width="288.0" height="174" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="662.0" y="105" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">编辑与呈现</text>
+<text x="662.0" y="134" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">NotesEditor 保持挂载</text>
+<text x="662.0" y="164" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">LinkEditor 保存打开时版</text>
+<text x="662.0" y="194" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">本</text>
+<text x="662.0" y="224" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Graph 局部节点坐标</text>
+</svg>
