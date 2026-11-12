@@ -1,0 +1,14 @@
+{
+  "upstream": "https://github.com/jasontaylordev/CleanArchitecture",
+  "tag": "v10.8.0",
+  "commit": "e5c08ecead8a52f6cf519477bf6c57668248c035",
+  "package": "Clean.Architecture.Solution.Template",
+  "version": "10.8.0",
+  "packageSha256": "5cd6ffe4c31d61084b52fc8125f549be964c2b4daf57990a01e5c070ca6b278d",
+  "install": "dotnet new install Clean.Architecture.Solution.Template@10.8.0",
+  "generate": "dotnet new ca-sln -cf react -db postgresql -n EchoCase --no-update-check",
+  "generatedFiles": 171,
+  "localSdk": "10.0.403",
+  "previousEchoCase": "bf9de37b9bd4d5cc2c227af2c857360e048b15d1",
+  "note": "Official NuGet package generation; generated-files.json records original bytes, including generated ports. Extra provenance and baseline-only verification workflow do not alter generated source."
+}
