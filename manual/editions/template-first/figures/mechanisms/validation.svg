@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="570" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">每项校验需要它能够可靠观察的事实</text>
+<rect x="30" y="80" width="900" height="92" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="47" y="112" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">HTTP 绑定 / 端点</text>
+<text x="380" y="112" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">JSON 形状、Guid、If-Match 形式</text>
+<text x="380" y="146" font-family="Book" font-size="20" fill="#627477" text-anchor="start">尚未形成完整用例</text>
+<line x1="210" y1="174" x2="210" y2="184" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="185" width="900" height="92" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="47" y="217" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">MediatR Validator</text>
+<text x="380" y="217" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">Key 是 D 格式 UUID</text>
+<text x="380" y="251" font-family="Book" font-size="20" fill="#627477" text-anchor="start">业务事务尚未写入</text>
+<line x1="210" y1="279" x2="210" y2="289" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="290" width="900" height="92" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="47" y="322" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Domain 聚合</text>
+<text x="380" y="322" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">Active、成员、解释、实际变化</text>
+<text x="380" y="356" font-family="Book" font-size="20" fill="#627477" text-anchor="start">事务内已加载的对象图</text>
+<line x1="210" y1="384" x2="210" y2="394" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="395" width="900" height="92" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="47" y="427" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">PostgreSQL</text>
+<text x="380" y="427" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">FK / CHECK / 唯一 / CAS</text>
+<text x="380" y="461" font-family="Book" font-size="20" fill="#627477" text-anchor="start">持久关系与并发仲裁</text>
+<text x="32" y="538" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">不是零 SQL 才叫“先校验”：外侧 Logging 可能已读取身份，但没有业务写入。</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="465" viewBox="0 0 960 465">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="465" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">一次命令的职责，不等于一层一句透传</text>
+<text x="35" y="111" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Endpoint</text>
+<text x="274" y="111" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">绑定协议 → Command</text>
+<line x1="30" y1="125" x2="930" y2="125" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="166" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Pipeline</text>
+<text x="274" y="166" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">身份 / Key 校验 / 诊断</text>
+<line x1="30" y1="180" x2="930" y2="180" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="221" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Handler</text>
+<text x="274" y="221" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">IUser → 当前 owner</text>
+<line x1="30" y1="235" x2="930" y2="235" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="276" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Service</text>
+<text x="274" y="276" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">操作名 / 时间 / 指纹 / 回调</text>
+<line x1="30" y1="290" x2="930" y2="290" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="331" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Store</text>
+<text x="274" y="331" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">事务 / owner / 回执 / 版本</text>
+<line x1="30" y1="345" x2="930" y2="345" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="386" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Domain</text>
+<text x="274" y="386" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">在回调内决定规则与新状态</text>
+<line x1="30" y1="400" x2="930" y2="400" stroke="#c8d7d3" stroke-width="2"/>
+<text x="35" y="442" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">Store 在领域回调前已开启事务；同一事务保存根、子、Audit、Receipt。</text>
+</svg>

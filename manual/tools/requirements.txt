@@ -3,3 +3,4 @@ pypdf==7.0.1
 pdfplumber==0.11.10
 Pillow==13.0.0
 markdown-it-py==4.3.0
+Pygments==2.21.0

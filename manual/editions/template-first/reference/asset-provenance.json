@@ -1,0 +1,159 @@
+{
+  "screenshots": [
+    {
+      "file": "figures/ui/02-dashboard.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/02-dashboard.png",
+      "sha256": "841d1c261ace39d2ba989731277e7f9c16238261148db3708eb42be8e0ab41be",
+      "pixels": [
+        1440,
+        1001
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/03-evidence.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/03-evidence.png",
+      "sha256": "e65fce2cff785c25bc0b270d34b2822bb47559bd1bc08bb938898aacf6d0542d",
+      "pixels": [
+        1440,
+        1118
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/04-graph.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/04-graph.png",
+      "sha256": "425dd4ca22c5d1566db642cbe8f700d4798d62d6b4ed62d72ef47c76bb7f43e8",
+      "pixels": [
+        1440,
+        1291
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/05-verdict.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/05-verdict.png",
+      "sha256": "ca30284eb5fee7a43fd1591c8f056527d9dabeb90b3b3a5f6c52edd55edb6541",
+      "pixels": [
+        1440,
+        1156
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/08-mobile.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/08-mobile.png",
+      "sha256": "a6128b69455297233813a2cb581369c557f2ac4711f988f4a1ad5d3aaddde270",
+      "pixels": [
+        390,
+        1196
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/inflight-draft.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/inflight-draft.png",
+      "sha256": "87cb4abfd5cd317b8bcca72603795aeb8fe3e46e1ba1b87fb395e50253b8e118",
+      "pixels": [
+        1440,
+        1124
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/dirty-refetch.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/dirty-refetch.png",
+      "sha256": "ba86607b271b81337fe95602027193dca64562059924aaadfeadc46893121d75",
+      "pixels": [
+        1440,
+        1420
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/unreadable-body.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/unreadable-body.png",
+      "sha256": "fbbe8a444d71585b2681e0728d667a2050b3c159e258e4457f637d76ae85a286",
+      "pixels": [
+        1440,
+        1151
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    },
+    {
+      "file": "figures/ui/link-revision.png",
+      "commit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+      "path": "evidence/phase2a/browser/link-revision.png",
+      "sha256": "e2daf52df97c643b5840e83076183850f9275f743d8427c89f9cec67f9e85fff",
+      "pixels": [
+        1440,
+        1292
+      ],
+      "description": "Genuine browser capture; unmodified source pixels."
+    }
+  ],
+  "runtimeCommit": "63c587277541b4e700258aad82de9b2ad0ba32f8",
+  "sourceCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+  "note": "Nine genuine captures from 2026-11-11, historical commit 63c5872. Not newly captured from the migrated application. Current UI business behavior is representative; API dispatch/transport changed. Only the listed core mechanisms are byte-equivalent to the historical run.",
+  "historicalEquivalenceAudit": {
+    "identicalApplicationFiles": [
+      "backend/EchoCase.Api/EchoCase.Api.csproj",
+      "backend/EchoCase.Api/Program.cs",
+      "backend/EchoCase.Api/appsettings.json",
+      "backend/EchoCase.Api/packages.lock.json",
+      "backend/EchoCase.Application/EchoCase.Application.csproj",
+      "backend/EchoCase.Application/Investigations.cs",
+      "backend/EchoCase.Application/packages.lock.json",
+      "backend/EchoCase.Domain/CaseCatalog.cs",
+      "backend/EchoCase.Domain/EchoCase.Domain.csproj",
+      "backend/EchoCase.Domain/Investigation.cs",
+      "backend/EchoCase.Domain/packages.lock.json",
+      "backend/EchoCase.Infrastructure/DesignTimeFactory.cs",
+      "backend/EchoCase.Infrastructure/EchoCase.Infrastructure.csproj",
+      "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111024947_InitialInvestigation.Designer.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111024947_InitialInvestigation.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111030224_InvestigationOwnerTimeline.Designer.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111030224_InvestigationOwnerTimeline.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.Designer.cs",
+      "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+      "backend/EchoCase.Infrastructure/Migrations/EchoDbContextModelSnapshot.cs",
+      "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+      "backend/EchoCase.Infrastructure/packages.lock.json",
+      "frontend/src/App.tsx",
+      "frontend/src/EvidenceGraph.tsx",
+      "frontend/src/Workspace.tsx",
+      "frontend/src/api/client.ts",
+      "frontend/src/api/schema.d.ts",
+      "frontend/src/components/Message.tsx",
+      "frontend/src/components/ui/badge.tsx",
+      "frontend/src/components/ui/button.tsx",
+      "frontend/src/components/ui/input.tsx",
+      "frontend/src/components/ui/textarea.tsx",
+      "frontend/src/lib/utils.ts",
+      "frontend/src/main.tsx",
+      "frontend/src/shadcn.css",
+      "frontend/src/styles.css",
+      "frontend/src/workspace.css",
+      "frontend/src/workspace/LinkEditor.tsx",
+      "frontend/src/workspace/NotesEditor.tsx",
+      "frontend/src/workspace/useInvestigation.ts",
+      "frontend/src/workspace/useNotesDraft.ts"
+    ]
+  },
+  "revisedSourceCommit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+  "unchangedMechanismPaths": [
+    "backend/EchoCase.Domain/Investigation.cs",
+    "backend/EchoCase.Application/Investigations.cs",
+    "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs"
+  ]
+}

@@ -1,0 +1,982 @@
+[
+  {
+    "id": "domain-start",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 33,
+    "end": 38,
+    "sha256": "9a5a4ff0e17ec0d2abfde30cab627603f7dcd2c011a3bc41c2931dd14a553ecc",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-examine",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 42,
+    "end": 50,
+    "sha256": "9977227b193a55479ea87f0707ea3d0dcc7f9af2d70ef05d43e5ec5022fb5473",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-link",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 52,
+    "end": 62,
+    "sha256": "cf036fbd5b1d1b6d67a19788e353a6473588691b34238aefcac039d789a1878b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-revise",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 73,
+    "end": 86,
+    "sha256": "94f8e12cdaa675e9fdc6f92e9ceee8a3f98346c6ec895f9678cba16afccb23bc",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-transitions",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 96,
+    "end": 109,
+    "sha256": "35e1a88d1ebf0fe12a132d59edac82488359226d144b6657d1f7f054c926fea7",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-submit",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 111,
+    "end": 121,
+    "sha256": "8d809ad42e3499e70009481c8122ed0c5d17a35eb4635bd0a361bb6bb0853287",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "domain-advance",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 123,
+    "end": 125,
+    "sha256": "6abea913ed0f0e53b2b5b724c599c5dee8e0a95eef43dd5f27993f114eec0aa7",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-port",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 27,
+    "end": 32,
+    "sha256": "4d10cd9a10518548364b8474d22cf4965b5d721418f18e31284f7bb6105eb392",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-presenter",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 34,
+    "end": 42,
+    "sha256": "80bc03e2102b8668698dda30f50057f6b49c14fca78df37b573553e9be082001",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-revise",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 62,
+    "end": 69,
+    "sha256": "ac974fb1f49bd2b528688ef597019ed8559c314dc56f993717b969a12a77cfd1",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-time",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 85,
+    "end": 89,
+    "sha256": "b50e4b4846f7965fc58cfbae79b37f9d9a292bd782f9dc3d11c73f620e9925fe",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-fingerprint",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 91,
+    "end": 98,
+    "sha256": "7e8ce4150796aed2946e29a10f67a73a3ad98047066b1641e8dcd53d8c40cd41",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-linkview",
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": 11,
+    "end": 11,
+    "sha256": "63bb45bed5e13f29c75290562923ac02b6bb2e13372c9ed42c5b3d81c11f5189",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "db01a8cfc3bd0d495769f506c309f36bb8d689dd",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-di",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 16,
+    "end": 18,
+    "sha256": "74c524756abd1267e8adb495310423075f9d5da926c454ff1845cd0dc8f03b20",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-cookie",
+    "path": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "start": 26,
+    "end": 34,
+    "sha256": "08293a4b34192fea5fafd03be7af3425e64660765e8900dc601925bbd3eb1987",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "fa49f116659df8d78074f51a1f3a5baefb72f1c2",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-json",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 27,
+    "end": 27,
+    "sha256": "c527ab89ac1de572cf3a25b2f7c36437a442bf9ff446a62a1f0173ac265093b6",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-trace",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 28,
+    "end": 33,
+    "sha256": "2c039f68deb9f11562f90a08cced2bdc09871e1576d0e1b33db02c1aedf65abb",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-pipeline",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 74,
+    "end": 83,
+    "sha256": "b43fb7a791846141a6f77bb55f7c0755364f0ba523afe7581c9a6b9e92505cf5",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-faults",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 52,
+    "end": 66,
+    "sha256": "6956ea4e9f856c7e7ba130ef5baa07fb58c48775bbc6537933a77e93b6224e31",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-version",
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": 39,
+    "end": 45,
+    "sha256": "fb112dc82a79456f652d10bf28e3e74edf4d4a88345f4ad1af3fe84a1edee2f8",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "5db9ffa40f2c9dbe3e222dd3978510eb35169c22",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-route",
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": 32,
+    "end": 32,
+    "sha256": "0f4a904e9c5cf854acb03e9ba7e64567d12469b87be098b8885b110229e5dafb",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "5db9ffa40f2c9dbe3e222dd3978510eb35169c22",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-owner",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 22,
+    "end": 25,
+    "sha256": "4d7d84b55a6454140513777a3fdfc30df0b686f24fc12baa297ef11a541f4e05",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-login",
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": 110,
+    "end": 112,
+    "sha256": "af0938203ce324930c347979ce65e9221c093edf74e5e589548b2949a24ff6ef",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2fdf55c79f585375bf26c0e00c3306946e3dec14",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-read",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 18,
+    "end": 23,
+    "sha256": "11273dccac4f5dc02fbe9a57a1ec272772e1a4f8257854db4ba94d4987066484",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-lock",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 28,
+    "end": 34,
+    "sha256": "0529e5c8825b2702623ea8b32ec589b1d67bd429046ec34884cc40c6a1b75526",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-receipt",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 35,
+    "end": 46,
+    "sha256": "341e9e72f0f7018e4b886a75a15dde50ad0fb8e09b8735f5499f6a2e95a4156b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-save",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 47,
+    "end": 56,
+    "sha256": "d0424cc4d66ed9d381c3132a77d5972bd545cf1cffead2f23e7eea9825461c7b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-conflicts",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 57,
+    "end": 67,
+    "sha256": "97475345ae0146d5739ec87649f9b666c5f7d436efa0b1716d1aa6febfc76081",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-root",
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": 45,
+    "end": 50,
+    "sha256": "96f33d6f64e950c936b7d76d0e8c2df1a5c0f28bc6ddb57d655e02994cf1c1a2",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ea7433efb4d3451c6e614ee125eebcf9b4059167",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-index",
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": 50,
+    "end": 50,
+    "sha256": "438dbc0feaf8b6dceee2250b682feb38f7d3ecefa98a6faf68601f52d2b5e354",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ea7433efb4d3451c6e614ee125eebcf9b4059167",
+    "label": "应用源码"
+  },
+  {
+    "id": "store-list",
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": 20,
+    "end": 21,
+    "sha256": "7a9eb559eba4fcd03738b41a5ef12e639ac21e9750cec7d3866aa694eff40b1c",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6c22ba6da6ec5976d11a720329a0bc15c9cf201a",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-collections",
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": 51,
+    "end": 54,
+    "sha256": "eb73b8eebf5e2dbb8240a115ab9eb983e95036ac418e67ceeaa3a97a7f45cb6e",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ea7433efb4d3451c6e614ee125eebcf9b4059167",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-links",
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": 66,
+    "end": 72,
+    "sha256": "c8d8322a1b46f3d157a88adb5965611f76e5e60df9fb05e9f0527799b1db54f4",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ea7433efb4d3451c6e614ee125eebcf9b4059167",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-receipt",
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": 73,
+    "end": 78,
+    "sha256": "52aee9f82795e3de1016645485868fd5f15428ad5e89ba13207eac03e3037166",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ea7433efb4d3451c6e614ee125eebcf9b4059167",
+    "label": "应用源码"
+  },
+  {
+    "id": "migration-columns",
+    "path": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+    "start": 14,
+    "end": 25,
+    "sha256": "17a5ed2f878323462eddb771b4943dee9aeeccc6fe355f5d67c98b93dbef84bf",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "5218eb1cb208389e57315c9dc25beb01113e86c5",
+    "label": "应用源码"
+  },
+  {
+    "id": "react-root",
+    "path": "frontend/src/main.tsx",
+    "start": 7,
+    "end": 19,
+    "sha256": "fc12dfe9da5c36ea0b2df34c44631804fd536b9e01d11087f558d6d52ee52177",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7ba6c14ed04b17e92ab5cf8ad878e8548e8970d4",
+    "label": "应用源码"
+  },
+  {
+    "id": "react-identity",
+    "path": "frontend/src/App.tsx",
+    "start": 75,
+    "end": 78,
+    "sha256": "9713540c6b5e2086ab325207efb94b09d8b9645acc6d0d4b4065f08ccec933a6",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "251fc931ac290e5db4e2a025235f90afeeeb74d3",
+    "label": "应用源码"
+  },
+  {
+    "id": "react-workspace",
+    "path": "frontend/src/App.tsx",
+    "start": 142,
+    "end": 147,
+    "sha256": "239db3bec66dc0e72105f7ba043c0d25ed50728cf27cf4c7857606fab1c38c85",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "251fc931ac290e5db4e2a025235f90afeeeb74d3",
+    "label": "应用源码"
+  },
+  {
+    "id": "button-contract",
+    "path": "frontend/src/components/ui/button.tsx",
+    "start": 42,
+    "end": 55,
+    "sha256": "5a1fd899ef14e94c5e4df277c1cddcfc9d4f1ebe882f487197b9f9c76222d5f4",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "4212cbb983fe90527e9c74371df6b544fd40f86d",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-latest",
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": 10,
+    "end": 14,
+    "sha256": "353ad4e782b6aea0fa1d6dd9693fa94b7b88cf607c4401b1fbb00de99544d918",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "be83ddfb95769a88611e81b7d451863e30247ff8",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-get",
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": 18,
+    "end": 25,
+    "sha256": "ba8a7a96fde31da7f905e3e88e7bafa76a2f22092e510f07f9ff2a104c873566",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "be83ddfb95769a88611e81b7d451863e30247ff8",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-mutation",
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": 28,
+    "end": 43,
+    "sha256": "8efaf09e1da33756d3e62980a60b9cd038ebf124b9d34c35615cc08bfc372a3f",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "be83ddfb95769a88611e81b7d451863e30247ff8",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-uncertain",
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": 44,
+    "end": 46,
+    "sha256": "b92dc3363b8974fc73f2e77ab6948a616a7d580a4acc0acf6a804ac87d3fe91b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "be83ddfb95769a88611e81b7d451863e30247ff8",
+    "label": "应用源码"
+  },
+  {
+    "id": "draft-initial",
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": 9,
+    "end": 16,
+    "sha256": "8b11721c666341025a5be8a1f93866d3c347d3d9ee9663aee9fe31599573e7a6",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7e3f225b4a924d26adbe1db5bea91d5c66dc1f36",
+    "label": "应用源码"
+  },
+  {
+    "id": "draft-refresh",
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": 18,
+    "end": 29,
+    "sha256": "4a6766dcf07e35ba4a0db0b1fa1e5b4199265261de9eab0ed52432459a86825c",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7e3f225b4a924d26adbe1db5bea91d5c66dc1f36",
+    "label": "应用源码"
+  },
+  {
+    "id": "draft-ack",
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": 38,
+    "end": 59,
+    "sha256": "8c00cc3f77497c4959d2894307967e8022320586fbda79d85a1d5cfa6e18bf3d",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7e3f225b4a924d26adbe1db5bea91d5c66dc1f36",
+    "label": "应用源码"
+  },
+  {
+    "id": "draft-edit",
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": 63,
+    "end": 71,
+    "sha256": "16bf46cb5250387efb64b5d2df51c9d753d1e31f3d166e5a9f29280447e6f2cd",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7e3f225b4a924d26adbe1db5bea91d5c66dc1f36",
+    "label": "应用源码"
+  },
+  {
+    "id": "draft-operation",
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": 81,
+    "end": 89,
+    "sha256": "0334937b7bfb78cb2c2d21b2bcfcc1555d3f5284555ce8f843ba682a133faa32",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "7e3f225b4a924d26adbe1db5bea91d5c66dc1f36",
+    "label": "应用源码"
+  },
+  {
+    "id": "notes-pending",
+    "path": "frontend/src/workspace/NotesEditor.tsx",
+    "start": 30,
+    "end": 31,
+    "sha256": "479bb3a0d0224215a14bce0b51e0886c5beb62ec7e57ba61498780af20d03f09",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "139f01b5e63ca0fb4422aa2f6aee963953a8c116",
+    "label": "应用源码"
+  },
+  {
+    "id": "client-fetch",
+    "path": "frontend/src/api/client.ts",
+    "start": 45,
+    "end": 55,
+    "sha256": "9b527c51d5cd761e0aefb635b6af9e6cba2243fe26e472bf02aab06d2d490e9b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "804f9f05897ee649eaaa4b2d0638c3673253cf68",
+    "label": "应用源码"
+  },
+  {
+    "id": "client-body",
+    "path": "frontend/src/api/client.ts",
+    "start": 72,
+    "end": 90,
+    "sha256": "7f12f309b3feb91af860f823078f89aeba0930f16b2c30fdf7aabb068f3ca92a",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "804f9f05897ee649eaaa4b2d0638c3673253cf68",
+    "label": "应用源码"
+  },
+  {
+    "id": "graph-position",
+    "path": "frontend/src/EvidenceGraph.tsx",
+    "start": 42,
+    "end": 45,
+    "sha256": "371e75462f6cba896dd7a0de8c8e47486c164b3895427200d8efe0364de5e95a",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "efc26fd1ac8bea0f2bec01b2e2a02d9f73710bb7",
+    "label": "应用源码"
+  },
+  {
+    "id": "graph-edges",
+    "path": "frontend/src/EvidenceGraph.tsx",
+    "start": 60,
+    "end": 72,
+    "sha256": "bf1975e720e64fa60788c679888a84000ef2f14ce53fe88302c6ea1b92506115",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "efc26fd1ac8bea0f2bec01b2e2a02d9f73710bb7",
+    "label": "应用源码"
+  },
+  {
+    "id": "link-baseline",
+    "path": "frontend/src/workspace/LinkEditor.tsx",
+    "start": 33,
+    "end": 47,
+    "sha256": "184c4f551553b5685b57f5c673ff155bdf0ecd6f7a72d5ff23017f3647967fd1",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "15011f2d0fc473b18528349d417cff614c89e36c",
+    "label": "应用源码"
+  },
+  {
+    "id": "link-save",
+    "path": "frontend/src/workspace/LinkEditor.tsx",
+    "start": 81,
+    "end": 92,
+    "sha256": "090175309260af788ba1306eae26cf3ce63a5832e88b6bf3ec5763b9cc43fc5f",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "15011f2d0fc473b18528349d417cff614c89e36c",
+    "label": "应用源码"
+  },
+  {
+    "id": "unit-revision",
+    "path": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "start": 19,
+    "end": 36,
+    "sha256": "373fe3c30b751e16923e2fd0bcf63ef2de3cb70ada58d03d8d70bddda257f581",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "affcb9e657dee4b581ba64fe35b69b548d3d7eb8",
+    "label": "应用源码"
+  },
+  {
+    "id": "unit-unicode",
+    "path": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "start": 37,
+    "end": 44,
+    "sha256": "43b99b797d41f94fd3d585c1bdfea5962ee25cf908b0a32d2da2dc6ee4e83ebd",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "affcb9e657dee4b581ba64fe35b69b548d3d7eb8",
+    "label": "应用源码"
+  },
+  {
+    "id": "e2e-delay",
+    "path": "test/e2e/specs/consistency.spec.ts",
+    "start": 71,
+    "end": 76,
+    "sha256": "564833aef8e9a5c970bfdf8b20bec37ceedb4f33954937844b166e281a8e1b8b",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "4bb6932fb3a60c187e91e07a2256a1e570121658",
+    "label": "应用源码"
+  },
+  {
+    "id": "integration-race",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs",
+    "start": 31,
+    "end": 37,
+    "sha256": "f82d410d96fd5282ea87eab972a2fd8f415f985190de477578cf7224f5267f24",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "ae69f48be3a112f6271d0c273e1570cdb13c49eb",
+    "label": "应用源码"
+  },
+  {
+    "id": "app-registration",
+    "path": "backend/EchoCase.Application/DependencyInjection.cs",
+    "start": 13,
+    "end": 22,
+    "sha256": "97fef8b2a2594a37baea67ff424dc2b3fa7959ee06bfb37d19f3052137cf2a49",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "301b11a0c025f78139b826a3368141f4371f3b9e",
+    "label": "应用源码"
+  },
+  {
+    "id": "infra-scope",
+    "path": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "start": 36,
+    "end": 38,
+    "sha256": "4e90923d7711ce1938bd477cedd9c8c34369de2b89a2d3780d4ee0e9ae7c1ac0",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "fa49f116659df8d78074f51a1f3a5baefb72f1c2",
+    "label": "应用源码"
+  },
+  {
+    "id": "web-openapi",
+    "path": "backend/EchoCase.Api/DependencyInjection.cs",
+    "start": 10,
+    "end": 13,
+    "sha256": "8dccbedaeb65dacadf88b2279e9f3698f94050db7359f2c9a2819b22acfd4328",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "4cb13eff2d9eb1e3ba0a12d046b63e761119f721",
+    "label": "应用源码"
+  },
+  {
+    "id": "endpoint-discovery",
+    "path": "backend/EchoCase.Api/Infrastructure/WebApplicationExtensions.cs",
+    "start": 14,
+    "end": 25,
+    "sha256": "066692b14648bb22a6f5b5152114fec3e09614eb4e2a7d845836c4af4a5641a4",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f216788f4133cb7393b925ab53ac8f17962a41a",
+    "label": "应用源码"
+  },
+  {
+    "id": "endpoint-naming",
+    "path": "backend/EchoCase.Api/Infrastructure/EndpointRouteBuilderExtensions.cs",
+    "start": 38,
+    "end": 44,
+    "sha256": "bf8e1f62d5b440d8a9d4c8c62b1e13f0a10051a862e5679f0482cbd2830bd4da",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "bb75546d925135350a55279efd26f7d9ead5a188",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-save",
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": 34,
+    "end": 34,
+    "sha256": "bb6435c7be46685df0f51b3acc9df5930e11d7cd95a0e000b8d17e692a5c8ae9",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "5db9ffa40f2c9dbe3e222dd3978510eb35169c22",
+    "label": "应用源码"
+  },
+  {
+    "id": "api-save-route",
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": 21,
+    "end": 21,
+    "sha256": "9d0fdb4f68021d02921a72c0c5fc110cfe81ce1761e94581f265971e5b3b0db0",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "5db9ffa40f2c9dbe3e222dd3978510eb35169c22",
+    "label": "应用源码"
+  },
+  {
+    "id": "save-command",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 16,
+    "end": 16,
+    "sha256": "bef90fb3c887163837ae08a6482a012feb8393d9daf6970b2a08a74f21b33292",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "revise-command",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 14,
+    "end": 14,
+    "sha256": "6a1a696071c04c15da69e4e50bcc721b4d3a90374470c02fb12c4de3c808f149",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "save-handler",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 59,
+    "end": 62,
+    "sha256": "39aac8543f91e93943107b3941f84defe2646893e44a9d83f9e6dcb7f8dea609",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "revise-handler",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 51,
+    "end": 54,
+    "sha256": "afd3585193e843d79618829ec4e6b4aa5d7ca862da76fa9eeecc01e633263251",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-handler",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 35,
+    "end": 38,
+    "sha256": "8788e90ab0517e5d80660690fc0737175a52afde2ed5ea32f04034b49dc3a998",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "write-validator",
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": 75,
+    "end": 80,
+    "sha256": "88231431535b7af0209800ade10f844cefefbbc8b4575e4665614ff5d5b40aec",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "8f0f8590fa55f18b05d4682a6740c5446df5cd36",
+    "label": "应用源码"
+  },
+  {
+    "id": "authorization-identity",
+    "path": "backend/EchoCase.Application/Common/Behaviours/AuthorizationBehaviour.cs",
+    "start": 24,
+    "end": 32,
+    "sha256": "4458db79d5f661f8e110e0752766a0e03b40dcab235c7c30d8ee1aae68c57342",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "6f4ce7ae17c593aae13a65eddf626209d6563779",
+    "label": "应用源码"
+  },
+  {
+    "id": "validation-dispatch",
+    "path": "backend/EchoCase.Application/Common/Behaviours/ValidationBehaviour.cs",
+    "start": 17,
+    "end": 30,
+    "sha256": "00aa5a347909c3dffc195de146d559c6d008e20c550665163d83c9f452c654e9",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "2be08355a13ba5744a80d3a5ea205706107d81f7",
+    "label": "应用源码"
+  },
+  {
+    "id": "logging-name",
+    "path": "backend/EchoCase.Application/Common/Behaviours/LoggingBehaviour.cs",
+    "start": 23,
+    "end": 33,
+    "sha256": "ca8033f47a3d83228cb3eaeac4f63650b38f5fc4638481a0731d9609f5d48865",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "45472e7efae1b2745d50c466553efb7ff6452550",
+    "label": "应用源码"
+  },
+  {
+    "id": "performance-return",
+    "path": "backend/EchoCase.Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "start": 28,
+    "end": 43,
+    "sha256": "bde0e82d49dc90423bd585bc2245760b8cdd884d88856e10a89aac72dfc0d4fe",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "17e3901a5f8f0537dcce5773b5811cb2a13c7076",
+    "label": "应用源码"
+  },
+  {
+    "id": "current-user",
+    "path": "backend/EchoCase.Api/Services/CurrentUser.cs",
+    "start": 16,
+    "end": 17,
+    "sha256": "5da72cc7235cf549928110ab72d0682c668250e287a19070635e7ad62ad72505",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "79ca0dc470e889e108db201c2e1a5c3db89fa1eb",
+    "label": "应用源码"
+  },
+  {
+    "id": "identity-policy",
+    "path": "backend/EchoCase.Infrastructure/Identity/IdentityService.cs",
+    "start": 52,
+    "end": 66,
+    "sha256": "8dc5543a518e9a1dbc1d0d7a279ad31cf186ac0df6bf2339532c0912ae95d873",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b32d32c64552d6689b86fb5a5b6bd37f938d5101",
+    "label": "应用源码"
+  },
+  {
+    "id": "nswag-save-path",
+    "path": "frontend/src/api/generated.ts",
+    "start": 638,
+    "end": 643,
+    "sha256": "575bd7ce12a73fd950a82d8493682ae30c622d04b2e043e282c38f5f780273af",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "246e800cd58f9fd221d0ade0b0aa9757e6dfb58a",
+    "label": "应用源码"
+  },
+  {
+    "id": "nswag-save-method",
+    "path": "frontend/src/api/generated.ts",
+    "start": 638,
+    "end": 660,
+    "sha256": "dfc2fb4972b376b8c184bcdca8abaf3a3d3c42b83dd98ac089d6ee034923a8ab",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "246e800cd58f9fd221d0ade0b0aa9757e6dfb58a",
+    "label": "应用源码"
+  },
+  {
+    "id": "nswag-save-process",
+    "path": "frontend/src/api/generated.ts",
+    "start": 662,
+    "end": 677,
+    "sha256": "7943af55317c8c5345bde51fc2b99de5fd906488d0ac93b262527323a1a1af64",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "246e800cd58f9fd221d0ade0b0aa9757e6dfb58a",
+    "label": "应用源码"
+  },
+  {
+    "id": "nswag-revise-signature",
+    "path": "frontend/src/api/generated.ts",
+    "start": 591,
+    "end": 591,
+    "sha256": "8cfa6c22c42eb19daa91abfe09f853da7d2c7e7f3780bfd749613d5948fae145",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "246e800cd58f9fd221d0ade0b0aa9757e6dfb58a",
+    "label": "应用源码"
+  },
+  {
+    "id": "nswag-verdict-signature",
+    "path": "frontend/src/api/generated.ts",
+    "start": 725,
+    "end": 725,
+    "sha256": "04cb64dde6160f537f60a1dc1163d7eb05355fae7a300aaaeda5c8ded4ba8e61",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "246e800cd58f9fd221d0ade0b0aa9757e6dfb58a",
+    "label": "应用源码"
+  },
+  {
+    "id": "adapter-headers",
+    "path": "frontend/src/api/client.ts",
+    "start": 46,
+    "end": 49,
+    "sha256": "e503fa456ebc070bde91caa9cc3ff1511723b3678d833b406e837c17c4253494",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "804f9f05897ee649eaaa4b2d0638c3673253cf68",
+    "label": "应用源码"
+  },
+  {
+    "id": "adapter-intent",
+    "path": "frontend/src/api/client.ts",
+    "start": 95,
+    "end": 107,
+    "sha256": "d81328066ee965086d681984c18162ff1e85bd28df457a4a752d725d6ebbf5a2",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "804f9f05897ee649eaaa4b2d0638c3673253cf68",
+    "label": "应用源码"
+  },
+  {
+    "id": "adapter-dispatch",
+    "path": "frontend/src/api/client.ts",
+    "start": 115,
+    "end": 116,
+    "sha256": "3eee819c04c66d8996145a8c48ba1163dc6af1caeaf97fe817b4883f923209fe",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "804f9f05897ee649eaaa4b2d0638c3673253cf68",
+    "label": "应用源码"
+  },
+  {
+    "id": "query-dispatch",
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": 27,
+    "end": 27,
+    "sha256": "36fee7bf185e31c9f55d56abc8fa268523a453102565748a9697fdb83f0f28a6",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "be83ddfb95769a88611e81b7d451863e30247ff8",
+    "label": "应用源码"
+  },
+  {
+    "id": "workspace-revise",
+    "path": "frontend/src/Workspace.tsx",
+    "start": 286,
+    "end": 294,
+    "sha256": "4c1dc7f0852408db5f22697fdc67fbc5ae41511fccb33c43d67f8eaaf9bb6bf4",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "3ad1ba37ceef0e6a9556eedebe26c9dce69471a4",
+    "label": "应用源码"
+  },
+  {
+    "id": "link-mutate",
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": 148,
+    "end": 153,
+    "sha256": "5e625466295ccb195d26ecc277fc9eafa285835b3416e8169d0b410680832fcf",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "b2ab2de7cead64dd7f1849c94401b346075c2f68",
+    "label": "应用源码"
+  },
+  {
+    "id": "slow-store-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 36,
+    "end": 42,
+    "sha256": "977cdf158917c7734ee8856e43075d891e5bf6fd8318e2a55e93e22a70a8a181",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "slow-result-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 60,
+    "end": 65,
+    "sha256": "8a7684681fc2a8856a24f8a28ce00e29e2599abda41c48bed179b41cf526b5a9",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "direct-sender-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 68,
+    "end": 73,
+    "sha256": "7b3304cb170106498964b042a9d6a071c248f54615d151b11fb86355d6a27122",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "validation-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 89,
+    "end": 93,
+    "sha256": "6eae02bcb0d55fa53d8f41adba0857bd8d503ef90d30f7f6345b47d245093cb8",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "former-owner-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 109,
+    "end": 113,
+    "sha256": "9f8df07099739b6a85342aa72aae698856a59ed459e1275b8d26d0da43fe40f6",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "model-drift-test",
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": 122,
+    "end": 129,
+    "sha256": "f0442757607ba01e7d7465e36d0035388380884f1bbcdc41490394fa96f9351c",
+    "commit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+    "blob": "e153db8462738ece0bdcbcde0e170acc0be469ea",
+    "label": "应用源码"
+  },
+  {
+    "id": "bootstrap-registration",
+    "path": "src/Application/DependencyInjection.cs",
+    "start": 16,
+    "end": 23,
+    "sha256": "30adc7421b30c44d3f309c524d724c2e3aaffbf752821a7ce2b08231762aebce",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "blob": "f179d20fadd1e8760992151c99f68fffb80804ff",
+    "label": "官方生成比较（历史）"
+  },
+  {
+    "id": "bootstrap-initializer",
+    "path": "src/Infrastructure/Data/ApplicationDbContextInitialiser.cs",
+    "start": 45,
+    "end": 46,
+    "sha256": "0572e76e4d6d90c9d626f0edc28743830946d3c1ab23c11cdb14035c7aa1bc8f",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "blob": "59012d181888a081a9858c2ce7ca26fa7a1601b1",
+    "label": "官方样例（已移除）"
+  },
+  {
+    "id": "bootstrap-performance",
+    "path": "src/Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "start": 43,
+    "end": 46,
+    "sha256": "dfd59fb6550391235266aa569ac15645df1dc8655d87e0c6cf818bb1fb7a63da",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "blob": "7f3ed3a86d688c5237c284df30da0a0ad617bd20",
+    "label": "官方原性能行为（历史）"
+  }
+]

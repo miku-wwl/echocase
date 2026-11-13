@@ -70,11 +70,24 @@ SPECS={
  'integration-race':(T+'integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs','                var result = await new PostgresInvestigationStore','                return (result, null);'),
 }
 
-def extract(id,commit):
-    spec=SPECS[id];path,start,end,*rest=spec
-    text=(ROOT/path).read_text(encoding='utf-8-sig').replace('\r\n','\n')
-    pinned=subprocess.check_output(['git','show',f'{commit}:{path}'],cwd=ROOT).decode('utf-8-sig').replace('\r\n','\n')
-    if text!=pinned:raise ValueError(f'Source changed after pinned commit: {path}')
+def extract(id,commit,specs=None,verify_worktree=True):
+    spec=(specs or SPECS)[id]
+    label='应用源码'
+    if isinstance(spec,dict):
+        path,start,end=spec['path'],spec['start'],spec.get('end')
+        rest=[1] if spec.get('nextOccurrence') else []
+        commit=spec.get('commit',commit)
+        label=spec.get('label',label)
+    else:path,start,end,*rest=spec
+    # Always resolve the immutable source FIRST. A worktree is an additional
+    # invariant for the accepted engineering edition, not an alternate source.
+    text=subprocess.check_output(['git','show',f'{commit}:{path}'],cwd=ROOT).decode('utf-8-sig').replace('\r\n','\n')
+    if verify_worktree and commit=='9f68721e18f15ae603e6502fa46b8fa78f9df55c':
+        current=(ROOT/path).read_text(encoding='utf-8-sig').replace('\r\n','\n')
+        if current!=text:raise ValueError(f'Source changed after pinned commit: {path}')
+    elif verify_worktree and specs is None:
+        current=(ROOT/path).read_text(encoding='utf-8-sig').replace('\r\n','\n')
+        if current!=text:raise ValueError(f'Source changed after pinned commit: {path}')
     a=text.index(start)
     if end is None:b=len(text)
     else:
@@ -82,5 +95,6 @@ def extract(id,commit):
     snippet=text[a:b].rstrip()
     if not snippet:raise ValueError(id)
     line=text[:a].count('\n')+1
+    blob=subprocess.check_output(['git','rev-parse',f'{commit}:{path}'],cwd=ROOT,text=True).strip()
     return dict(id=id,path=path,start=line,end=line+snippet.count('\n'),text=snippet,
-                sha256=hashlib.sha256(snippet.encode()).hexdigest(),commit=commit)
+                sha256=hashlib.sha256(snippet.encode()).hexdigest(),commit=commit,blob=blob,label=label)

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="520" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">历史夹具：关闭自动检测后，显式观察三个时刻</text>
+<text x="40" y="90" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">观察点</text>
+<text x="242" y="90" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">根 Investigation</text>
+<text x="592" y="90" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">子 EvidenceLink</text>
+<rect x="28" y="112" width="190" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="40" y="147" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">刚加载</text>
+<rect x="230" y="112" width="338" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="242" y="147" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Unchanged</text>
+<text x="242" y="176" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Original Version = 4</text>
+<rect x="580" y="112" width="350" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="592" y="147" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Unchanged</text>
+<text x="592" y="176" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Original Kind = Corroborates</text>
+<rect x="28" y="224" width="190" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="40" y="259" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">领域方法返回</text>
+<rect x="230" y="224" width="338" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="242" y="259" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">CLR Version = 5</text>
+<text x="242" y="288" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">状态尚未扫描</text>
+<rect x="580" y="224" width="350" height="100" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="592" y="259" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">CLR Kind = Contradicts</text>
+<text x="592" y="288" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">解释、时间已赋值</text>
+<rect x="28" y="336" width="190" height="100" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="40" y="371" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">DetectChanges 后</text>
+<rect x="230" y="336" width="338" height="100" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="242" y="371" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Modified</text>
+<text x="242" y="400" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">UpdatedAt、Version</text>
+<rect x="580" y="336" width="350" height="100" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="592" y="371" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Modified</text>
+<text x="592" y="400" font-family="Book" font-size="19" fill="#173c44" text-anchor="start">Kind、Rationale、RevisedAt</text>
+<text x="30" y="490" font-family="Book" font-size="20" fill="#627477" text-anchor="start">2026-11-11：原值 4 → 当前 5；显式 DetectChanges 才观察到 Modified。</text>
+</svg>

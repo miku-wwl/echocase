@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="600" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">从用户看过的版本，到 SQL 必须匹配的原值</text>
+<rect x="30" y="80" width="900" height="65" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="108" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">LinkEditor draft.version = 4</text>
+<text x="45" y="133" font-family="Book" font-size="19" fill="#627477" text-anchor="start">用户打开编辑时看过的事实</text>
+<line x1="890" y1="147" x2="890" y2="155" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="155" width="900" height="65" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="183" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Operation.version = 4 / Key K</text>
+<text x="45" y="208" font-family="Book" font-size="19" fill="#627477" text-anchor="start">本次意图冻结，重试保持不变</text>
+<line x1="890" y1="222" x2="890" y2="230" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="230" width="900" height="65" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="258" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">If-Match: &quot;4&quot; → Command.Version</text>
+<text x="45" y="283" font-family="Book" font-size="19" fill="#627477" text-anchor="start">HTTP 前提进入已类型化请求</text>
+<line x1="890" y1="297" x2="890" y2="305" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="305" width="900" height="65" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="333" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Change.ExpectedVersion = 4</text>
+<text x="45" y="358" font-family="Book" font-size="19" fill="#627477" text-anchor="start">Store 前置比较，不关闭后续竞争</text>
+<line x1="890" y1="372" x2="890" y2="380" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="380" width="900" height="65" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="45" y="408" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">EF Original = 4；Current = 5</text>
+<text x="45" y="433" font-family="Book" font-size="19" fill="#627477" text-anchor="start">WHERE 用原值，SET 用领域目标值</text>
+<line x1="890" y1="447" x2="890" y2="455" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="455" width="900" height="65" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="483" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Commit → Session.version = 5</text>
+<text x="45" y="508" font-family="Book" font-size="19" fill="#627477" text-anchor="start">回执确认过去；缓存仍按版本单调合并</text>
+<text x="30" y="568" font-family="Book" font-size="21" fill="#24766e" text-anchor="start">数据库已有别人的 5，不等于本次 Current = 5 已经成功。</text>
+</svg>

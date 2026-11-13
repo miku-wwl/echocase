@@ -1,0 +1,502 @@
+{
+  "domain-start": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public static Investigation Start",
+    "end": "    public bool IsVisible"
+  },
+  "domain-examine": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public void Examine",
+    "end": "    public void Link"
+  },
+  "domain-link": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public void Link",
+    "end": "    public void RemoveLink"
+  },
+  "domain-revise": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public void ReviseLink",
+    "end": "    public void SaveNotes"
+  },
+  "domain-transitions": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public void Review",
+    "end": "    public void Submit"
+  },
+  "domain-submit": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    public void Submit",
+    "end": "    private void Editable"
+  },
+  "domain-advance": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    private void Editable",
+    "end": "}\n\npublic sealed class Discovery"
+  },
+  "app-port": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "public interface IInvestigationStore",
+    "end": "public static class SessionPresenter"
+  },
+  "app-presenter": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "public static class SessionPresenter",
+    "end": "public sealed class InvestigationService"
+  },
+  "app-revise": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "    public Task<SessionView> ReviseLink",
+    "end": "    public Task<SessionView> Notes"
+  },
+  "app-time": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "    private DateTimeOffset Now",
+    "end": "    private Task<SessionView> Write"
+  },
+  "app-fingerprint": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "    private Task<SessionView> Write",
+    "end": null
+  },
+  "app-linkview": {
+    "path": "backend/EchoCase.Application/Investigations.cs",
+    "start": "public sealed record LinkView",
+    "end": "public sealed record VerdictView"
+  },
+  "api-di": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "builder.AddApplicationServices();",
+    "end": "builder.WebHost.ConfigureKestrel"
+  },
+  "api-cookie": {
+    "path": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "start": "        builder.Services.AddAuthentication",
+    "end": "        builder.Services.AddAuthorization"
+  },
+  "api-json": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "builder.Services.ConfigureHttpJsonOptions",
+    "end": "builder.Services.AddProblemDetails"
+  },
+  "api-trace": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "builder.Services.AddProblemDetails",
+    "end": "var app = builder.Build"
+  },
+  "api-pipeline": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "app.UseRouting();",
+    "end": "app.UseDefaultFiles();"
+  },
+  "api-faults": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "        var (status, code, detail) = e switch",
+    "end": "        if (status >= 500)"
+  },
+  "api-version": {
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": "    private static int Version",
+    "end": "    private static IResult Respond"
+  },
+  "api-route": {
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": "    public static async Task<IResult> ReviseLink",
+    "end": "    public static async Task<IResult> RemoveLink"
+  },
+  "api-owner": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "internal static class RequestOwner",
+    "end": "public sealed class GetCasesHandler"
+  },
+  "api-login": {
+    "path": "backend/EchoCase.Api/Program.cs",
+    "start": "    var principal = new ClaimsPrincipal",
+    "end": "}).WithName(\"Login\")"
+  },
+  "store-read": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "    private IQueryable<Investigation> Graph",
+    "end": "    public async Task<SessionView> WriteAsync"
+  },
+  "store-lock": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "        await using var tx",
+    "end": "        var previous ="
+  },
+  "store-receipt": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "        var previous =",
+    "end": "        var result = apply"
+  },
+  "store-save": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "        var result = apply",
+    "end": "        catch (DbUpdateConcurrencyException)"
+  },
+  "store-conflicts": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "        catch (DbUpdateConcurrencyException)",
+    "end": "        return response;"
+  },
+  "model-root": {
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": "        i.Property(x => x.Version)",
+    "end": "        i.HasMany(x => x.Discoveries)"
+  },
+  "model-index": {
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": "        i.HasIndex(x => new { x.OwnerId, x.UpdatedAt })",
+    "end": "        i.HasMany(x => x.Discoveries)"
+  },
+  "store-list": {
+    "path": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "start": "    public async Task<IReadOnlyList<SessionView>> ListAsync",
+    "end": "    public async Task<SessionView> GetAsync"
+  },
+  "model-collections": {
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": "        i.HasMany(x => x.Discoveries)",
+    "end": "        var d = b.Entity"
+  },
+  "model-links": {
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": "        l.HasKey(x => x.Id)",
+    "end": "        var r = b.Entity"
+  },
+  "model-receipt": {
+    "path": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "start": "        var r = b.Entity",
+    "end": "    }\n}"
+  },
+  "migration-columns": {
+    "path": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+    "start": "            migrationBuilder.AddColumn<string>",
+    "end": "            migrationBuilder.AddCheckConstraint"
+  },
+  "react-root": {
+    "path": "frontend/src/main.tsx",
+    "start": "const queryClient =",
+    "end": null
+  },
+  "react-identity": {
+    "path": "frontend/src/App.tsx",
+    "start": "        onLogin={(u) =>",
+    "end": "        error={"
+  },
+  "react-workspace": {
+    "path": "frontend/src/App.tsx",
+    "start": "          <Workspace",
+    "end": "        ) : ("
+  },
+  "button-contract": {
+    "path": "frontend/src/components/ui/button.tsx",
+    "start": "function Button(",
+    "end": "export { Button"
+  },
+  "query-latest": {
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": "function latest",
+    "end": "export function useInvestigation"
+  },
+  "query-get": {
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": "  const queryKey =",
+    "end": "  const mutation ="
+  },
+  "query-mutation": {
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": "    onMutate:",
+    "end": "  const uncertain ="
+  },
+  "query-uncertain": {
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": "  const uncertain =",
+    "end": "  const act ="
+  },
+  "draft-initial": {
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": "  const [draft, setDraft]",
+    "end": "  const acknowledged ="
+  },
+  "draft-refresh": {
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": "  useEffect(() => {",
+    "end": "  useEffect(() => {",
+    "nextOccurrence": true
+  },
+  "draft-ack": {
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": "    const { result, operation }",
+    "end": "  }, [success, current.version]);"
+  },
+  "draft-edit": {
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": "    conflict:",
+    "end": "    discard:"
+  },
+  "draft-operation": {
+    "path": "frontend/src/workspace/useNotesDraft.ts",
+    "start": "    operation:",
+    "end": null
+  },
+  "notes-pending": {
+    "path": "frontend/src/workspace/NotesEditor.tsx",
+    "start": "  const optimistic =",
+    "end": "  return ("
+  },
+  "client-fetch": {
+    "path": "frontend/src/api/client.ts",
+    "start": "      const headers =",
+    "end": "      if (!response.ok)"
+  },
+  "client-body": {
+    "path": "frontend/src/api/client.ts",
+    "start": "  try {\n    return await perform(client);",
+    "end": "export async function refreshCsrf"
+  },
+  "graph-position": {
+    "path": "frontend/src/EvidenceGraph.tsx",
+    "start": "        position:",
+    "end": "        data:"
+  },
+  "graph-edges": {
+    "path": "frontend/src/EvidenceGraph.tsx",
+    "start": "  const edges:",
+    "end": "  const connect ="
+  },
+  "link-baseline": {
+    "path": "frontend/src/workspace/LinkEditor.tsx",
+    "start": "        onClick={() =>",
+    "end": "  return (",
+    "nextOccurrence": true
+  },
+  "link-save": {
+    "path": "frontend/src/workspace/LinkEditor.tsx",
+    "start": "        onClick={async () =>",
+    "end": "      >\n        保存关联修订"
+  },
+  "unit-revision": {
+    "path": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "start": "    public void RevisionKeepsIdentity",
+    "end": "    [TestCase"
+  },
+  "unit-unicode": {
+    "path": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "start": "    [TestCase",
+    "end": "    [Test]\n    public void UnknownLink"
+  },
+  "e2e-delay": {
+    "path": "test/e2e/specs/consistency.spec.ts",
+    "start": "  await page.route(\"**/api/investigations/*/notes\", async (route) => {",
+    "end": "  await input.fill"
+  },
+  "integration-race": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs",
+    "start": "                var result = await new PostgresInvestigationStore",
+    "end": "                return (result, null);"
+  },
+  "app-registration": {
+    "path": "backend/EchoCase.Application/DependencyInjection.cs",
+    "start": "        builder.Services.AddValidatorsFromAssembly",
+    "end": "        builder.Services.AddScoped<InvestigationService>"
+  },
+  "infra-scope": {
+    "path": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "start": "        builder.Services.AddSingleton(TimeProvider.System);",
+    "end": "    }\n}"
+  },
+  "web-openapi": {
+    "path": "backend/EchoCase.Api/DependencyInjection.cs",
+    "start": "        builder.Services.AddScoped<IUser",
+    "end": "    }\n}"
+  },
+  "endpoint-discovery": {
+    "path": "backend/EchoCase.Api/Infrastructure/WebApplicationExtensions.cs",
+    "start": "        var endpointGroupTypes",
+    "end": "        return app;"
+  },
+  "endpoint-naming": {
+    "path": "backend/EchoCase.Api/Infrastructure/EndpointRouteBuilderExtensions.cs",
+    "start": "    public static RouteHandlerBuilder MapPut",
+    "end": "    /// <inheritdoc",
+    "nextOccurrence": true
+  },
+  "api-save": {
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": "    public static async Task<IResult> SaveNotes",
+    "end": "    public static async Task<IResult> TransitionInvestigation"
+  },
+  "api-save-route": {
+    "path": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "start": "        group.MapPut(SaveNotes",
+    "end": "        group.MapPost(TransitionInvestigation"
+  },
+  "save-command": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "[Authorize] public sealed record SaveNotesCommand",
+    "end": "[Authorize] public sealed record TransitionInvestigationCommand"
+  },
+  "revise-command": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "[Authorize] public sealed record ReviseLinkCommand",
+    "end": "[Authorize] public sealed record RemoveLinkCommand"
+  },
+  "save-handler": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "public sealed class SaveNotesHandler",
+    "end": "public sealed class TransitionInvestigationHandler"
+  },
+  "revise-handler": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "public sealed class ReviseLinkHandler",
+    "end": "public sealed class RemoveLinkHandler"
+  },
+  "query-handler": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "public sealed class GetInvestigationHandler",
+    "end": "public sealed class StartInvestigationHandler"
+  },
+  "write-validator": {
+    "path": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "start": "public abstract class WriteCommandValidator",
+    "end": "public sealed class StartInvestigationValidator"
+  },
+  "authorization-identity": {
+    "path": "backend/EchoCase.Application/Common/Behaviours/AuthorizationBehaviour.cs",
+    "start": "        var authorizeAttributes =",
+    "end": "            // Role-based authorization"
+  },
+  "validation-dispatch": {
+    "path": "backend/EchoCase.Application/Common/Behaviours/ValidationBehaviour.cs",
+    "start": "        if (_validators.Any())",
+    "end": "        return await next();"
+  },
+  "logging-name": {
+    "path": "backend/EchoCase.Application/Common/Behaviours/LoggingBehaviour.cs",
+    "start": "        var requestName =",
+    "end": "    }\n}"
+  },
+  "performance-return": {
+    "path": "backend/EchoCase.Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "start": "        var response = await next();",
+    "end": "        return response;"
+  },
+  "current-user": {
+    "path": "backend/EchoCase.Api/Services/CurrentUser.cs",
+    "start": "    public string? Id",
+    "end": "\n\n}"
+  },
+  "identity-policy": {
+    "path": "backend/EchoCase.Infrastructure/Identity/IdentityService.cs",
+    "start": "    public async Task<bool> AuthorizeAsync",
+    "end": "    public async Task<Result> DeleteUserAsync"
+  },
+  "nswag-save-path": {
+    "path": "frontend/src/api/generated.ts",
+    "start": "    saveNotes(id: string, body: NotesRequest, signal?: AbortSignal): Promise<SessionView> {",
+    "end": "        const content_"
+  },
+  "nswag-save-method": {
+    "path": "frontend/src/api/generated.ts",
+    "start": "    saveNotes(id: string, body: NotesRequest, signal?: AbortSignal): Promise<SessionView> {",
+    "end": "    protected processSaveNotes"
+  },
+  "nswag-save-process": {
+    "path": "frontend/src/api/generated.ts",
+    "start": "    protected processSaveNotes",
+    "end": "    /**",
+    "nextOccurrence": true
+  },
+  "nswag-revise-signature": {
+    "path": "frontend/src/api/generated.ts",
+    "start": "    reviseLink(id: string, linkId: string, body: ReviseLinkRequest, signal?: AbortSignal): Promise<SessionView> {",
+    "end": "        let url_"
+  },
+  "nswag-verdict-signature": {
+    "path": "frontend/src/api/generated.ts",
+    "start": "    submitVerdict(id: string, body: VerdictRequest, signal?: AbortSignal): Promise<SessionView> {",
+    "end": "        let url_"
+  },
+  "adapter-headers": {
+    "path": "frontend/src/api/client.ts",
+    "start": "      if (write) headers.set",
+    "end": "      const response ="
+  },
+  "adapter-intent": {
+    "path": "frontend/src/api/client.ts",
+    "start": "export type Action =",
+    "end": "export function executeOperation"
+  },
+  "adapter-dispatch": {
+    "path": "frontend/src/api/client.ts",
+    "start": "      case \"revise-link\":",
+    "end": "      case \"unlink\":"
+  },
+  "query-dispatch": {
+    "path": "frontend/src/workspace/useInvestigation.ts",
+    "start": "    mutationFn:",
+    "end": "    onMutate:"
+  },
+  "workspace-revise": {
+    "path": "frontend/src/Workspace.tsx",
+    "start": "            onRevise={(linkId, body, version) =>",
+    "end": "          />"
+  },
+  "link-mutate": {
+    "path": "backend/EchoCase.Domain/Investigation.cs",
+    "start": "    internal void Revise(LinkKind",
+    "end": "\n}"
+  },
+  "slow-store-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "        public async Task<SessionView> WriteAsync",
+    "end": "    [Test]"
+  },
+  "slow-result-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "        var result = await Success(await Send(client, token, HttpMethod.Post, \"/api/investigations\"",
+    "end": "    [Test]"
+  },
+  "direct-sender-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "    public async Task TemplateAuthorizationProtectsDirectSenderWithoutHttpEndpoint",
+    "end": "    [Test]"
+  },
+  "validation-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "            var sender = scope.ServiceProvider.GetRequiredService<ISender>();",
+    "end": "        finally"
+  },
+  "former-owner-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "        // Fixture-only transfer:",
+    "end": "        var visibleToBob"
+  },
+  "model-drift-test": {
+    "path": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.Template.cs",
+    "start": "    public async Task TemplateIntegrationIntroducesNoDatabaseModelOrMigrationDrift",
+    "end": "\n}"
+  },
+  "bootstrap-registration": {
+    "path": "src/Application/DependencyInjection.cs",
+    "start": "        builder.Services.AddMediatR",
+    "end": "    }\n}",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "label": "官方生成比较（历史）"
+  },
+  "bootstrap-initializer": {
+    "path": "src/Infrastructure/Data/ApplicationDbContextInitialiser.cs",
+    "start": "            await _context.Database.EnsureDeletedAsync();",
+    "end": "        }",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "label": "官方样例（已移除）"
+  },
+  "bootstrap-performance": {
+    "path": "src/Application/Common/Behaviours/PerformanceBehaviour.cs",
+    "start": "            if (!string.IsNullOrEmpty(userId))",
+    "end": "            _logger.LogWarning",
+    "commit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+    "label": "官方原性能行为（历史）"
+  }
+}

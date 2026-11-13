@@ -1,0 +1,106 @@
+# 第 7 章 EF Core 跟踪器如何把对象变化变成 SQL
+
+关联修订在领域中只改变一个子对象，数据库却必须同时更新关系行和调查根版本。中间的桥梁不是 SaveChanges 这个方法名，而是 DbContext 所维护的实体身份、原始值、当前值、状态和关系。若无法解释这些内容，就很难分辨真正的并发冲突、错误映射和漏存修改。
+
+## 7.1 一个工作单元中的两种读取
+
+EchoCase 的 Get 和 List 是只读路径，采用 AsNoTracking；Write 则通过 Graph 加载带跟踪聚合。写路径需要记住根原来的 Version，后续 UPDATE 才能知道此次修改基于什么。只读展示不需要这些快照，所以选择减少跟踪负担。
+
+DbContext 适合短生命周期工作单元。它不是所有数据的持续镜像，跟踪中的对象也不会因为其他连接提交而自动刷新。把同一个上下文长期缓存，可能一直复用旧实例和旧原值。当前请求作用域使读取、领域决定和保存局限在一条可见链中。[跟踪概念](https://learn.microsoft.com/en-us/ef/core/change-tracking/)
+
+{{code model-collections}}
+
+私有列表不妨碍持久化。模型告诉 EF 使用字段访问导航，框架在实体物化和关系修复时能填充内部集合；业务调用仍只能从只读视图观察成员。持久化可以理解对象结构，不要求领域为数据库开放公共 setter。这里的 Discovery 和 EvidenceLink 是普通实体关系，并非 EF OwnsMany 的 owned 类型，二者不要混淆。
+
+## 7.2 身份解析先于变化比较
+
+{{figure ef-materialization}}
+
+单语句 JOIN 可能让同一个调查的根列在多行中重复出现。带跟踪查询通过实体主键解析身份，同一个键在当前上下文中对应同一个实例；导航与外键再把发现和关系接回根。若没有这种区分，重复根行可能变成几个相互矛盾的对象，修改哪一个都不明确。[身份解析](https://learn.microsoft.com/en-us/ef/core/change-tracking/identity-resolution)
+
+实体身份不等于对象引用地址。Guid 标识关系在持久世界中的连续性，引用标识本工作单元里正在修改的实例。将一个 DTO 重新 new 成同键实体，再把它附加到已经跟踪该键的上下文，会引入身份冲突，也容易丢失原值。EchoCase 选择先按 owner/id 加载真实图，再调用领域方法，避免让客户端提供一个任意“待附加实体图”。
+
+关系修复也不负责业务规则。EF 能根据外键把某条 Link 放到根集合，却不知道复核中禁止修订，或解释为什么至少二十个字符。能物化某个对象图，只说明映射允许表达它，不说明这组事实已经通过所有领域判断。
+
+## 7.3 当前值已经改变，状态为何仍是 Unchanged
+
+默认快照跟踪在实体进入上下文时记录值，之后在变更检测中比较当前值。普通 C# 属性赋值并不必然立即通知跟踪器。领域方法返回后，CLR 中的 Version 已从 4 变成 5，关系类型也已变化；若尚未扫描，跟踪条目仍可能显示 Unchanged。[快照与检测](https://learn.microsoft.com/en-us/ef/core/change-tracking/change-detection)
+
+{{figure ef-tracking}}
+
+图中的状态来自 2026 年 11 月 11 日的真实关联修订夹具。夹具关闭 AutoDetectChanges，以便分离扫描前后；不能把它理解成任意调试查看都一定保持 Unchanged。领域、映射和 Store 与当前基线内容一致，观测不是本次出版的新执行。扫描之前，根与关系均为 Unchanged；显式 DetectChanges 后，根的 UpdatedAt、Version 标为 Modified，子关系的 Kind、Rationale、RevisedAt 标为 Modified。根其他属性没有因“保存整个聚合”就全部标脏。
+
+这解释了一个容易误判的调试现场：看到 Unchanged 不能立刻说领域赋值失败，应同时看当前 CLR 属性、是否执行过检测，以及调试观察本身会不会触发检测。反过来，Modified 也不表示事务已经提交，它只说明 EF 准备产生持久化修改。对象变化、状态变化、SQL 执行和提交是四个时刻。
+
+## 7.4 原始 Version 如何进入条件
+
+{{code model-root}}
+
+IsConcurrencyToken 告诉 EF 在更新和删除时比较加载得到的原始值。它不会自动把 Version 加一；真正推进版本的是根的 Advance。当前值决定 SET 中的新值，原始值决定 WHERE 中的预期值。这两个数字即使属于同一属性，也在不同位置承担不同职责。
+
+真实生成语句中的核心部分如下，参数名称保留，值由驱动绑定。此次观察的根原值为 4，成功后为 5。
+
+```sql
+UPDATE "Investigations" SET "UpdatedAt" = @p0, "Version" = @p1
+WHERE "Id" = @p2 AND "Version" = @p3;
+UPDATE "Links" SET "Kind" = @p4, "Rationale" = @p5, "RevisedAt" = @p6
+WHERE "Id" = @p7;
+```
+
+子关系 UPDATE 的 WHERE 只有 Id，没有它自己的版本条件。它之所以受到并发保护，是因为同一事务还必须成功更新根。如果有人另写一条绕过根版本的子表更新路径，这份保护就不再成立。聚合的设计承诺必须由所有写路径共同遵守，映射中的单个属性配置不能替代它。
+
+## 7.5 预分配 Guid 与 Added 状态
+
+{{code model-links}}
+
+EvidenceLink 构造器自己生成 Guid，因此映射显式采用 ValueGeneratedNever。这个配置声明“键值已经由应用分配”，而不是把非默认键当成数据库已存在成员的信号。对已跟踪根中新发现的子实体，生成策略会影响状态推断；错误状态可能产生 UPDATE，影响零行之后表现为并发异常。[值生成配置](https://learn.microsoft.com/en-us/ef/core/modeling/generated-properties)
+
+{{figure ef-identity}}
+
+所以 DbUpdateConcurrencyException 的名字不等于“另一个用户一定改过数据”。它也可能说明框架更新了原本不存在的行。定位时应先问：这个成员本应新增还是更新，状态是 Added 还是 Modified，键由谁分配，生成 SQL 是否符合意图。若把映射错误一律解释成真实竞争并无限重试，只会重复错误语句。
+
+这里没有把所有 Guid 属性都改成 ValueGeneratedNever 的必要。规则针对实际由领域预先分配的关系身份，其他实体和键类型应按自己的创建路径判断。框架约定可以减少配置，但一旦领域身份策略与约定不同，就应明确表达。
+
+## 7.6 SaveChanges 与事务提交不是同一个事件
+
+{{figure ef-savecommit}}
+
+{{code store-save}}
+
+Store 先把命令结果投影成视图，再把回执与审计加进上下文，然后 SaveChanges 并显式 Commit。投影对象在内存中已经存在，并不意味着它可以提前交给客户端。只有提交成功，返回值才成为服务器对外确认的业务结果。
+
+关系提供者通常让单次 SaveChanges 的多条修改具有事务性，但当前协议的锁、加载与回执读取发生在保存之前，因此 Store 需要显式事务把这些阶段包括进来。尚未提交的事务在离开作用域时回滚；若丢失的是提交确认，则还需按结果未知分析。当前代码没有把一个可能已损坏跟踪状态的上下文拿去继续服务下一次请求。[事务边界](https://learn.microsoft.com/en-us/ef/core/saving/transactions)
+
+实际旧版本写入的观察显示，根的并发条件失败后，子关系尝试修改没有留存。这才是聚合保护的关键结果：不是捕获到某个异常就算完成，而是失败决定没有留下部分业务事实。下面再将状态种类、原始值与工作单元成本分别辨认清楚。
+
+## 7.7 用五种状态阅读一项业务操作
+
+跟踪器的状态是一套持久化语言。Detached 表示当前上下文不管理这个实例；Unchanged 表示已跟踪且尚未识别需写入的差异；Added 表示准备插入；Modified 表示已有实体的部分值需要更新；Deleted 表示准备删除。状态属于本上下文中的条目，不是业务 Status 的另一种写法。Submitted 调查在读取后也可以是 Unchanged，Active 调查在本次保存中可能是 Modified。
+
+{{figure ef-states}}
+
+把 Examine 放入这个模型，根已经被加载为 Unchanged，新 Discovery 进入集合，检测后新成员准备 INSERT，根的 Version 与 UpdatedAt 准备 UPDATE。把 ReviseLink 放入模型，成员已经存在，因此是属性更新而非新增。把删除关系放入模型，则应关注集合移除如何在已配置关系中变成删除，而不是看到集合数量减少就断言数据库行已经消失。
+
+状态的价值在于让预期变成可检查问题。新增关系失败时，首先应期待 Added 和 INSERT；修订关系失败时，期待稳定 Id 对应的 UPDATE；根没有 Modified 时，应追问哪个行为漏掉了 Advance。这样，诊断从业务意图走向状态，再走向 SQL，不会被单个异常名牵着走。
+
+## 7.8 三份值与一次真正的竞争
+
+{{figure ef-values}}
+
+同一个 Version 可以有三个观察值：上下文加载时的 original、领域改完后的 current、另一条数据库读取看到的 database。设 A 与 B 都加载 4，A 保存 5；B 的 original 仍是 4，current 也可能已被自己的决定推进到 5，数据库则是 A 的 5。这三个数字表面只出现 4 和 5，语义却完全不同。
+
+B 不能因为 current 等于数据库的 5 就认为自己的决定已经提交。current 表示它想写出的值，数据库的 5 属于 A；WHERE 应比较 original 4，正是为了识别这种同值不同来源。若用客户端传来的最新数字覆盖 OriginalValues，便可能抹掉检测竞争的依据。
+
+业务中常用时间戳猜测“谁更新得更晚”，但精度、时钟和并发来源都会增加歧义。应用版本在同一聚合内提供明确序列；原始值则把该序列与本工作单元的读取联系起来。两者合作，才能将一段跨时间的用户判断变成数据库可仲裁的条件。
+
+## 7.9 物化、变更检测、保存分别消耗什么
+
+物化把结果行转换成对象，身份解析与关系修复要处理重复根列；跟踪器为条目和原值保留内存；DetectChanges 要比较被跟踪图中的值与关系；保存再把变更组织成命令。减少 SQL 次数并不一定减少全部应用成本，因为一个很宽的 JOIN 仍可能让客户端处理大量重复数据。
+
+当前图上限小，所以完整加载与默认检测容易解释；只读路径不需要保留修改快照，故用 AsNoTracking。未来若把大量历史调查长期放入一个上下文，扫描和内存成本会增长，即使每次实际只改一条笔记。此时先缩小工作单元与查询形状，通常比盲目关闭自动检测更容易保证正确性。
+
+关闭检测是改变框架前提的选择，不是普通“性能开关”。漏掉扫描可能让 CLR 变化没有进入 SQL；手工批量设置状态又可能扩大 UPDATE 范围。任何这类优化都应能解释受影响实体的完整生命周期，并由实际生成命令校正，不能只比较某一次 SaveChanges 的耗时。
+
+最后，SaveChanges 默认 AcceptAllChanges，把成功发往数据库的当前值接受为跟踪基线，这与显式事务最终提交仍有先后。即使保存阶段已经把条目恢复为 Unchanged，提交确认依然可能失败。EchoCase 只在 CommitAsync 成功之后返回结果，并结束请求作用域，避免把跟踪状态误当成持久提交证明。这再次说明，同一工作单元里必须辨认每个观察时刻。[SaveChangesAsync 参数语义](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync?view=efcore-10.0)
+
+模板迁移没有把该工作单元改成样例保存拦截器。当前操作审计描述“哪个调查版本执行哪种行为”，并与回执一同提交；通用 CreatedBy/LastModifiedBy 元数据描述的是另一项事实。保留既有映射与迁移链，才能保留旧数据库和旧回执的意义。不能仅凭“模板也有审计”便认为可以无语义成本替换。

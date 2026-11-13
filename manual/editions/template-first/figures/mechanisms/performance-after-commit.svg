@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="590" viewBox="0 0 960 590">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="590" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">同样已经提交，辅助查询决定了交付是否又失败</text>
+<text x="30" y="88" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">历史模板的风险路径（源码推演）</text>
+<rect x="30" y="115" width="278" height="120" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="44" y="153" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">next 返回</text>
+<text x="44" y="195" font-family="Book" font-size="21" fill="#af543c" text-anchor="start">事务已提交</text>
+<rect x="340" y="115" width="278" height="120" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="354" y="153" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">慢分支查用户名</text>
+<text x="354" y="195" font-family="Book" font-size="21" fill="#af543c" text-anchor="start">额外数据库 I/O</text>
+<rect x="650" y="115" width="278" height="120" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="664" y="153" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">查询抛错</text>
+<text x="664" y="195" font-family="Book" font-size="21" fill="#af543c" text-anchor="start">成功被表现为错误</text>
+<line x1="312" y1="172" x2="335" y2="172" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="622" y1="172" x2="645" y2="172" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="30" y="292" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">当前路径与实际回归</text>
+<line x1="38" y1="394" x2="920" y2="394" stroke="#c8d7d3" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="40" y="349" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">预处理查名</text>
+<text x="40" y="378" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">调用次数 1</text>
+<text x="274" y="349" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">真实 Store</text>
+<text x="274" y="378" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">提交已完成</text>
+<text x="508" y="349" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">夹具延迟 600 ms</text>
+<text x="508" y="378" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">进入慢分支</text>
+<text x="742" y="349" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">只记录 UserId</text>
+<text x="742" y="378" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">返回成功</text>
+<text x="30" y="460" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">身份替身：第一次允许，第二次必抛错；修正后的行为没有第二次调用。</text>
+<text x="30" y="506" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">数据库观察：一项操作审计、一份回执；不是运行旧实现的失败复现。</text>
+<text x="30" y="554" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">移除可避免的提交后 I/O，仍保留网络交付未知时的原意图重试。</text>
+</svg>

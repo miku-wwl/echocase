@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="510" viewBox="0 0 960 510">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="510" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">模板来源与业务迁移，是两条相交的历史</text>
+<text x="30" y="91" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">业务线</text>
+<text x="30" y="260" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">官方线</text>
+<line x1="340" y1="337" x2="510" y2="337" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="170" y="94" width="285" height="118" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="188" y="129" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">早期自行实现</text>
+<text x="188" y="158" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">908811b：原业务已实现</text>
+<text x="188" y="188" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">未采用要求的模板基础</text>
+<rect x="520" y="260" width="390" height="128" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="538" y="295" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">实际生成 v10.8.0</text>
+<text x="538" y="324" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">上游 e5c08ec → 生成 f1df1a3</text>
+<text x="538" y="354" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">独立验证，保留样例局限</text>
+<line x1="715" y1="255" x2="715" y2="211" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="520" y="80" width="390" height="132" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="538" y="115" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">迁移并接受 9f68721</text>
+<text x="538" y="144" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">真实引入分派、行为、身份、端点</text>
+<text x="538" y="174" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">保留原聚合、数据与写入协议</text>
+<text x="170" y="306" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">CleanArchitecture</text>
+<text x="170" y="337" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">真实模板输入</text>
+<line x1="455" y1="153" x2="505" y2="153" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="32" y="438" font-family="Book" font-size="21" fill="#24766e" text-anchor="start">纠偏发生在实际生成之后；没有把早期实现追溯改称为模板项目。</text>
+<text x="32" y="476" font-family="Book" font-size="19" fill="#627477" text-anchor="start">图中仅标关键提交；完整不可变来源保存在教材参考资料。</text>
+</svg>

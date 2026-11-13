@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="670" viewBox="0 0 960 670">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="670" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">同一项承诺沿真实文件传递，而不是只沿目录传递</text>
+<rect x="30" y="80" width="900" height="74" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="110" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">稳定关系身份</text>
+<text x="300" y="109" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Investigation.ReviseLink</text>
+<text x="300" y="137" font-family="Book" font-size="19" fill="#627477" text-anchor="start">不重建 Guid / 不换端点</text>
+<line x1="155" y1="157" x2="155" y2="166" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="166" width="900" height="74" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="45" y="196" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">受保护的意图</text>
+<text x="300" y="195" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Requests.cs：Command / Handler</text>
+<text x="300" y="223" font-family="Book" font-size="19" fill="#627477" text-anchor="start">IUser + Key + Version + Body</text>
+<line x1="155" y1="243" x2="155" y2="252" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="252" width="900" height="74" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="282" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">事务协议</text>
+<text x="300" y="281" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Investigations.cs → Postgres Store</text>
+<text x="300" y="309" font-family="Book" font-size="19" fill="#627477" text-anchor="start">指纹 / owner / 回执 / CAS</text>
+<line x1="155" y1="329" x2="155" y2="338" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="338" width="900" height="74" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="45" y="368" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">兼容数据</text>
+<text x="300" y="367" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">EchoDbContext + LinkRevisionExplanation</text>
+<text x="300" y="395" font-family="Book" font-size="19" fill="#627477" text-anchor="start">可空列 / 原迁移链 / 旧 JSON</text>
+<line x1="155" y1="415" x2="155" y2="424" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="424" width="900" height="74" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="454" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">跨语言合同</text>
+<text x="300" y="453" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Endpoints → openapi.json → generated.ts</text>
+<text x="300" y="481" font-family="Book" font-size="19" fill="#627477" text-anchor="start">ReviseLink → reviseLink</text>
+<line x1="155" y1="501" x2="155" y2="510" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="510" width="900" height="74" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="45" y="540" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">用户确认</text>
+<text x="300" y="539" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">LinkEditor → Workspace → Query</text>
+<text x="300" y="567" font-family="Book" font-size="19" fill="#627477" text-anchor="start">冻结基线 / SDK / 保留失败草稿</text>
+<text x="30" y="640" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">每条边连接一项用户承诺；验证沿身份、原子性、兼容和确认分别观察。</text>
+</svg>

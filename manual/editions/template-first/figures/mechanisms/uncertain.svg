@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="525" viewBox="0 0 960 525">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="525" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">结果未知：沿原意图再次询问，而不是发明新决定</text>
+<text x="30" y="95" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">服务器</text>
+<text x="345" y="95" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">浏览器传输与解析</text>
+<text x="690" y="95" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">本地意图</text>
+<rect x="30" y="126" width="260" height="122" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="163" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">Commit + Receipt</text>
+<text x="45" y="209" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">业务已经成立</text>
+<rect x="345" y="126" width="290" height="122" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="362" y="163" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">断线 / 成功正文解析失败</text>
+<text x="362" y="209" font-family="Book" font-size="22" fill="#af543c" text-anchor="start">ApiError status = 0</text>
+<rect x="690" y="126" width="240" height="122" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="705" y="163" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">保留 Operation</text>
+<text x="705" y="209" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">禁止不同写入</text>
+<line x1="295" y1="182" x2="339" y2="182" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="640" y1="182" x2="684" y2="182" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="808" y1="254" x2="808" y2="315" stroke="#627477" stroke-width="2"/>
+<line x1="808" y1="315" x2="155" y2="315" stroke="#627477" stroke-width="2"/>
+<line x1="155" y1="315" x2="155" y2="254" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="250" y="351" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">同 Key + 同 Version + 同目标 + 同 Body</text>
+<text x="30" y="410" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">旧回执确认过去；Query 仍拒绝低版本倒退，草稿按代次与基线确认。</text>
+<text x="30" y="466" font-family="Book" font-size="20" fill="#627477" text-anchor="start">范围：不验证所有合法 JSON 形状；一般 5xx 与页面重启未统一持久恢复。</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="550" viewBox="0 0 960 550">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="550" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">同一生成基础，不同机制有不同迁移决定</text>
+<text x="30" y="92" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">决定</text>
+<text x="225" y="92" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">来自模板的机制</text>
+<text x="580" y="92" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">当前 EchoCase 的落点</text>
+<rect x="28" y="112" width="904" height="54" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="147" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">保留</text>
+<text x="225" y="147" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">MediatR / Validation / DI</text>
+<text x="580" y="147" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">请求行为与程序集扫描</text>
+<rect x="28" y="172" width="904" height="54" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="207" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">保留</text>
+<text x="225" y="207" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">端点组 / IUser / Identity</text>
+<text x="580" y="207" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">发现、命名与当前用户端口</text>
+<rect x="28" y="232" width="904" height="54" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="44" y="267" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">适配</text>
+<text x="225" y="267" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">应用 DbContext / 样例实体</text>
+<text x="580" y="267" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Guid 聚合 + IInvestigationStore</text>
+<rect x="28" y="292" width="904" height="54" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="44" y="327" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">适配</text>
+<text x="225" y="327" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">保存审计与事件示例</text>
+<text x="580" y="327" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">原有 Audit / Receipt 同事务</text>
+<rect x="28" y="352" width="904" height="54" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="387" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">移除</text>
+<text x="225" y="387" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Aspire / Todo / Weather</text>
+<text x="580" y="387" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">不进入活动业务与仓库范围</text>
+<rect x="28" y="412" width="904" height="54" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="447" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">移除</text>
+<text x="225" y="447" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">样例删库初始化 / seed</text>
+<text x="580" y="447" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">既有迁移链；不重建业务数据</text>
+<text x="30" y="518" font-family="Book" font-size="21" fill="#24766e" text-anchor="start">保留的是执行机制；选择性适配不是“从未真正初始化模板”。</text>
+</svg>

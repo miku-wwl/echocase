@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="460" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">处理器临时创建，工作单元仍由请求作用域拥有</text>
+<rect x="28" y="82" width="432" height="300" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<text x="46" y="118" font-family="BookBold" font-size="24" fill="#173c44" text-anchor="start">请求 A</text>
+<text x="46" y="166" font-family="Book" font-size="23" fill="#173c44" text-anchor="start">Transient Handler</text>
+<line x1="243" y1="175" x2="243" y2="198" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="46" y="205" width="396" height="145" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="61" y="239" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">同一 scoped 服务链</text>
+<text x="61" y="278" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">IUser → Service → Store</text>
+<text x="61" y="317" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">唯一 DbContext / 跟踪快照</text>
+<rect x="500" y="82" width="432" height="300" rx="9" fill="#ffffff" stroke="#c8d7d3"/>
+<text x="518" y="118" font-family="BookBold" font-size="24" fill="#173c44" text-anchor="start">请求 B</text>
+<text x="518" y="166" font-family="Book" font-size="23" fill="#173c44" text-anchor="start">Transient Handler</text>
+<line x1="715" y1="175" x2="715" y2="198" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="518" y="205" width="396" height="145" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="533" y="239" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">同一 scoped 服务链</text>
+<text x="533" y="278" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">IUser → Service → Store</text>
+<text x="533" y="317" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">唯一 DbContext / 跟踪快照</text>
+<text x="30" y="421" font-family="Book" font-size="21" fill="#24766e" text-anchor="start">A 与 B 不共享跟踪对象；TimeProvider 可单例，共享时钟不共享实体。</text>
+</svg>

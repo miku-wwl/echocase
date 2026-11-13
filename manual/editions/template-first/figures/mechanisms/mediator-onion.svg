@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="675" viewBox="0 0 960 675">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="675" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">Send 的嵌套：进入顺序与返回顺序相反</text>
+<rect x="30" y="78" width="900" height="545" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="112" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">RequestPreProcessorBehavior：先 Logging</text>
+<rect x="58" y="153" width="844" height="461" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="74" y="187" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">UnhandledException：记录并重抛</text>
+<rect x="86" y="228" width="788" height="377" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="102" y="262" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Authorization：当前身份 / 可选角色策略</text>
+<rect x="114" y="303" width="732" height="293" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="130" y="337" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Validation：请求形状规则</text>
+<rect x="142" y="378" width="676" height="209" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="158" y="412" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Performance：计时只包内层 Handler</text>
+<rect x="170" y="453" width="620" height="125" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="186" y="487" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Handler → Service → Store</text>
+<text x="210" y="552" font-family="Book" font-size="21" fill="#24766e" text-anchor="start">Store 才拥有事务；通用行为不自动开事务</text>
+<text x="30" y="656" font-family="Book" font-size="18" fill="#627477" text-anchor="start">Logging 的失败不在内侧 UnhandledException 包围内；HTTP 外围仍可捕获。</text>
+</svg>

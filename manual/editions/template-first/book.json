@@ -1,0 +1,27 @@
+{
+  "id": "template-first",
+  "title": "企业级 .NET 全栈软件工程：官方 Clean Architecture 模板、数据一致性与 React 状态管理",
+  "subtitle": "从一条真实修订请求理解框架、事务与浏览器中的决定",
+  "edition": "Template-First Revised Edition · November 2026",
+  "publicationDate": "2026-11-13",
+  "sourceCommit": "9f68721e18f15ae603e6502fa46b8fa78f9df55c",
+  "templateVersion": "Clean.Architecture.Solution.Template@10.8.0",
+  "upstreamCommit": "e5c08ecead8a52f6cf519477bf6c57668248c035",
+  "bootstrapCommit": "f1df1a3c3b95bae184600a0ccef629eccaa18080",
+  "repository": "https://github.com/miku-wwl/echocase",
+  "chapterRoot": "editions/template-first/chapters",
+  "figureCatalog": "editions/template-first/figures/catalog.json",
+  "sourceSelections": "editions/template-first/source-selections.json",
+  "output": "dist/Enterprise-Full-Stack-Engineering-Template-First.pdf",
+  "buildDirectory": "build/template-first",
+  "verifyWorkingTree": true,
+  "invariantPdf": true,
+  "chapters": [
+    "00-preface.md", "01-requirements.md", "02-clean-architecture.md",
+    "03-domain.md", "04-request-pipeline.md", "05-cqrs.md", "06-api.md",
+    "07-persistence.md", "08-schema-evolution.md", "09-mvcc.md",
+    "10-concurrency.md", "11-idempotency.md", "12-security.md",
+    "13-react.md", "14-server-state.md", "15-drafts.md", "16-graph.md",
+    "17-performance.md", "18-testing.md", "19-evolution.md", "20-reasoning.md", "21-reference.md"
+  ]
+}

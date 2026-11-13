@@ -1,0 +1,572 @@
+[
+  {
+    "chapter": "01-requirements.md",
+    "id": "domain-start",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Domain/Investigation.cs",
+    "historicalSHA256": "9a5a4ff0e17ec0d2abfde30cab627603f7dcd2c011a3bc41c2931dd14a553ecc",
+    "revisedPath": "backend/EchoCase.Domain/Investigation.cs",
+    "revisedSHA256": "9a5a4ff0e17ec0d2abfde30cab627603f7dcd2c011a3bc41c2931dd14a553ecc",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "01-requirements.md",
+    "id": "app-presenter",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "80bc03e2102b8668698dda30f50057f6b49c14fca78df37b573553e9be082001",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "80bc03e2102b8668698dda30f50057f6b49c14fca78df37b573553e9be082001",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "02-clean-architecture.md",
+    "id": "app-port",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "4d10cd9a10518548364b8474d22cf4965b5d721418f18e31284f7bb6105eb392",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "4d10cd9a10518548364b8474d22cf4965b5d721418f18e31284f7bb6105eb392",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "02-clean-architecture.md",
+    "id": "api-di",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "9488133956bb238f5e2982e9772b8b5428f46c55deb68e4f34bb403e6b08b4fb",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "74c524756abd1267e8adb495310423075f9d5da926c454ff1845cd0dc8f03b20",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "03-domain.md",
+    "id": "domain-transitions",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Domain/Investigation.cs",
+    "historicalSHA256": "35e1a88d1ebf0fe12a132d59edac82488359226d144b6657d1f7f054c926fea7",
+    "revisedPath": "backend/EchoCase.Domain/Investigation.cs",
+    "revisedSHA256": "35e1a88d1ebf0fe12a132d59edac82488359226d144b6657d1f7f054c926fea7",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "03-domain.md",
+    "id": "domain-link",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Domain/Investigation.cs",
+    "historicalSHA256": "cf036fbd5b1d1b6d67a19788e353a6473588691b34238aefcac039d789a1878b",
+    "revisedPath": "backend/EchoCase.Domain/Investigation.cs",
+    "revisedSHA256": "cf036fbd5b1d1b6d67a19788e353a6473588691b34238aefcac039d789a1878b",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "03-domain.md",
+    "id": "domain-revise",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Domain/Investigation.cs",
+    "historicalSHA256": "94f8e12cdaa675e9fdc6f92e9ceee8a3f98346c6ec895f9678cba16afccb23bc",
+    "revisedPath": "backend/EchoCase.Domain/Investigation.cs",
+    "revisedSHA256": "94f8e12cdaa675e9fdc6f92e9ceee8a3f98346c6ec895f9678cba16afccb23bc",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "03-domain.md",
+    "id": "domain-submit",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Domain/Investigation.cs",
+    "historicalSHA256": "8d809ad42e3499e70009481c8122ed0c5d17a35eb4635bd0a361bb6bb0853287",
+    "revisedPath": "backend/EchoCase.Domain/Investigation.cs",
+    "revisedSHA256": "8d809ad42e3499e70009481c8122ed0c5d17a35eb4635bd0a361bb6bb0853287",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "04-request-pipeline.md",
+    "id": "api-pipeline",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "b43fb7a791846141a6f77bb55f7c0755364f0ba523afe7581c9a6b9e92505cf5",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "b43fb7a791846141a6f77bb55f7c0755364f0ba523afe7581c9a6b9e92505cf5",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "04-request-pipeline.md",
+    "id": "api-route",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "c50f044c530a802d16705b57068d28318de709077cd5ce479290da5e8c2944fa",
+    "revisedPath": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "revisedSHA256": "0f4a904e9c5cf854acb03e9ba7e64567d12469b87be098b8885b110229e5dafb",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "04-request-pipeline.md",
+    "id": "api-json",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "c527ab89ac1de572cf3a25b2f7c36437a442bf9ff446a62a1f0173ac265093b6",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "c527ab89ac1de572cf3a25b2f7c36437a442bf9ff446a62a1f0173ac265093b6",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "04-request-pipeline.md",
+    "id": "api-faults",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "9684dd9ef2789359ec2edd60a3e0ece0cffb36ec192f3fd3ebaa9e26ffa42c6d",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "6956ea4e9f856c7e7ba130ef5baa07fb58c48775bbc6537933a77e93b6224e31",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "04-request-pipeline.md",
+    "id": "api-trace",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "2c039f68deb9f11562f90a08cced2bdc09871e1576d0e1b33db02c1aedf65abb",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "2c039f68deb9f11562f90a08cced2bdc09871e1576d0e1b33db02c1aedf65abb",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "05-cqrs.md",
+    "id": "app-revise",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "ac974fb1f49bd2b528688ef597019ed8559c314dc56f993717b969a12a77cfd1",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "ac974fb1f49bd2b528688ef597019ed8559c314dc56f993717b969a12a77cfd1",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "05-cqrs.md",
+    "id": "app-fingerprint",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "7e8ce4150796aed2946e29a10f67a73a3ad98047066b1641e8dcd53d8c40cd41",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "7e8ce4150796aed2946e29a10f67a73a3ad98047066b1641e8dcd53d8c40cd41",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "05-cqrs.md",
+    "id": "app-time",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "b50e4b4846f7965fc58cfbae79b37f9d9a292bd782f9dc3d11c73f620e9925fe",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "b50e4b4846f7965fc58cfbae79b37f9d9a292bd782f9dc3d11c73f620e9925fe",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "06-api.md",
+    "id": "api-version",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "b4ea5e90bdf0aa015aacad42585c7499d53150748682895b8e14ff83e704d994",
+    "revisedPath": "backend/EchoCase.Api/Endpoints/Investigations.cs",
+    "revisedSHA256": "fb112dc82a79456f652d10bf28e3e74edf4d4a88345f4ad1af3fe84a1edee2f8",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "06-api.md",
+    "id": "store-read",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "11273dccac4f5dc02fbe9a57a1ec272772e1a4f8257854db4ba94d4987066484",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "11273dccac4f5dc02fbe9a57a1ec272772e1a4f8257854db4ba94d4987066484",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "07-persistence.md",
+    "id": "model-collections",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "historicalSHA256": "eb73b8eebf5e2dbb8240a115ab9eb983e95036ac418e67ceeaa3a97a7f45cb6e",
+    "revisedPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "revisedSHA256": "eb73b8eebf5e2dbb8240a115ab9eb983e95036ac418e67ceeaa3a97a7f45cb6e",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "07-persistence.md",
+    "id": "model-root",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "historicalSHA256": "96f33d6f64e950c936b7d76d0e8c2df1a5c0f28bc6ddb57d655e02994cf1c1a2",
+    "revisedPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "revisedSHA256": "96f33d6f64e950c936b7d76d0e8c2df1a5c0f28bc6ddb57d655e02994cf1c1a2",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "07-persistence.md",
+    "id": "model-links",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "historicalSHA256": "c8d8322a1b46f3d157a88adb5965611f76e5e60df9fb05e9f0527799b1db54f4",
+    "revisedPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "revisedSHA256": "c8d8322a1b46f3d157a88adb5965611f76e5e60df9fb05e9f0527799b1db54f4",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "07-persistence.md",
+    "id": "store-save",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "d0424cc4d66ed9d381c3132a77d5972bd545cf1cffead2f23e7eea9825461c7b",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "d0424cc4d66ed9d381c3132a77d5972bd545cf1cffead2f23e7eea9825461c7b",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "08-schema-evolution.md",
+    "id": "migration-columns",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+    "historicalSHA256": "17a5ed2f878323462eddb771b4943dee9aeeccc6fe355f5d67c98b93dbef84bf",
+    "revisedPath": "backend/EchoCase.Infrastructure/Migrations/20261111060117_LinkRevisionExplanation.cs",
+    "revisedSHA256": "17a5ed2f878323462eddb771b4943dee9aeeccc6fe355f5d67c98b93dbef84bf",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "08-schema-evolution.md",
+    "id": "app-linkview",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "63bb45bed5e13f29c75290562923ac02b6bb2e13372c9ed42c5b3d81c11f5189",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "63bb45bed5e13f29c75290562923ac02b6bb2e13372c9ed42c5b3d81c11f5189",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "08-schema-evolution.md",
+    "id": "app-time",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Application/Investigations.cs",
+    "historicalSHA256": "b50e4b4846f7965fc58cfbae79b37f9d9a292bd782f9dc3d11c73f620e9925fe",
+    "revisedPath": "backend/EchoCase.Application/Investigations.cs",
+    "revisedSHA256": "b50e4b4846f7965fc58cfbae79b37f9d9a292bd782f9dc3d11c73f620e9925fe",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "09-mvcc.md",
+    "id": "store-lock",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "0529e5c8825b2702623ea8b32ec589b1d67bd429046ec34884cc40c6a1b75526",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "0529e5c8825b2702623ea8b32ec589b1d67bd429046ec34884cc40c6a1b75526",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "10-concurrency.md",
+    "id": "store-receipt",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "341e9e72f0f7018e4b886a75a15dde50ad0fb8e09b8735f5499f6a2e95a4156b",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "341e9e72f0f7018e4b886a75a15dde50ad0fb8e09b8735f5499f6a2e95a4156b",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "10-concurrency.md",
+    "id": "store-conflicts",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "97475345ae0146d5739ec87649f9b666c5f7d436efa0b1716d1aa6febfc76081",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "97475345ae0146d5739ec87649f9b666c5f7d436efa0b1716d1aa6febfc76081",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "11-idempotency.md",
+    "id": "model-receipt",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "historicalSHA256": "52aee9f82795e3de1016645485868fd5f15428ad5e89ba13207eac03e3037166",
+    "revisedPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "revisedSHA256": "52aee9f82795e3de1016645485868fd5f15428ad5e89ba13207eac03e3037166",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "11-idempotency.md",
+    "id": "client-fetch",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/api/client.ts",
+    "historicalSHA256": "2e93672f16becc463bd7bb4de30a570a6896bddadee8a8e75be5223043a2626f",
+    "revisedPath": "frontend/src/api/client.ts",
+    "revisedSHA256": "9b527c51d5cd761e0aefb635b6af9e6cba2243fe26e472bf02aab06d2d490e9b",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "11-idempotency.md",
+    "id": "client-body",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/api/client.ts",
+    "historicalSHA256": "8c6e5f582092ca25905eb98d0db4b45776d5445011da5c34dbabb9b0cf13bafa",
+    "revisedPath": "frontend/src/api/client.ts",
+    "revisedSHA256": "7f12f309b3feb91af860f823078f89aeba0930f16b2c30fdf7aabb068f3ca92a",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "11-idempotency.md",
+    "id": "query-uncertain",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useInvestigation.ts",
+    "historicalSHA256": "b92dc3363b8974fc73f2e77ab6948a616a7d580a4acc0acf6a804ac87d3fe91b",
+    "revisedPath": "frontend/src/workspace/useInvestigation.ts",
+    "revisedSHA256": "b92dc3363b8974fc73f2e77ab6948a616a7d580a4acc0acf6a804ac87d3fe91b",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "12-security.md",
+    "id": "api-login",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "af0938203ce324930c347979ce65e9221c093edf74e5e589548b2949a24ff6ef",
+    "revisedPath": "backend/EchoCase.Api/Program.cs",
+    "revisedSHA256": "af0938203ce324930c347979ce65e9221c093edf74e5e589548b2949a24ff6ef",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "12-security.md",
+    "id": "api-cookie",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "df36deefbe34950c41f5d5c747213b798a4f2d1c8625e78c4f3e32b6ceaaebb4",
+    "revisedPath": "backend/EchoCase.Infrastructure/DependencyInjection.cs",
+    "revisedSHA256": "08293a4b34192fea5fafd03be7af3425e64660765e8900dc601925bbd3eb1987",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "12-security.md",
+    "id": "api-owner",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Api/Program.cs",
+    "historicalSHA256": "030bf5a262a5a2aa5b944c394f2bf9a4de700a8e41073543f8c986cbfdfaabbf",
+    "revisedPath": "backend/EchoCase.Application/Investigations/Requests.cs",
+    "revisedSHA256": "4d7d84b55a6454140513777a3fdfc30df0b686f24fc12baa297ef11a541f4e05",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "13-react.md",
+    "id": "react-root",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/main.tsx",
+    "historicalSHA256": "fc12dfe9da5c36ea0b2df34c44631804fd536b9e01d11087f558d6d52ee52177",
+    "revisedPath": "frontend/src/main.tsx",
+    "revisedSHA256": "fc12dfe9da5c36ea0b2df34c44631804fd536b9e01d11087f558d6d52ee52177",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "13-react.md",
+    "id": "react-workspace",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/App.tsx",
+    "historicalSHA256": "239db3bec66dc0e72105f7ba043c0d25ed50728cf27cf4c7857606fab1c38c85",
+    "revisedPath": "frontend/src/App.tsx",
+    "revisedSHA256": "239db3bec66dc0e72105f7ba043c0d25ed50728cf27cf4c7857606fab1c38c85",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "13-react.md",
+    "id": "button-contract",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/components/ui/button.tsx",
+    "historicalSHA256": "5a1fd899ef14e94c5e4df277c1cddcfc9d4f1ebe882f487197b9f9c76222d5f4",
+    "revisedPath": "frontend/src/components/ui/button.tsx",
+    "revisedSHA256": "5a1fd899ef14e94c5e4df277c1cddcfc9d4f1ebe882f487197b9f9c76222d5f4",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "14-server-state.md",
+    "id": "query-get",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useInvestigation.ts",
+    "historicalSHA256": "e99c537747f75f515148976ea312a9ab980d1d56f0f89dcb502a36041f5ce3f3",
+    "revisedPath": "frontend/src/workspace/useInvestigation.ts",
+    "revisedSHA256": "ba8a7a96fde31da7f905e3e88e7bafa76a2f22092e510f07f9ff2a104c873566",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "14-server-state.md",
+    "id": "query-latest",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useInvestigation.ts",
+    "historicalSHA256": "353ad4e782b6aea0fa1d6dd9693fa94b7b88cf607c4401b1fbb00de99544d918",
+    "revisedPath": "frontend/src/workspace/useInvestigation.ts",
+    "revisedSHA256": "353ad4e782b6aea0fa1d6dd9693fa94b7b88cf607c4401b1fbb00de99544d918",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "14-server-state.md",
+    "id": "query-mutation",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useInvestigation.ts",
+    "historicalSHA256": "8efaf09e1da33756d3e62980a60b9cd038ebf124b9d34c35615cc08bfc372a3f",
+    "revisedPath": "frontend/src/workspace/useInvestigation.ts",
+    "revisedSHA256": "8efaf09e1da33756d3e62980a60b9cd038ebf124b9d34c35615cc08bfc372a3f",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "14-server-state.md",
+    "id": "notes-pending",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/NotesEditor.tsx",
+    "historicalSHA256": "40a4d7f43bd28ccf0e6e51ca07a3d32bcdf40d3cd4304a12e0fefe4b5db0929f",
+    "revisedPath": "frontend/src/workspace/NotesEditor.tsx",
+    "revisedSHA256": "479bb3a0d0224215a14bce0b51e0886c5beb62ec7e57ba61498780af20d03f09",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "15-drafts.md",
+    "id": "draft-initial",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useNotesDraft.ts",
+    "historicalSHA256": "8b11721c666341025a5be8a1f93866d3c347d3d9ee9663aee9fe31599573e7a6",
+    "revisedPath": "frontend/src/workspace/useNotesDraft.ts",
+    "revisedSHA256": "8b11721c666341025a5be8a1f93866d3c347d3d9ee9663aee9fe31599573e7a6",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "15-drafts.md",
+    "id": "draft-edit",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useNotesDraft.ts",
+    "historicalSHA256": "16bf46cb5250387efb64b5d2df51c9d753d1e31f3d166e5a9f29280447e6f2cd",
+    "revisedPath": "frontend/src/workspace/useNotesDraft.ts",
+    "revisedSHA256": "16bf46cb5250387efb64b5d2df51c9d753d1e31f3d166e5a9f29280447e6f2cd",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "15-drafts.md",
+    "id": "draft-operation",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useNotesDraft.ts",
+    "historicalSHA256": "456b37d4aff981df0948ddb15851b75e41b1c78c6d527edc76957b4409f5c61b",
+    "revisedPath": "frontend/src/workspace/useNotesDraft.ts",
+    "revisedSHA256": "0334937b7bfb78cb2c2d21b2bcfcc1555d3f5284555ce8f843ba682a133faa32",
+    "textUnchanged": false
+  },
+  {
+    "chapter": "15-drafts.md",
+    "id": "draft-ack",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useNotesDraft.ts",
+    "historicalSHA256": "8c00cc3f77497c4959d2894307967e8022320586fbda79d85a1d5cfa6e18bf3d",
+    "revisedPath": "frontend/src/workspace/useNotesDraft.ts",
+    "revisedSHA256": "8c00cc3f77497c4959d2894307967e8022320586fbda79d85a1d5cfa6e18bf3d",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "15-drafts.md",
+    "id": "draft-refresh",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/useNotesDraft.ts",
+    "historicalSHA256": "4a6766dcf07e35ba4a0db0b1fa1e5b4199265261de9eab0ed52432459a86825c",
+    "revisedPath": "frontend/src/workspace/useNotesDraft.ts",
+    "revisedSHA256": "4a6766dcf07e35ba4a0db0b1fa1e5b4199265261de9eab0ed52432459a86825c",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "16-graph.md",
+    "id": "graph-position",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/EvidenceGraph.tsx",
+    "historicalSHA256": "371e75462f6cba896dd7a0de8c8e47486c164b3895427200d8efe0364de5e95a",
+    "revisedPath": "frontend/src/EvidenceGraph.tsx",
+    "revisedSHA256": "371e75462f6cba896dd7a0de8c8e47486c164b3895427200d8efe0364de5e95a",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "16-graph.md",
+    "id": "graph-edges",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/EvidenceGraph.tsx",
+    "historicalSHA256": "bf1975e720e64fa60788c679888a84000ef2f14ce53fe88302c6ea1b92506115",
+    "revisedPath": "frontend/src/EvidenceGraph.tsx",
+    "revisedSHA256": "bf1975e720e64fa60788c679888a84000ef2f14ce53fe88302c6ea1b92506115",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "16-graph.md",
+    "id": "link-baseline",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/LinkEditor.tsx",
+    "historicalSHA256": "184c4f551553b5685b57f5c673ff155bdf0ecd6f7a72d5ff23017f3647967fd1",
+    "revisedPath": "frontend/src/workspace/LinkEditor.tsx",
+    "revisedSHA256": "184c4f551553b5685b57f5c673ff155bdf0ecd6f7a72d5ff23017f3647967fd1",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "16-graph.md",
+    "id": "link-save",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "frontend/src/workspace/LinkEditor.tsx",
+    "historicalSHA256": "090175309260af788ba1306eae26cf3ce63a5832e88b6bf3ec5763b9cc43fc5f",
+    "revisedPath": "frontend/src/workspace/LinkEditor.tsx",
+    "revisedSHA256": "090175309260af788ba1306eae26cf3ce63a5832e88b6bf3ec5763b9cc43fc5f",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "17-performance.md",
+    "id": "store-list",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "historicalSHA256": "7a9eb559eba4fcd03738b41a5ef12e639ac21e9750cec7d3866aa694eff40b1c",
+    "revisedPath": "backend/EchoCase.Infrastructure/PostgresInvestigationStore.cs",
+    "revisedSHA256": "7a9eb559eba4fcd03738b41a5ef12e639ac21e9750cec7d3866aa694eff40b1c",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "17-performance.md",
+    "id": "model-index",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "historicalSHA256": "438dbc0feaf8b6dceee2250b682feb38f7d3ecefa98a6faf68601f52d2b5e354",
+    "revisedPath": "backend/EchoCase.Infrastructure/EchoDbContext.cs",
+    "revisedSHA256": "438dbc0feaf8b6dceee2250b682feb38f7d3ecefa98a6faf68601f52d2b5e354",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "18-testing.md",
+    "id": "unit-revision",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "historicalSHA256": "373fe3c30b751e16923e2fd0bcf63ef2de3cb70ada58d03d8d70bddda257f581",
+    "revisedPath": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "revisedSHA256": "373fe3c30b751e16923e2fd0bcf63ef2de3cb70ada58d03d8d70bddda257f581",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "18-testing.md",
+    "id": "unit-unicode",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "historicalSHA256": "43b99b797d41f94fd3d585c1bdfea5962ee25cf908b0a32d2da2dc6ee4e83ebd",
+    "revisedPath": "test/unit/EchoCase.UnitTests/LinkRevisionTests.cs",
+    "revisedSHA256": "43b99b797d41f94fd3d585c1bdfea5962ee25cf908b0a32d2da2dc6ee4e83ebd",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "18-testing.md",
+    "id": "integration-race",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs",
+    "historicalSHA256": "f82d410d96fd5282ea87eab972a2fd8f415f985190de477578cf7224f5267f24",
+    "revisedPath": "test/integration/EchoCase.IntegrationTests/PostgresApiTests.LinkRevision.cs",
+    "revisedSHA256": "f82d410d96fd5282ea87eab972a2fd8f415f985190de477578cf7224f5267f24",
+    "textUnchanged": true
+  },
+  {
+    "chapter": "18-testing.md",
+    "id": "e2e-delay",
+    "historicalCommit": "908811b95fb40cf14fa79b8eddf41796aa02cc04",
+    "historicalPath": "test/e2e/specs/consistency.spec.ts",
+    "historicalSHA256": "564833aef8e9a5c970bfdf8b20bec37ceedb4f33954937844b166e281a8e1b8b",
+    "revisedPath": "test/e2e/specs/consistency.spec.ts",
+    "revisedSHA256": "564833aef8e9a5c970bfdf8b20bec37ceedb4f33954937844b166e281a8e1b8b",
+    "textUnchanged": true
+  }
+]

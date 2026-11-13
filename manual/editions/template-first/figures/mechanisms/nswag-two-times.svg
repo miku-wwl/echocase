@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="665" viewBox="0 0 960 665">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="665" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">构建阶段生成合同；运行阶段传递意图</text>
+<text x="30" y="92" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">构建与合同更新</text>
+<rect x="30" y="115" width="180" height="127" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="42" y="151" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">命名端点</text>
+<text x="42" y="188" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">operationId</text>
+<line x1="214" y1="177" x2="264" y2="177" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="270" y="115" width="180" height="127" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="282" y="151" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">OpenAPI 3.0</text>
+<text x="282" y="188" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">frontend/</text>
+<text x="282" y="217" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">openapi.json</text>
+<line x1="454" y1="177" x2="504" y2="177" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="510" y="115" width="180" height="127" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="522" y="151" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">NSwag 14.8.0</text>
+<text x="522" y="188" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">Fetch</text>
+<text x="522" y="217" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">DTO Interface</text>
+<line x1="694" y1="177" x2="744" y2="177" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="750" y="115" width="180" height="127" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="762" y="151" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">generated.ts</text>
+<text x="762" y="188" font-family="Book" font-size="18" fill="#173c44" text-anchor="start">可调用客户端</text>
+<line x1="30" y1="281" x2="930" y2="281" stroke="#c8d7d3" stroke-width="2"/>
+<text x="30" y="322" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">浏览器运行（没有即时生成）</text>
+<rect x="30" y="344" width="900" height="57" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="379" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">React 组件 / Query</text>
+<text x="455" y="379" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">草稿、缓存、等待、原操作身份</text>
+<line x1="240" y1="403" x2="240" y2="410" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="410" width="900" height="57" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="445" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">executeOperation → 生成 SDK</text>
+<text x="455" y="445" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">kind 选择方法；SDK 编码路径与正文</text>
+<line x1="240" y1="469" x2="240" y2="476" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="476" width="900" height="57" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="45" y="511" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">注入 fetch：apiCall 适配器</text>
+<text x="455" y="511" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Cookie / CSRF / Key / If-Match / signal</text>
+<line x1="240" y1="535" x2="240" y2="542" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="542" width="900" height="57" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="45" y="577" font-family="BookBold" font-size="21" fill="#173c44" text-anchor="start">ASP.NET Core → Store</text>
+<text x="455" y="577" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">授权、业务、回执与原子提交</text>
+<text x="30" y="642" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">返回：Response → SDK 解析 → ApiError / Session → Query → React 确认。</text>
+</svg>

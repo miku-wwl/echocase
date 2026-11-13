@@ -21,7 +21,7 @@ test/unit/                 独立 NUnit 单元测试
 test/integration/          独立 PostgreSQL/API 集成测试；可选 QueryProbe
 test/e2e/                  独立 Playwright 包与公共接口测试
 test/tools/                边界检查与测试启动工具
-manual/                    固定于旧实现的历史教材、插图、出版源与修订影响表
+manual/                    模板修订版与历史教材、插图、独立出版源及审校报告
 ```
 
 `EchoCase.slnx` 只包含四个应用项目。`test/EchoCase.Tests.slnx` 是独立测试入口。依赖方向始终是 Tests → Application；单元测试不引用 API、数据库实现或集成夹具。前端应用不安装 Playwright。
@@ -80,7 +80,7 @@ npm test
 - [模板来源与转换](backend/docs/architecture/TEMPLATE-LINEAGE.md)、[整改 ADR](backend/docs/architecture/decisions/0010-template-first-foundation.md)、[本轮验收](backend/docs/engineering/TEMPLATE-MIGRATION-ACCEPTANCE.md)
 - [当前路线与 DoD](backend/docs/PLAN.md)、[历史应用实验索引](manual/reference/EXPERIMENTS.md)、[历史模板机制比较](manual/reference/TEMPLATE-COMPARISON.md)
 - [重构验收](backend/docs/engineering/APPLICATION-ONLY-ACCEPTANCE.md)、[仓库责任与退役清单](backend/docs/engineering/REPOSITORY-RESPONSIBILITY.md)
-- [历史 Phase 2B 教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)、[教材来源说明](manual/README.md)、[待修订章节与插图](manual/reference/TEMPLATE-MIGRATION-IMPACT.md)
+- [模板修订版教材 PDF](manual/dist/Enterprise-Full-Stack-Engineering-Template-First.pdf)、[历史 107 页 PDF](manual/dist/Enterprise-Full-Stack-Engineering.pdf)、[双版本来源与审校](manual/README.md)
 
 ## 范围变更与历史
 
@@ -88,4 +88,4 @@ npm test
 
 历史 Phase 2A 分支 `codex/phase2a-engineering-20261111` 保留在 `63c587277541b4e700258aad82de9b2ad0ba32f8`。历史实验、原证据和两份旧 PDF 可从 [该提交](https://github.com/miku-wwl/echocase/tree/63c587277541b4e700258aad82de9b2ad0ba32f8)恢复。2026-11-12 的新教材以四目录整理后的应用为源码基础，重写正文与插图，不把旧 PDF 或运行日志重新装订成交付物；业务代码、main 与历史分支保持原状。
 
-上述教材出版记录描述 `bf9de37b9bd4d5cc2c227af2c857360e048b15d1`。本轮工程整改改变了请求分派和客户端来源；PDF 字节与正文保留，不宣称已和新架构同步，也未开始教材重写。main 和所有既有历史审查分支保持不变。
+上述历史教材出版记录对应 `bf9de37b9bd4d5cc2c227af2c857360e048b15d1`，原 107 页 PDF 保持原字节。2026-11-13 的 Template-First 修订版使用独立清单与 PDF，工程源码固定为 `9f68721e18f15ae603e6502fa46b8fa78f9df55c`，解释真实官方模板迁移、MediatR、NSwag 及既有一致性机制。本次仅在 main 发布教材，没有修改应用或测试，也未创建分支；历史分支名已清理，提交仍可由哈希访问。

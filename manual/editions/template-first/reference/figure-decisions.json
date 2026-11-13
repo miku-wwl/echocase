@@ -1,0 +1,396 @@
+[
+  {
+    "id": "business-loop",
+    "status": "RETAIN",
+    "reason": "固定案件的五模块任务闭环未改变，仍解释业务而非框架。",
+    "revisedFile": "figures/mechanisms/business-loop.svg",
+    "historicalFile": "figures/mechanisms/business-loop.svg",
+    "historicalSHA256": "c78ee1d9e7e85e1da0bef91d0a63f22316f6e4c128c8ac1450820bed28f845b5"
+  },
+  {
+    "id": "architecture",
+    "status": "REPLACE",
+    "reason": "直接引用与运行调用分开编码；端口定义向内，事务与领域回调在运行时合作。",
+    "revisedFile": "editions/template-first/figures/mechanisms/architecture.svg",
+    "historicalFile": "figures/mechanisms/architecture.svg",
+    "historicalSHA256": "3fe70bc599ebf72dc5899ba1888f7d077e80b48e5ae92e778247413c8e7eedfd"
+  },
+  {
+    "id": "aggregate",
+    "status": "RETAIN",
+    "reason": "Guid 根与普通子实体、版本边界和成员写入口未变。",
+    "revisedFile": "figures/mechanisms/aggregate.svg",
+    "historicalFile": "figures/mechanisms/aggregate.svg",
+    "historicalSHA256": "18c166eb7a87dbc0b3b573be03c1d22018ddf54b349f7980a25cb659205bfe7d"
+  },
+  {
+    "id": "domain-states",
+    "status": "RETAIN",
+    "reason": "Active/Reviewing/Submitted 转移和复核条件未变。",
+    "revisedFile": "figures/mechanisms/domain-states.svg",
+    "historicalFile": "figures/mechanisms/domain-states.svg",
+    "historicalSHA256": "0c4445f8eaa80e23362d6a207afc3666158e709e18841efbc01c074cec8a10cc"
+  },
+  {
+    "id": "request-pipeline",
+    "status": "REPLACE",
+    "reason": "无历史回执的新写成功路径。右括线标 Store 事务，到 Commit 为止；领域操作在事务内，提交后仍有结果交付。",
+    "revisedFile": "editions/template-first/figures/mechanisms/request-pipeline.svg",
+    "historicalFile": "figures/mechanisms/request-pipeline.svg",
+    "historicalSHA256": "e7f5e82bc1e8f301fd653961c950ec97a7f398267c82d98af907d4b2c3759668"
+  },
+  {
+    "id": "ef-tracking",
+    "status": "REVISE",
+    "reason": "补足 AutoDetectChanges 夹具条件与历史日期，避免把 Unchanged 误当普遍即时状态。",
+    "revisedFile": "editions/template-first/figures/mechanisms/ef-tracking.svg",
+    "historicalFile": "figures/mechanisms/ef-tracking.svg",
+    "historicalSHA256": "94612593deba72ae61bd8e9480f00f149618155bd00faa6318407deb0dbb7e00"
+  },
+  {
+    "id": "mvcc-tuples",
+    "status": "RETAIN",
+    "reason": "概念事务明确标示，区分物理行版本与业务 Version。",
+    "revisedFile": "figures/mechanisms/mvcc-tuples.svg",
+    "historicalFile": "figures/mechanisms/mvcc-tuples.svg",
+    "historicalSHA256": "813927677ae43b8d18491e2d4876af91b17c157efc9e110c17305e3fe6681113"
+  },
+  {
+    "id": "intent-coordinates",
+    "status": "RETAIN",
+    "reason": "资源版本与意图键的双坐标仍是当前协议。",
+    "revisedFile": "figures/mechanisms/intent-coordinates.svg",
+    "historicalFile": "figures/mechanisms/intent-coordinates.svg",
+    "historicalSHA256": "ac97677f6b7c0401eb21ebffaab45e443cc4886ef13529f69056f6ea588a845d"
+  },
+  {
+    "id": "state-owners",
+    "status": "RETAIN",
+    "reason": "确认缓存、草稿和局部图位置的状态所有权未变。",
+    "revisedFile": "figures/mechanisms/state-owners.svg",
+    "historicalFile": "figures/mechanisms/state-owners.svg",
+    "historicalSHA256": "2f2b28a1838979316c3a4118fcf0ef7c5e8bf0de1a9a5240da68a9c517d191a6"
+  },
+  {
+    "id": "graph-semantics",
+    "status": "RETAIN",
+    "reason": "无向业务关系与有方向的控件手势区别未变。",
+    "revisedFile": "figures/mechanisms/graph-semantics.svg",
+    "historicalFile": "figures/mechanisms/graph-semantics.svg",
+    "historicalSHA256": "45adf40da016c7ad335388f1de9bbb6e4b35eced975ba91c6e64644df0171297"
+  },
+  {
+    "id": "query-plans",
+    "status": "RETAIN",
+    "reason": "历史 30,000 根三种计划有效，正文新增历史适用界限。",
+    "revisedFile": "figures/mechanisms/query-plans.svg",
+    "historicalFile": "figures/mechanisms/query-plans.svg",
+    "historicalSHA256": "473397c105c83a8cee849b0556d4dc9389c92310c8e11370d798ae7d21c9d74c"
+  },
+  {
+    "id": "query-cost",
+    "status": "RETAIN",
+    "reason": "数值与原始历史观察一致，明确单机暖缓存限制。",
+    "revisedFile": "figures/mechanisms/query-cost.svg",
+    "historicalFile": "figures/mechanisms/query-cost.svg",
+    "historicalSHA256": "499ed224b0e3d24c9318cde9baa48f09fdea04633e4609cc1202b178267f8b3f"
+  },
+  {
+    "id": "requirements",
+    "status": "RETAIN",
+    "reason": "修订需求的身份、前提和原子结果未变。",
+    "revisedFile": "figures/mechanisms/requirements.svg",
+    "historicalFile": "figures/mechanisms/requirements.svg",
+    "historicalSHA256": "5442c987e32fdcf0f236a72b4275974e986be0b51f8010f68e9ec6de10a756b6"
+  },
+  {
+    "id": "template-tradeoffs",
+    "status": "REPLACE",
+    "reason": "迁移决策按机制分类；没有将可选样例抽象机械替换为业务承诺。",
+    "revisedFile": "editions/template-first/figures/mechanisms/template-tradeoffs.svg",
+    "historicalFile": "figures/mechanisms/template-tradeoffs.svg",
+    "historicalSHA256": "28f066e9aaf3e3a5046774d9a5538ef516a836ac453e26826c30df9e161a260c"
+  },
+  {
+    "id": "usecase",
+    "status": "REPLACE",
+    "reason": "处理器接入模板横切能力，协调服务复用原意图协议，领域与 Store 分别决定合法性和持久成败。",
+    "revisedFile": "editions/template-first/figures/mechanisms/usecase.svg",
+    "historicalFile": "figures/mechanisms/usecase.svg",
+    "historicalSHA256": "d714718300fe2a0003bb47cac7b8608fe5e965a39233be01541984a02a70da38"
+  },
+  {
+    "id": "validation",
+    "status": "REPLACE",
+    "reason": "校验范围由事实来源决定；通用 Validator 不替代事务内领域判断和数据库竞争。",
+    "revisedFile": "editions/template-first/figures/mechanisms/validation.svg",
+    "historicalFile": "figures/mechanisms/validation.svg",
+    "historicalSHA256": "90b075d3b1bcd863964281aa113ec6153e782ceb91c4cdccdbfabdfb62f06cbf"
+  },
+  {
+    "id": "http-outcomes",
+    "status": "RETAIN",
+    "reason": "列示的是代表性结果而非完整状态清单，未知结果的区别仍成立。",
+    "revisedFile": "figures/mechanisms/http-outcomes.svg",
+    "historicalFile": "figures/mechanisms/http-outcomes.svg",
+    "historicalSHA256": "2e172a3d9217beba8855f7dbb2e3f0e42919a52309ed1e72741912c21403133c"
+  },
+  {
+    "id": "di-scope",
+    "status": "REPLACE",
+    "reason": "Transient 处理器在当前作用域内取得 scoped 依赖，不等于每解析一次就新建上下文。",
+    "revisedFile": "editions/template-first/figures/mechanisms/di-scope.svg",
+    "historicalFile": "figures/mechanisms/di-scope.svg",
+    "historicalSHA256": "8b699a9cc235fe52708d0c384d2d164692c479750d50d3148f18c895dae3422a"
+  },
+  {
+    "id": "binding-sources",
+    "status": "REPLACE",
+    "reason": "参数最终都是值，来源与信任仍不同；身份在处理器侧通过 IUser 进入协调服务。",
+    "revisedFile": "editions/template-first/figures/mechanisms/binding-sources.svg",
+    "historicalFile": "figures/mechanisms/binding-sources.svg",
+    "historicalSHA256": "bd2b5c3c14900808bcc5ca92833210777169296832c2678da051d58f25603e28"
+  },
+  {
+    "id": "problem-writer",
+    "status": "RETAIN",
+    "reason": "原有最终 writer 的 TraceId 修正仍在当前 Program，正文明确为历史案例。",
+    "revisedFile": "figures/mechanisms/problem-writer.svg",
+    "historicalFile": "figures/mechanisms/problem-writer.svg",
+    "historicalSHA256": "831ab0399cd03b2feee6ca17ed17967a2bac041863707274217c76e18d8ab138"
+  },
+  {
+    "id": "endpoint-lifecycle",
+    "status": "REPLACE",
+    "reason": "端点发现、命名合同和每次请求执行分处不同时间，避免把反射与业务运行混为一谈。",
+    "revisedFile": "editions/template-first/figures/mechanisms/endpoint-lifecycle.svg",
+    "historicalFile": "figures/mechanisms/endpoint-lifecycle.svg",
+    "historicalSHA256": "23c9f2caf3efa8e701360816a8a1ed8bb43703e34f6e0d71e14c2734e3b6fa80"
+  },
+  {
+    "id": "ef-materialization",
+    "status": "RETAIN",
+    "reason": "单语句图、身份解析、字段导航与原值快照未变。",
+    "revisedFile": "figures/mechanisms/ef-materialization.svg",
+    "historicalFile": "figures/mechanisms/ef-materialization.svg",
+    "historicalSHA256": "5ec6058fb8f89fe2ebfae5ad38d8314fe1bf2dca3e19c15280498758c25ae449"
+  },
+  {
+    "id": "ef-identity",
+    "status": "RETAIN",
+    "reason": "应用预分配 Guid 与 ValueGeneratedNever 保持一致。",
+    "revisedFile": "figures/mechanisms/ef-identity.svg",
+    "historicalFile": "figures/mechanisms/ef-identity.svg",
+    "historicalSHA256": "85f2443670cdeb601822c63f238f611780ea9dd00efdec63a011257bb075264e"
+  },
+  {
+    "id": "ef-states",
+    "status": "RETAIN",
+    "reason": "五种状态与业务状态的区别仍准确。",
+    "revisedFile": "figures/mechanisms/ef-states.svg",
+    "historicalFile": "figures/mechanisms/ef-states.svg",
+    "historicalSHA256": "8806e1897b73965b9f5fc4b22181699d128fb804f093a34a6c6210826f26e969"
+  },
+  {
+    "id": "ef-values",
+    "status": "RETAIN",
+    "reason": "Original/Current/Database 三值的竞争解释未变。",
+    "revisedFile": "figures/mechanisms/ef-values.svg",
+    "historicalFile": "figures/mechanisms/ef-values.svg",
+    "historicalSHA256": "3213729d1a159994c26f756f0d8ea3db71b0a4f725df8f23dafdc1d4fe333bf2"
+  },
+  {
+    "id": "schema-contract",
+    "status": "RETAIN",
+    "reason": "可空列和旧回执默认值的三份时间合同未变。",
+    "revisedFile": "figures/mechanisms/schema-contract.svg",
+    "historicalFile": "figures/mechanisms/schema-contract.svg",
+    "historicalSHA256": "e616cd06787c7f3b76fad052dc4a1aed2421a73f0cd5440bb8cebf55ae589d17"
+  },
+  {
+    "id": "time-precision",
+    "status": "RETAIN",
+    "reason": "业务微秒截断机制及历史精度数据可核对。",
+    "revisedFile": "figures/mechanisms/time-precision.svg",
+    "historicalFile": "figures/mechanisms/time-precision.svg",
+    "historicalSHA256": "7757f3e41822f824c38916dafbf2f637193dbbdc799c02e67b4cab9d76b6fe89"
+  },
+  {
+    "id": "mvcc-statements",
+    "status": "RETAIN",
+    "reason": "READ COMMITTED 每语句快照仍是当前 Store 默认隔离。",
+    "revisedFile": "figures/mechanisms/mvcc-statements.svg",
+    "historicalFile": "figures/mechanisms/mvcc-statements.svg",
+    "historicalSHA256": "1c8f6422d0e2c847fc3083a31a779fefc2f484f7d7643da8456d8421b3eb9cca"
+  },
+  {
+    "id": "mvcc-visibility",
+    "status": "RETAIN",
+    "reason": "概念可见性图不冒充实际 xmin/xmax 记录。",
+    "revisedFile": "figures/mechanisms/mvcc-visibility.svg",
+    "historicalFile": "figures/mechanisms/mvcc-visibility.svg",
+    "historicalSHA256": "286ac0dadb26b0e0bed781cfd1d32ab1b4fa7eca7e400df12f2be99205d7d7d8"
+  },
+  {
+    "id": "write-skew",
+    "status": "RETAIN",
+    "reason": "跨根反例明确为教学示意，不冒充应用功能。",
+    "revisedFile": "figures/mechanisms/write-skew.svg",
+    "historicalFile": "figures/mechanisms/write-skew.svg",
+    "historicalSHA256": "666db1420333e7b767b4c4c0ccaf2ae255308cd1fe4f776fbe5706d8dca592e8"
+  },
+  {
+    "id": "cas-race",
+    "status": "RETAIN",
+    "reason": "不同 Key 竞争同根版本的历史观察仍由未变 Store 支持。",
+    "revisedFile": "figures/mechanisms/cas-race.svg",
+    "historicalFile": "figures/mechanisms/cas-race.svg",
+    "historicalSHA256": "abdb60717526946d2659f2750ea949bf168ea8d19af66ec3608f3e6c939e131c"
+  },
+  {
+    "id": "transaction-set",
+    "status": "RETAIN",
+    "reason": "根、子、Audit、Receipt 同事务保证未变。",
+    "revisedFile": "figures/mechanisms/transaction-set.svg",
+    "historicalFile": "figures/mechanisms/transaction-set.svg",
+    "historicalSHA256": "e071ade5cd27746535a63ce3ceacea7527946cfdecc5fe2c2ff0be75b69dc471"
+  },
+  {
+    "id": "receipt-lock",
+    "status": "RETAIN",
+    "reason": "同 owner/key 的事务锁与重放次序未变。",
+    "revisedFile": "figures/mechanisms/receipt-lock.svg",
+    "historicalFile": "figures/mechanisms/receipt-lock.svg",
+    "historicalSHA256": "dd33c7debf36f512070b1057429358d5041acd7b4ee993d6bd5ed2ce926da890"
+  },
+  {
+    "id": "security-boundaries",
+    "status": "REPLACE",
+    "reason": "通用登录要求保护用例入口，事务内资源过滤保护具体对象；CSRF 仍是独立边界。",
+    "revisedFile": "editions/template-first/figures/mechanisms/security-boundaries.svg",
+    "historicalFile": "figures/mechanisms/security-boundaries.svg",
+    "historicalSHA256": "f10ab6f617920194898192f5928e090bab58c17994c80588a9014876d4695800"
+  },
+  {
+    "id": "react-render",
+    "status": "RETAIN",
+    "reason": "事件快照与函数式更新的框架机制不受客户端迁移影响。",
+    "revisedFile": "figures/mechanisms/react-render.svg",
+    "historicalFile": "figures/mechanisms/react-render.svg",
+    "historicalSHA256": "e98476e9030cd0ceef6b70e10ae3b952d768e8c77e83bc3aeb7438aa11bd118e"
+  },
+  {
+    "id": "component-boundaries",
+    "status": "RETAIN",
+    "reason": "组件状态所有者未变，Query 仍协调请求生命周期；协议细节由新增图展开。",
+    "revisedFile": "figures/mechanisms/component-boundaries.svg",
+    "historicalFile": "figures/mechanisms/component-boundaries.svg",
+    "historicalSHA256": "828d961a407fcdd8dacfbfd78de5e64984b575bb98519b730790558ab21bb05d"
+  },
+  {
+    "id": "query-cycle",
+    "status": "REPLACE",
+    "reason": "mutation 成功与整个确认周期完成分开；Query 不再自行组织 HTTP 路径。",
+    "revisedFile": "editions/template-first/figures/mechanisms/query-cycle.svg",
+    "historicalFile": "figures/mechanisms/query-cycle.svg",
+    "historicalSHA256": "9dd02f5616338676e24a7273d7bfc538ab3acdba0743d85fa1af55bfe6af2065"
+  },
+  {
+    "id": "late-get",
+    "status": "RETAIN",
+    "reason": "取消及缓存单调合并机制未变。",
+    "revisedFile": "figures/mechanisms/late-get.svg",
+    "historicalFile": "figures/mechanisms/late-get.svg",
+    "historicalSHA256": "41f0c9b9177154e984e3c02d314aafe2cd199e04e8898571f8138e58ff6ac41b"
+  },
+  {
+    "id": "draft-generation",
+    "status": "RETAIN",
+    "reason": "输入代次与在途保存的对应规则未变。",
+    "revisedFile": "figures/mechanisms/draft-generation.svg",
+    "historicalFile": "figures/mechanisms/draft-generation.svg",
+    "historicalSHA256": "831f2c261284f1d4f3ab433c7bd29c338a36cce3de1adbcacffae5fb7e9d846f"
+  },
+  {
+    "id": "three-way",
+    "status": "RETAIN",
+    "reason": "baseline/current/draft 三方比较规则未变。",
+    "revisedFile": "figures/mechanisms/three-way.svg",
+    "historicalFile": "figures/mechanisms/three-way.svg",
+    "historicalSHA256": "4020e463582eec832fe1c91b9e70d4fdc3c5615c883618b52c47001b5f77eef7"
+  },
+  {
+    "id": "uncertain",
+    "status": "REPLACE",
+    "reason": "SDK 解析与适配器错误规范化协作；恢复保留原意图，当前资源和历史回执仍分开。",
+    "revisedFile": "editions/template-first/figures/mechanisms/uncertain.svg",
+    "historicalFile": "figures/mechanisms/uncertain.svg",
+    "historicalSHA256": "c952262709b3e531affba086c582826b70a4a60f996e3b689f6a330696f0441b"
+  },
+  {
+    "id": "test-reasoning",
+    "status": "RETAIN",
+    "reason": "按失败机制区分验证边界仍有效，正文新增模板特有反例。",
+    "revisedFile": "figures/mechanisms/test-reasoning.svg",
+    "historicalFile": "figures/mechanisms/test-reasoning.svg",
+    "historicalSHA256": "3b658eda395651daf4dddecd30fffed02310726b330d9fb28a069167f6b22b91"
+  },
+  {
+    "id": "evolution",
+    "status": "REPLACE",
+    "reason": "跨层影响图标明具体方法与文件，让必要改动及其复用保证可被逐一解释。",
+    "revisedFile": "editions/template-first/figures/mechanisms/evolution.svg",
+    "historicalFile": "figures/mechanisms/evolution.svg",
+    "historicalSHA256": "0dabad18c7192b026febfb4265695eb3d7f92c23bd2d0a0ac75a1c4be440b432"
+  },
+  {
+    "id": "review-model",
+    "status": "RETAIN",
+    "reason": "从用户承诺逆向追问仍覆盖当前完整路径。",
+    "revisedFile": "figures/mechanisms/review-model.svg",
+    "historicalFile": "figures/mechanisms/review-model.svg",
+    "historicalSHA256": "9bdc6bcb77b6f046c82a664f41740723831c5ee487b9bcc7af3e819b00a2f75a"
+  },
+  {
+    "id": "template-lineage",
+    "status": "ADD NEW",
+    "reason": "真实生成与业务迁移相交，既不否认原业务实现，也不抹去模板要求的纠偏。",
+    "revisedFile": "editions/template-first/figures/mechanisms/template-lineage.svg"
+  },
+  {
+    "id": "mediator-onion",
+    "status": "ADD NEW",
+    "reason": "按 MediatR 注册与包装实现绘制；next 向内调用，await 返回后向外继续。",
+    "revisedFile": "editions/template-first/figures/mechanisms/mediator-onion.svg"
+  },
+  {
+    "id": "performance-after-commit",
+    "status": "ADD NEW",
+    "reason": "上半部是历史源码风险分析，下半部是当前实际回归构造；两者不混为同一次观测。",
+    "revisedFile": "editions/template-first/figures/mechanisms/performance-after-commit.svg"
+  },
+  {
+    "id": "nswag-two-times",
+    "status": "ADD NEW",
+    "reason": "生成和调用采用分开的时间区域；业务并发与恢复由应用层次合作完成。",
+    "revisedFile": "editions/template-first/figures/mechanisms/nswag-two-times.svg"
+  },
+  {
+    "id": "owner-replay",
+    "status": "ADD NEW",
+    "reason": "把所有权检查放在回执之前，避免历史成功成为当前资源权限的通行证。",
+    "revisedFile": "editions/template-first/figures/mechanisms/owner-replay.svg"
+  },
+  {
+    "id": "ef-savecommit",
+    "status": "ADD NEW",
+    "reason": "拆开 CLR 变化、EF 状态、SQL 保存和显式提交四个时刻，避免把 Unchanged 误读为已提交。",
+    "revisedFile": "editions/template-first/figures/mechanisms/ef-savecommit.svg"
+  },
+  {
+    "id": "version-propagation",
+    "status": "ADD NEW",
+    "reason": "一个数字沿层次改变职责；类型化合同传值，领域与数据库分别决定目标和仲裁。",
+    "revisedFile": "editions/template-first/figures/mechanisms/version-propagation.svg"
+  }
+]

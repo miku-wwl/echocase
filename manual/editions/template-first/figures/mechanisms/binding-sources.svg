@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="480" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">客户端声明、宿主依赖与可信身份在不同位置进入</text>
+<rect x="28" y="85" width="400" height="164" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="46" y="120" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">端点绑定</text>
+<text x="46" y="149" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">路由 id；JSON NotesRequest</text>
+<text x="46" y="179" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">DI：ISender；宿主：ctx / ct</text>
+<text x="46" y="209" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">端点显式解析 Key / If-Match</text>
+<rect x="530" y="85" width="400" height="164" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="548" y="120" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">命令对象</text>
+<text x="548" y="149" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">Id / Key / Version / Body</text>
+<text x="548" y="179" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">SaveNotesCommand</text>
+<text x="548" y="209" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">没有 Owner 字段</text>
+<line x1="435" y1="167" x2="522" y2="167" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="295" width="400" height="125" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="47" y="331" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Cookie → Claims → CurrentUser</text>
+<text x="47" y="374" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">IUser.Id 不来自请求正文</text>
+<rect x="530" y="295" width="400" height="125" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="550" y="331" font-family="BookBold" font-size="22" fill="#173c44" text-anchor="start">Handler 取得 owner</text>
+<text x="550" y="374" font-family="Book" font-size="22" fill="#173c44" text-anchor="start">service.Notes(id, owner, …)</text>
+<line x1="435" y1="360" x2="522" y2="360" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="730" y1="253" x2="730" y2="289" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

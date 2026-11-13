@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="475" viewBox="0 0 960 475">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#627477"/></marker></defs>
+<rect width="960" height="475" rx="14" fill="#f8faf9"/>
+<text x="28" y="42" font-family="BookBold" font-size="26" fill="#173c44" text-anchor="start">Query 负责生命周期，SDK 和适配器负责不同传输部分</text>
+<rect x="30" y="95" width="260" height="140" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="44" y="136" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">onMutate</text>
+<text x="44" y="179" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">取消旧 GET / 消费 signal</text>
+<rect x="350" y="95" width="260" height="140" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="364" y="136" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">mutationFn</text>
+<text x="364" y="179" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">executeOperation</text>
+<text x="364" y="208" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">→ SDK</text>
+<rect x="670" y="95" width="260" height="140" rx="9" fill="#edf4f2" stroke="#c8d7d3"/>
+<text x="684" y="136" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">onSuccess</text>
+<text x="684" y="179" font-family="Book" font-size="20" fill="#173c44" text-anchor="start">单调合并 Session</text>
+<line x1="295" y1="160" x2="344" y2="160" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="615" y1="160" x2="664" y2="160" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="350" y="285" width="580" height="98" rx="9" fill="#f8f2e7" stroke="#c8d7d3"/>
+<text x="367" y="321" font-family="BookBold" font-size="23" fill="#173c44" text-anchor="start">onSettled：await 两类失效刷新</text>
+<text x="367" y="357" font-family="Book" font-size="21" fill="#173c44" text-anchor="start">刷新完成前 pending 仍未结束</text>
+<line x1="800" y1="240" x2="800" y2="279" stroke="#627477" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="30" y="429" font-family="Book" font-size="20" fill="#24766e" text-anchor="start">SDK：URL / method / DTO / 解析；适配器：Cookie / CSRF / Key / If-Match。</text>
+</svg>

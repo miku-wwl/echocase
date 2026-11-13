@@ -22,10 +22,16 @@ from reportlab.platypus import (BaseDocTemplate,PageTemplate,Frame,Paragraph,Spa
 from reportlab.platypus.tableofcontents import TableOfContents
 from pypdf import PdfReader
 from source_excerpts import extract
+from editions import load,output_path,protected_history,specifications
+from pygments import lex
+from pygments.lexers import CSharpLexer,TypeScriptLexer,SqlLexer,TextLexer
+from pygments.token import Token
 
 M=Path(__file__).resolve().parents[1];ROOT=M.parent
-CONF=json.loads((M/'book.json').read_text(encoding='utf-8'))
-CAT=json.loads((M/'figures/catalog.json').read_text(encoding='utf-8'))
+CONF=load()
+CAT=json.loads((M/CONF['figureCatalog']).read_text(encoding='utf-8'))
+SPECS=specifications(CONF)
+CHAPTER_ROOT=M/CONF['chapterRoot'];BUILD=M/CONF['buildDirectory']
 W,H=595.276,841.89; LEFT=55;RIGHT=51;TOP=59;BOTTOM=49;WIDTH=W-LEFT-RIGHT
 INK=colors.HexColor('#213b43');TEAL=colors.HexColor('#1a6c65');MUTED=colors.HexColor('#637677')
 FONTS=Path('C:/Windows/Fonts')
@@ -42,9 +48,9 @@ def unicode_cmap(*args,**kwargs):
     return re.sub(r'<([0-9A-Fa-f]{5,6})>',lambda m:'<'+chr(int(m[1],16)).encode('utf-16-be').hex().upper()+'>',value)
 ttfonts.makeToUnicodeCMap=unicode_cmap
 ST={
- 'body':ParagraphStyle('body',fontName='Book',fontSize=10.6,leading=18.2,textColor=INK,spaceAfter=8.5,wordWrap='CJK',allowWidows=0,allowOrphans=0),
+ 'body':ParagraphStyle('body',fontName='Book',fontSize=10.6,leading=18.2,textColor=INK,spaceAfter=7.5,wordWrap='CJK',allowWidows=0,allowOrphans=0),
  'h1':ParagraphStyle('h1',fontName='BookBold',fontSize=23.4,leading=34,spaceAfter=20,textColor=INK,keepWithNext=True,wordWrap='CJK'),
- 'h2':ParagraphStyle('h2',fontName='BookBold',fontSize=14.2,leading=22.5,spaceBefore=19,spaceAfter=10,textColor=TEAL,keepWithNext=True,wordWrap='CJK'),
+ 'h2':ParagraphStyle('h2',fontName='BookBold',fontSize=14.2,leading=22.5,spaceBefore=16,spaceAfter=9,textColor=TEAL,keepWithNext=True,wordWrap='CJK'),
  'h3':ParagraphStyle('h3',fontName='BookBold',fontSize=11.6,leading=18.5,spaceBefore=13,spaceAfter=7,textColor=INK,keepWithNext=True,wordWrap='CJK'),
  'kicker':ParagraphStyle('kicker',fontName='BookBold',fontSize=10,leading=15,spaceAfter=8,textColor=colors.HexColor('#9a702d'),keepWithNext=True),
  'caption':ParagraphStyle('caption',fontName='Book',fontSize=8.7,leading=13.6,spaceAfter=11,textColor=MUTED,wordWrap='CJK'),
@@ -70,16 +76,18 @@ def inline(s):
         elif t.type=='em_close':out.append('</i>')
         elif t.type=='link_open':
             href=t.attrGet('href')
-            if not href.startswith(('http://','https://','#')):
-                href=CONF['repository']+'/blob/'+CONF['sourceCommit']+'/'+str((M/'chapters'/href).resolve().relative_to(ROOT)).replace('\\','/')
+            if href in CONF['chapters']:
+                href='#chapter-'+str(CONF['chapters'].index(href))
+            elif not href.startswith(('http://','https://','#')):
+                href=CONF['repository']+'/blob/'+CONF['sourceCommit']+'/'+str((CHAPTER_ROOT/href).resolve().relative_to(ROOT)).replace('\\','/')
             out.append(f'<a href="{html.escape(href,quote=True)}" color="#1a6c65">')
         elif t.type=='link_close':out.append('</a>')
         elif t.type in ('softbreak','hardbreak'):out.append(' ' if t.type=='softbreak' else '<br/>')
     return ''.join(out)
 
 class Code(Flowable):
-    def __init__(self,rows,width=WIDTH,fontSize=8.25):
-        Flowable.__init__(self);self.width=width;self.fs=fontSize;self.leading=12.8
+    def __init__(self,rows,width=WIDTH,fontSize=8.6,language='text'):
+        Flowable.__init__(self);self.width=width;self.fs=fontSize;self.leading=12.4;self.language=language
         self.rows=[]
         for number,line in rows:
             # Exact source characters, only visual soft wrapping. Continuation has no fake line number.
@@ -103,7 +111,7 @@ class Code(Flowable):
         if n<3:return []
         if n>=len(self.rows):return [self]
         def part(rows):
-            p=Code([],self.width,self.fs);p.rows=rows;p.height=len(rows)*p.leading+18;return p
+            p=Code([],self.width,self.fs,self.language);p.rows=rows;p.height=len(rows)*p.leading+18;return p
         return [part(self.rows[:n]),part(self.rows[n:])]
     def draw(self):
         c=self.canv;c.setFillColor(colors.HexColor('#f1f5f4'));c.roundRect(0,0,self.width,self.height,5,fill=1,stroke=0)
@@ -111,9 +119,16 @@ class Code(Flowable):
         for i,(num,line) in enumerate(self.rows):
             y=self.height-16-i*self.leading;c.setFont('Mono',7.1);c.setFillColor(MUTED);c.drawRightString(30,y,num)
             x=45;comment=line.lstrip().startswith(('//','#','/*','*'))
-            for face,characters in groupby(line,key=codefont):
-                run=''.join(characters);c.setFont(face,self.fs)
-                c.setFillColor(MUTED if comment else INK);c.drawString(x,y,run);x+=pdfmetrics.stringWidth(run,face,self.fs)
+            lexer={'cs':CSharpLexer,'ts':TypeScriptLexer,'tsx':TypeScriptLexer,'sql':SqlLexer}.get(self.language,TextLexer)()
+            for kind,value in lex(line,lexer):
+                value=value.rstrip('\n')
+                tone=(MUTED if kind in Token.Comment or comment else
+                      colors.HexColor('#795081') if kind in Token.Keyword else
+                      colors.HexColor('#88612c') if kind in Token.Literal.String else
+                      colors.HexColor('#315b91') if kind in Token.Literal.Number else INK)
+                for face,characters in groupby(value,key=codefont):
+                    run=''.join(characters);c.setFont(face,self.fs);c.setFillColor(tone)
+                    c.drawString(x,y,run);x+=pdfmetrics.stringWidth(run,face,self.fs)
 
 class VectorFigure(Flowable):
     def __init__(self,path):
@@ -180,7 +195,7 @@ class ScreenFigure(Flowable):
 
 class Book(BaseDocTemplate):
     def __init__(self,path):
-        super().__init__(str(path),pagesize=(W,H),leftMargin=LEFT,rightMargin=RIGHT,topMargin=TOP,bottomMargin=BOTTOM,title=CONF['title'],author='EchoCase',allowSplitting=1)
+        super().__init__(str(path),pagesize=(W,H),leftMargin=LEFT,rightMargin=RIGHT,topMargin=TOP,bottomMargin=BOTTOM,title=CONF['title'],author='EchoCase',allowSplitting=1,invariant=CONF['invariantPdf'])
         self.running='';self.tocseen=set();self.addPageTemplates(PageTemplate(id='book',frames=Frame(LEFT,BOTTOM,WIDTH,H-TOP-BOTTOM,id='body',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0),onPage=self.chrome))
     def beforeDocument(self):self.running='';self.tocseen=set()
     def chrome(self,c,doc):
@@ -202,13 +217,13 @@ class RunningChapter(ActionFlowable):
     def apply(self,doc):doc.running=self.title
 
 def source(id):
-    e=extract(id,CONF['sourceCommit']);SOURCE.append({k:v for k,v in e.items() if k!='text'})
+    e=extract(id,CONF['sourceCommit'],SPECS,CONF['verifyWorkingTree']);SOURCE.append({k:v for k,v in e.items() if k!='text'})
     COUNTS['sourceLines']+=len(e['text'].splitlines())
-    url=f'{CONF["repository"]}/blob/{CONF["sourceCommit"]}/{e["path"]}#L{e["start"]}'
+    url=f'{CONF["repository"]}/blob/{e["commit"]}/{e["path"]}#L{e["start"]}'
     label=e['path']
-    head=Paragraph(f'<b>源码</b>　<a href="{url}" color="#1a6c65">{html.escape(label)}</a> · L{e["start"]}-{e["end"]}',ST['small'])
+    head=Paragraph(f'<b>{e["label"]}</b>　<a href="{url}" color="#1a6c65">{html.escape(label)}</a> · L{e["start"]}-{e["end"]}',ST['small'])
     head.keepWithNext=True
-    return [head,Code([(e['start']+i,l) for i,l in enumerate(e['text'].splitlines())]),Spacer(1,9)]
+    return [head,Code([(e['start']+i,l) for i,l in enumerate(e['text'].splitlines())],language=Path(e['path']).suffix.lstrip('.')),Spacer(1,9)]
 
 def figure(id,num):
     it=CAT[id];FIGURES.append(dict(id=id,number=num,**it));COUNTS['figures']+=1
@@ -262,7 +277,7 @@ def chapter(path,index):
             while i<len(lines) and not lines[i].strip().startswith('```'):block.append(lines[i]);i+=1
             # Explanatory SQL/HTTP fragments are explicitly labelled, never application source selections.
             story.append(Paragraph('运行摘录' if lang in ('sql','http','text') else '说明片段',ST['small']))
-            story.append(Code([(i+1,l) for i,l in enumerate(block)]));story.append(Spacer(1,10));i+=1;continue
+            story.append(Code([(i+1,l) for i,l in enumerate(block)],language=lang));story.append(Spacer(1,10));i+=1;continue
         if line.startswith('|'):
             block=[]
             while i<len(lines) and lines[i].strip().startswith('|'):block.append(lines[i]);i+=1
@@ -309,23 +324,33 @@ class Cover(Flowable):
         c.setFillColor(colors.white);c.setFont('BookBold',31);c.drawString(0,560,'企业级 .NET');c.drawString(0,510,'全栈软件工程')
         c.setFont('Mono',12);c.setFillColor(colors.HexColor('#bfd8ce'));c.drawString(1,465,'ENTERPRISE .NET FULL-STACK SOFTWARE ENGINEERING')
         c.setFont('Book',13);c.drawString(0,408,'从真实实现理解架构、数据一致性与 React 状态')
+        if CONF['id']=='template-first':
+            c.setFillColor(INK);c.rect(-1,365,WIDTH+2,80,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor('#e1ebe5'));c.setFont('Book',15)
+            c.drawString(0,419,'官方 Clean Architecture 模板')
+            c.drawString(0,390,'数据一致性与 React 状态管理')
         c.setStrokeColor(colors.HexColor('#567b73'));c.line(0,358,WIDTH,358)
         for i,(head,body) in enumerate([('业务意图','领域边界 / 用例 / HTTP 合同'),('持久事实','EF 跟踪 / MVCC / 并发与幂等'),('交互承诺','确认缓存 / 草稿代次 / 冲突决策')]):
             yy=314-i*70;c.setFont('BookBold',12);c.setFillColor(colors.HexColor('#d6bd82'));c.drawString(0,yy,head)
             c.setFont('Book',11);c.setFillColor(colors.HexColor('#e1ebe5'));c.drawString(85,yy,body)
-        c.setFont('Book',10);c.setFillColor(colors.HexColor('#bfd8ce'));c.drawString(0,54,CONF['edition']);c.drawString(0,32,'基于可审阅的 EchoCase 应用源码 · 中文技术教材')
+        c.setFont('Book',9);c.setFillColor(colors.HexColor('#bfd8ce'));c.drawString(0,66,CONF['edition'])
+        if CONF['id']=='template-first':
+            c.setFont('Mono',8.6);c.drawString(0,43,'SOURCE '+CONF['sourceCommit']);c.drawString(0,22,'PUBLISHED '+CONF['publicationDate']+' / TEMPLATE 10.8.0')
+        else:c.drawString(0,32,'基于可审阅的 EchoCase 应用源码 · 中文技术教材')
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--output',default=str(M/'dist/Enterprise-Full-Stack-Engineering.pdf'));args=parser.parse_args()
-    out=Path(args.output);out.parent.mkdir(parents=True,exist_ok=True);(M/'build').mkdir(exist_ok=True)
+    parser=argparse.ArgumentParser();parser.add_argument('--manifest');parser.add_argument('--output');args=parser.parse_args()
+    protected_history()
+    out=output_path(CONF,args.output);out.parent.mkdir(parents=True,exist_ok=True);BUILD.mkdir(exist_ok=True,parents=True)
     story=[Cover(),PageBreak(),Paragraph('目录',ST['h1'])]
     toc=TableOfContents();toc.levelStyles=[ParagraphStyle('toc0',fontName='BookBold',fontSize=10.7,leading=18.5,spaceBefore=8,leftIndent=0,rightIndent=26,wordWrap='CJK'),ParagraphStyle('toc1',fontName='Book',fontSize=8.8,leading=14.5,leftIndent=16,rightIndent=26,textColor=MUTED,wordWrap='CJK')]
     story.extend([toc])
-    for i,file in enumerate(CONF['chapters']):story.extend(chapter(M/'chapters'/file,i))
+    for i,file in enumerate(CONF['chapters']):story.extend(chapter(CHAPTER_ROOT/file,i))
     doc=Book(out);doc.multiBuild(story)
     reader=PdfReader(out)
     stats=dict(COUNTS,pages=len(reader.pages),chapterCount=len(CHAPTERS),figureCount=len(FIGURES),chapters=CHAPTERS,sourceSelections=SOURCE,figures=FIGURES,pdfSha256=hashlib.sha256(out.read_bytes()).hexdigest(),sourceCommit=CONF['sourceCommit'])
-    (M/'build/publication-stats.json').write_text(json.dumps(stats,ensure_ascii=False,indent=2),encoding='utf-8')
+    (BUILD/'publication-stats.json').write_text(json.dumps(stats,ensure_ascii=False,indent=2),encoding='utf-8')
+    protected_history()
     print(json.dumps({k:v for k,v in stats.items() if k not in ['chapters','sourceSelections','figures']},ensure_ascii=False))
 
 if __name__=='__main__':main()
